@@ -638,7 +638,7 @@
             var scrollSection;
             
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                console.log("移動");
+                alert("移動");
 
             } else {
 
