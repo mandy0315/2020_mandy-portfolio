@@ -7,7 +7,6 @@
  * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo
  */
 (function ($, document, window, undefined) {
-    'use strict';
 
     $.fn.pagepiling = function (custom) {
         var PP = $.fn.pagepiling;
@@ -634,16 +633,41 @@
         * Determines the way of scrolling up or down:
         * by 'automatically' scrolling a section or by using the default and normal scrolling.
         */
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            function scrolling(type, scrollable) {
+                var check;
+                var scrollSection;
+                if (type == 'down') {
+                    check = 'left';
+                    scrollSection = PP.moveSectionUp;
+                } else {
+                    check = 'right';
+                    scrollSection = PP.moveSectionDown;
+                }
+
+                if (scrollable.length > 0) {
+                    //is the scrollbar at the start/end of the scroll?
+                    if (isScrolled(check, scrollable)) {
+                        scrollSection();
+                    } else {
+                        return true;
+                    }
+                } else {
+                    //moved up/down
+                    scrollSection();
+                }}
+
+        }else {
+
         function scrolling(type, scrollable){
             var check;
             var scrollSection;
-
             if(type == 'down'){
                 check = 'bottom';
-                scrollSection = PP.moveSectionDown;
+                scrollSection = PP.moveSectionUp;
             }else{
                 check = 'top';
-                scrollSection = PP.moveSectionUp;
+                scrollSection = PP.moveSectionDown;
             }
 
             if(scrollable.length > 0 ){
@@ -657,6 +681,8 @@
                 //moved up/down
                 scrollSection();
             }
+        }
+
         }
 
         /**

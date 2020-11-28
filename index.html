@@ -22,10 +22,18 @@
 		* Plugin intialization
 		*/
 		$('#pagepiling').pagepiling({
+			//水平換頁
 			direction: 'horizontal',
 			menu: '#menu',
+			//換頁速度
+			scrollingSpeed: 700,
+			//循環回到首頁
+			loopBottom: true,
+			// 連結名稱
 			anchors: ['page1', 'page2', 'page3', 'page4'],
+			// 背景色
 			sectionsColor: ['white', '#ee005a', '#2C3E50', '#39C'],
+			// 點瀏覽
 			navigation: {
 				'position': 'right',
 				'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
