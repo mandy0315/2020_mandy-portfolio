@@ -634,28 +634,28 @@
         * by 'automatically' scrolling a section or by using the default and normal scrolling.
         */
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-            function scrolling(type, scrollable) {
-                var check;
-                var scrollSection;
-                if (type == 'down') {
-                    check = 'left';
-                    scrollSection = PP.moveSectionUp;
-                } else {
-                    check = 'right';
-                    scrollSection = PP.moveSectionDown;
-                }
+            // function scrolling(type, scrollable) {
+            //     var check;
+            //     var scrollSection;
+            //     if (type == 'down') {
+            //         check = 'left';
+            //         scrollSection = PP.moveSectionUp;
+            //     } else {
+            //         check = 'right';
+            //         scrollSection = PP.moveSectionDown;
+            //     }
 
-                if (scrollable.length > 0) {
-                    //is the scrollbar at the start/end of the scroll?
-                    if (isScrolled(check, scrollable)) {
-                        scrollSection();
-                    } else {
-                        return true;
-                    }
-                } else {
-                    //moved up/down
-                    scrollSection();
-                }}
+            //     if (scrollable.length > 0) {
+            //         //is the scrollbar at the start/end of the scroll?
+            //         if (isScrolled(check, scrollable)) {
+            //             scrollSection();
+            //         } else {
+            //             return true;
+            //         }
+            //     } else {
+            //         //moved up/down
+            //         scrollSection();
+            //     }}
 
         }else {
 
