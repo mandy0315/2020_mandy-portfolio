@@ -10,6 +10,7 @@ html, body {
     overflow:hidden;
     margin:0;
     padding:0;
+
     /*Avoid flicker on slides transitions for mobile phones #336 */
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -39,9 +40,6 @@ html, body {
     margin-top: -32px;
     bottom: 0;
     opacity: 1;
-}
-#pp-nav ul{
-    display: flex;
 }
 #pp-nav.right {
     right: 17px;
