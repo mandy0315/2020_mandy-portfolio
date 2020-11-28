@@ -709,7 +709,7 @@
                 //Microsoft pointers
                 var MSPointer = getMSPointer();
 
-                container.off('touchstart ' +  MSPointer.down).on('touchstart ' + MSPointer.down, touchStartHandler);
+                container.off('touchstart ' +  MSPointer.right).on('touchstart ' + MSPointer.right, touchStartHandler);
                 container.off('touchmove ' + MSPointer.move).on('touchmove ' + MSPointer.move, touchMoveHandler);
             }
         }
@@ -722,7 +722,7 @@
                 //Microsoft pointers
                 var MSPointer = getMSPointer();
 
-                container.off('touchstart ' + MSPointer.down);
+                container.off('touchstart ' + MSPointer.right);
                 container.off('touchmove ' + MSPointer.move);
             }
         }
