@@ -633,6 +633,29 @@
         * Determines the way of scrolling up or down:
         * by 'automatically' scrolling a section or by using the default and normal scrolling.
         */
+        function scrolling(type, scrollable) {
+            var check;
+            var scrollSection;
+            if (type == 'down') {
+                check = 'bottom';
+                scrollSection = PP.moveSectionUp;
+            } else {
+                check = 'top';
+                scrollSection = PP.moveSectionDown;
+            }
+
+            if (scrollable.length > 0) {
+                //is the scrollbar at the start/end of the scroll?
+                if (isScrolled(check, scrollable)) {
+                    scrollSection();
+                } else {
+                    return true;
+                }
+            } else {
+                //moved up/down
+                scrollSection();
+            }
+        }
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
             // function scrolling(type, scrollable) {
             //     var check;
@@ -659,29 +682,7 @@
 
         }else {
 
-        function scrolling(type, scrollable){
-            var check;
-            var scrollSection;
-            if(type == 'down'){
-                check = 'bottom';
-                scrollSection = PP.moveSectionUp;
-            }else{
-                check = 'top';
-                scrollSection = PP.moveSectionDown;
-            }
 
-            if(scrollable.length > 0 ){
-                //is the scrollbar at the start/end of the scroll?
-                if(isScrolled(check, scrollable)){
-                    scrollSection();
-                }else{
-                    return true;
-                }
-            }else{
-                //moved up/down
-                scrollSection();
-            }
-        }
 
         }
 
