@@ -633,20 +633,18 @@
         * Determines the way of scrolling up or down:
         * by 'automatically' scrolling a section or by using the default and normal scrolling.
         */
-        function scrolling(type, scrollable) {
-            var check;
-            var scrollSection;
-            
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                $("#section1").bind("swipeleft", function () {
-                    $.mobile.changePage("#page2");
-                });
-                $("#section1").bind("swiperight", function () {
-                    $.mobile.changePage("#page3");
-                });
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            $("#section1").bind("swipeleft", function () {
+                $.mobile.changePage("#page2");
+            });
+            $("#section1").bind("swiperight", function () {
+                $.mobile.changePage("#page3");
+            });
 
-            } else {
-
+        } else {
+            function scrolling(type, scrollable) {
+                var check;
+                var scrollSection;
                 if (type == 'down') {
                     check = 'bottom';
                     scrollSection = PP.moveSectionUp;
@@ -655,20 +653,21 @@
                     scrollSection = PP.moveSectionDown;
                 }
 
+                if (scrollable.length > 0) {
+                    //is the scrollbar at the start/end of the scroll?
+                    if (isScrolled(check, scrollable)) {
+                        scrollSection();
+                    } else {
+                        return true;
+                    }
+                } else {
+                    //moved up/down
+                    scrollSection();
+                }
             }
 
-            if (scrollable.length > 0) {
-                //is the scrollbar at the start/end of the scroll?
-                if (isScrolled(check, scrollable)) {
-                    scrollSection();
-                } else {
-                    return true;
-                }
-            } else {
-                //moved up/down
-                scrollSection();
-            }
         }
+        
         /**
         * Return a boolean depending on whether the scrollable element is at the end or at the start of the scrolling
         * depending on the given type.
