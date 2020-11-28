@@ -38,7 +38,7 @@ html, body {
     position: fixed;
     z-index: 100;
     margin-top: -32px;
-    bottom: 0;
+    top: 50%;
     opacity: 1;
 }
 #pp-nav.right {

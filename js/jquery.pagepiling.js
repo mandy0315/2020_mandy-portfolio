@@ -639,12 +639,11 @@
             var scrollSection;
 
             if(type == 'down'){
-                check = 'top';
-                scrollSection = PP.moveSectionUp;
-                
-            }else{
                 check = 'bottom';
                 scrollSection = PP.moveSectionDown;
+            }else{
+                check = 'top';
+                scrollSection = PP.moveSectionUp;
             }
 
             if(scrollable.length > 0 ){
