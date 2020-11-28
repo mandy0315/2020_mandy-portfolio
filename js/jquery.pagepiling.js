@@ -634,11 +634,29 @@
         * by 'automatically' scrolling a section or by using the default and normal scrolling.
         */
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-            $("#section1").bind("swipeleft", function () {
-                $.mobile.changePage("#page2");
+            $(document).on('swipeleft', '.ui-page', function (event) {
+                if (event.handled !== true) // This will prevent event triggering more then once
+                {
+                    var nextpage = $.mobile.activePage.next('[data-role="page"]');
+                    // swipe using id of next page if exists
+                    if (nextpage.length > 0) {
+                        $.mobile.changePage(nextpage, { transition: "slide", reverse: false }, true, true);
+                    }
+                    event.handled = true;
+                }
+                return false;
             });
-            $("#section1").bind("swiperight", function () {
-                $.mobile.changePage("#page3");
+
+            $(document).on('swiperight', '.ui-page', function (event) {
+                if (event.handled !== true) // This will prevent event triggering more then once
+                {
+                    var prevpage = $(this).prev('[data-role="page"]');
+                    if (prevpage.length > 0) {
+                        $.mobile.changePage(prevpage, { transition: "slide", reverse: true }, true, true);
+                    }
+                    event.handled = true;
+                }
+                return false;
             });
 
         } else {
@@ -796,48 +814,48 @@
 
         /* Detecting touch events
         */
-        function touchMoveHandler(event){
-            var e = event.originalEvent;
+        // function touchMoveHandler(event){
+        //     var e = event.originalEvent;
 
-            // additional: if one of the normalScrollElements isn't within options.normalScrollElementTouchThreshold hops up the DOM chain
-            if ( !checkParentForNormalScrollElement(event.target) && isReallyTouch(e) ) {
+        //     // additional: if one of the normalScrollElements isn't within options.normalScrollElementTouchThreshold hops up the DOM chain
+        //     if ( !checkParentForNormalScrollElement(event.target) && isReallyTouch(e) ) {
 
-                var activeSection = $('.pp-section.active');
-                var scrollable = isScrollable(activeSection);
+        //         var activeSection = $('.pp-section.active');
+        //         var scrollable = isScrollable(activeSection);
 
-                if(!scrollable.length){
-                    event.preventDefault();
-                }
+        //         if(!scrollable.length){
+        //             event.preventDefault();
+        //         }
 
-                if (!isMoving()) {
-                    var touchEvents = getEventsPage(e);
-                    touchEndY = touchEvents.y;
-                    touchEndX = touchEvents.x;
+        //         if (!isMoving()) {
+        //             var touchEvents = getEventsPage(e);
+        //             touchEndY = touchEvents.y;
+        //             touchEndX = touchEvents.x;
 
-                  //$('body').append('<span style="position:fixed; top: 250px; left: 20px; z-index:88; font-size: 25px; color: #000;">touchEndY: ' + touchEndY  + '</div>');
+        //           //$('body').append('<span style="position:fixed; top: 250px; left: 20px; z-index:88; font-size: 25px; color: #000;">touchEndY: ' + touchEndY  + '</div>');
 
-                    //X movement bigger than Y movement?
-                    // if (options.direction === 'horizontal' && Math.abs(touchStartX - touchEndX) > (Math.abs(touchStartY - touchEndY))) {
-                    //     //is the movement greater than the minimum resistance to scroll?
-                    //     if (Math.abs(touchStartX - touchEndX) > (container.width() / 100 * options.touchSensitivity)) {
-                    //         if (touchStartX > touchEndX) {
-                    //             scrolling('down', scrollable);
-                    //         } else if (touchEndX > touchStartX) {
-                    //             scrolling('up', scrollable);
-                    //         }
-                    //     }
-                    // } else {
-                    //     if (Math.abs(touchStartY - touchEndY) > (container.height() / 100 * options.touchSensitivity)) {
-                    //         if (touchStartY > touchEndY) {
-                    //             scrolling('down', scrollable);
-                    //         } else if (touchEndY > touchStartY) {
-                    //             scrolling('up', scrollable);
-                    //         }
-                    //     }
-                    // }
-                }
-            }
-        }
+        //             //X movement bigger than Y movement?
+        //             if (options.direction === 'horizontal' && Math.abs(touchStartX - touchEndX) > (Math.abs(touchStartY - touchEndY))) {
+        //                 //is the movement greater than the minimum resistance to scroll?
+        //                 if (Math.abs(touchStartX - touchEndX) > (container.width() / 100 * options.touchSensitivity)) {
+        //                     if (touchStartX > touchEndX) {
+        //                         scrolling('down', scrollable);
+        //                     } else if (touchEndX > touchStartX) {
+        //                         scrolling('up', scrollable);
+        //                     }
+        //                 }
+        //             } else {
+        //                 if (Math.abs(touchStartY - touchEndY) > (container.height() / 100 * options.touchSensitivity)) {
+        //                     if (touchStartY > touchEndY) {
+        //                         scrolling('down', scrollable);
+        //                     } else if (touchEndY > touchStartY) {
+        //                         scrolling('up', scrollable);
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
 
         /**
          * recursive function to loop up the parent nodes to check if one of them exists in options.normalScrollElements
