@@ -1,0 +1,88 @@
+//import font-en
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap')   
+//初始設定
+body,html
+    font-family: 'Noto Sans TC', sans-serif ,"微軟正黑體"
+    font-size: 16px
+    background: $day
+.wrapper
+    max-width: 480px
+    margin: 0 auto
+    width: 100%
+.clearfix 
+    clear: both
+.font-en
+    font-family: 'Lobster Two', cursive
+
+.header-container
+    height: 90px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0.2rem 1rem
+.logo
+    h1
+        display: block
+        background: url(../image/logo.svg) no-repeat
+        background-size: cover
+        width: 180px
+        height: 75px
+        text-indent: 101%
+        overflow: hidden
+        white-space: nowrap
+
+#menu 
+    position: fixed
+    top: 0
+    left: 0
+    height: 40px
+    z-index: 70
+    width: 100%
+    padding: 0
+    margin: 0
+    li 
+        display: inline-block
+        margin: 10px
+        color: #000
+        background: #fff
+        background: rgba(255,255,255, 0.5)
+        -webkit-border-radius: 10px
+        border-radius: 10px
+        &.active
+            background: #666
+            background: rgba(0,0,0, 0.5)
+            color: #fff
+        a
+            text-decoration: none
+            color: #000
+            &:hover
+                color: #000
+#menu li a,
+#menu li.active a
+    padding: 9px 18px
+    display: block
+
+#menu li.active a
+    color: #fff
+
+// 白天 夜晚背景
+.day
+    background: $day
+.night
+    background: $night
+.bg01
+    background: url(../image/logo.svg)
+
+    background-size: cover
+    width: 100%
+    height: 400px
+    background-position: bottom
+    position: absolute
+    bottom: 0
+
+
+
+
+
+    
+
