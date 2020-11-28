@@ -638,13 +638,7 @@
             var scrollSection;
             
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                if (type == 'down') {
-                    check = 'bottom';
-                    scrollSection = PP.moveSectionDown;
-                } else {
-                    check = 'top';
-                    scrollSection = PP.moveSectionUp;
-                }
+                console.log("移動");
 
             } else {
 
