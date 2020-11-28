@@ -49,6 +49,7 @@ abbr,acronym { border: 0;
 body{
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #f2f2f2;
+	overflow-y:hidden; 
 }
 h1{
 	font-size: 6em;
