@@ -636,12 +636,26 @@
         function scrolling(type, scrollable) {
             var check;
             var scrollSection;
-            if (type == 'down') {
-                check = 'bottom';
-                scrollSection = PP.moveSectionUp;
+            
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                if (type == 'down') {
+                    check = 'bottom';
+                    scrollSection = PP.moveSectionDown;
+                } else {
+                    check = 'top';
+                    scrollSection = PP.moveSectionUp;
+                }
+
             } else {
-                check = 'top';
-                scrollSection = PP.moveSectionDown;
+
+                if (type == 'down') {
+                    check = 'bottom';
+                    scrollSection = PP.moveSectionUp;
+                } else {
+                    check = 'top';
+                    scrollSection = PP.moveSectionDown;
+                }
+
             }
 
             if (scrollable.length > 0) {
@@ -709,7 +723,7 @@
                 //Microsoft pointers
                 var MSPointer = getMSPointer();
 
-                container.off('touchstart ' +  MSPointer.right).on('touchstart ' + MSPointer.right, touchStartHandler);
+                container.off('touchstart ' +  MSPointer.down).on('touchstart ' + MSPointer.down, touchStartHandler);
                 container.off('touchmove ' + MSPointer.move).on('touchmove ' + MSPointer.move, touchMoveHandler);
             }
         }
@@ -722,7 +736,7 @@
                 //Microsoft pointers
                 var MSPointer = getMSPointer();
 
-                container.off('touchstart ' + MSPointer.right);
+                container.off('touchstart ' + MSPointer.down);
                 container.off('touchmove ' + MSPointer.move);
             }
         }
