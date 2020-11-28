@@ -638,13 +638,12 @@
             var scrollSection;
             
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                if (type == 'down') {
-                    check = 'bottom';
-                    scrollSection = PP.moveSectionDown;
-                } else {
-                    check = 'top';
-                    scrollSection = PP.moveSectionUp;
-                }
+                $("#section1").bind("swipeleft", function () {
+                    $.mobile.changePage("#page2");
+                });
+                $("#section1").bind("swiperight", function () {
+                    $.mobile.changePage("#page3");
+                });
 
             } else {
 
