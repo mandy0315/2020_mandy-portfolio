@@ -3,7 +3,6 @@ $(document).ready(function(){
     LoadingInit();
   }
   function LoadingInit(){
-    alert("測試1");
     $('#loading-box').load("./share/loading.html");
     setTimeout(() => {
       $("#loading").show
@@ -16,7 +15,6 @@ $(window).on('load',function () {
   }
   function LoadingClose() {
   setTimeout(() => {
-    alert("測試2");
     $("#loading-box").slideUp(500);
   }, 4000);
   }
