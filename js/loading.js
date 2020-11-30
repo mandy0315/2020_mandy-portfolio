@@ -15,7 +15,6 @@ $(document).ready(function(){
     }, 2500);
   }
   function LoadingClose(){
-    $('#loading-box').load("./share/loading.html");
     setTimeout(() => {
       alert("測試2");
       $("#loading-box").slideUp(500);
