@@ -15,51 +15,18 @@
 	<!-- Link jquery-3.5.1.min.js -->
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<!-- Link loading Javascript -->
-	<!-- <script src="js/loading.js"></script> -->
-	<!-- partial -->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js'></script>
-	<!-- Link all.js -->
-	<script type="text/javascript" src="js/all.js"></script>
+	<script src="js/loading.js"></script>
 	<!-- Link pagepiling.js -->
 	<script type="text/javascript" src="js/jquery.pagepiling.js"></script>
-	<!-- Link pagepiling 自訂 -->
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#pagepiling').pagepiling({
-				//水平換頁
-				direction: 'horizontal',
-				menu: '#menu',
-				//換頁速度
-				scrollingSpeed: 700,
-				//循環回到首頁
-				loopBottom: true,
-				// 背景色
-				sectionsColor: ['', '', '', ''],
-				// 連結名稱
-				anchors: ['page1', 'page2', 'page3', 'page4'],
-				// 點瀏覽
-				navigation: {
-					'position': 'right',
-					'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
-				},
-				afterRender: function () {
-					$('#pp-nav').addClass('custom');
-				},
-				afterLoad: function (anchorLink, index) {
-					if (index > 1) {
-						$('#pp-nav').removeClass('custom');
-					} else {
-						$('#pp-nav').addClass('custom');
-					}
-				}
-			});
-		});
-	</script>
+	<!-- Link all.js -->
+	<script type="text/javascript" src="js/all.js"></script>
 </head>
 <body class="home">
-	<!-- <div id="loading-box">
-		<noscript>請升級您的瀏覽器以便預覽此網站</noscript>
-	</div> -->
+	<div id="loading-box">
+		<div id="loading-bg">
+			<noscript>請升級您的瀏覽器以便預覽此網站</noscript>
+		</div>
+	</div>
 	<header>
 		<noscript>請升級您的瀏覽器以便預覽此網站</noscript>
 	</header>

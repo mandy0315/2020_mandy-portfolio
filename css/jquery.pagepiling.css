@@ -44,15 +44,8 @@ html, body {
 #pp-nav ul{
     display: flex;
 }
-#pp-nav.right {
+#pp-nav.nav-position {
     right: 17px;
-}
-#pp-nav.center {
-    display: flex;
-    justify-content: center;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
 }
 .pp-section.pp-table{
     display: table;
@@ -119,18 +112,13 @@ html, body {
 }
 .pp-tooltip {
     position: absolute;
-    top: -2px;
+    bottom: 20px;
+    left: -12px;
     color: #fff;
     font-size: 14px;
     font-family: arial, helvetica, sans-serif;
     white-space: nowrap;
     max-width: 220px;
-}
-.pp-tooltip.right {
-    right: 20px;
-}
-.pp-tooltip.left {
-    left: 20px;
 }
 .pp-scrollable{
     overflow-y: scroll;
