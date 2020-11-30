@@ -38,14 +38,21 @@ html, body {
     position: fixed;
     z-index: 100;
     margin-top: -32px;
-    top: 50%;
+    bottom: 0px;
     opacity: 1;
+}
+#pp-nav ul{
+    display: flex;
 }
 #pp-nav.right {
     right: 17px;
 }
-#pp-nav.left {
-    left: 17px;
+#pp-nav.center {
+    display: flex;
+    justify-content: center;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 .pp-section.pp-table{
     display: table;

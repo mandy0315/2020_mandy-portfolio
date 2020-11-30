@@ -1,0 +1,73 @@
+//import font-en
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap')   
+/* Custom CSS */
+body,html
+    font-family: 'Noto Sans TC', sans-serif ,"微軟正黑體"
+    font-size: 16px
+    background: $day
+.wrapper
+    max-width: 480px
+    margin: 0 auto
+    width: 100%
+.clearfix 
+    clear: both
+.font-en
+    font-family: 'Lobster Two', cursive
+.day
+    background: $day
+.night
+    background: $night
+
+/* header */
+.header-container
+    height: 70px
+    display: flex
+    justify-content: space-between
+    align-items: center
+.logo-text
+    width: 200px
+/* Menu */
+#menu li 
+    display: inline-block
+    margin: 10px
+    color: #000
+    background: #fff
+    background: rgba(255,255,255, 0.5)
+    -webkit-border-radius: 10px
+    border-radius: 10px
+
+#menu li.active
+    background: #666
+    background: rgba(0,0,0, 0.5)
+    color: #fff
+
+#menu li a
+    text-decoration:none
+    color: #000
+
+#menu li.active a:hover
+    color: #000
+
+#menu li:hover
+    background: rgba(255,255,255, 0.8)
+
+#menu li a,
+#menu li.active a
+    padding: 9px 18px
+    display:block
+
+#menu li.active a
+    color: #fff
+
+.pp-scrollable
+    overflow-x: hidden
+
+#loading-bg
+    position: fixed
+    z-index: 1000
+    width: 100vw
+    height: 100vh
+    background: #73cacf
+    opacity: 1
+    -webkit-transition: opacity 1s 0s /* For Safari 3.1 to 6.0 */
+    transition: opacity 1s 0s
