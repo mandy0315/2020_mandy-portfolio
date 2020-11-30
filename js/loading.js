@@ -9,6 +9,7 @@ window.onload = function() {
 }
   function LoadingInit(){
     $('#loading-box').load("./share/loading.html");
+    alert("反應");
     // setTimeout(() => {
     //   $(".loading-logo").addClass('active2')
     // }, 1500);
@@ -16,13 +17,13 @@ window.onload = function() {
       $("#loading").show
     }, 2500);
   }
-  function LoadingClose(){
+  function LoadingClose() {
+    $('#loading-box').load("./share/loading.html");
     // setTimeout(() => {
-    //   $("#loading").addClass('active');
-    // }, 3500);
-    alert("反應");
+    //   $(".loading-logo").addClass('active2')
+    // }, 1500);
     setTimeout(() => {
-        $("#loading-box").slideUp(500);
+      $("#loading-box").slideUp(500);
     }, 4000);
   }
 });
