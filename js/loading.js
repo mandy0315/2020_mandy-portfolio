@@ -4,7 +4,7 @@ $(document).ready(function () {
   }
 window.onload = function() {
     if($("body").hasClass('home')){
-      alert("onload");
+      alert("測試1");
       LoadingClose();
     }
 }
@@ -23,7 +23,7 @@ window.onload = function() {
     //   $(".loading-logo").addClass('active2')
     // }, 1500);
     setTimeout(() => {
-      alert("LoadingClose");
+      alert("測試2");
       $("#loading-box").slideUp(500);
     }, 4000);
   }
