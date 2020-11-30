@@ -4,11 +4,11 @@ $(document).ready(function(){
   }
   window.onload = function(){
       if($("body").hasClass('home')){
-        alert("測試1");
         LoadingClose();
       }
   }
   function LoadingInit(){
+    alert("測試1");
     $('#loading-box').load("./share/loading.html");
     setTimeout(() => {
       $("#loading").show
