@@ -20,8 +20,9 @@ window.onload = function() {
     // setTimeout(() => {
     //   $("#loading").addClass('active');
     // }, 3500);
+    alert("反應");
     setTimeout(() => {
-      $("#loading-box").slideUp(500);
-    },4000)
+        $("#loading-box").slideUp(500);
+    }, 4000);
   }
 });
