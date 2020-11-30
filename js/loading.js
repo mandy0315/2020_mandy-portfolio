@@ -4,8 +4,8 @@ $(document).ready(function () {
   }
 window.onload = function() {
     if($("body").hasClass('home')){
-      alert("反應");
-      LoadingClose()
+      alert("onload");
+      LoadingClose();
     }
 }
   function LoadingInit(){
@@ -23,6 +23,7 @@ window.onload = function() {
     //   $(".loading-logo").addClass('active2')
     // }, 1500);
     setTimeout(() => {
+      alert("LoadingClose");
       $("#loading-box").slideUp(500);
     }, 4000);
   }
