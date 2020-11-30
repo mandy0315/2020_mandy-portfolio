@@ -18,7 +18,7 @@ $(document).ready(function () {
         });
     }
     getServerTime();
-    $('header').load('./component/header.html', function () {
+    $('header').load('./share/header.html', function () {
     });
     function windowSize() {
         var navPosition = $('#pp-nav');
