@@ -20,19 +20,19 @@ $(document).ready(function () {
     getServerTime();
     $('header').load('./share/header.html', function () {
     });
-    function windowSize() {
-        var navPosition = $('#pp-nav');
-        if ($(window).width() <= 768) {
-            navPosition.addClass("center");
-            navPosition.removeClass("right");
-        } else {
-            navPosition.addClass("right");
-            navPosition.removeClass("center");
-        }
-    };
-    $(window).resize(function () {
-        windowSize();
-    });
+    // function windowSize() {
+    //     var navPosition = $('#pp-nav');
+    //     if ($(window).width() <= 768) {
+    //         navPosition.addClass("center");
+    //         navPosition.removeClass("right");
+    //     } else {
+    //         navPosition.addClass("right");
+    //         navPosition.removeClass("center");
+    //     }
+    // };
+    // $(window).resize(function () {
+    //     windowSize();
+    // });
 
     
     

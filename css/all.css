@@ -162,3 +162,13 @@ body, html {
   -webkit-transition: opacity 1s 0s;
   transition: opacity 1s 0s;
 }
+
+@media only screen and (max-width: 768px) {
+  #pp-nav.right {
+    display: flex;
+    justify-content: center;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+}
