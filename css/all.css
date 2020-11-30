@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*reset start */
-@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,8 +56,6 @@ img {
 
 *, *::after, *::before {
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 
 input[type="submit"],
@@ -69,15 +66,17 @@ button {
 }
 
 /*reset end */
-/* Custom CSS */
 body, html {
   font-family: "Noto Sans TC", sans-serif, "微軟正黑體";
   font-size: 16px;
-  background: #7DAFD4;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #727171;
 }
 
 .wrapper {
-  max-width: 480px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
@@ -86,79 +85,128 @@ body, html {
   clear: both;
 }
 
-.font-en {
-  font-family: "Lobster Two", cursive;
-}
-
-.day {
-  background: #7DAFD4;
-}
-
-.night {
-  background: #3A64A1;
-}
-
-/* header */
-.header-container {
+.header {
   height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #ffffff;
+  top: -30px;
+  padding: 0.3rem 0;
 }
 
-.logo-text {
-  width: 200px;
+.logo {
+  position: relative;
+  z-index: 30;
+  display: inline;
+  width: 100%;
 }
-
-/* Menu */
-#menu li {
+.logo a {
   display: inline-block;
-  margin: 10px;
-  color: #000;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.5);
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: url(../image/logo.svg) no-repeat;
+  width: 185px;
+  height: 58px;
+  background-size: contain;
 }
 
-#menu li.active {
-  background: #666;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+.menu {
+  display: inline-block;
+  float: right;
+  padding-top: 1.35rem;
 }
-
-#menu li a {
-  color: #000;
+.menu .pages {
+  display: inline-block;
+  float: right;
+  height: 30px;
 }
-
-#menu li.active a:hover {
-  color: #000;
+.menu .pages div {
+  float: left;
+  padding-left: 2rem;
 }
-
-#menu li:hover {
-  background: rgba(255, 255, 255, 0.8);
+.menu .pages div a {
+  font-size: 1rem;
+  color: #727171;
+  text-decoration: none;
 }
-
-#menu li a,
-#menu li.active a {
-  padding: 9px 18px;
+.menu .pages div a::after {
+  content: "";
+  opacity: 0;
+  width: 0;
+  margin: 0 auto;
+  height: 3px;
+  margin-top: 1.55rem;
+  display: block;
+  transition: width 0.8s;
+  -webkit-transition: width 0.8s;
 }
-
-#menu li.active a {
-  color: #fff;
+.menu .pages div a:hover {
+  color: #009fa8;
 }
-
-.pp-scrollable {
-  overflow-x: hidden;
-}
-
-#loading-bg {
-  position: fixed;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  background: #73cacf;
+.menu .pages div a:hover::after {
   opacity: 1;
-  -webkit-transition: opacity 1s 0s;
-  transition: opacity 1s 0s;
+  width: 100%;
+  transition: width 0.8s;
+  -webkit-transition: width 0.8s;
+}
+.menu .language {
+  float: right;
+  display: inline-block;
+  padding-left: 1.8rem;
+}
+.menu .language div {
+  float: left;
+  padding-left: 0.5rem;
+}
+.menu .language div a {
+  font-size: 1rem;
+  color: gray;
+  text-decoration: none;
+}
+.menu .language div a:hover {
+  color: #009fa8;
+}
+
+section {
+  padding: 20rem 0;
+}
+
+.footer {
+  position: relative;
+  z-index: 10;
+  background: #ffffff;
+  padding: 3rem 0;
+}
+
+.vic-logo-news {
+  float: left;
+  width: 50%;
+}
+.vic-logo-news .logo {
+  padding-top: 0;
+  padding-bottom: 1.2rem;
+}
+.vic-logo-news .vic-news p {
+  font-size: 0.9rem;
+  color: #727171;
+  line-height: 1.8;
+}
+
+.menu-copy {
+  width: 50%;
+}
+.menu-copy .pages {
+  height: 30px;
+}
+.menu-copy p {
+  padding-top: 2rem;
+  float: right;
+  color: #727171;
+}
+
+.mandy {
+  color: white;
+}
+
+.mandy2 {
+  color: red;
 }

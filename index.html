@@ -1,92 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>旅圖 | MandyPortfoilo</title>
-	<!-- Link siteicon -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="shortcut icon" href="image/logo_icon.ico">
-	<!-- Link pagepiling.css -->
-	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
-	<!-- Link all.css -->
-	<link rel="stylesheet" type="text/css" href="css/all.css" />
-	<!-- Link jquery-3.5.1.min.js -->
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<!-- Link loading Javascript -->
-	<!-- <script src="js/loading.js"></script> -->
-	<!-- partial -->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js'></script>
-	<!-- Link all.js -->
-	<script type="text/javascript" src="js/all.js"></script>
-	<!-- Link pagepiling.js -->
-	<script type="text/javascript" src="js/jquery.pagepiling.js"></script>
-	<!-- Link pagepiling 自訂 -->
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#pagepiling').pagepiling({
-				//水平換頁
-				direction: 'horizontal',
-				menu: '#menu',
-				//換頁速度
-				scrollingSpeed: 700,
-				//循環回到首頁
-				loopBottom: true,
-				// 背景色
-				sectionsColor: ['', '', '', ''],
-				// 連結名稱
-				anchors: ['page1', 'page2', 'page3', 'page4'],
-				// 點瀏覽
-				navigation: {
-					'position': 'right',
-					'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
-				},
-				afterRender: function () {
-					$('#pp-nav').addClass('custom');
-				},
-				afterLoad: function (anchorLink, index) {
-					if (index > 1) {
-						$('#pp-nav').removeClass('custom');
-					} else {
-						$('#pp-nav').addClass('custom');
-					}
-				}
-			});
-		});
-	</script>
+    <title>路博邁獨家打造的  N次方程式讓你投資省更多！</title>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- all CSS -->
+	<link rel="stylesheet" href="css/all.css">
 </head>
-<body class="home">
-	<!-- <div id="loading-box">
-		<noscript>請升級您的瀏覽器以便預覽此網站</noscript>
-	</div> -->
-	<header>
-		<noscript>請升級您的瀏覽器以便預覽此網站</noscript>
-	</header>
-
-	<div id="pagepiling">
-	    <div class="section pp-scrollable" id="section1">
-			<br />
-
-	    	<h1>Horizontal Scroll</h1>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe porro labore, sunt ducimus ullam magnam architecto, animi iusto atque asperiores quae eos aut? Itaque corporis numquam mollitia in accusantium sunt placeat quo non assumenda, libero laborum dolorum repellat tenetur, earum amet quis nemo? Expedita cum, distinctio dolorem earum sit et atque nesciunt nulla recusandae similique quas? Quidem, pariatur? Saepe, expedita optio. Et adipisci aperiam possimus, minima perferendis dolorem ullam quam voluptatibus voluptatum eius. Eum magnam dolore eligendi doloribus necessitatibus in ipsa officiis laboriosam aliquam pariatur, iusto maxime nihil aliquid alias veritatis? Tempora accusamus eos commodi, hic inventore doloribus vel iure!</p>
-
-	    </div>
-	    <div class="section" id="section2">
-	    	<div class="intro">
-	    		<h1>Simple to use</h1>
-	    		<p>Just use the option direction: 'horizontal' to have it working!</p>
-	    	</div>
-	    </div>
-	    <div class="section" id="section3">
-	    	<div class="intro">
-	    		<h1>Isn't it great?</h1>
-	    		<p>Just as you expected!</p>
-	    		<div id="colors2"></div>
-	    		<div id="colors3"></div>
-	    	</div>
-	    </div>
-	</div>
-	
+<body>
+    <!-- header -->
+    <header>
+        <noscript>請升級您的瀏覽器以便預覽此網站</noscript>
+    </header>
+    
+    <section>
+        <div class="wrapper">
+            <h1 class="mandy mandy2">我是曼蒂</h1>
+        </div>
+    </section>
+    
+    <!-- footer -->
+    <footer>
+        <noscript>請升級您的瀏覽器以便預覽此網站</noscript>
+    </footer>
+    <!--jquery-3.4.1 JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- all JS -->
+    <script src="js/all.js"></script>
 </body>
 </html>
