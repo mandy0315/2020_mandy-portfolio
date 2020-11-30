@@ -4,12 +4,12 @@ $(document).ready(function () {
   }
 window.onload = function() {
     if($("body").hasClass('home')){
+      alert("反應");
       LoadingClose()
     }
 }
   function LoadingInit(){
     $('#loading-box').load("./share/loading.html");
-    alert("反應");
     // setTimeout(() => {
     //   $(".loading-logo").addClass('active2')
     // }, 1500);
