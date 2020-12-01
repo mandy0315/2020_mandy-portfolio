@@ -11,11 +11,11 @@ $(document).ready(function () {
         // 背景色
         sectionsColor: ['', '', '', ''],
         // 連結名稱
-        anchors: ['page1', 'page2', 'page3', 'page4'],
+        anchors: ['home', 'about', 'skills', 'works', 'contact'],
         // 點瀏覽
         navigation: {
             'position': 'nav-position',
-            'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
+            'tooltips': ['Home', 'About', 'Skills', 'Works', 'Contact']
         },
         afterRender: function () {
             $('#pp-nav').addClass('custom');
@@ -50,5 +50,7 @@ $(document).ready(function () {
     //header 載入
     $('header').load('./share/header.html', function () {
     });
+    //nav 
+    $('#pp-nav').append('<div class="line-dotted"></div>');
 
 });

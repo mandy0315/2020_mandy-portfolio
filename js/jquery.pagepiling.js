@@ -905,6 +905,7 @@
         /**
         * Navigation tooltips
         */
+        
         $(document).on({
             mouseenter: function(){
                 var tooltip = $(this).data('tooltip');
