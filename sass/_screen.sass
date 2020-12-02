@@ -68,23 +68,29 @@ body,html
     bottom: 15px
 /* nav end */
 /* home */
-.pp-tableCell
+.section
     overflow: hidden
     width: 100%
     margin: 0 auto
     position: relative
-.big-title
+.big-title-box
     display: flex
     justify-content: center
     position: absolute
-    top: 100px
+    bottom: 80px
     width: 100%
     z-index: 10
     img
-        max-width: 400px
+        max-width: 280px
         filter: drop-shadow(0px 6px 0px rgba(85,150,202,.8))
-.home-day
+.home-air-wrapper,.home-city-wrapper
+    margin-top: -80px
+    position: relative
+.home-city-wrapper
+    margin-top: -40px
+.home-day-box,.home-city-box
     width: 100%
+    height: 300px
     margin: 0 auto
     position: relative
     .home-day-cloud,.home-day-sun
@@ -96,14 +102,81 @@ body,html
         img
             width: 100%
     .home-day-sun
-        top: 80px
-        padding-left: 80px
+        top: 100px
+        padding-left: 60px
         img
-            width: 80px
+            width: 70px
             -webkit-animation: turn-An 16s linear infinite
             animation: turn-An 16s linear infinite
+.home-city-box
+    height: 400px
+    .home-bluecity,.home-city
+        width: 2000px
+        height: auto
+        position: absolute
+        left: calc(50% - 1000px)
+        bottom: 0
+        img
+            width: 100%
+    .home-bluecity-up
+        z-index: 10
+    .home-city-up
+        z-index: 15
+        bottom: -2px
+.home-my-box
+    position: absolute
+    top: 100px
+    z-index: 20
+    left: 240px
+    img
+        width: 180px
 
-            
+.home-road-box
+    background-color: $gray
+    height: 100vh
+    position: relative
+    .home-ZebraRoad
+        background: url(../images/home/home-ZebraRoad.svg) no-repeat
+        width: 433px
+        height: 160px
+        background-size: contain
+        position: absolute
+        left: 140px
+.home-car,.home-car2
+    position: absolute
+    z-index: 15
+    top: -70px
+    ul
+        position: relative
+        height: 120px
+        width: 2000px
+        li
+            opacity: 0
+            position: absolute
+            bottom: 0
+            width: 100%
+            .home-car-up01,.home-car-up04
+                width: 150px
+            .home-scooter-up02
+                width: 80px
+            .home-car-up03
+                width: 120px
+.home-car2
+    top: -35px
+    ul
+        li
+            opacity: 0
+            .home-car-down01
+                width: 170px
+            .home-car-down02
+                width: 200px
+            .home-scooter-down03
+                width: 100px
+
+                
+
+
+
 /* home end */  
 /* Menu */
 // #menu li 

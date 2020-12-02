@@ -28,6 +28,8 @@ $(document).ready(function () {
             }
         }
     });
+    //nav 
+    $('#pp-nav').append('<div class="line-dotted"></div>');
     //時間更換背景
     function getServerTime() {
         $.ajax({
@@ -50,7 +52,6 @@ $(document).ready(function () {
     //header 載入
     $('header').load('./share/header.html', function () {
     });
-    //nav 
-    $('#pp-nav').append('<div class="line-dotted"></div>');
+
 
 });
