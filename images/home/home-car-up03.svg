@@ -14,7 +14,7 @@
         <polygon class="cls-6" points="81.29 17.78 70.29 31.84 66.95 31.96 81.43 13.48 81.29 17.78"/>
         <polygon class="cls-6" points="99.07 32.08 112.4 15.02 111.96 11.47 95.93 31.93 99.07 32.08"/>
         <path class="cls-7" d="M1.2,56.15H7.41c5.54,0,7-1.57,8.09-4.42,0,0,2.73-5.14-4.15-5.14H3.91S1.1,46.5,1.08,50.18Z"/>
-        <animateTransform attributeType="auto" attributeName="transform" type="translate" values="0 0; 0 -1.8; 0 0" dur="0.8s" begin="0" repeatCount="indefinite" />
+        <animateTransform attributeType="auto" attributeName="transform" type="translate" values="0 0; 0 -2.5; 0 0" dur="0.8s" begin="0" repeatCount="indefinite" />
 
     </g>
     <g>

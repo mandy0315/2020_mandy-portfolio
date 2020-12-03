@@ -33,7 +33,7 @@
         <polygon class="cls-11" points="110.33 13.59 105.14 13.59 120.88 40.39 126.41 40.39 110.33 13.59"/>
         <polygon class="cls-11" points="28.76 13.76 37.14 13.76 53.05 40.55 44.01 40.39 28.76 13.76"/>
         <polygon class="cls-11" points="24.41 13.76 19.22 13.76 34.96 40.55 40.49 40.55 24.41 13.76"/>
-        <animateTransform attributeType="auto" attributeName="transform" type="translate" values="0 0; 0 -1.8; 0 0" dur="0.8s" begin="0" repeatCount="indefinite" />
+        <animateTransform attributeType="auto" attributeName="transform" type="translate" values="0 0; 0 -2.5; 0 0" dur="0.8s" begin="0" repeatCount="indefinite" />
     </g>
     <g>
         <circle class="cls-7" cx="121.11" cy="95.72" r="12.6"/>

@@ -11,15 +11,17 @@
     li
         -webkit-animation: home-car-up-An 12s linear infinite
         animation: home-car-up-An 12s linear infinite
+        -webkit-animation-delay: 5s
+        animation-delay: 5s
         &:nth-child(2)
-            -webkit-animation-delay: 4s
-            animation-delay: 4s
+            -webkit-animation-delay: 9s
+            animation-delay: 9s
         &:nth-child(3)
-            -webkit-animation-delay: 5s
-            animation-delay: 5s
+            -webkit-animation-delay: 10s
+            animation-delay: 10s
         &:nth-child(4)
-            -webkit-animation-delay: 8s
-            animation-delay: 8s
+            -webkit-animation-delay: 14s
+            animation-delay: 14s
 @keyframes home-car-up-An
     from
         opacity: 1
@@ -29,17 +31,19 @@
         opacity: 1
         -webkit-transform: translateX(-50%)
         transform: translateX(-50%)
-.home-car-up-an2
+.home-car-up-down
     li
-        -webkit-animation: home-car-up-An2 12s linear infinite
-        animation: home-car-up-An2 12s linear infinite
+        -webkit-animation: home-car-up-down 12s linear infinite
+        animation: home-car-up-down 12s linear infinite
+        -webkit-animation-delay: 5s
+        animation-delay: 5s
         &:nth-child(2)
-            -webkit-animation-delay: 2s
-            animation-delay: 2s
+            -webkit-animation-delay: 7s
+            animation-delay: 7s
         &:nth-child(3)
-            -webkit-animation-delay: 5s
-            animation-delay: 5s
-@keyframes home-car-up-An2
+            -webkit-animation-delay: 10s
+            animation-delay: 10s
+@keyframes home-car-up-down
     from
         opacity: 1
         -webkit-transform: translateX(-50%)
@@ -48,4 +52,36 @@
         opacity: 1
         -webkit-transform: translateX(100%)
         transform: translateX(100%)
-
+//home-day-cloud-an
+.home-day-cloud-an2,.home-day-cloud-an3
+    -webkit-animation: home-day-cloud-an2 40s linear infinite
+    animation: home-day-cloud-an2 40s linear infinite
+    opacity: 0
+.home-day-cloud-an3
+    -webkit-animation-delay: 20s
+    animation-delay: 20s
+@keyframes home-day-cloud-an2
+    from
+        opacity: 1
+        -webkit-transform: translateX(-100%)
+        transform: translateX(-100%)
+    to
+        opacity: 1
+        -webkit-transform: translateX(100%)
+        transform: translateX(100%)
+//home-my-an
+.home-my-an
+    -webkit-animation: home-my-an 1s ease-in 1 forwards
+    animation: home-my-an 1s ease-in 1 forwards
+    opacity: 0
+    -webkit-animation-delay: 4s
+    animation-delay: 4s
+@keyframes home-my-an
+    from
+        opacity: 0
+        -webkit-transform: translate(0px,0px)
+        transform: translate(0px,0px)
+    to
+        opacity: 1
+        -webkit-transform: translate(20px,8px)
+        transform: translate(20px,8px)

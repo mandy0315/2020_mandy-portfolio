@@ -4,9 +4,9 @@ $(document).ready(function(){
   }
   function LoadingInit(){
     $('#loading-box').load("./share/loading.html");
-    setTimeout(() => {
-      $("#loading").show
-    }, 2500);
+    // setTimeout(() => {
+    //   $("#loading").show
+    // }, 2500);
   }
 });
 $(window).on('load',function () {
@@ -16,6 +16,6 @@ $(window).on('load',function () {
   function LoadingClose() {
   setTimeout(() => {
     $("#loading-box").slideUp(500);
-  }, 4000);
+  }, 2000);
   }
 });
