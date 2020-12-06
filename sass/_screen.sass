@@ -1,9 +1,14 @@
 //import font-en
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap')   
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&display=swap') 
 /* Custom CSS */
 body,html
     font-family: 'Noto Sans TC', sans-serif ,"微軟正黑體"
     font-size: 16px
+body.lock
+    overflow: hidden
+    position: fixed
+    height: 100%
+    width: 100%
 .wrapper
     max-width: 1440px
     margin: 0 auto
@@ -33,7 +38,9 @@ body,html
     display: flex
     justify-content: space-between
     align-items: center
-.logo-wrapper,.menu-wrapper
+    z-index: 120
+    position: relative
+.logo-wrapper,.menu-icon-wrapper
     display: block
     filter: drop-shadow(0px 6px 0px rgba(85,150,202,.8))
     a,.menu-icon
@@ -46,9 +53,10 @@ body,html
         height: 78px
         background-size: contain
         img
+            z-index: 120
             width: 100%
             padding: 10px 18px 0px 18px
-.menu-wrapper
+.menu-icon-wrapper
     .menu-icon
         display: inline-block
         background: url(../images/icon/menu.svg) no-repeat 
@@ -56,10 +64,95 @@ body,html
         height: 68px 
         img
             padding: 20px 10px
-            &:hover
-                -webkit-animation: turn-An 2.5s linear infinite
-                animation: turn-An 2.5s linear infinite
+            transform: rotateZ(90deg) translate3d(0,0,0)
+            -webkit-transform: rotateZ(90deg) translate3d(0,0,0)
+            -webkit-transition: all 500ms ease-in-out
+            transition: all 500ms ease-in-out
 /* header end*/
+/* menu */
+.menu-bgw-box
+    position: fixed
+    z-index: 100
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background: $white
+    opacity: .75
+    -webkit-transform: translate3d(100%,0,0)
+    transform: translate3d(100%,0,0)
+    -webkit-transition: all 500ms ease-in-out
+    transition: all 500ms ease-in-out
+    &.active
+        -webkit-transform: translate3d(0,0,0)
+        -moz-transform: translate3d(0,0,0)
+        transform: translate3d(0,0,0)
+        -webkit-transition: all 500ms ease-in-out
+        -moz-transition: all 500ms ease-in-out
+        transition: all 500ms ease-in-out
+.menu-contant-box
+    position: fixed
+    z-index: 100
+    top: 0
+    right: -1px
+    width: 25rem
+    height: 100vh
+    display: block
+    div
+        position: absolute
+    .menu-img-up,.menu-img-down
+        width: 7.75rem
+        margin-top: -1px
+        img
+            width: 100%
+    .menu-img-down
+        width: 10rem
+        bottom: -1px
+        right: 0px
+        ul
+            position: relative
+            .menu-hitballoon
+                position: absolute
+                width: 8rem
+                bottom: 20px
+                right: 20px
+    .menu-text
+        height: 100vh
+        ul
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding: 0px 2.5rem
+            li
+                padding-bottom: 1.5rem
+                a
+                    text-decoration: none
+                    display: flex
+                    &.fa-arrow-circle-right
+                        &:before
+                            display: none
+                        &:after
+                            content: "\f0a9"
+                            font-size: $h5
+                            color: $white
+                            margin-left: 0.5rem
+                            margin-top: 1rem
+                    h2
+                        letter-spacing: 2px
+                        color: $white
+                        font-size: $h5
+                        line-height: 1.2
+                        span
+                            font-size: $h2
+                            font-weight: normal
+                    svg
+                        width: 20px
+                        margin: 1rem 0.6rem
+                        .menu-arrow-icon
+                            fill: $white
+
+/* menu end */
 /* nav */
 .line-dotted
     border-top: 2px dotted #4D3224
@@ -88,16 +181,17 @@ body,html
     position: relative
 .home-city-wrapper
     margin-top: -40px
-.home-day-box
+//日夜 remove/add class
+.home-day-box,.home-night-box,.home-day-car,.home-day-car2,.home-night-car,.home-night-car2
     display: none
     &.active
-        display: inline
-.home-day-box,.home-city-box
+        display: block
+.home-day-box,.home-night-box,.home-city-box
     width: 100%
     height: 300px
     margin: 0 auto
     position: relative
-    .home-day-cloud,.home-day-sun
+    .home-day-sun,.home-night-moon-box,.home-day-cloud,.home-night-star
         width: 1400px
         height: auto
         position: absolute
@@ -105,13 +199,29 @@ body,html
         top: 0
         img
             width: 100%
-    .home-day-sun
+    .home-day-sun,.home-night-moon
         top: 100px
-        padding-left: 60px
+        padding: 0 0 0 60px
         img
             width: 70px
-            -webkit-animation: turn-An 16s linear infinite
-            animation: turn-An 16s linear infinite
+    .home-night-moon,.home-moon-light
+        position: absolute
+        right: 0px
+        height: 100px
+        z-index: 5
+    .home-moon-light
+        right: -20px
+        top: 90px
+        z-index: 0
+        img
+            width: 100px
+//home-day-cloud 重複雲朵
+.home-day-cloud-an2
+    ul
+        &:nth-of-type(2)
+            position: relative
+            left: -90%
+            height: 300px
 .home-city-box
     height: 400px
     .home-bluecity,.home-city
@@ -134,7 +244,6 @@ body,html
     left: 240px
     img
         width: 180px
-
 .home-road-box
     background-color: $gray
     height: 100vh
@@ -146,7 +255,8 @@ body,html
         background-size: contain
         position: absolute
         left: 140px
-.home-car,.home-car2
+//home-day-car,home-night-car車
+.home-day-car,.home-day-car2,.home-night-car,.home-night-car2
     position: absolute
     z-index: 15
     top: -70px
@@ -165,7 +275,16 @@ body,html
                 width: 80px
             .home-car-up03
                 width: 120px
-.home-car2
+.home-night-car
+    ul
+        li
+            .home-car-up01,.home-car-up04
+                width: 190px
+            .home-scooter-up02
+                width: 120px
+            .home-car-up03
+                width: 160px
+.home-day-car2,.home-night-car2
     top: -35px
     ul
         li
@@ -176,48 +295,54 @@ body,html
                 width: 200px
             .home-scooter-down03
                 width: 100px
-.home-day-cloud-an2
+.home-night-car2
     ul
-        &:nth-of-type(2)
-            position: relative
-            left: -90%
-            height: 300px
-                
+        li
+            .home-car-down01
+                width: 230px
+            .home-car-down02
+                width: 260px
+            .home-scooter-down03
+                width: 160px
+.arrow-pages-wrapper
+    position: absolute
+    top: calc(50vh - 80px)
+    left: 0        
+    z-index: 20
+    padding: 10px 20px
+    display: flex
+    justify-content: space-between
+    width: 100%
+    .arrow-pages-left,.arrow-pages-right
+        -webkit-transform: translateX(0px)
+        transform: translateX(0px)
+        &:hover
+            -webkit-transform: translateX(10px)
+            transform: translateX(10px)
+            -webkit-transition: all 0.5s ease-in-out
+            transition: all 0.5s ease-in-out
+        a
+            display: block
+            &:hover
+                .arrow-pages-style
+                    path
+                        fill: #F5E69A
+            svg
+                width: 35px
+                filter: drop-shadow(0px 3px 0px rgba(77, 50, 36, 1))
+                path
+                    fill: #fff
+                    stroke: #4d3224
+                    stroke-linecap: round
+                    stroke-linejoin: round
+                    stroke-width: 2px
+    .arrow-pages-left
+        &:hover
+            -webkit-transform: translateX(-10px)
+            transform: translateX(-10px)
 
 
 
 /* home end */  
-/* Menu */
-// #menu li 
-//     display: inline-block
-//     margin: 10px
-//     color: #000
-//     background: #fff
-//     background: rgba(255,255,255, 0.5)
-//     -webkit-border-radius: 10px
-//     border-radius: 10px
-
-// #menu li.active
-//     background: #666
-//     background: rgba(0,0,0, 0.5)
-//     color: #fff
-
-// #menu li a
-//     text-decoration:none
-//     color: #000
-
-// #menu li.active a:hover
-//     color: #000
-
-// #menu li:hover
-//     background: rgba(255,255,255, 0.8)
-
-// #menu li a,
-// #menu li.active a
-//     padding: 9px 18px
-//     display:block
-
-// #menu li.active a
-//     color: #fff
 
 

@@ -1,4 +1,16 @@
-//home-sea-an
+//home-menu-an
+.open-menu-icon-an
+    .menu-icon
+        img
+            transform: rotateZ(180deg) translate3d(0,0,0)
+            -webkit-transform: rotateZ(180deg) translate3d(0,0,0)
+            -webkit-transition: all 500ms ease-in-out
+            transition: all 500ms ease-in-out
+//home-sun-an
+.home-day-sun-an
+    img
+        -webkit-animation: turn-An 16s linear infinite
+        animation: turn-An 16s linear infinite
 @keyframes turn-An
     from
         -webkit-transform: rotateZ(0deg) translate3d(0,0,0)
@@ -69,6 +81,26 @@
         opacity: 1
         -webkit-transform: translateX(100%)
         transform: translateX(100%)
+
+//home-moon-light-an
+.home-moon-light-an
+    img
+        -webkit-animation: home-moon-light-an 4s ease-in-out infinite
+        animation: home-moon-light-an 4s ease-in-out infinite
+        opacity: 1
+@keyframes home-moon-light-an
+    0%
+        opacity: 0.8
+        -webkit-transform: scale(1)
+    50%
+        opacity: 1
+        -webkit-transform: scale(1.4)
+        transform: scale(1.4)
+    100%
+        opacity: 0.8
+        -webkit-transform: scale(1)
+        transform: scale(1)
+
 //home-my-an
 .home-my-an
     -webkit-animation: home-my-an 1s ease-in 1 forwards

@@ -935,10 +935,10 @@
         /**
          * Activating the website main menu elements according to the given slide name.
          */
-        function activateMenuElement(name){
-            if(options.menu){
+        function activateMenuElement(name) {
+            if (options.menu) {
                 $(options.menu).find('.active').removeClass('active');
-                $(options.menu).find('[data-menuanchor="'+name+'"]').addClass('active');
+                $(options.menu).find('[data-menuanchor="' + name + '"]').addClass('active');
             }
         }
 

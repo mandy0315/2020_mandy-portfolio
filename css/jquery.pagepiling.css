@@ -36,7 +36,7 @@ html, body {
 }
 #pp-nav {
     position: absolute;
-    z-index: 100;
+    z-index: 50;
     margin-top: -32px;
     bottom: 20px;
     opacity: 1;
