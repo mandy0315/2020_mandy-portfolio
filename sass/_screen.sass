@@ -38,7 +38,7 @@ body.lock
     display: flex
     justify-content: space-between
     align-items: center
-    z-index: 120
+    z-index: 200
     position: relative
 .logo-wrapper,.menu-icon-wrapper
     display: block
@@ -85,20 +85,27 @@ body.lock
     transition: all 500ms ease-in-out
     &.active
         -webkit-transform: translate3d(0,0,0)
-        -moz-transform: translate3d(0,0,0)
         transform: translate3d(0,0,0)
         -webkit-transition: all 500ms ease-in-out
-        -moz-transition: all 500ms ease-in-out
         transition: all 500ms ease-in-out
 .menu-contant-box
     position: fixed
-    z-index: 100
+    z-index: 120
     top: 0
     right: -1px
     width: 25rem
     height: 100vh
     display: block
-    div
+    -webkit-transform: translate3d(100%,0,0)
+    transform: translate3d(100%,0,0)
+    -webkit-transition: all 350ms ease-in-out
+    transition: all 350ms ease-in-out
+    &.active
+        -webkit-transform: translate3d(0,0,0)
+        transform: translate3d(0,0,0)
+        -webkit-transition: all 350ms 200ms cubic-bezier(.32,-0.05,.44,1.41)
+        transition: all 350ms 200ms cubic-bezier(.32,-0.05,.44,1.41)
+    >div
         position: absolute
     .menu-img-up,.menu-img-down
         width: 7.75rem
@@ -112,10 +119,14 @@ body.lock
         ul
             position: relative
             .menu-hitballoon
+                opacity: 0
                 position: absolute
                 width: 8rem
                 bottom: 20px
                 right: 20px
+                &.animate__fadeInUp
+                    &:root
+                        --animate-delay: 2s
     .menu-text
         height: 100vh
         ul
@@ -126,9 +137,22 @@ body.lock
             padding: 0px 2.5rem
             li
                 padding-bottom: 1.5rem
+                h5
+                    letter-spacing: 2px
+                    color: $white
+                    font-size: $h5
+                    line-height: 1.2
+                    span
+                        font-size: $h2
+                        font-weight: normal
+            .menu-pages
                 a
                     text-decoration: none
                     display: flex
+                    -webkit-transform: translateX(0px)
+                    transform: translateX(0px)
+                    -webkit-transition: all 0.2s ease-in-out
+                    transition: all 0.2s ease-in-out
                     &.fa-arrow-circle-right
                         &:before
                             display: none
@@ -138,19 +162,45 @@ body.lock
                             color: $white
                             margin-left: 0.5rem
                             margin-top: 1rem
-                    h2
-                        letter-spacing: 2px
-                        color: $white
-                        font-size: $h5
-                        line-height: 1.2
-                        span
-                            font-size: $h2
-                            font-weight: normal
-                    svg
-                        width: 20px
-                        margin: 1rem 0.6rem
-                        .menu-arrow-icon
-                            fill: $white
+                    &:hover
+                        -webkit-transform: translateX(20px)
+                        transform: translateX(20px)
+                        -webkit-transition: all 0.2s ease-in-out
+                        transition: all 0.2s ease-in-out
+                        h5
+                            color: $yellow
+                        &.fa-arrow-circle-right
+                            &:after
+                                color: $yellow
+            .menu-line  
+                img
+                    width: 12rem
+            .menu-community
+                h5
+                    padding-bottom: 0.8rem
+                .fb-icon
+                    display: inline-block
+                .ig-icon
+                    float: left
+
+//以contact共用
+.fb-icon,.ig-icon
+    a
+        svg
+            width: 3.8rem
+            fill: $white
+            margin-right: .8rem
+            -webkit-transform: translateY(0px)
+            transform: translateY(0px)
+            -webkit-transition: all 0.2s ease-in-out
+            transition: all 0.2s ease-in-out
+            &:hover
+                fill: $yellow
+                -webkit-transform: translateY(-5px)
+                transform: translateY(-5px)
+                -webkit-transition: all 0.2s ease-in-out
+                transition: all 0.2s ease-in-out
+                
 
 /* menu end */
 /* nav */
@@ -316,6 +366,8 @@ body.lock
     .arrow-pages-left,.arrow-pages-right
         -webkit-transform: translateX(0px)
         transform: translateX(0px)
+        -webkit-transition: all 0.5s ease-in-out
+        transition: all 0.5s ease-in-out
         &:hover
             -webkit-transform: translateX(10px)
             transform: translateX(10px)
@@ -326,7 +378,7 @@ body.lock
             &:hover
                 .arrow-pages-style
                     path
-                        fill: #F5E69A
+                        fill: $yellow
             svg
                 width: 35px
                 filter: drop-shadow(0px 3px 0px rgba(77, 50, 36, 1))

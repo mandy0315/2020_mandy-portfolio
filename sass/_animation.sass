@@ -1,11 +1,35 @@
 //home-menu-an
-.open-menu-icon-an
+.open-menu-icon-an,.menu-home-hoverAn,.menu-about-hoverAn,.menu-skills-hoverAn,.menu-works-hoverAn,.menu-contact-hoverAn
     .menu-icon
         img
             transform: rotateZ(180deg) translate3d(0,0,0)
             -webkit-transform: rotateZ(180deg) translate3d(0,0,0)
             -webkit-transition: all 500ms ease-in-out
             transition: all 500ms ease-in-out
+.menu-home-hoverAn,.menu-about-hoverAn,.menu-skills-hoverAn,.menu-works-hoverAn,.menu-contact-hoverAn
+    .menu-icon
+        img
+            transform: rotateZ(225deg)
+            -webkit-transform: rotateZ(225deg)
+            -webkit-transition: all 500ms ease-in-out
+            transition: all 500ms ease-in-out
+    &.menu-about-hoverAn
+        img
+            transform: rotateZ(270deg)
+            -webkit-transform: rotateZ(270deg)
+    &.menu-skills-hoverAn
+        img
+            transform: rotateZ(315deg)
+            -webkit-transform: rotateZ(315deg)
+    &.menu-works-hoverAn
+        img
+            transform: rotateZ(355deg)
+            -webkit-transform: rotateZ(355deg)
+    &.menu-contact-hoverAn
+        img
+            transform: rotateZ(390deg)
+            -webkit-transform: rotateZ(390deg)
+    
 //home-sun-an
 .home-day-sun-an
     img

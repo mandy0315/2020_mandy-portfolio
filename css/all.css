@@ -123,7 +123,7 @@ body.lock {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 120;
+  z-index: 200;
   position: relative;
 }
 
@@ -178,23 +178,31 @@ body.lock {
 }
 .menu-bgw-box.active {
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
 .menu-contant-box {
   position: fixed;
-  z-index: 100;
+  z-index: 120;
   top: 0;
   right: -1px;
   width: 25rem;
   height: 100vh;
   display: block;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
 }
-.menu-contant-box div {
+.menu-contant-box.active {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 350ms 200ms cubic-bezier(0.32, -0.05, 0.44, 1.41);
+  transition: all 350ms 200ms cubic-bezier(0.32, -0.05, 0.44, 1.41);
+}
+.menu-contant-box > div {
   position: absolute;
 }
 .menu-contant-box .menu-img-up, .menu-contant-box .menu-img-down {
@@ -213,10 +221,14 @@ body.lock {
   position: relative;
 }
 .menu-contant-box .menu-img-down ul .menu-hitballoon {
+  opacity: 0;
   position: absolute;
   width: 8rem;
   bottom: 20px;
   right: 20px;
+}
+.menu-contant-box .menu-img-down ul .menu-hitballoon.animate__fadeInUp:root {
+  --animate-delay: 2s;
 }
 .menu-contant-box .menu-text {
   height: 100vh;
@@ -231,36 +243,74 @@ body.lock {
 .menu-contant-box .menu-text ul li {
   padding-bottom: 1.5rem;
 }
-.menu-contant-box .menu-text ul li a {
+.menu-contant-box .menu-text ul li h5 {
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.menu-contant-box .menu-text ul li h5 span {
+  font-size: 36px;
+  font-weight: normal;
+}
+.menu-contant-box .menu-text ul .menu-pages a {
   text-decoration: none;
   display: flex;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-.menu-contant-box .menu-text ul li a.fa-arrow-circle-right:before {
+.menu-contant-box .menu-text ul .menu-pages a.fa-arrow-circle-right:before {
   display: none;
 }
-.menu-contant-box .menu-text ul li a.fa-arrow-circle-right:after {
+.menu-contant-box .menu-text ul .menu-pages a.fa-arrow-circle-right:after {
   content: "";
   font-size: 20px;
   color: #ffffff;
   margin-left: 0.5rem;
   margin-top: 1rem;
 }
-.menu-contant-box .menu-text ul li a h2 {
-  letter-spacing: 2px;
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 1.2;
+.menu-contant-box .menu-text ul .menu-pages a:hover {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-.menu-contant-box .menu-text ul li a h2 span {
-  font-size: 36px;
-  font-weight: normal;
+.menu-contant-box .menu-text ul .menu-pages a:hover h5 {
+  color: #F5E69A;
 }
-.menu-contant-box .menu-text ul li a svg {
-  width: 20px;
-  margin: 1rem 0.6rem;
+.menu-contant-box .menu-text ul .menu-pages a:hover.fa-arrow-circle-right:after {
+  color: #F5E69A;
 }
-.menu-contant-box .menu-text ul li a svg .menu-arrow-icon {
+.menu-contant-box .menu-text ul .menu-line img {
+  width: 12rem;
+}
+.menu-contant-box .menu-text ul .menu-community h5 {
+  padding-bottom: 0.8rem;
+}
+.menu-contant-box .menu-text ul .menu-community .fb-icon {
+  display: inline-block;
+}
+.menu-contant-box .menu-text ul .menu-community .ig-icon {
+  float: left;
+}
+
+.fb-icon a svg, .ig-icon a svg {
+  width: 3.8rem;
   fill: #ffffff;
+  margin-right: 0.8rem;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.fb-icon a svg:hover, .ig-icon a svg:hover {
+  fill: #F5E69A;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 /* menu end */
@@ -474,6 +524,8 @@ body.lock {
 .arrow-pages-wrapper .arrow-pages-left, .arrow-pages-wrapper .arrow-pages-right {
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .arrow-pages-wrapper .arrow-pages-left:hover, .arrow-pages-wrapper .arrow-pages-right:hover {
   -webkit-transform: translateX(10px);
@@ -513,11 +565,34 @@ body.lock {
     margin: auto;
   }
 }
-.open-menu-icon-an .menu-icon img {
+.open-menu-icon-an .menu-icon img, .menu-home-hoverAn .menu-icon img, .menu-about-hoverAn .menu-icon img, .menu-skills-hoverAn .menu-icon img, .menu-works-hoverAn .menu-icon img, .menu-contact-hoverAn .menu-icon img {
   transform: rotateZ(180deg) translate3d(0, 0, 0);
   -webkit-transform: rotateZ(180deg) translate3d(0, 0, 0);
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+}
+
+.menu-home-hoverAn .menu-icon img, .menu-about-hoverAn .menu-icon img, .menu-skills-hoverAn .menu-icon img, .menu-works-hoverAn .menu-icon img, .menu-contact-hoverAn .menu-icon img {
+  transform: rotateZ(225deg);
+  -webkit-transform: rotateZ(225deg);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.menu-home-hoverAn.menu-about-hoverAn img, .menu-about-hoverAn.menu-about-hoverAn img, .menu-skills-hoverAn.menu-about-hoverAn img, .menu-works-hoverAn.menu-about-hoverAn img, .menu-contact-hoverAn.menu-about-hoverAn img {
+  transform: rotateZ(270deg);
+  -webkit-transform: rotateZ(270deg);
+}
+.menu-home-hoverAn.menu-skills-hoverAn img, .menu-about-hoverAn.menu-skills-hoverAn img, .menu-skills-hoverAn.menu-skills-hoverAn img, .menu-works-hoverAn.menu-skills-hoverAn img, .menu-contact-hoverAn.menu-skills-hoverAn img {
+  transform: rotateZ(315deg);
+  -webkit-transform: rotateZ(315deg);
+}
+.menu-home-hoverAn.menu-works-hoverAn img, .menu-about-hoverAn.menu-works-hoverAn img, .menu-skills-hoverAn.menu-works-hoverAn img, .menu-works-hoverAn.menu-works-hoverAn img, .menu-contact-hoverAn.menu-works-hoverAn img {
+  transform: rotateZ(355deg);
+  -webkit-transform: rotateZ(355deg);
+}
+.menu-home-hoverAn.menu-contact-hoverAn img, .menu-about-hoverAn.menu-contact-hoverAn img, .menu-skills-hoverAn.menu-contact-hoverAn img, .menu-works-hoverAn.menu-contact-hoverAn img, .menu-contact-hoverAn.menu-contact-hoverAn img {
+  transform: rotateZ(390deg);
+  -webkit-transform: rotateZ(390deg);
 }
 
 .home-day-sun-an img {
