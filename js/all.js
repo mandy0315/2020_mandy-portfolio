@@ -125,8 +125,8 @@ $(document).ready(function () {
             let starLY = ((height - pagey) / - 20);
             let starRY = ((height - pagey) / + 20);
             $(".home-night-star img").css("transform", "translateX(" + starX + "px)")
-            $(".skills-design-box").css("transform", "translateY(" + starLY + "px)")
-            $(".skills-code-box").css("transform", "translateY(" + starRY + "px)")
+            // $(".skills-design-box").css("transform", "translateY(" + starLY + "px)")
+            // $(".skills-code-box").css("transform", "translateY(" + starRY + "px)")
         });
     };
     // icon 社群載入
