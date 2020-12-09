@@ -1,26 +1,29 @@
-//import font-en
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&display=swap') 
+
 /* Custom CSS */
 body,html
     font-family: 'Noto Sans TC', sans-serif ,"微軟正黑體"
-    font-size: 16px
+
 body.lock
     overflow: hidden
     position: fixed
     height: 100%
     width: 100%
+h1,h2,h3,h4,h5,h6,p
+    letter-spacing: 2px
+    line-height: 2
 .wrapper
-    max-width: 1440px
+    max-width: 1200px
     margin: 0 auto
     width: 100%
 .clearfix 
     clear: both
 .font-en
-    font-family: 'Lobster Two', cursive
+    font-family: 'Lobster', cursive
 .day
     background: $day
 .night
     background: $night
+
 /* loading */
 #loading-box
     position: fixed
@@ -236,7 +239,7 @@ body.lock
     display: none
     &.active
         display: block
-.home-day-box,.home-night-box,.home-city-box
+.home-day-box,.home-night-box,.home-city-box,.about-city-box
     width: 100%
     height: 300px
     margin: 0 auto
@@ -272,9 +275,9 @@ body.lock
             position: relative
             left: -90%
             height: 300px
-.home-city-box
+.home-city-box,.about-city-box,.skills-sea-box
     height: 400px
-    .home-bluecity,.home-city
+    .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral
         width: 2000px
         height: auto
         position: absolute
@@ -282,9 +285,9 @@ body.lock
         bottom: 0
         img
             width: 100%
-    .home-bluecity-up
+    .home-bluecity-up,.about-cloud-up
         z-index: 10
-    .home-city-up
+    .home-city-up,.about-city-up
         z-index: 15
         bottom: -2px
 .home-my-box
@@ -293,8 +296,8 @@ body.lock
     z-index: 20
     left: 240px
     img
-        width: 180px
-.home-road-box
+        width: 11rem
+.home-road-box,.about-road-box,.about-seasand-box
     background-color: $gray
     height: 100vh
     position: relative
@@ -392,9 +395,185 @@ body.lock
         &:hover
             -webkit-transform: translateX(-10px)
             transform: translateX(-10px)
-
-
-
 /* home end */  
-
+/* about */ 
+.about-contant-wrapper,.skills-contant-wrapper
+    position: relative
+    display: flex
+    flex-wrap: wrap
+.title-box
+    display: flex
+    justify-content: center
+    position: relative
+    width: 100%
+    .title-line-dashed
+        border-top: 1.5px dashed $white
+        width: 2.5rem
+        position: relative
+        top: 50%
+        margin: 0 0.8rem
+    .title-text
+        h4
+            padding-top: 5px
+            font-size: $h4
+            color: $white
+            &:before
+                padding-right: .4rem
+.about-AirCamera-box,.skills-tortoise-box
+    position: absolute
+    right: 4rem
+    svg
+        width: 15rem  
+.about-contant-box
+    margin: 2rem 6rem 0 6rem
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .about-img
+        width: 18rem
+        position: relative
+        display: flex
+        align-items: center
+        .about-my-photo
+            position: absolute
+            top: 5px
+            z-index: 5
+        img
+            width: 100%
+    .about-text
+        padding-left: 1rem
+        max-width: 40rem
+        p
+            font-size: $l-p
+            color: $white
+            span
+                font-size: $h3
+                margin-bottom: 1rem
+.about-road-box
+    padding-top: 4rem
+.about-my-box,.about-people-box
+    position: absolute
+    top: -45px
+    z-index: 20
+    left: 0px
+    width: 100%
+    opacity: 0
+    img
+        width: 12rem
+.about-people-box
+    top: -120px
+    z-index: 15
+    left: 0px
+    display: flex
+    justify-content: flex-end
+    padding-right: 10rem
+    opacity: 1
+    img
+        width: 4rem
+.about-city-box
+    height: 300px
+    .about-bcity
+        width: 1400px
+        left: calc(50% - 700px)
+    .about-cloud
+        img
+            filter: drop-shadow(0px -6px 0px rgba(85,150,202,.8))
+/* about end */
+/* skills */ 
+.skills-tortoise-box
+    right: 10rem
+    img
+        width: 8.7rem
+.skills-fishs-wrapper
+    position: absolute
+    width: 100%
+    top: 2rem
+    img
+        width: 20rem
+.skills-contant-box
+    margin-top: 2rem
+    width: 100%
+    display: flex
+.skills-design-box,.skills-code-box
+    width: 50%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    .skills-design-img,.skills-code-img
+        position: relative
+        .design-svg,.code-svg
+            position: absolute
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            padding-bottom: 2rem
+            padding-right: 1rem
+            img
+                width: 8rem
+            p
+                color: $white
+                margin-top: 10px
+                &:after
+                    content: ">"
+                    display: inline-block 
+                &:before
+                    content: "<"
+                    display: inline-block
+        .design-svg
+            padding-left: 2rem
+            padding-top: 1rem
+        .skills-bubble
+            width: 14rem
+    .skills-design-text,.skills-code-text
+        color: $white
+        h3
+            font-size: $h3
+            &:before
+                content: ""
+                display: inline-block
+                border-top: 1.5px dashed $white
+                width: 20px
+                position: relative
+                bottom: 0.5rem
+                margin-right: 10px
+        .design-text,.code-text
+            padding-left: 2rem
+            li
+                font-size: $l-p
+                letter-spacing: 2px
+                line-height: 2
+        .code-text
+            display: flex
+            flex-wrap: wrap
+.skills-code-box
+    padding-top: 4rem
+.skills-sea-box
+    position: relative
+    bottom: -5px
+    .skills-seabed
+        bottom: 8rem
+    .skills-seasand
+        bottom: 0px
+        z-index: 10
+    .skills-coral
+        display: flex
+        justify-content: space-between
+        bottom: 4rem
+        z-index: 10
+        img
+            width: 18rem
+    .skills-my-box
+        position: absolute
+        width: 100%
+        z-index: 10
+        top: 4rem
+        img
+            width: 12rem
+.about-seasand-box
+    background-color: #F1CA9E
+/* skills end */ 
 

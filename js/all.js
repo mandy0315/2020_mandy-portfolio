@@ -31,6 +31,7 @@ $(document).ready(function () {
     // 時間執行呼叫
     getHomeTime();
     getTimeBg();
+    // getStarMousemove();
     //nav 
     $('#pp-nav').append('<div class="line-dotted"></div>');
     //header 載入
@@ -38,6 +39,9 @@ $(document).ready(function () {
         getMenuPlay();
         getTimeBg();
     });
+    // about-AirCamera-svg 載入
+    $('.about-AirCamera-box').load("./share/AirCamera-svg.html");
+    // about-AirCamera-svg 載入
     // Time 時間更換背景|動畫
     function getHomeTime() {
         $.ajax({
@@ -112,11 +116,17 @@ $(document).ready(function () {
         $(window).mousemove(function (e) {
             //获取鼠标坐标：
             var pagex = e.pageX;
+            var pagey = e.pageY;
             let width = window.innerWidth / 2;
+            let height = window.innerHeight;
 
             //滑鼠  -50 同放向 50 反放向
             let starX = ((width - pagex) / - 50);
+            let starLY = ((height - pagey) / - 20);
+            let starRY = ((height - pagey) / + 20);
             $(".home-night-star img").css("transform", "translateX(" + starX + "px)")
+            $(".skills-design-box").css("transform", "translateY(" + starLY + "px)")
+            $(".skills-code-box").css("transform", "translateY(" + starRY + "px)")
         });
     };
     // icon 社群載入

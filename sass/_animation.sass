@@ -67,10 +67,10 @@
         opacity: 1
         -webkit-transform: translateX(-50%)
         transform: translateX(-50%)
-.home-car-up-down
+.home-car-down
     li
-        -webkit-animation: home-car-up-down 12s linear infinite
-        animation: home-car-up-down 12s linear infinite
+        -webkit-animation: home-car-down 12s linear infinite
+        animation: home-car-down 12s linear infinite
         -webkit-animation-delay: 5s
         animation-delay: 5s
         &:nth-child(2)
@@ -79,7 +79,7 @@
         &:nth-child(3)
             -webkit-animation-delay: 10s
             animation-delay: 10s
-@keyframes home-car-up-down
+@keyframes home-car-down
     from
         opacity: 1
         -webkit-transform: translateX(-50%)
@@ -141,3 +141,30 @@
         opacity: 1
         -webkit-transform: translate(20px,8px)
         transform: translate(20px,8px)
+//about an
+.about-my-photo-bg-an
+    -webkit-animation: turn-An 8s linear infinite
+    animation: turn-An 8s linear infinite
+//直線游泳、腳踏車動畫
+.about-my-box-an,.skills-my-box-an
+    -webkit-animation: home-car-down 8s linear infinite
+    animation: home-car-down 8s linear infinite
+.skills-my-box-an
+    -webkit-animation: home-car-down 10s linear infinite
+    animation: home-car-down 10s linear infinite 
+
+// 換section 開啟動畫
+.home,.about,.skills
+    &.active
+        .about-contant-wrapper
+            opacity: 1
+            transform: translateY(0px)
+            -webkit-transform: translateY(0px)
+            -webkit-transition: all 2s 1 ease-in-out
+            transition: all 2s 1 ease-in-out
+    // .vv,.bb
+    //     opacity: 0
+    //     transform: translateY(100px)
+    //     -webkit-transform: translateY(100px)
+    //     -webkit-transition: all 2s ease-in-out
+    //     transition: all 2s ease-in-out
