@@ -121,6 +121,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* loading end */
 /* header */
+header {
+  position: absolute;
+  width: 100%;
+}
+
 .header-container {
   padding: 10px 20px;
   display: flex;
@@ -161,6 +166,11 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-transform: rotateZ(90deg) translate3d(0, 0, 0);
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+}
+
+.header-box {
+  width: 100%;
+  height: 6rem;
 }
 
 /* header end */
@@ -513,8 +523,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .arrow-pages-wrapper {
-  position: absolute;
-  top: calc(50vh - 80px);
+  position: fixed;
+  top: 50vh;
   left: 0;
   z-index: 20;
   padding: 10px 20px;
@@ -554,6 +564,10 @@ h1, h2, h3, h4, h5, h6, p {
 .arrow-pages-wrapper .arrow-pages-left:hover {
   -webkit-transform: translateX(-10px);
   transform: translateX(-10px);
+}
+
+.pp-scrollable .arrow-pages-wrapper {
+  top: 50%;
 }
 
 /* home end */
@@ -639,35 +653,36 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .about-road-box {
-  padding-top: 4rem;
+  padding-top: 3.4rem;
 }
 
 .about-my-box, .about-people-box {
   position: absolute;
-  top: -45px;
+  top: -40px;
   z-index: 20;
   left: 0px;
   width: 100%;
   opacity: 0;
 }
 .about-my-box img, .about-people-box img {
-  width: 12rem;
+  width: 8.8rem;
 }
 
 .about-people-box {
-  top: -120px;
+  top: -90px;
   z-index: 15;
   left: 0px;
   display: flex;
   justify-content: flex-end;
-  padding-right: 10rem;
+  padding-right: 16rem;
   opacity: 1;
 }
 .about-people-box img {
-  width: 4rem;
+  width: 3rem;
 }
 
 .about-city-box {
+  margin-top: -2rem;
   height: 300px;
 }
 .about-city-box .about-bcity {
@@ -690,14 +705,14 @@ h1, h2, h3, h4, h5, h6, p {
 .skills-fishs-wrapper {
   position: absolute;
   width: 100%;
-  top: 2rem;
+  top: 10%;
 }
 .skills-fishs-wrapper img {
   width: 20rem;
 }
 
 .skills-contant-box {
-  margin-top: 2rem;
+  margin-top: 4rem;
   width: 100%;
   display: flex;
 }
@@ -803,7 +818,7 @@ h1, h2, h3, h4, h5, h6, p {
   top: 4rem;
 }
 .skills-sea-box .skills-my-box img {
-  width: 12rem;
+  width: 10rem;
 }
 
 /* skills end */
