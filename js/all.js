@@ -9,7 +9,7 @@ $(document).ready(function () {
         //循環回到首頁
         loopBottom: true,
         // 背景色
-        sectionsColor: ['', '', '', '', ''],
+        sectionsColor: ['#E3E3E3', '#E3E3E3', '#F1CA9E', '#94C28B', ''],
         // 連結名稱
         anchors: ['home', 'about', 'skills', 'works', 'contact'],
         // 點瀏覽
@@ -77,9 +77,9 @@ $(document).ready(function () {
                 todayDate = new Date();
                 var hh = todayDate.getHours();
                 if (hh >= 6 && hh <= 16) {
-                    $("body,#pagepiling>div,.menu-contant-box").addClass("day");
+                    $("body,.section-AirBg-wrapper,.menu-contant-box").addClass("day");
                 } else {
-                    $("body,#pagepiling>div,.menu-contant-box").addClass("night");
+                    $("body,.section-AirBg-wrapper,.menu-contant-box").addClass("night");
                 }
             }
         });

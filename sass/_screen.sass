@@ -275,9 +275,9 @@ h1,h2,h3,h4,h5,h6,p
             position: relative
             left: -90%
             height: 300px
-.home-city-box,.about-city-box,.skills-sea-box
+.home-city-box,.about-city-box,.skills-sea-box,.works-mountain-box
     height: 400px
-    .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral
+    .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.works-b-tree
         width: 2000px
         height: auto
         position: absolute
@@ -297,9 +297,7 @@ h1,h2,h3,h4,h5,h6,p
     left: 240px
     img
         width: 11rem
-.home-road-box,.about-road-box,.about-seasand-box
-    background-color: $gray
-    height: 100vh
+.home-road-box,.about-road-box,.about-seasand-bg,.works-mountain-bg
     position: relative
     .home-ZebraRoad
         background: url(../images/home/home-ZebraRoad.svg) no-repeat
@@ -397,10 +395,11 @@ h1,h2,h3,h4,h5,h6,p
             transform: translateX(-10px)
 /* home end */  
 /* about */ 
-.about-contant-wrapper,.skills-contant-wrapper
+.about-contant-wrapper,.skills-contant-wrapper,.works-title-wrapper
     position: relative
     display: flex
     flex-wrap: wrap
+    padding: 1.5rem 0
 .title-box
     display: flex
     justify-content: center
@@ -413,12 +412,18 @@ h1,h2,h3,h4,h5,h6,p
         top: 50%
         margin: 0 0.8rem
     .title-text
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
         h4
-            padding-top: 5px
+            padding-top: 10px
             font-size: $h4
             color: $white
             &:before
                 padding-right: .4rem
+        img
+            width: 10rem
 .about-AirCamera-box,.skills-tortoise-box
     position: absolute
     right: 4rem
@@ -573,7 +578,29 @@ h1,h2,h3,h4,h5,h6,p
         top: 4rem
         img
             width: 12rem
-.about-seasand-box
-    background-color: #F1CA9E
 /* skills end */ 
+/* works */
+.works-bird-box
+    width: 2.5rem
+    position: absolute
+    left: calc(50% + 6rem)
+    bottom: 2.2rem
+    z-index: 5
+.works-mountain-wrapper
+    margin-top: -7.5rem
+    .works-mountain-box
+        height: 300px
+        position: relative
+        bottom: -6px
+        .skills-seasand
+            bottom: 0px
+            z-index: 10
+        .works-my-box
+            position: absolute
+            width: 100%
+            z-index: 15
+            bottom: 16px
+            img
+                width: 5rem
+/* works end */ 
 

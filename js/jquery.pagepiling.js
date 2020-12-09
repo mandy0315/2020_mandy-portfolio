@@ -604,7 +604,7 @@
 	                    scrolling('down', scrollable);
 
 	                //scrolling up?
-	                }else if(delta>0){
+	                }else if(delta > 0){
 	                    scrolling('up', scrollable);
 	                }
 	            }
@@ -716,8 +716,7 @@
         }
 
         /**
-        * Adds the possibility to auto scroll through sections on touch devices.
-        */
+        * Adds the possibility to auto scroll through sections on touch devices. */
         function addTouchHandler(){
             if(isTouch){
                 //Microsoft pointers
