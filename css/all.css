@@ -832,7 +832,7 @@ header {
 }
 
 .works-mountain-wrapper {
-  margin-top: -7.5rem;
+  margin-top: -6rem;
 }
 .works-mountain-wrapper .works-mountain-box {
   height: 300px;
@@ -846,8 +846,8 @@ header {
 .works-mountain-wrapper .works-mountain-box .works-my-box {
   position: absolute;
   width: 100%;
-  z-index: 25;
-  bottom: 16px;
+  z-index: 20;
+  bottom: 0.8rem;
 }
 .works-mountain-wrapper .works-mountain-box .works-my-box img {
   width: 5rem;
@@ -856,13 +856,14 @@ header {
 .section-contant-container {
   position: relative;
   z-index: 20;
-  top: -6rem;
+  top: 0px;
 }
 
 .tabs {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 2.8rem;
 }
 .tabs a {
   display: flex;
@@ -880,9 +881,6 @@ header {
   color: #94C28B;
 }
 
-.tab-content {
-  margin-top: 4rem;
-}
 .tab-content > div {
   display: none;
   font-size: 14px;
@@ -918,13 +916,15 @@ header {
 }
 
 .web-text {
-  padding-top: 1.2rem;
+  margin-top: 0.5rem;
 }
 .web-text h4 {
   font-size: 24px;
+  line-height: 1.5;
 }
 .web-text p {
   font-size: 18px;
+  line-height: 1.5;
 }
 
 #loadMore {
@@ -932,27 +932,27 @@ header {
   color: #fff;
   display: block;
   text-align: center;
-  margin: 20px auto;
+  margin: 1.8rem auto 4rem auto;
   padding: 10px;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  background-color: blue;
-  transition: 0.3s;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  background-color: #94C28B;
+  text-decoration: none;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 #loadMore:hover {
-  color: blue;
+  color: #94C28B;
   background-color: #fff;
-  border: 1px solid blue;
-  text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
-  .col3.col2 {
+  .works-web-box .works-web.col3.col2 {
     width: calc(100%/2 - 1rem);
     margin-left: calc(1rem * 2 / 1);
     margin-bottom: calc(1rem * 2 / 1);
   }
-  .col3.col2:nth-child(2n+1) {
+  .works-web-box .works-web.col3.col2:nth-child(2n+1) {
     margin-left: 0;
   }
 }

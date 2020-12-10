@@ -597,7 +597,7 @@ header
     bottom: 2.2rem
     z-index: 5
 .works-mountain-wrapper
-    margin-top: -7.5rem
+    margin-top: -6rem
     .works-mountain-box
         height: 300px
         position: relative
@@ -608,19 +608,20 @@ header
         .works-my-box
             position: absolute
             width: 100%
-            z-index: 25
-            bottom: 16px
+            z-index: 20
+            bottom: 0.8rem
             img
                 width: 5rem
 .section-contant-container
     position: relative
     z-index: 20
-    top: -6rem
+    top: 0px
 //tab style
 .tabs
     width: 100%
     display: flex
     justify-content: center
+    margin-bottom: 2.8rem
     a
         display: flex
         color: $white
@@ -634,9 +635,7 @@ header
         &:hover,&.active
             background-color: $white
             color: $green
-
 .tab-content
-    margin-top: 4rem
     >div
         display: none
         font-size: 14px
@@ -663,34 +662,39 @@ header
     background-color: gray
     height: 200px
 .web-text
-    padding-top: 1.2rem
+    margin-top: .5rem
     h4
         font-size: $h4
+        line-height: 1.5
     p
         font-size: $l-p
+        line-height: 1.5
 #loadMore
     width: 200px
     color: #fff
     display: block
     text-align: center
-    margin: 20px auto
+    margin: 1.8rem auto 4rem auto
     padding: 10px
-    border-radius: 10px
-    border: 1px solid transparent
-    background-color: blue
-    transition: .3s
+    border-radius: 20px
+    border: 1px solid #fff
+    background-color: $green
+    text-decoration: none
+    -webkit-transition: all 500ms ease-in-out
+    transition: all 500ms ease-in-out
     &:hover
-        color: blue
+        color: $green
         background-color: #fff
-        border: 1px solid blue
-        text-decoration : none
+        
 @media only screen and (max-width: 768px)
-    .col3
-        &.col2
-            width: calc(100%/2 - 1rem)
-            margin-left: calc(1rem * 2 / 1)
-            margin-bottom: calc(1rem * 2 / 1)
-            &:nth-child(2n+1)
-                margin-left: 0
+    .works-web-box
+        .works-web
+            &.col3
+                &.col2
+                    width: calc(100%/2 - 1rem)
+                    margin-left: calc(1rem * 2 / 1)
+                    margin-bottom: calc(1rem * 2 / 1)
+                    &:nth-child(2n+1)
+                        margin-left: 0
 /* works end */ 
 
