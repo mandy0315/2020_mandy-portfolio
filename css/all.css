@@ -846,13 +846,116 @@ header {
 .works-mountain-wrapper .works-mountain-box .works-my-box {
   position: absolute;
   width: 100%;
-  z-index: 15;
+  z-index: 25;
   bottom: 16px;
 }
 .works-mountain-wrapper .works-mountain-box .works-my-box img {
   width: 5rem;
 }
 
+.section-contant-container {
+  position: relative;
+  z-index: 20;
+  top: -6rem;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tabs a {
+  display: flex;
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0px 0.4rem;
+  padding: 4px 16px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  background-color: #94C28B;
+  border-radius: 20px;
+}
+.tabs a:hover, .tabs a.active {
+  background-color: #ffffff;
+  color: #94C28B;
+}
+
+.tab-content {
+  margin-top: 4rem;
+}
+.tab-content > div {
+  display: none;
+  font-size: 14px;
+  color: #666;
+}
+.tab-content > div.active {
+  display: block;
+}
+
+.works-web-box {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+}
+.works-web-box .works-web {
+  display: none;
+}
+.works-web-box .works-web.col3 {
+  width: calc(100%/3 - 1rem);
+  margin-left: calc(1rem * 3 / 2);
+  margin-bottom: calc(1rem * 3 / 2);
+  text-align: center;
+}
+.works-web-box .works-web.col3:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.web-img {
+  width: 100%;
+  background-color: gray;
+  height: 200px;
+}
+
+.web-text {
+  padding-top: 1.2rem;
+}
+.web-text h4 {
+  font-size: 24px;
+}
+.web-text p {
+  font-size: 18px;
+}
+
+#loadMore {
+  width: 200px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: blue;
+  transition: 0.3s;
+}
+#loadMore:hover {
+  color: blue;
+  background-color: #fff;
+  border: 1px solid blue;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .col3.col2 {
+    width: calc(100%/2 - 1rem);
+    margin-left: calc(1rem * 2 / 1);
+    margin-bottom: calc(1rem * 2 / 1);
+  }
+  .col3.col2:nth-child(2n+1) {
+    margin-left: 0;
+  }
+}
 /* works end */
 @media only screen and (max-width: 768px) {
   #pp-nav.nav-position {

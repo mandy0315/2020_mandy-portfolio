@@ -608,9 +608,89 @@ header
         .works-my-box
             position: absolute
             width: 100%
-            z-index: 15
+            z-index: 25
             bottom: 16px
             img
                 width: 5rem
+.section-contant-container
+    position: relative
+    z-index: 20
+    top: -6rem
+//tab style
+.tabs
+    width: 100%
+    display: flex
+    justify-content: center
+    a
+        display: flex
+        color: $white
+        font-size: $l-p
+        margin: 0px 0.4rem
+        padding: 4px 16px
+        border: 1px solid $white
+        cursor: pointer
+        background-color: $green
+        border-radius: 20px
+        &:hover,&.active
+            background-color: $white
+            color: $green
+
+.tab-content
+    margin-top: 4rem
+    >div
+        display: none
+        font-size: 14px
+        color: #666
+        &.active
+            display: block
+//works style
+.works-web-box
+    width: 100%
+    display: block
+    overflow: hidden
+    font-size: 0
+    .works-web
+        display: none
+        &.col3
+            width: calc(100%/3 - 1rem)
+            margin-left: calc(1rem * 3 / 2)
+            margin-bottom: calc(1rem * 3 / 2)
+            text-align: center
+            &:nth-child(3n+1)
+                margin-left: 0
+.web-img
+    width: 100%
+    background-color: gray
+    height: 200px
+.web-text
+    padding-top: 1.2rem
+    h4
+        font-size: $h4
+    p
+        font-size: $l-p
+#loadMore
+    width: 200px
+    color: #fff
+    display: block
+    text-align: center
+    margin: 20px auto
+    padding: 10px
+    border-radius: 10px
+    border: 1px solid transparent
+    background-color: blue
+    transition: .3s
+    &:hover
+        color: blue
+        background-color: #fff
+        border: 1px solid blue
+        text-decoration : none
+@media only screen and (max-width: 768px)
+    .col3
+        &.col2
+            width: calc(100%/2 - 1rem)
+            margin-left: calc(1rem * 2 / 1)
+            margin-bottom: calc(1rem * 2 / 1)
+            &:nth-child(2n+1)
+                margin-left: 0
 /* works end */ 
 

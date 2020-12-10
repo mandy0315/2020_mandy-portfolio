@@ -176,4 +176,25 @@ $(document).ready(function () {
         getCommunityIcon();
         getMenuPagesHover();
     }
+    // works tab 
+    $(function () {
+        $('.WorksTabs-web').load("./share/WorksTabs-web.html");
+        $('.WorksTabs-ui').load("./share/WorksTabs-ui.html");
+        $('.WorksTabs-vision').load("./share/WorksTabs-vision.html");
+        var $tabPanel = $('.tab-wrapper'),
+            $tabs = $tabPanel.find('.tabs'),
+            $tab = $tabs.find('a'),
+            $tabContent = $tabPanel.find('.tab-content'),
+            $content = $tabContent.find('> div');
+
+        $tab.eq(0).addClass('active');
+        $content.eq(0).addClass('active').siblings().removeClass('active');
+
+        $tab.on('click', function () {
+            var $tabIndex = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $content.eq($tabIndex).addClass('active').siblings().removeClass('active');
+        });
+    });
+
 });
