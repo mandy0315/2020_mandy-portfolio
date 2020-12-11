@@ -97,6 +97,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .font-en {
   font-family: "Lobster", cursive;
+  font-weight: bold;
 }
 
 .day {
@@ -859,6 +860,11 @@ header {
   top: 0px;
 }
 
+.tab-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
 .tabs {
   width: 100%;
   display: flex;
@@ -877,6 +883,7 @@ header {
   border-radius: 20px;
 }
 .tabs a:hover, .tabs a.active {
+  cursor: pointer;
   background-color: #ffffff;
   color: #94C28B;
 }
@@ -886,37 +893,51 @@ header {
   font-size: 14px;
   color: #666;
 }
-.tab-content > div.active {
-  display: block;
+
+.tab-content {
+  margin-bottom: 4rem;
 }
 
-.works-web-box {
+.works-web-box, .works-vision-box, .works-ui-box {
   width: 100%;
   display: block;
   overflow: hidden;
   font-size: 0;
 }
-.works-web-box .works-web {
+.works-web-box .works-web, .works-web-box .works-vision, .works-web-box .works-ui, .works-vision-box .works-web, .works-vision-box .works-vision, .works-vision-box .works-ui, .works-ui-box .works-web, .works-ui-box .works-vision, .works-ui-box .works-ui {
   display: none;
 }
-.works-web-box .works-web.col3 {
+.works-web-box .works-web.col3, .works-web-box .works-vision.col3, .works-web-box .works-ui.col3, .works-vision-box .works-web.col3, .works-vision-box .works-vision.col3, .works-vision-box .works-ui.col3, .works-ui-box .works-web.col3, .works-ui-box .works-vision.col3, .works-ui-box .works-ui.col3 {
   width: calc(100%/3 - 1rem);
   margin-left: calc(1rem * 3 / 2);
   margin-bottom: calc(1rem * 3 / 2);
   text-align: center;
 }
-.works-web-box .works-web.col3:nth-child(3n+1) {
+.works-web-box .works-web.col3:nth-child(3n+1), .works-web-box .works-vision.col3:nth-child(3n+1), .works-web-box .works-ui.col3:nth-child(3n+1), .works-vision-box .works-web.col3:nth-child(3n+1), .works-vision-box .works-vision.col3:nth-child(3n+1), .works-vision-box .works-ui.col3:nth-child(3n+1), .works-ui-box .works-web.col3:nth-child(3n+1), .works-ui-box .works-vision.col3:nth-child(3n+1), .works-ui-box .works-ui.col3:nth-child(3n+1) {
   margin-left: 0;
+}
+.works-web-box .works-web a, .works-web-box .works-vision a, .works-web-box .works-ui a, .works-vision-box .works-web a, .works-vision-box .works-vision a, .works-vision-box .works-ui a, .works-ui-box .works-web a, .works-ui-box .works-vision a, .works-ui-box .works-ui a {
+  text-decoration: none;
+}
+.works-web-box .works-web a:hover .web-text, .works-web-box .works-vision a:hover .web-text, .works-web-box .works-ui a:hover .web-text, .works-vision-box .works-web a:hover .web-text, .works-vision-box .works-vision a:hover .web-text, .works-vision-box .works-ui a:hover .web-text, .works-ui-box .works-web a:hover .web-text, .works-ui-box .works-vision a:hover .web-text, .works-ui-box .works-ui a:hover .web-text {
+  opacity: 0.6;
 }
 
 .web-img {
   width: 100%;
-  background-color: gray;
-  height: 200px;
+  height: auto;
+  overflow: hidden;
+}
+.web-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .web-text {
   margin-top: 0.5rem;
+  color: #ffffff;
 }
 .web-text h4 {
   font-size: 24px;
@@ -926,33 +947,66 @@ header {
   font-size: 18px;
   line-height: 1.5;
 }
+.web-text p:before {
+  content: "";
+  background: url(../images/icon/icon-web.svg) no-repeat;
+  display: inline-block;
+  background-size: contain;
+  width: 22px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
 
-#loadMore {
+.loadMore {
   width: 200px;
   color: #fff;
   display: block;
   text-align: center;
-  margin: 1.8rem auto 4rem auto;
+  margin: 0.5rem auto 4rem auto;
   padding: 10px;
   border-radius: 20px;
   border: 1px solid #fff;
   background-color: #94C28B;
   text-decoration: none;
+  font-size: 16px;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
-#loadMore:hover {
+.loadMore:hover {
   color: #94C28B;
   background-color: #fff;
 }
 
+.works-animal-box {
+  width: 1800px;
+  height: auto;
+  position: absolute;
+  left: calc(50% - 900px);
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.works-animal-box .works-beer, .works-animal-box .works-LeopardCat {
+  width: 12.8rem;
+  margin-top: 26rem;
+}
+.works-animal-box .works-beer img, .works-animal-box .works-LeopardCat img {
+  width: 100%;
+}
+.works-animal-box .works-beer.works-LeopardCat, .works-animal-box .works-LeopardCat.works-LeopardCat {
+  width: 6.4rem;
+  margin-top: 8rem;
+  margin-left: 8rem;
+}
+
 @media only screen and (max-width: 768px) {
-  .works-web-box .works-web.col3.col2 {
+  .works-web-box .works-web.col3.col2, .works-web-box .works-vision.col3.col2, .works-web-box .works-ui.col3.col2, .works-vision-box .works-web.col3.col2, .works-vision-box .works-vision.col3.col2, .works-vision-box .works-ui.col3.col2, .works-ui-box .works-web.col3.col2, .works-ui-box .works-vision.col3.col2, .works-ui-box .works-ui.col3.col2 {
     width: calc(100%/2 - 1rem);
     margin-left: calc(1rem * 2 / 1);
     margin-bottom: calc(1rem * 2 / 1);
   }
-  .works-web-box .works-web.col3.col2:nth-child(2n+1) {
+  .works-web-box .works-web.col3.col2:nth-child(2n+1), .works-web-box .works-vision.col3.col2:nth-child(2n+1), .works-web-box .works-ui.col3.col2:nth-child(2n+1), .works-vision-box .works-web.col3.col2:nth-child(2n+1), .works-vision-box .works-vision.col3.col2:nth-child(2n+1), .works-vision-box .works-ui.col3.col2:nth-child(2n+1), .works-ui-box .works-web.col3.col2:nth-child(2n+1), .works-ui-box .works-vision.col3.col2:nth-child(2n+1), .works-ui-box .works-ui.col3.col2:nth-child(2n+1) {
     margin-left: 0;
   }
 }
@@ -1152,6 +1206,19 @@ header {
 .works-my-box-an {
   -webkit-animation: home-car-down 20s linear infinite;
   animation: home-car-down 20s linear infinite;
+}
+
+.works-web a .web-img-an img, .works-vision a .web-img-an img, .works-ui a .web-img-an img {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
+}
+.works-web a:hover .web-img-an img, .works-vision a:hover .web-img-an img, .works-ui a:hover .web-img-an img {
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -webkit-transition: all 4s ease-in-out;
+  transition: all 4s ease-in-out;
 }
 
 .home.active .about-contant-wrapper, .about.active .about-contant-wrapper, .skills.active .about-contant-wrapper {

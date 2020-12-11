@@ -19,6 +19,7 @@ h1,h2,h3,h4,h5,h6,p
     clear: both
 .font-en
     font-family: 'Lobster', cursive
+    font-weight: bold
 .day
     background: $day
 .night
@@ -617,6 +618,9 @@ header
     z-index: 20
     top: 0px
 //tab style
+.tab-wrapper
+    position: relative
+    z-index: 10
 .tabs
     width: 100%
     display: flex
@@ -633,6 +637,7 @@ header
         background-color: $green
         border-radius: 20px
         &:hover,&.active
+            cursor: pointer
             background-color: $white
             color: $green
 .tab-content
@@ -640,15 +645,15 @@ header
         display: none
         font-size: 14px
         color: #666
-        &.active
-            display: block
 //works style
-.works-web-box
+.tab-content
+    margin-bottom: 4rem
+.works-web-box,.works-vision-box,.works-ui-box
     width: 100%
     display: block
     overflow: hidden
     font-size: 0
-    .works-web
+    .works-web,.works-vision,.works-ui
         display: none
         &.col3
             width: calc(100%/3 - 1rem)
@@ -657,38 +662,75 @@ header
             text-align: center
             &:nth-child(3n+1)
                 margin-left: 0
+        a
+            text-decoration: none
+            &:hover
+                .web-text
+                    opacity: 0.6
 .web-img
     width: 100%
-    background-color: gray
-    height: 200px
+    height: auto
+    overflow: hidden
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: 50% 50%
 .web-text
     margin-top: .5rem
+    color: $white
     h4
         font-size: $h4
         line-height: 1.5
     p
         font-size: $l-p
         line-height: 1.5
-#loadMore
+        &:before
+            content: ""
+            background: url(../images/icon/icon-web.svg) no-repeat
+            display: inline-block
+            background-size: contain
+            width: 22px
+            height: 20px
+            margin-right: 10px
+            vertical-align: middle
+.loadMore
     width: 200px
     color: #fff
     display: block
     text-align: center
-    margin: 1.8rem auto 4rem auto
+    margin: 0.5rem auto 4rem auto
     padding: 10px
     border-radius: 20px
     border: 1px solid #fff
     background-color: $green
     text-decoration: none
+    font-size: 16px
     -webkit-transition: all 500ms ease-in-out
     transition: all 500ms ease-in-out
     &:hover
         color: $green
         background-color: #fff
-        
+.works-animal-box
+    width: 1800px
+    height: auto
+    position: absolute
+    left: calc(50% - 900px)
+    top: 0
+    display: flex
+    justify-content: space-between
+    .works-beer,.works-LeopardCat
+        width: 12.8rem
+        margin-top: 26rem
+        img
+            width: 100%
+        &.works-LeopardCat
+            width: 6.4rem
+            margin-top: 8rem
+            margin-left: 8rem
 @media only screen and (max-width: 768px)
-    .works-web-box
-        .works-web
+    .works-web-box,.works-vision-box,.works-ui-box
+        .works-web,.works-vision,.works-ui
             &.col3
                 &.col2
                     width: calc(100%/2 - 1rem)
