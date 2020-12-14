@@ -359,8 +359,12 @@ header {
 }
 
 .home-air-wrapper, .home-city-wrapper {
-  margin-top: -80px;
+  margin-top: -2rem;
   position: relative;
+}
+
+.home-air-wrapper {
+  margin-bottom: 1rem;
 }
 
 .home-city-wrapper {
@@ -418,23 +422,23 @@ header {
   height: 300px;
 }
 
-.home-city-box, .about-city-box, .skills-sea-box, .works-mountain-box {
+.home-city-box, .about-city-box, .skills-sea-box, .works-mountain-box, .contact-sea-box {
   height: 400px;
 }
-.home-city-box .home-bluecity, .home-city-box .home-city, .home-city-box .about-city, .home-city-box .about-cloud, .home-city-box .about-bcity, .home-city-box .skills-seabed, .home-city-box .skills-seasand, .home-city-box .skills-coral, .home-city-box .works-mountain, .home-city-box .works-b-tree, .about-city-box .home-bluecity, .about-city-box .home-city, .about-city-box .about-city, .about-city-box .about-cloud, .about-city-box .about-bcity, .about-city-box .skills-seabed, .about-city-box .skills-seasand, .about-city-box .skills-coral, .about-city-box .works-mountain, .about-city-box .works-b-tree, .skills-sea-box .home-bluecity, .skills-sea-box .home-city, .skills-sea-box .about-city, .skills-sea-box .about-cloud, .skills-sea-box .about-bcity, .skills-sea-box .skills-seabed, .skills-sea-box .skills-seasand, .skills-sea-box .skills-coral, .skills-sea-box .works-mountain, .skills-sea-box .works-b-tree, .works-mountain-box .home-bluecity, .works-mountain-box .home-city, .works-mountain-box .about-city, .works-mountain-box .about-cloud, .works-mountain-box .about-bcity, .works-mountain-box .skills-seabed, .works-mountain-box .skills-seasand, .works-mountain-box .skills-coral, .works-mountain-box .works-mountain, .works-mountain-box .works-b-tree {
+.home-city-box .home-bluecity, .home-city-box .home-city, .home-city-box .about-city, .home-city-box .about-cloud, .home-city-box .about-bcity, .home-city-box .skills-seabed, .home-city-box .skills-seasand, .home-city-box .skills-coral, .home-city-box .works-mountain, .home-city-box .works-b-tree, .home-city-box .contact-wave, .about-city-box .home-bluecity, .about-city-box .home-city, .about-city-box .about-city, .about-city-box .about-cloud, .about-city-box .about-bcity, .about-city-box .skills-seabed, .about-city-box .skills-seasand, .about-city-box .skills-coral, .about-city-box .works-mountain, .about-city-box .works-b-tree, .about-city-box .contact-wave, .skills-sea-box .home-bluecity, .skills-sea-box .home-city, .skills-sea-box .about-city, .skills-sea-box .about-cloud, .skills-sea-box .about-bcity, .skills-sea-box .skills-seabed, .skills-sea-box .skills-seasand, .skills-sea-box .skills-coral, .skills-sea-box .works-mountain, .skills-sea-box .works-b-tree, .skills-sea-box .contact-wave, .works-mountain-box .home-bluecity, .works-mountain-box .home-city, .works-mountain-box .about-city, .works-mountain-box .about-cloud, .works-mountain-box .about-bcity, .works-mountain-box .skills-seabed, .works-mountain-box .skills-seasand, .works-mountain-box .skills-coral, .works-mountain-box .works-mountain, .works-mountain-box .works-b-tree, .works-mountain-box .contact-wave, .contact-sea-box .home-bluecity, .contact-sea-box .home-city, .contact-sea-box .about-city, .contact-sea-box .about-cloud, .contact-sea-box .about-bcity, .contact-sea-box .skills-seabed, .contact-sea-box .skills-seasand, .contact-sea-box .skills-coral, .contact-sea-box .works-mountain, .contact-sea-box .works-b-tree, .contact-sea-box .contact-wave {
   width: 2000px;
   height: auto;
   position: absolute;
   left: calc(50% - 1000px);
   bottom: 0;
 }
-.home-city-box .home-bluecity img, .home-city-box .home-city img, .home-city-box .about-city img, .home-city-box .about-cloud img, .home-city-box .about-bcity img, .home-city-box .skills-seabed img, .home-city-box .skills-seasand img, .home-city-box .skills-coral img, .home-city-box .works-mountain img, .home-city-box .works-b-tree img, .about-city-box .home-bluecity img, .about-city-box .home-city img, .about-city-box .about-city img, .about-city-box .about-cloud img, .about-city-box .about-bcity img, .about-city-box .skills-seabed img, .about-city-box .skills-seasand img, .about-city-box .skills-coral img, .about-city-box .works-mountain img, .about-city-box .works-b-tree img, .skills-sea-box .home-bluecity img, .skills-sea-box .home-city img, .skills-sea-box .about-city img, .skills-sea-box .about-cloud img, .skills-sea-box .about-bcity img, .skills-sea-box .skills-seabed img, .skills-sea-box .skills-seasand img, .skills-sea-box .skills-coral img, .skills-sea-box .works-mountain img, .skills-sea-box .works-b-tree img, .works-mountain-box .home-bluecity img, .works-mountain-box .home-city img, .works-mountain-box .about-city img, .works-mountain-box .about-cloud img, .works-mountain-box .about-bcity img, .works-mountain-box .skills-seabed img, .works-mountain-box .skills-seasand img, .works-mountain-box .skills-coral img, .works-mountain-box .works-mountain img, .works-mountain-box .works-b-tree img {
+.home-city-box .home-bluecity img, .home-city-box .home-city img, .home-city-box .about-city img, .home-city-box .about-cloud img, .home-city-box .about-bcity img, .home-city-box .skills-seabed img, .home-city-box .skills-seasand img, .home-city-box .skills-coral img, .home-city-box .works-mountain img, .home-city-box .works-b-tree img, .home-city-box .contact-wave img, .about-city-box .home-bluecity img, .about-city-box .home-city img, .about-city-box .about-city img, .about-city-box .about-cloud img, .about-city-box .about-bcity img, .about-city-box .skills-seabed img, .about-city-box .skills-seasand img, .about-city-box .skills-coral img, .about-city-box .works-mountain img, .about-city-box .works-b-tree img, .about-city-box .contact-wave img, .skills-sea-box .home-bluecity img, .skills-sea-box .home-city img, .skills-sea-box .about-city img, .skills-sea-box .about-cloud img, .skills-sea-box .about-bcity img, .skills-sea-box .skills-seabed img, .skills-sea-box .skills-seasand img, .skills-sea-box .skills-coral img, .skills-sea-box .works-mountain img, .skills-sea-box .works-b-tree img, .skills-sea-box .contact-wave img, .works-mountain-box .home-bluecity img, .works-mountain-box .home-city img, .works-mountain-box .about-city img, .works-mountain-box .about-cloud img, .works-mountain-box .about-bcity img, .works-mountain-box .skills-seabed img, .works-mountain-box .skills-seasand img, .works-mountain-box .skills-coral img, .works-mountain-box .works-mountain img, .works-mountain-box .works-b-tree img, .works-mountain-box .contact-wave img, .contact-sea-box .home-bluecity img, .contact-sea-box .home-city img, .contact-sea-box .about-city img, .contact-sea-box .about-cloud img, .contact-sea-box .about-bcity img, .contact-sea-box .skills-seabed img, .contact-sea-box .skills-seasand img, .contact-sea-box .skills-coral img, .contact-sea-box .works-mountain img, .contact-sea-box .works-b-tree img, .contact-sea-box .contact-wave img {
   width: 100%;
 }
-.home-city-box .home-bluecity-up, .home-city-box .about-cloud-up, .about-city-box .home-bluecity-up, .about-city-box .about-cloud-up, .skills-sea-box .home-bluecity-up, .skills-sea-box .about-cloud-up, .works-mountain-box .home-bluecity-up, .works-mountain-box .about-cloud-up {
+.home-city-box .home-bluecity-up, .home-city-box .about-cloud-up, .about-city-box .home-bluecity-up, .about-city-box .about-cloud-up, .skills-sea-box .home-bluecity-up, .skills-sea-box .about-cloud-up, .works-mountain-box .home-bluecity-up, .works-mountain-box .about-cloud-up, .contact-sea-box .home-bluecity-up, .contact-sea-box .about-cloud-up {
   z-index: 10;
 }
-.home-city-box .home-city-up, .home-city-box .about-city-up, .about-city-box .home-city-up, .about-city-box .about-city-up, .skills-sea-box .home-city-up, .skills-sea-box .about-city-up, .works-mountain-box .home-city-up, .works-mountain-box .about-city-up {
+.home-city-box .home-city-up, .home-city-box .about-city-up, .about-city-box .home-city-up, .about-city-box .about-city-up, .skills-sea-box .home-city-up, .skills-sea-box .about-city-up, .works-mountain-box .home-city-up, .works-mountain-box .about-city-up, .contact-sea-box .home-city-up, .contact-sea-box .about-city-up {
   z-index: 15;
   bottom: -2px;
 }
@@ -446,7 +450,7 @@ header {
   left: 240px;
 }
 .home-my-box img {
-  width: 11rem;
+  width: 10rem;
 }
 
 .home-road-box, .about-road-box, .about-seasand-bg, .works-mountain-bg {
@@ -478,23 +482,23 @@ header {
   width: 100%;
 }
 .home-day-car ul li .home-car-up01, .home-day-car ul li .home-car-up04, .home-day-car2 ul li .home-car-up01, .home-day-car2 ul li .home-car-up04, .home-night-car ul li .home-car-up01, .home-night-car ul li .home-car-up04, .home-night-car2 ul li .home-car-up01, .home-night-car2 ul li .home-car-up04 {
-  width: 150px;
+  max-width: 6.6rem;
 }
 .home-day-car ul li .home-scooter-up02, .home-day-car2 ul li .home-scooter-up02, .home-night-car ul li .home-scooter-up02, .home-night-car2 ul li .home-scooter-up02 {
-  width: 80px;
+  max-width: 3.8rem;
 }
 .home-day-car ul li .home-car-up03, .home-day-car2 ul li .home-car-up03, .home-night-car ul li .home-car-up03, .home-night-car2 ul li .home-car-up03 {
-  width: 120px;
+  max-width: 6.6rem;
 }
 
 .home-night-car ul li .home-car-up01, .home-night-car ul li .home-car-up04 {
-  width: 190px;
+  max-width: 6.6rem;
 }
 .home-night-car ul li .home-scooter-up02 {
-  width: 120px;
+  max-width: 3.8rem;
 }
 .home-night-car ul li .home-car-up03 {
-  width: 160px;
+  max-width: 6.6rem;
 }
 
 .home-day-car2, .home-night-car2 {
@@ -504,23 +508,23 @@ header {
   opacity: 0;
 }
 .home-day-car2 ul li .home-car-down01, .home-night-car2 ul li .home-car-down01 {
-  width: 170px;
+  max-width: 7.6rem;
 }
 .home-day-car2 ul li .home-car-down02, .home-night-car2 ul li .home-car-down02 {
-  width: 200px;
+  max-width: 10rem;
 }
 .home-day-car2 ul li .home-scooter-down03, .home-night-car2 ul li .home-scooter-down03 {
-  width: 100px;
+  max-width: 4.6rem;
 }
 
 .home-night-car2 ul li .home-car-down01 {
-  width: 230px;
+  max-width: 7.6rem;
 }
 .home-night-car2 ul li .home-car-down02 {
-  width: 260px;
+  max-width: 8rem;
 }
 .home-night-car2 ul li .home-scooter-down03 {
-  width: 160px;
+  max-width: 4.6rem;
 }
 
 .arrow-pages-wrapper {
@@ -600,15 +604,21 @@ header {
   align-items: center;
 }
 .title-box .title-text h4 {
-  padding-top: 10px;
   font-size: 24px;
   color: #ffffff;
+  line-height: 2;
 }
 .title-box .title-text h4:before {
   padding-right: 0.4rem;
 }
-.title-box .title-text img {
-  width: 10rem;
+.title-box .title-img {
+  max-width: 8.6rem;
+}
+.title-box .title-img img {
+  width: 100%;
+}
+.title-box .title-img.title-img-c {
+  max-width: 12rem;
 }
 
 .about-AirCamera-box, .skills-tortoise-box {
@@ -672,14 +682,14 @@ header {
 .about-people-box {
   top: -90px;
   z-index: 15;
-  left: 0px;
+  left: -10rem;
   display: flex;
   justify-content: flex-end;
   padding-right: 16rem;
   opacity: 1;
 }
 .about-people-box img {
-  width: 3rem;
+  width: 2.8rem;
 }
 
 .about-city-box {
@@ -800,7 +810,7 @@ header {
   bottom: 8rem;
 }
 .skills-sea-box .skills-seasand {
-  bottom: 0px;
+  bottom: -1.2rem;
   z-index: 10;
 }
 .skills-sea-box .skills-coral {
@@ -810,7 +820,7 @@ header {
   z-index: 10;
 }
 .skills-sea-box .skills-coral img {
-  width: 18rem;
+  width: 16rem;
 }
 .skills-sea-box .skills-my-box {
   position: absolute;
@@ -910,7 +920,7 @@ header {
 .works-web-box .works-web.col3, .works-web-box .works-vision.col3, .works-web-box .works-ui.col3, .works-vision-box .works-web.col3, .works-vision-box .works-vision.col3, .works-vision-box .works-ui.col3, .works-ui-box .works-web.col3, .works-ui-box .works-vision.col3, .works-ui-box .works-ui.col3 {
   width: calc(100%/3 - 1rem);
   margin-left: calc(1rem * 3 / 2);
-  margin-bottom: calc(1rem * 3 / 2);
+  margin-bottom: calc(2rem * 3 / 2);
   text-align: center;
 }
 .works-web-box .works-web.col3:nth-child(3n+1), .works-web-box .works-vision.col3:nth-child(3n+1), .works-web-box .works-ui.col3:nth-child(3n+1), .works-vision-box .works-web.col3:nth-child(3n+1), .works-vision-box .works-vision.col3:nth-child(3n+1), .works-vision-box .works-ui.col3:nth-child(3n+1), .works-ui-box .works-web.col3:nth-child(3n+1), .works-ui-box .works-vision.col3:nth-child(3n+1), .works-ui-box .works-ui.col3:nth-child(3n+1) {
@@ -941,7 +951,6 @@ header {
 }
 .web-text h4 {
   font-size: 24px;
-  line-height: 1.5;
 }
 .web-text p {
   font-size: 18px;
@@ -995,22 +1004,168 @@ header {
   width: 100%;
 }
 .works-animal-box .works-beer.works-LeopardCat, .works-animal-box .works-LeopardCat.works-LeopardCat {
-  width: 6.4rem;
-  margin-top: 8rem;
-  margin-left: 8rem;
+  width: 5.8rem;
+  margin-top: 10rem;
+  margin-left: 10rem;
 }
 
 @media only screen and (max-width: 768px) {
   .works-web-box .works-web.col3.col2, .works-web-box .works-vision.col3.col2, .works-web-box .works-ui.col3.col2, .works-vision-box .works-web.col3.col2, .works-vision-box .works-vision.col3.col2, .works-vision-box .works-ui.col3.col2, .works-ui-box .works-web.col3.col2, .works-ui-box .works-vision.col3.col2, .works-ui-box .works-ui.col3.col2 {
     width: calc(100%/2 - 1rem);
     margin-left: calc(1rem * 2 / 1);
-    margin-bottom: calc(1rem * 2 / 1);
+    margin-bottom: calc(2rem * 2 / 1);
   }
   .works-web-box .works-web.col3.col2:nth-child(2n+1), .works-web-box .works-vision.col3.col2:nth-child(2n+1), .works-web-box .works-ui.col3.col2:nth-child(2n+1), .works-vision-box .works-web.col3.col2:nth-child(2n+1), .works-vision-box .works-vision.col3.col2:nth-child(2n+1), .works-vision-box .works-ui.col3.col2:nth-child(2n+1), .works-ui-box .works-web.col3.col2:nth-child(2n+1), .works-ui-box .works-vision.col3.col2:nth-child(2n+1), .works-ui-box .works-ui.col3.col2:nth-child(2n+1) {
     margin-left: 0;
   }
 }
 /* works end */
+/* contact */
+.contact-contant-container {
+  padding-bottom: 6rem;
+}
+
+.contact-contant-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-hitballoon-left, .contact-hitballoon-right {
+  position: relative;
+  width: 5.4rem;
+  margin: 0 4rem;
+}
+.contact-hitballoon-left img, .contact-hitballoon-right img {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+}
+.contact-hitballoon-left.contact-hitballoon-right, .contact-hitballoon-right.contact-hitballoon-right {
+  width: 4.4rem;
+}
+.contact-hitballoon-left.contact-hitballoon-right img, .contact-hitballoon-right.contact-hitballoon-right img {
+  position: absolute;
+  bottom: 20%;
+  top: initial;
+}
+
+.contact-contant-box {
+  max-width: 20rem;
+}
+.contact-contant-box .contact-myhitballoon, .contact-contant-box .contact-myhitballoon-line {
+  max-width: 6.8rem;
+  margin: 0 auto;
+}
+.contact-contant-box .contact-myhitballoon img, .contact-contant-box .contact-myhitballoon-line img {
+  width: 100%;
+}
+.contact-contant-box .contact-myhitballoon.contact-myhitballoon-line, .contact-contant-box .contact-myhitballoon-line.contact-myhitballoon-line {
+  max-width: 12rem;
+  padding-bottom: 4px;
+  margin-top: -16px;
+}
+.contact-contant-box .contant-box {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  background-color: rgba(198, 233, 255, 0.2);
+  border-radius: 0.2rem;
+  padding: 20px 16px;
+}
+.contact-contant-box .contant-box:before {
+  content: "";
+  display: block;
+  border-radius: 0.2rem;
+  border: 3.2px solid rgba(198, 233, 255, 0.6);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: -8px;
+  z-index: -1;
+}
+.contact-contant-box .contant-box .title-box, .contact-contant-box .contant-box .my-contact-box {
+  width: 100%;
+}
+.contact-contant-box .contant-box .my-contact-box {
+  margin: 1rem 0;
+}
+.contact-contant-box .contant-box .my-contact-box li {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 2.4;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+}
+.contact-contant-box .contant-box .my-contact-box li::before {
+  margin-right: 10px;
+}
+.contact-contant-box .contant-box .my-community-box {
+  width: 100%;
+}
+.contact-contant-box .contant-box .my-community-box .community-title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.contact-contant-box .contant-box .my-community-box .community-title .title-line-dashed {
+  width: 33.3%;
+  border-top: 1.5px dashed #ffffff;
+}
+.contact-contant-box .contant-box .my-community-box .community-title h6 {
+  padding: 0 1rem;
+  color: #ffffff;
+  font-size: 18px;
+}
+.contact-contant-box .contant-box .my-community-box .community-icon {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-sea-wrapper.day-contact-sea {
+  background: url(../images/contact/day-contact-sea.svg) repeat-x;
+  width: 100%;
+  height: 100px;
+}
+.contact-sea-wrapper.night-contact-sea {
+  background: url(../images/contact/night-contact-sea.svg) repeat-x;
+  width: 100%;
+  height: 100px;
+}
+
+.contact-sea-box {
+  height: auto;
+  position: relative;
+}
+.contact-sea-box .contact-wave {
+  top: 0px;
+  bottom: initial;
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+  left: calc(50% - 720px);
+}
+.contact-sea-box .contact-wave .contact-wave-left, .contact-sea-box .contact-wave .contact-wave-right {
+  max-width: 18rem;
+}
+.contact-sea-box .contact-wave .contact-wave-left img, .contact-sea-box .contact-wave .contact-wave-right img {
+  width: 100%;
+}
+.contact-sea-box .contact-islands-box .contact-islands {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.contact-sea-box .contact-islands-box .contact-islands img {
+  width: 100%;
+}
+
+/* contact end */
 @media only screen and (max-width: 768px) {
   #pp-nav.nav-position {
     left: 0px;

@@ -210,8 +210,6 @@ header
                 transform: translateY(-5px)
                 -webkit-transition: all 0.2s ease-in-out
                 transition: all 0.2s ease-in-out
-                
-
 /* menu end */
 /* nav */
 .line-dotted
@@ -237,8 +235,10 @@ header
         max-width: 280px
         filter: drop-shadow(0px 6px 0px rgba(85,150,202,.8))
 .home-air-wrapper,.home-city-wrapper
-    margin-top: -80px
+    margin-top: -2rem
     position: relative
+.home-air-wrapper
+    margin-bottom: 1rem
 .home-city-wrapper
     margin-top: -40px
 //日夜 remove/add class
@@ -282,9 +282,9 @@ header
             position: relative
             left: -90%
             height: 300px
-.home-city-box,.about-city-box,.skills-sea-box,.works-mountain-box
+.home-city-box,.about-city-box,.skills-sea-box,.works-mountain-box,.contact-sea-box
     height: 400px
-    .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.works-b-tree
+    .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.works-b-tree,.contact-wave
         width: 2000px
         height: auto
         position: absolute
@@ -303,7 +303,7 @@ header
     z-index: 20
     left: 240px
     img
-        width: 11rem
+        width: 10rem
 .home-road-box,.about-road-box,.about-seasand-bg,.works-mountain-bg
     position: relative
     .home-ZebraRoad
@@ -328,40 +328,40 @@ header
             bottom: 0
             width: 100%
             .home-car-up01,.home-car-up04
-                width: 150px
+                max-width: 6.6rem
             .home-scooter-up02
-                width: 80px
+                max-width: 3.8rem
             .home-car-up03
-                width: 120px
+                max-width: 6.6rem
 .home-night-car
     ul
         li
             .home-car-up01,.home-car-up04
-                width: 190px
+                max-width: 6.6rem
             .home-scooter-up02
-                width: 120px
+                max-width: 3.8rem
             .home-car-up03
-                width: 160px
+                max-width: 6.6rem
 .home-day-car2,.home-night-car2
     top: -35px
     ul
         li
             opacity: 0
             .home-car-down01
-                width: 170px
+                max-width: 7.6rem
             .home-car-down02
-                width: 200px
+                max-width: 10rem
             .home-scooter-down03
-                width: 100px
+                max-width: 4.6rem
 .home-night-car2
     ul
         li
             .home-car-down01
-                width: 230px
+                max-width: 7.6rem
             .home-car-down02
-                width: 260px
+                max-width: 8rem
             .home-scooter-down03
-                width: 160px
+                max-width: 4.6rem
 .arrow-pages-wrapper
     position: fixed
     top: 50vh
@@ -427,13 +427,17 @@ header
         justify-content: center
         align-items: center
         h4
-            padding-top: 10px
             font-size: $h4
             color: $white
+            line-height: 2
             &:before
                 padding-right: .4rem
+    .title-img
+        max-width: 8.6rem
         img
-            width: 10rem
+            width: 100%
+        &.title-img-c
+            max-width: 12rem
 .about-AirCamera-box,.skills-tortoise-box
     position: absolute
     right: 4rem
@@ -479,13 +483,13 @@ header
 .about-people-box
     top: -90px
     z-index: 15
-    left: 0px
+    left: -10rem
     display: flex
     justify-content: flex-end
     padding-right: 16rem
     opacity: 1
     img
-        width: 3rem
+        width: 2.8rem
 .about-city-box
     margin-top: -2rem
     height: 300px
@@ -573,7 +577,7 @@ header
     .skills-seabed
         bottom: 8rem
     .skills-seasand
-        bottom: 0px
+        bottom: -1.2rem
         z-index: 10
     .skills-coral
         display: flex
@@ -581,7 +585,7 @@ header
         bottom: 4rem
         z-index: 10
         img
-            width: 18rem
+            width: 16rem
     .skills-my-box
         position: absolute
         width: 100%
@@ -658,7 +662,7 @@ header
         &.col3
             width: calc(100%/3 - 1rem)
             margin-left: calc(1rem * 3 / 2)
-            margin-bottom: calc(1rem * 3 / 2)
+            margin-bottom: calc(2rem * 3 / 2)
             text-align: center
             &:nth-child(3n+1)
                 margin-left: 0
@@ -681,7 +685,6 @@ header
     color: $white
     h4
         font-size: $h4
-        line-height: 1.5
     p
         font-size: $l-p
         line-height: 1.5
@@ -725,9 +728,9 @@ header
         img
             width: 100%
         &.works-LeopardCat
-            width: 6.4rem
-            margin-top: 8rem
-            margin-left: 8rem
+            width: 5.8rem
+            margin-top: 10rem
+            margin-left: 10rem
 @media only screen and (max-width: 768px)
     .works-web-box,.works-vision-box,.works-ui-box
         .works-web,.works-vision,.works-ui
@@ -735,8 +738,121 @@ header
                 &.col2
                     width: calc(100%/2 - 1rem)
                     margin-left: calc(1rem * 2 / 1)
-                    margin-bottom: calc(1rem * 2 / 1)
+                    margin-bottom: calc(2rem * 2 / 1)
                     &:nth-child(2n+1)
                         margin-left: 0
 /* works end */ 
+/* contact */
+.contact-contant-container
+    padding-bottom: 6rem
+.contact-contant-wrapper
+    margin: 0 auto
+    display: flex
+    justify-content: center
+.contact-hitballoon-left,.contact-hitballoon-right
+    position: relative
+    width: 5.4rem
+    margin: 0 4rem
+    img
+        position: absolute
+        width: 100%
+        top: 40%
+    &.contact-hitballoon-right
+        width: 4.4rem
+        img
+            position: absolute
+            bottom: 20%
+            top: initial
+.contact-contant-box
+    max-width: 20rem
+    .contact-myhitballoon,.contact-myhitballoon-line
+        max-width: 6.8rem
+        margin: 0 auto
+        img
+            width: 100%
+        &.contact-myhitballoon-line
+            max-width: 12rem
+            padding-bottom: 4px
+            margin-top: -16px
+    .contant-box
+        position: relative
+        z-index: 0
+        width: 100%
+        background-color: rgba(198,233,255,.2)
+        border-radius: 0.2rem
+        padding: 20px 16px
+        &:before
+            content: ''
+            display: block
+            border-radius: 0.2rem
+            border: 3.2px solid rgba(198,233,255,.6)
+            position: absolute
+            top: 0px
+            bottom: 0px
+            left: 0px
+            right: 0px
+            margin: -8px
+            z-index: -1
+        .title-box,.my-contact-box
+            width: 100%
+        .my-contact-box
+            margin: 1rem 0
+            li
+                width: 100%
+                text-align: center
+                font-size: $l-p
+                line-height: 2.4
+                color: $white
+                letter-spacing: 1.5px
+                &::before
+                    margin-right: 10px
+        .my-community-box
+            width: 100%
+            .community-title
+                display: flex
+                width: 100%
+                align-items: center
+                justify-content: center
+                .title-line-dashed
+                    width: 33.3%
+                    border-top: 1.5px dashed $white
+                h6
+                    padding: 0 1rem
+                    color: $white
+                    font-size: $h6
+            .community-icon
+                margin-top: 1rem
+                width: 100%
+                display: flex
+                justify-content: center
+.contact-sea-wrapper
+    &.day-contact-sea
+        background: url(../images/contact/day-contact-sea.svg) repeat-x
+        width: 100%
+        height: 100px
+    &.night-contact-sea
+        background: url(../images/contact/night-contact-sea.svg) repeat-x
+        width: 100%
+        height: 100px
+.contact-sea-box
+    height: auto
+    position: relative
+    .contact-wave
+        top: 0px
+        bottom: initial
+        display: flex
+        justify-content: space-between
+        width: 1440px
+        left: calc(50% - 720px)
+        .contact-wave-left,.contact-wave-right
+            max-width: 18rem
+            img
+                width: 100%
+    .contact-islands-box
+        .contact-islands
+            max-width: 40rem
+            margin: 0 auto
+            img
+                width: 100%
 
+/* contact end */ 

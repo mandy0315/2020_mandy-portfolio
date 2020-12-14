@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //pagepiling 自訂
+    // pagepiling 自訂
     $('#pagepiling').pagepiling({
         //水平換頁
         direction: 'horizontal',
@@ -9,7 +9,7 @@ $(document).ready(function () {
         //循環回到首頁
         loopBottom: true,
         // 背景色
-        sectionsColor: ['#E3E3E3', '#E3E3E3', '#F1CA9E', '#94C28B', ''],
+        sectionsColor: ['#E3E3E3', '#E3E3E3', '#F1CA9E', '#94C28B', '#5596CA'],
         // 連結名稱
         anchors: ['home', 'about', 'skills', 'works', 'contact'],
         // 點瀏覽
@@ -28,10 +28,10 @@ $(document).ready(function () {
             }
         }
     });
-    // 時間執行呼叫
+    // 執行呼叫
     getHomeTime();
     getTimeBg();
-    // getStarMousemove();
+    getBlueBgMousemove();
     //nav 
     $('#pp-nav').append('<div class="line-dotted"></div>');
     //header 載入
@@ -63,7 +63,6 @@ $(document).ready(function () {
                     $(".home-night-car,.home-night-car2").addClass("active");
                     $(".home-day-car,.home-day-car2").removeClass("active");
                     getNightTimelineAn();
-                    getStarMousemove();
                 }
             }
         });
@@ -77,9 +76,11 @@ $(document).ready(function () {
                 todayDate = new Date();
                 var hh = todayDate.getHours();
                 if (hh >= 6 && hh <= 16) {
-                    $("body,.section-AirBg-wrapper,.menu-contant-box").addClass("day");
+                    $(".section-AirBg-wrapper,.menu-contant-box").addClass("day");
+                    $(".contact-sea-wrapper").addClass("day-contact-sea");
                 } else {
-                    $("body,.section-AirBg-wrapper,.menu-contant-box").addClass("night");
+                    $(".section-AirBg-wrapper,.menu-contant-box").addClass("night");
+                    $(".contact-sea-wrapper").addClass("night-contact-sea");
                 }
             }
         });
@@ -111,22 +112,23 @@ $(document).ready(function () {
             .staggerFrom(stars, 0.8, { opacity: 0, y: 100, ease: Back.easeOut }, 1)
             .staggerFrom(bigTitle, 0.4, { opacity: 0, scale: 0.2, x: 30, y: 30, ease: Back.easeOut })
     }
-    function getStarMousemove() {
+    // 滑鼠移動動態
+    function getBlueBgMousemove() {
         //鼠标指针移动时发生 mousemove 事件
         $(window).mousemove(function (e) {
             //获取鼠标坐标：
             var pagex = e.pageX;
             var pagey = e.pageY;
             let width = window.innerWidth / 2;
-            let height = window.innerHeight;
+            // let height = window.innerHeight / 2;
 
             //滑鼠  -50 同放向 50 反放向
-            let starX = ((width - pagex) / - 50);
-            let starLY = ((height - pagey) / - 20);
-            let starRY = ((height - pagey) / + 20);
-            $(".home-night-star img").css("transform", "translateX(" + starX + "px)")
-            // $(".skills-design-box").css("transform", "translateY(" + starLY + "px)")
-            // $(".skills-code-box").css("transform", "translateY(" + starRY + "px)")
+            let starX = ((width - pagex) / - 100);
+            let starRX = ((width - pagex) / + 100);
+            // $(".home-bluecity-up img,.about-bcity img,.skills-seabed img,.works-b-tree-up img").css("transform", "translateX(" + starX + "px)")
+            // $(".home-bluecity-down img,.works-b-tree-down img").css("transform", "translateX(" + starRX + "px)")
+            $(".home-bluecity-up img").css("transform", "translateX(" + starX + "px)")
+            $(".home-bluecity-down img").css("transform", "translateX(" + starRX + "px)")
         });
     };
     // icon 社群載入
