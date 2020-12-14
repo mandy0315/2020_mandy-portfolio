@@ -337,11 +337,11 @@ header
     ul
         li
             .home-car-up01,.home-car-up04
-                max-width: 6.6rem
+                max-width: 8.8rem
             .home-scooter-up02
-                max-width: 3.8rem
+                max-width: 4.8rem
             .home-car-up03
-                max-width: 6.6rem
+                max-width: 7.4rem
 .home-day-car2,.home-night-car2
     top: -35px
     ul
@@ -357,11 +357,11 @@ header
     ul
         li
             .home-car-down01
-                max-width: 7.6rem
+                max-width: 9rem
             .home-car-down02
-                max-width: 8rem
+                mmax-width: 12rem
             .home-scooter-down03
-                max-width: 4.6rem
+                max-width: 5rem
 .arrow-pages-wrapper
     position: fixed
     top: 50vh
@@ -764,7 +764,7 @@ header
             bottom: 20%
             top: initial
 .contact-contant-box
-    max-width: 20rem
+    max-width: 24rem
     .contact-myhitballoon,.contact-myhitballoon-line
         max-width: 6.8rem
         margin: 0 auto
@@ -796,7 +796,7 @@ header
         .title-box,.my-contact-box
             width: 100%
         .my-contact-box
-            margin: 1rem 0
+            margin-bottom: .5rem
             li
                 width: 100%
                 text-align: center
@@ -849,10 +849,44 @@ header
             img
                 width: 100%
     .contact-islands-box
+        width: 100%
         .contact-islands
-            max-width: 40rem
+            background: url(../images/contact/contact-islands.svg) no-repeat
+            width: 38rem
+            height: 13.8rem
+            background-size: contain
             margin: 0 auto
-            img
-                width: 100%
+            display: flex
+            justify-content: center
+            .contact-islands-about,.contact-islands-work
+                width: 46%
+                margin-top: -20px
+                margin-left: 10px
+                img
+                    width: 100%
+                .islands-about-title,.islands-works-title
+                    width: 4rem
+                    margin: -50px auto 0px auto
+                    &.islands-works-title
+                        position: relative
+                        right: 32px
+                &.contact-islands-work
+                    width: 54%
+                    margin-top: -40px 
+                    margin-right: 20px
+.contact-copyright
+    padding: .2rem 0px
+    margin-top: -10px
+    background: rgb(85, 150, 202)
+    position: fixed
+    z-index: 10
+    width: 100%
+    bottom: 0px
+    p
+        color: $white
+        width: 100%
+        text-align: center
+        font-size: $s-p
+
 
 /* contact end */ 

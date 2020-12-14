@@ -492,13 +492,13 @@ header {
 }
 
 .home-night-car ul li .home-car-up01, .home-night-car ul li .home-car-up04 {
-  max-width: 6.6rem;
+  max-width: 8.8rem;
 }
 .home-night-car ul li .home-scooter-up02 {
-  max-width: 3.8rem;
+  max-width: 4.8rem;
 }
 .home-night-car ul li .home-car-up03 {
-  max-width: 6.6rem;
+  max-width: 7.4rem;
 }
 
 .home-day-car2, .home-night-car2 {
@@ -518,13 +518,13 @@ header {
 }
 
 .home-night-car2 ul li .home-car-down01 {
-  max-width: 7.6rem;
+  max-width: 9rem;
 }
 .home-night-car2 ul li .home-car-down02 {
-  max-width: 8rem;
+  mmax-width: 12rem;
 }
 .home-night-car2 ul li .home-scooter-down03 {
-  max-width: 4.6rem;
+  max-width: 5rem;
 }
 
 .arrow-pages-wrapper {
@@ -1051,7 +1051,7 @@ header {
 }
 
 .contact-contant-box {
-  max-width: 20rem;
+  max-width: 24rem;
 }
 .contact-contant-box .contact-myhitballoon, .contact-contant-box .contact-myhitballoon-line {
   max-width: 6.8rem;
@@ -1090,7 +1090,7 @@ header {
   width: 100%;
 }
 .contact-contant-box .contant-box .my-contact-box {
-  margin: 1rem 0;
+  margin-bottom: 0.5rem;
 }
 .contact-contant-box .contant-box .my-contact-box li {
   width: 100%;
@@ -1157,12 +1157,54 @@ header {
 .contact-sea-box .contact-wave .contact-wave-left img, .contact-sea-box .contact-wave .contact-wave-right img {
   width: 100%;
 }
-.contact-sea-box .contact-islands-box .contact-islands {
-  max-width: 40rem;
-  margin: 0 auto;
-}
-.contact-sea-box .contact-islands-box .contact-islands img {
+.contact-sea-box .contact-islands-box {
   width: 100%;
+}
+.contact-sea-box .contact-islands-box .contact-islands {
+  background: url(../images/contact/contact-islands.svg) no-repeat;
+  width: 38rem;
+  height: 13.8rem;
+  background-size: contain;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.contact-sea-box .contact-islands-box .contact-islands .contact-islands-about, .contact-sea-box .contact-islands-box .contact-islands .contact-islands-work {
+  width: 46%;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+.contact-sea-box .contact-islands-box .contact-islands .contact-islands-about img, .contact-sea-box .contact-islands-box .contact-islands .contact-islands-work img {
+  width: 100%;
+}
+.contact-sea-box .contact-islands-box .contact-islands .contact-islands-about .islands-about-title, .contact-sea-box .contact-islands-box .contact-islands .contact-islands-about .islands-works-title, .contact-sea-box .contact-islands-box .contact-islands .contact-islands-work .islands-about-title, .contact-sea-box .contact-islands-box .contact-islands .contact-islands-work .islands-works-title {
+  width: 4rem;
+  margin: -50px auto 0px auto;
+}
+.contact-sea-box .contact-islands-box .contact-islands .contact-islands-about .islands-about-title.islands-works-title, .contact-sea-box .contact-islands-box .contact-islands .contact-islands-about .islands-works-title.islands-works-title, .contact-sea-box .contact-islands-box .contact-islands .contact-islands-work .islands-about-title.islands-works-title, .contact-sea-box .contact-islands-box .contact-islands .contact-islands-work .islands-works-title.islands-works-title {
+  position: relative;
+  right: 32px;
+}
+.contact-sea-box .contact-islands-box .contact-islands .contact-islands-about.contact-islands-work, .contact-sea-box .contact-islands-box .contact-islands .contact-islands-work.contact-islands-work {
+  width: 54%;
+  margin-top: -40px;
+  margin-right: 20px;
+}
+
+.contact-copyright {
+  padding: 0.2rem 0px;
+  margin-top: -10px;
+  background: #5596ca;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  bottom: 0px;
+}
+.contact-copyright p {
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
 }
 
 /* contact end */
