@@ -28,10 +28,12 @@ $(document).ready(function () {
             }
         }
     });
+    $.fn.pagepiling.setAllowScrolling(false);
     // 執行呼叫
     getHomeTime();
     getTimeBg();
     getBlueBgMousemove();
+    getTabs();
     //nav 
     $('#pp-nav').append('<div class="line-dotted"></div>');
     //header 載入
@@ -125,8 +127,6 @@ $(document).ready(function () {
             //滑鼠  -50 同放向 50 反放向
             let starX = ((width - pagex) / - 100);
             let starRX = ((width - pagex) / + 100);
-            // $(".home-bluecity-up img,.about-bcity img,.skills-seabed img,.works-b-tree-up img").css("transform", "translateX(" + starX + "px)")
-            // $(".home-bluecity-down img,.works-b-tree-down img").css("transform", "translateX(" + starRX + "px)")
             $(".home-bluecity-up img").css("transform", "translateX(" + starX + "px)")
             $(".home-bluecity-down img").css("transform", "translateX(" + starRX + "px)")
         });
@@ -237,7 +237,7 @@ $(document).ready(function () {
         });
     }
     // works tab 
-    $(function () {
+    function getTabs() {
         $('.WorksTabs-web,.WorksTabs-ui,.WorksTabs-vision').load("./share/WorksTabs-web.html", function () {
             getLoadMore();
         });
@@ -261,6 +261,12 @@ $(document).ready(function () {
             $(this).addClass('active').siblings().removeClass('active');
             $content.eq($tabIndex).fadeIn(500).css('display', 'block').siblings().css('display', 'none');
         });
-    });
+    }
+    // cc();
+    // function cc() {
+    //     $("#home").bind("swipeleft", function(){
+    //         window.location.href="#about";
+    //     });
+    // }
 
 });

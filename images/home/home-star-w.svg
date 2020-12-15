@@ -12,6 +12,5 @@
             <path class="cls-1" d="M951.45,190.43c0-8.52-2.4-10.92-10.92-10.92,8.52,0,10.92-2.39,10.92-10.91,0,8.52,2.39,10.91,10.91,10.91C953.84,179.51,951.45,181.91,951.45,190.43Z"/>
             <rect class="cls-2" width="1400" height="325.27"/>
             <animate attributeType="auto" attributeName="opacity" dur="1.2s" values="0.2;1;0.2" repeatCount="indefinite" begin="0.6s"/>
-
         </g>
 </svg>
