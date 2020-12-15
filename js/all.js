@@ -274,11 +274,11 @@ $(document).ready(function () {
 
         $tab.eq(0).addClass('active');
         $content.eq(0).fadeIn(500).css('display', 'block').siblings().css('display', 'none');
-        $tab.click(function(){
+        $tab.on('click', function () {
             var $tabIndex = $(this).index();
             $(this).addClass('active').siblings().removeClass('active');
             $content.eq($tabIndex).fadeIn(500).css('display', 'block').siblings().css('display', 'none');
-        })
+        });
     }
     //左右滑動
     function getSectionSlide() {
