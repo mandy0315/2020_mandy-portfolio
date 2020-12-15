@@ -1,4 +1,19 @@
-//home-menu-an
+// arrow-pages
+.arrow-pages-left-an,.arrow-pages-right-an
+    -webkit-transform: translateX(0px)
+    transform: translateX(0px)
+    -webkit-transition: all 0.5s ease-in-out
+    transition: all 0.5s ease-in-out
+    &:hover
+        -webkit-transform: translateX(10px)
+        transform: translateX(10px)
+        -webkit-transition: all 0.5s ease-in-out
+        transition: all 0.5s ease-in-out
+    &.arrow-pages-left-an
+        &:hover
+            -webkit-transform: translateX(-10px)
+            transform: translateX(-10px)
+// home-menu-an
 .open-menu-icon-an,.menu-home-hoverAn,.menu-about-hoverAn,.menu-skills-hoverAn,.menu-works-hoverAn,.menu-contact-hoverAn
     .menu-icon
         img

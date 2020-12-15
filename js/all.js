@@ -79,16 +79,11 @@ $(document).ready(function () {
                     $(".home-night-car,.home-night-car2").removeClass("active");
                     getDayTimelineAn();
                 } else {
-                    $(".home-day-box").addClass("active");
-                    $(".home-night-box").removeClass("active");
-                    $(".home-day-car,.home-day-car2").addClass("active");
-                    $(".home-night-car,.home-night-car2").removeClass("active");
-                    getDayTimelineAn();
-                    // $(".home-night-box").addClass("active");
-                    // $(".home-day-box").removeClass("active");
-                    // $(".home-night-car,.home-night-car2").addClass("active");
-                    // $(".home-day-car,.home-day-car2").removeClass("active");
-                    // getNightTimelineAn();
+                    $(".home-night-box").addClass("active");
+                    $(".home-day-box").removeClass("active");
+                    $(".home-night-car,.home-night-car2").addClass("active");
+                    $(".home-day-car,.home-day-car2").removeClass("active");
+                    getNightTimelineAn();
                 }
             }
         });
@@ -279,12 +274,11 @@ $(document).ready(function () {
 
         $tab.eq(0).addClass('active');
         $content.eq(0).fadeIn(500).css('display', 'block').siblings().css('display', 'none');
-
-        $tab.on('click', function () {
+        $tab.click(function(){
             var $tabIndex = $(this).index();
             $(this).addClass('active').siblings().removeClass('active');
             $content.eq($tabIndex).fadeIn(500).css('display', 'block').siblings().css('display', 'none');
-        });
+        })
     }
     //左右滑動
     function getSectionSlide() {

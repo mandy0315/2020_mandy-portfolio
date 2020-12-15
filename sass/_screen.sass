@@ -367,21 +367,12 @@ header
     position: fixed
     top: 50vh
     left: 0        
-    z-index: 20
-    padding: 10px 20px
-    display: flex
-    justify-content: space-between
+    z-index: 10
     width: 100%
+    justify-content: space-between
+    display: flex
+    padding: 0 20px  
     .arrow-pages-left,.arrow-pages-right
-        -webkit-transform: translateX(0px)
-        transform: translateX(0px)
-        -webkit-transition: all 0.5s ease-in-out
-        transition: all 0.5s ease-in-out
-        &:hover
-            -webkit-transform: translateX(10px)
-            transform: translateX(10px)
-            -webkit-transition: all 0.5s ease-in-out
-            transition: all 0.5s ease-in-out
         a
             display: block
             &:hover
@@ -397,10 +388,6 @@ header
                     stroke-linecap: round
                     stroke-linejoin: round
                     stroke-width: 2px
-    .arrow-pages-left
-        &:hover
-            -webkit-transform: translateX(-10px)
-            transform: translateX(-10px)
 .pp-scrollable
     .arrow-pages-wrapper
         top: 50%
