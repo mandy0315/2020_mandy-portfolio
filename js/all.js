@@ -1,4 +1,15 @@
 $(document).ready(function () {
+    // 偵測網址資料庫
+    let hashNum = 0
+    let data = ["home","about","skills","works","contact"]
+    let data2 = {
+        "#home": "0",
+        "#about": "1",
+        "#skills": "2",
+        "#works": "3",
+        "#contact": "4"
+    }
+    let hashName = window.location.hash
     // pagepiling 自訂
     $('#pagepiling').pagepiling({
         //水平換頁
@@ -28,18 +39,22 @@ $(document).ready(function () {
             }
         }
     });
+    // 停止滾動
     $.fn.pagepiling.setAllowScrolling(false);
     // 執行呼叫
+    getSectionSlide();
     getHomeTime();
     getTimeBg();
     getBlueBgMousemove();
     getTabs();
-    //nav 
+    // nav 虛線匯入
     $('#pp-nav').append('<div class="line-dotted"></div>');
-    //header 載入
+    // header 載入
     $('header').load('./share/header.html', function () {
         getMenuPlay();
         getTimeBg();
+        arrow();
+        menuAnchor();
     });
     // about-AirCamera-svg 載入
     $('.about-AirCamera-box').load("./share/AirCamera-svg.html");
@@ -60,11 +75,16 @@ $(document).ready(function () {
                     $(".home-night-car,.home-night-car2").removeClass("active");
                     getDayTimelineAn();
                 } else {
-                    $(".home-night-box").addClass("active");
-                    $(".home-day-box").removeClass("active");
-                    $(".home-night-car,.home-night-car2").addClass("active");
-                    $(".home-day-car,.home-day-car2").removeClass("active");
-                    getNightTimelineAn();
+                    $(".home-day-box").addClass("active");
+                    $(".home-night-box").removeClass("active");
+                    $(".home-day-car,.home-day-car2").addClass("active");
+                    $(".home-night-car,.home-night-car2").removeClass("active");
+                    getDayTimelineAn();
+                    // $(".home-night-box").addClass("active");
+                    // $(".home-day-box").removeClass("active");
+                    // $(".home-night-car,.home-night-car2").addClass("active");
+                    // $(".home-day-car,.home-day-car2").removeClass("active");
+                    // getNightTimelineAn();
                 }
             }
         });
@@ -262,11 +282,58 @@ $(document).ready(function () {
             $content.eq($tabIndex).fadeIn(500).css('display', 'block').siblings().css('display', 'none');
         });
     }
-    // cc();
-    // function cc() {
-    //     $("#home").bind("swipeleft", function(){
-    //         window.location.href="#about";
-    //     });
-    // }
-
+    //左右滑動
+    function getSectionSlide() {
+        $(".section").bind("swipeleft", function(e){
+            hashName = window.location.hash
+            hashNum = data2[hashName]
+            hashNum++
+            if(hashNum>4){
+                hashNum = 0
+            }
+            window.location.href = '#'+data[hashNum]
+        });
+         $(".section").bind("swiperight", function(e){
+            hashName = window.location.hash
+            hashNum = data2[hashName]
+            hashNum--
+            if(hashNum<0){
+                hashNum = 4
+            }
+            window.location.href = '#'+data[hashNum]
+        });
+    }
+    //左右箭頭跳轉功能
+    function arrow() {
+        $(".arrow-pages-right").click(function(e){
+            hashName = window.location.hash
+            hashNum = data2[hashName]
+            hashNum++
+            if(hashNum>4){
+                hashNum = 0
+            }
+            // window.location.href = 'http://127.0.0.1:5502/index.html#'+data[hashNum]
+            window.location.href = '#'+data[hashNum]
+        })
+        $(".arrow-pages-left").click(function(e){
+            hashName = window.location.hash
+            hashNum = data2[hashName]
+            hashNum--
+            if(hashNum<0){
+                hashNum = 4
+            }
+            // window.location.href = 'http://127.0.0.1:5502/index.html#'+data[hashNum]
+            window.location.href = '#'+data[hashNum]
+        })
+    }
+    //漢堡選單錨點功能
+    function menuAnchor() {
+        $(".menu-pages").click(function(){
+            let targetAnchorNum = $(this).attr('data-anchor')
+            // $("#pagepiling [data-num="+targetAnchorNum+"] .about-my-box").addClass("cc")
+            $("#pp-nav > ul > li:nth-child("+targetAnchorNum+") a").click()
+            hashName = window.location.hash
+            hashNum = data2[hashName];
+        })
+    }
 });
