@@ -3,6 +3,7 @@ $(document).ready(function () {
     let hashNum = 0
     let data = ["home","about","skills","works","contact"]
     let data2 = {
+        "": "0",
         "#home": "0",
         "#about": "1",
         "#skills": "2",
@@ -55,6 +56,9 @@ $(document).ready(function () {
         getTimeBg();
         arrow();
         menuAnchor();
+        $(".logo-wrapper a").click(function(){
+            window.location.href = '#home'
+        })
     });
     // about-AirCamera-svg 載入
     $('.about-AirCamera-box').load("./share/AirCamera-svg.html");
@@ -312,7 +316,6 @@ $(document).ready(function () {
             if(hashNum>4){
                 hashNum = 0
             }
-            // window.location.href = 'http://127.0.0.1:5502/index.html#'+data[hashNum]
             window.location.href = '#'+data[hashNum]
         })
         $(".arrow-pages-left").click(function(e){
@@ -322,7 +325,6 @@ $(document).ready(function () {
             if(hashNum<0){
                 hashNum = 4
             }
-            // window.location.href = 'http://127.0.0.1:5502/index.html#'+data[hashNum]
             window.location.href = '#'+data[hashNum]
         })
     }
