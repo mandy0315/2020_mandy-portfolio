@@ -15,7 +15,8 @@
         img
             max-width: 240px
     .home-my-box
-        width: 7rem
+        width: 8rem
+        top: 30%
     .home-road-box
         .home-ZebraRoad
             width: 300px
@@ -23,40 +24,62 @@
         &.home-day-car
             ul
                 li
-                    .home-car-up01,.home-car-up04
-                        max-width: 7.8rem
+                    .home-car-up01
+                        max-width: 5.4rem
                     .home-scooter-up02
-                        max-width: 4rem
+                        max-width: 2.4rem
                     .home-car-up03
-                        max-width: 6.8rem
-
+                        max-width: 4.6rem
+                    .home-car-up04
+                        max-width: 5.4rem
+        &.home-day-car2
+            ul
+                li
+                    .home-car-down01
+                        max-width: 5.6rem
+                    .home-car-down02
+                        max-width: 8rem
+                    .home-scooter-down03
+                        max-width: 3rem
         &.home-night-car
             ul
                 li
-                    .home-car-up01,.home-car-up04
-                        max-width: 7.8rem
+                    .home-car-up01
+                        max-width: 7.4rem
                     .home-scooter-up02
-                        max-width: 4rem
+                        max-width: 3.8rem
                     .home-car-up03
-                        max-width: 6.8rem
+                        max-width: 6.2rem
+                    .home-car-up04
+                        max-width: 7.4rem
         &.home-night-car2
             ul
                 li
                     .home-car-down01
-                        max-width: 8.8rem
+                        max-width: 8.6rem
                     .home-car-down02
                         max-width: 10rem
                     .home-scooter-down03
-                        max-width: 4.8rem
-
-
-
+                        max-width: 4.2rem
+    /* menu */
+    .menu-contant-box
+        .menu-text
+            ul
+                li
+                    h5
+                        font-size: $h6
+                        span
+                            font-size: 32px
+        .fb-icon,.ig-icon
+            a
+                svg
+                    width: 3.4rem
     /* about */
     .about-city-box
-        height: 200px
-        .about-bcity
-            width: 1000px
-            left: calc(50% - 500px)
+        height: 240px
+        .about-city,.about-cloud,.about-bcity
+            width: 1440px
+            left: calc(50% - 720px)
     .about-contant-box
         margin: 1rem 6rem 0 6rem
         .about-img
@@ -79,21 +102,27 @@
             width: 7.2rem
     .about-people-box
         left: 0px
+        top: -60px
         img
-            width: 2.4rem
+            width: 2rem
     .about-road-box
-        padding-top: 2rem
+        padding-top: 1.4rem
     .about-AirCamera-box
         svg
             width: 10rem
     /* skills */      
     .skills-sea-box
-        height: 300px
-        .skills-coral
-            img
-                width: 10rem
-        .skills-seabed
-            bottom: 8rem
+        height: 340px
+        .skills-seabed,.skills-seasand,.skills-coral
+            width: 1440px
+            left: calc(50% - 720px)
+            &.skills-coral
+                img
+                    width: 10rem
+            &.skills-seasand
+                bottom: 0
+            &.skills-seabed
+                bottom: 6rem
         .skills-my-box
             top: 0px
             img
@@ -120,68 +149,150 @@
     /* work */ 
     .works-mountain-wrapper
         .works-mountain-box
-            height: 260px
             .works-my-box
                 img
                     width: 4rem
-    .works-animal-box
-        width: 1600px
-        left: calc(50% - 800px)
-        .works-beer,.works-LeopardCat
-            margin-right: 2rem
-            width: 12rem
-            &.works-LeopardCat
-                margin-left: 6rem
-                width: 5rem
     .web-text
-        h4
-            font-size: $h5
         p
             font-size: 16px
+    .works-web-box,.works-vision-box,.works-ui-box
+        .works-web,.works-vision,.works-ui
+            &.col3
+                margin-bottom: calc(1.5rem * 3 / 2)
     .works-bird-box
-        width: 1.8rem
+        width: 1.4rem
+        bottom: 2.2rem
+    .tabs
+        margin-bottom: 2.4rem
     /* contact */
-    .contact-contant-container
-        padding-bottom: 3.2rem   
+    .contact-air-box
+        .home-day-box,.home-night-box
+            height: 280px
+            .home-day-cloud,.home-night-star
+                width: 1440px
+                height: auto
+                position: absolute
+                left: calc(50% - 720px)
+                top: 0
     .contact-contant-box
         .contant-box
             padding: 1rem
             .my-contact-box
-                li
+                a
                     font-size: 16px
         .contact-myhitballoon
-            max-width: 5.8rem
+            max-width: 5.2rem
         .contact-myhitballoon-line
             max-width: 8rem
+    .contact-hitballoon-left,.contact-hitballoon-right
+        &.contact-hitballoon-left
+            width: 4rem
+        &.contact-hitballoon-right
+            width: 2.8rem
     .contact-FishsIslands-box
         .contact-islands-box
             .contact-islands
-                width: 32rem
-                height: 10.8rem
-    .contact-hitballoon-left,.contact-hitballoon-right
-        width: 4.4rem
-        &.contact-hitballoon-right
-            width: 3.4rem
+                width: 28rem
+                height: 9.4rem
+                .contact-islands-about,.contact-islands-work
+                    &.contact-islands-work
+                        margin-top: -30px 
+                        margin-right: 10px
+    .contact-fishs-box,.contact-TurtleMedusa-box
+        &.contact-TurtleMedusa-box
+            ul
+                li
+                    &:nth-of-type(2)
+                        img
+                            &:nth-of-type(1)
+                                width: 3.6rem
     .contact-contant-box
         .fb-icon,.ig-icon
             a
                 svg
                     width: 2.8rem
+    .contact-sea-box
+        .contact-wave
+            width: 1000px
+            left: calc(50% - 500px)
+            .contact-wave-right,.contact-wave-left
+                max-width: 15rem
 
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 1200px)	
+@media only screen and (max-width: 1200px)
+    .wrapper
+        padding: 0 1.6rem
+    .skills-design-box,.skills-code-box
+        .skills-design-img,.skills-code-img
+            .skills-bubble
+                width: 11.8rem
 @media only screen and (max-width: 1024px)
+    /* home */
+    .home-my-box
+        width: 7rem
+        top: 40%
+    .home-road-box
+        .home-ZebraRoad
+            width: 240px
+    /* about */
+    .about-contant-box
+        .about-text
+            padding-left: 2.8rem
+            max-width: 34rem
+    .about-city-box
+        .about-bcity
+            width: 1100px
+            left: calc(50% - 550px)
+    .about-my-box
+        img
+            width: 6.2rem
+    /* skills */
+    .skills-sea-box
+        height: 240px
+        .skills-my-box
+            img
+                width: 6.8rem
+    .skills-fishs-wrapper
+        img
+            width: 15rem
+    .skills-tortoise-box
+        img
+            width: 5.2rem
+    .skills-contant-box
+        display: flex
+        flex-direction: column
+    .skills-design-box,.skills-code-box
+        width: 100%
+        justify-content: center
+        &.skills-design-box
+            padding-right: 8rem
+        &.skills-code-box
+            padding-left: 8rem
+            padding-top: 2rem
+    .code-svg
+        p
+            font-size: 12px  
+    /* works */
+    .works-mountain-wrapper
+        .works-mountain-box
+            height: 260px
+    .works-animal-box,.works-b-tree,.works-tree
+        width: 1000px
+        left: calc(50% - 500px)
+    .works-mountain-wrapper
+        .works-mountain-box
+            .works-my-box
+                img
+                    width: 3.4rem
+    .web-text 
+        h4
+            font-size: $h5
+    .tabs
+        a
+            font-size: $h6
+            padding: 0.3rem 1rem
+    /* 關掉左右箭頭 */
+    .arrow-pages-left,.arrow-pages-right
+        display: none 
 @media only screen and (max-width: 768px)
     /* jquery.pagepiling */ 
     #pp-nav.nav-position
@@ -190,7 +301,44 @@
         display: block
         max-width: 180px
         margin: auto
-    /* home */ 
+    /* home */
+    .home-air-wrapper
+        margin: 2rem 0
+    .home-my-box
+        left: 200px
+    .about-contant-box
+        flex-direction: column
+        margin: 2rem 6rem 0 6rem
+        .about-text
+            padding-left: 0
+            max-width: 100%
+            p
+                text-align: center
+        .about-img
+            width: 14.2rem
+            margin-bottom: 2rem
+    .about-AirCamera-box
+        top: 2rem
+    /* skills */
+    .skills-contant-box
+        margin: 4rem 0
+    .skills-design-box,.skills-code-box
+        &.skills-code-box
+            padding-left: 8rem
+            padding-top: 3.2rem
+    .skills-sea-box
+        .skills-seabed,.skills-seasand,.skills-coral
+            &.skills-seasand
+                bottom: -10px   
+            &.skills-seabed
+                bottom: 6rem
+            &.skills-coral
+                width: 100%
+                left: 0
+                justify-content: flex-end
+                img
+                    &:nth-of-type(1)
+                        display: none
     /* works */ 
     .works-web-box,.works-vision-box,.works-ui-box
         .works-web,.works-vision,.works-ui
@@ -201,6 +349,23 @@
                     margin-bottom: calc(2rem * 2 / 1)
                     &:nth-child(2n+1)
                         margin-left: 0
+    /* contact */
+    .contact-contant-container
+        padding-bottom: 0px
+    .contact-contant-wrapper
+        padding: 4rem 0
+    .contact-contant-box
+        .contant-box
+            padding: 2rem
+    .contact-copyright
+        padding: 1.8rem 0rem
+    .contact-FishsIslands-box,.contact-hitballoon-left,.contact-hitballoon-right
+        display: none
+    .m-contact-FishsIslands-box
+        display: block
+        padding: 0 1.6rem
+        
+
 @media only screen and (max-width: 414px)
 @media only screen and (max-width: 375px)
 @media only screen and (max-width: 320px)						

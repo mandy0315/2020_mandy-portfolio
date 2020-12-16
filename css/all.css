@@ -85,6 +85,10 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 2;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -145,8 +149,8 @@ header {
   flex-direction: column;
   justify-content: center;
   background: url(../images/icon/logo-bg.svg) no-repeat;
-  width: 180px;
-  height: 78px;
+  width: 162px;
+  height: 68px;
   background-size: contain;
 }
 .logo-wrapper a img, .logo-wrapper .menu-icon img, .menu-icon-wrapper a img, .menu-icon-wrapper .menu-icon img {
@@ -158,8 +162,8 @@ header {
 .menu-icon-wrapper .menu-icon {
   display: inline-block;
   background: url(../images/icon/menu.svg) no-repeat;
-  width: 68px;
-  height: 68px;
+  width: 58px;
+  height: 58px;
 }
 .menu-icon-wrapper .menu-icon img {
   padding: 20px 10px;
@@ -199,7 +203,7 @@ header {
 
 .menu-contant-box {
   position: fixed;
-  z-index: 120;
+  z-index: 150;
   top: 0;
   right: -1px;
   width: 25rem;
@@ -220,14 +224,14 @@ header {
   position: absolute;
 }
 .menu-contant-box .menu-img-up, .menu-contant-box .menu-img-down {
-  width: 7.75rem;
+  max-width: 6.8rem;
   margin-top: -1px;
 }
 .menu-contant-box .menu-img-up img, .menu-contant-box .menu-img-down img {
   width: 100%;
 }
 .menu-contant-box .menu-img-down {
-  width: 10rem;
+  max-width: 8rem;
   bottom: -1px;
   right: 0px;
 }
@@ -237,7 +241,7 @@ header {
 .menu-contant-box .menu-img-down ul .menu-hitballoon {
   opacity: 0;
   position: absolute;
-  width: 8rem;
+  width: 6.2rem;
   bottom: 20px;
   right: 20px;
 }
@@ -268,7 +272,6 @@ header {
   font-weight: normal;
 }
 .menu-contant-box .menu-text ul .menu-pages a {
-  text-decoration: none;
   display: flex;
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
@@ -337,6 +340,38 @@ header {
 }
 
 /* nav end */
+/* arrow */
+.arrow-pages-left, .arrow-pages-right {
+  display: inline-block;
+  position: fixed;
+  z-index: 50;
+  top: 50%;
+}
+.arrow-pages-left a, .arrow-pages-right a {
+  display: block;
+}
+.arrow-pages-left a:hover .arrow-pages-style path, .arrow-pages-right a:hover .arrow-pages-style path {
+  fill: #F5E69A;
+}
+.arrow-pages-left a svg, .arrow-pages-right a svg {
+  width: 35px;
+  filter: drop-shadow(0px 3px 0px #4d3224);
+}
+.arrow-pages-left a svg path, .arrow-pages-right a svg path {
+  fill: #fff;
+  stroke: #4d3224;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+.arrow-pages-left.arrow-pages-right, .arrow-pages-right.arrow-pages-right {
+  right: 20px;
+}
+.arrow-pages-left.arrow-pages-left, .arrow-pages-right.arrow-pages-left {
+  left: 20px;
+}
+
+/* arrow end */
 /* home */
 .section {
   overflow: hidden;
@@ -396,24 +431,27 @@ header {
 }
 .home-day-box .home-day-sun, .home-day-box .home-night-moon, .home-night-box .home-day-sun, .home-night-box .home-night-moon, .home-city-box .home-day-sun, .home-city-box .home-night-moon, .about-city-box .home-day-sun, .about-city-box .home-night-moon {
   top: 100px;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 4rem;
+  max-width: 7.4rem;
 }
 .home-day-box .home-day-sun img, .home-day-box .home-night-moon img, .home-night-box .home-day-sun img, .home-night-box .home-night-moon img, .home-city-box .home-day-sun img, .home-city-box .home-night-moon img, .about-city-box .home-day-sun img, .about-city-box .home-night-moon img {
-  width: 70px;
+  width: 100%;
+}
+.home-day-box .home-day-sun.home-night-moon, .home-day-box .home-night-moon.home-night-moon, .home-night-box .home-day-sun.home-night-moon, .home-night-box .home-night-moon.home-night-moon, .home-city-box .home-day-sun.home-night-moon, .home-city-box .home-night-moon.home-night-moon, .about-city-box .home-day-sun.home-night-moon, .about-city-box .home-night-moon.home-night-moon {
+  max-width: 6.4rem;
 }
 .home-day-box .home-night-moon, .home-day-box .home-moon-light, .home-night-box .home-night-moon, .home-night-box .home-moon-light, .home-city-box .home-night-moon, .home-city-box .home-moon-light, .about-city-box .home-night-moon, .about-city-box .home-moon-light {
   position: absolute;
   right: 0px;
-  height: 100px;
   z-index: 5;
 }
 .home-day-box .home-moon-light, .home-night-box .home-moon-light, .home-city-box .home-moon-light, .about-city-box .home-moon-light {
   right: -20px;
-  top: 90px;
+  top: 80px;
   z-index: 0;
 }
 .home-day-box .home-moon-light img, .home-night-box .home-moon-light img, .home-city-box .home-moon-light img, .about-city-box .home-moon-light img {
-  width: 100px;
+  width: 100%;
 }
 
 .home-day-cloud-an2 ul:nth-of-type(2) {
@@ -425,14 +463,14 @@ header {
 .home-city-box, .about-city-box, .skills-sea-box, .works-mountain-box, .contact-sea-box {
   height: 400px;
 }
-.home-city-box .home-bluecity, .home-city-box .home-city, .home-city-box .about-city, .home-city-box .about-cloud, .home-city-box .about-bcity, .home-city-box .skills-seabed, .home-city-box .skills-seasand, .home-city-box .skills-coral, .home-city-box .works-mountain, .home-city-box .works-b-tree, .home-city-box .contact-wave, .about-city-box .home-bluecity, .about-city-box .home-city, .about-city-box .about-city, .about-city-box .about-cloud, .about-city-box .about-bcity, .about-city-box .skills-seabed, .about-city-box .skills-seasand, .about-city-box .skills-coral, .about-city-box .works-mountain, .about-city-box .works-b-tree, .about-city-box .contact-wave, .skills-sea-box .home-bluecity, .skills-sea-box .home-city, .skills-sea-box .about-city, .skills-sea-box .about-cloud, .skills-sea-box .about-bcity, .skills-sea-box .skills-seabed, .skills-sea-box .skills-seasand, .skills-sea-box .skills-coral, .skills-sea-box .works-mountain, .skills-sea-box .works-b-tree, .skills-sea-box .contact-wave, .works-mountain-box .home-bluecity, .works-mountain-box .home-city, .works-mountain-box .about-city, .works-mountain-box .about-cloud, .works-mountain-box .about-bcity, .works-mountain-box .skills-seabed, .works-mountain-box .skills-seasand, .works-mountain-box .skills-coral, .works-mountain-box .works-mountain, .works-mountain-box .works-b-tree, .works-mountain-box .contact-wave, .contact-sea-box .home-bluecity, .contact-sea-box .home-city, .contact-sea-box .about-city, .contact-sea-box .about-cloud, .contact-sea-box .about-bcity, .contact-sea-box .skills-seabed, .contact-sea-box .skills-seasand, .contact-sea-box .skills-coral, .contact-sea-box .works-mountain, .contact-sea-box .works-b-tree, .contact-sea-box .contact-wave {
-  width: 2000px;
+.home-city-box .home-bluecity, .home-city-box .home-city, .home-city-box .about-city, .home-city-box .about-cloud, .home-city-box .about-bcity, .home-city-box .skills-seabed, .home-city-box .skills-seasand, .home-city-box .skills-coral, .home-city-box .works-mountain, .home-city-box .contact-wave, .about-city-box .home-bluecity, .about-city-box .home-city, .about-city-box .about-city, .about-city-box .about-cloud, .about-city-box .about-bcity, .about-city-box .skills-seabed, .about-city-box .skills-seasand, .about-city-box .skills-coral, .about-city-box .works-mountain, .about-city-box .contact-wave, .skills-sea-box .home-bluecity, .skills-sea-box .home-city, .skills-sea-box .about-city, .skills-sea-box .about-cloud, .skills-sea-box .about-bcity, .skills-sea-box .skills-seabed, .skills-sea-box .skills-seasand, .skills-sea-box .skills-coral, .skills-sea-box .works-mountain, .skills-sea-box .contact-wave, .works-mountain-box .home-bluecity, .works-mountain-box .home-city, .works-mountain-box .about-city, .works-mountain-box .about-cloud, .works-mountain-box .about-bcity, .works-mountain-box .skills-seabed, .works-mountain-box .skills-seasand, .works-mountain-box .skills-coral, .works-mountain-box .works-mountain, .works-mountain-box .contact-wave, .contact-sea-box .home-bluecity, .contact-sea-box .home-city, .contact-sea-box .about-city, .contact-sea-box .about-cloud, .contact-sea-box .about-bcity, .contact-sea-box .skills-seabed, .contact-sea-box .skills-seasand, .contact-sea-box .skills-coral, .contact-sea-box .works-mountain, .contact-sea-box .contact-wave {
+  width: 1920px;
   height: auto;
   position: absolute;
-  left: calc(50% - 1000px);
+  left: calc(50% - 960px);
   bottom: 0;
 }
-.home-city-box .home-bluecity img, .home-city-box .home-city img, .home-city-box .about-city img, .home-city-box .about-cloud img, .home-city-box .about-bcity img, .home-city-box .skills-seabed img, .home-city-box .skills-seasand img, .home-city-box .skills-coral img, .home-city-box .works-mountain img, .home-city-box .works-b-tree img, .home-city-box .contact-wave img, .about-city-box .home-bluecity img, .about-city-box .home-city img, .about-city-box .about-city img, .about-city-box .about-cloud img, .about-city-box .about-bcity img, .about-city-box .skills-seabed img, .about-city-box .skills-seasand img, .about-city-box .skills-coral img, .about-city-box .works-mountain img, .about-city-box .works-b-tree img, .about-city-box .contact-wave img, .skills-sea-box .home-bluecity img, .skills-sea-box .home-city img, .skills-sea-box .about-city img, .skills-sea-box .about-cloud img, .skills-sea-box .about-bcity img, .skills-sea-box .skills-seabed img, .skills-sea-box .skills-seasand img, .skills-sea-box .skills-coral img, .skills-sea-box .works-mountain img, .skills-sea-box .works-b-tree img, .skills-sea-box .contact-wave img, .works-mountain-box .home-bluecity img, .works-mountain-box .home-city img, .works-mountain-box .about-city img, .works-mountain-box .about-cloud img, .works-mountain-box .about-bcity img, .works-mountain-box .skills-seabed img, .works-mountain-box .skills-seasand img, .works-mountain-box .skills-coral img, .works-mountain-box .works-mountain img, .works-mountain-box .works-b-tree img, .works-mountain-box .contact-wave img, .contact-sea-box .home-bluecity img, .contact-sea-box .home-city img, .contact-sea-box .about-city img, .contact-sea-box .about-cloud img, .contact-sea-box .about-bcity img, .contact-sea-box .skills-seabed img, .contact-sea-box .skills-seasand img, .contact-sea-box .skills-coral img, .contact-sea-box .works-mountain img, .contact-sea-box .works-b-tree img, .contact-sea-box .contact-wave img {
+.home-city-box .home-bluecity img, .home-city-box .home-city img, .home-city-box .about-city img, .home-city-box .about-cloud img, .home-city-box .about-bcity img, .home-city-box .skills-seabed img, .home-city-box .skills-seasand img, .home-city-box .skills-coral img, .home-city-box .works-mountain img, .home-city-box .contact-wave img, .about-city-box .home-bluecity img, .about-city-box .home-city img, .about-city-box .about-city img, .about-city-box .about-cloud img, .about-city-box .about-bcity img, .about-city-box .skills-seabed img, .about-city-box .skills-seasand img, .about-city-box .skills-coral img, .about-city-box .works-mountain img, .about-city-box .contact-wave img, .skills-sea-box .home-bluecity img, .skills-sea-box .home-city img, .skills-sea-box .about-city img, .skills-sea-box .about-cloud img, .skills-sea-box .about-bcity img, .skills-sea-box .skills-seabed img, .skills-sea-box .skills-seasand img, .skills-sea-box .skills-coral img, .skills-sea-box .works-mountain img, .skills-sea-box .contact-wave img, .works-mountain-box .home-bluecity img, .works-mountain-box .home-city img, .works-mountain-box .about-city img, .works-mountain-box .about-cloud img, .works-mountain-box .about-bcity img, .works-mountain-box .skills-seabed img, .works-mountain-box .skills-seasand img, .works-mountain-box .skills-coral img, .works-mountain-box .works-mountain img, .works-mountain-box .contact-wave img, .contact-sea-box .home-bluecity img, .contact-sea-box .home-city img, .contact-sea-box .about-city img, .contact-sea-box .about-cloud img, .contact-sea-box .about-bcity img, .contact-sea-box .skills-seabed img, .contact-sea-box .skills-seasand img, .contact-sea-box .skills-coral img, .contact-sea-box .works-mountain img, .contact-sea-box .contact-wave img {
   width: 100%;
 }
 .home-city-box .home-bluecity-up, .home-city-box .about-cloud-up, .about-city-box .home-bluecity-up, .about-city-box .about-cloud-up, .skills-sea-box .home-bluecity-up, .skills-sea-box .about-cloud-up, .works-mountain-box .home-bluecity-up, .works-mountain-box .about-cloud-up, .contact-sea-box .home-bluecity-up, .contact-sea-box .about-cloud-up {
@@ -482,79 +520,53 @@ header {
   bottom: 0;
   width: 100%;
 }
-.home-day-car ul li .home-car-up01, .home-day-car ul li .home-car-up04, .home-day-car2 ul li .home-car-up01, .home-day-car2 ul li .home-car-up04, .home-night-car ul li .home-car-up01, .home-night-car ul li .home-car-up04, .home-night-car2 ul li .home-car-up01, .home-night-car2 ul li .home-car-up04 {
+.home-day-car.home-day-car ul li .home-car-up01, .home-day-car2.home-day-car ul li .home-car-up01, .home-night-car.home-day-car ul li .home-car-up01, .home-night-car2.home-day-car ul li .home-car-up01 {
   max-width: 6.6rem;
 }
-.home-day-car ul li .home-scooter-up02, .home-day-car2 ul li .home-scooter-up02, .home-night-car ul li .home-scooter-up02, .home-night-car2 ul li .home-scooter-up02 {
+.home-day-car.home-day-car ul li .home-scooter-up02, .home-day-car2.home-day-car ul li .home-scooter-up02, .home-night-car.home-day-car ul li .home-scooter-up02, .home-night-car2.home-day-car ul li .home-scooter-up02 {
   max-width: 3rem;
 }
-.home-day-car ul li .home-car-up03, .home-day-car2 ul li .home-car-up03, .home-night-car ul li .home-car-up03, .home-night-car2 ul li .home-car-up03 {
-  max-width: 4.6rem;
+.home-day-car.home-day-car ul li .home-car-up03, .home-day-car2.home-day-car ul li .home-car-up03, .home-night-car.home-day-car ul li .home-car-up03, .home-night-car2.home-day-car ul li .home-car-up03 {
+  max-width: 5.8rem;
 }
-.home-day-car.home-day-car2, .home-day-car.home-night-car2, .home-day-car2.home-day-car2, .home-day-car2.home-night-car2, .home-night-car.home-day-car2, .home-night-car.home-night-car2, .home-night-car2.home-day-car2, .home-night-car2.home-night-car2 {
+.home-day-car.home-day-car ul li .home-car-up04, .home-day-car2.home-day-car ul li .home-car-up04, .home-night-car.home-day-car ul li .home-car-up04, .home-night-car2.home-day-car ul li .home-car-up04 {
+  max-width: 8rem;
+}
+.home-day-car.home-day-car2, .home-day-car2.home-day-car2, .home-night-car.home-day-car2, .home-night-car2.home-day-car2 {
   top: -35px;
 }
-.home-day-car.home-day-car2 ul li, .home-day-car.home-night-car2 ul li, .home-day-car2.home-day-car2 ul li, .home-day-car2.home-night-car2 ul li, .home-night-car.home-day-car2 ul li, .home-night-car.home-night-car2 ul li, .home-night-car2.home-day-car2 ul li, .home-night-car2.home-night-car2 ul li {
-  opacity: 0;
+.home-day-car.home-day-car2 ul li .home-car-down01, .home-day-car2.home-day-car2 ul li .home-car-down01, .home-night-car.home-day-car2 ul li .home-car-down01, .home-night-car2.home-day-car2 ul li .home-car-down01 {
+  max-width: 6.8rem;
 }
-.home-day-car.home-day-car2 ul li .home-car-down01, .home-day-car.home-night-car2 ul li .home-car-down01, .home-day-car2.home-day-car2 ul li .home-car-down01, .home-day-car2.home-night-car2 ul li .home-car-down01, .home-night-car.home-day-car2 ul li .home-car-down01, .home-night-car.home-night-car2 ul li .home-car-down01, .home-night-car2.home-day-car2 ul li .home-car-down01, .home-night-car2.home-night-car2 ul li .home-car-down01 {
-  max-width: 7.6rem;
-}
-.home-day-car.home-day-car2 ul li .home-car-down02, .home-day-car.home-night-car2 ul li .home-car-down02, .home-day-car2.home-day-car2 ul li .home-car-down02, .home-day-car2.home-night-car2 ul li .home-car-down02, .home-night-car.home-day-car2 ul li .home-car-down02, .home-night-car.home-night-car2 ul li .home-car-down02, .home-night-car2.home-day-car2 ul li .home-car-down02, .home-night-car2.home-night-car2 ul li .home-car-down02 {
+.home-day-car.home-day-car2 ul li .home-car-down02, .home-day-car2.home-day-car2 ul li .home-car-down02, .home-night-car.home-day-car2 ul li .home-car-down02, .home-night-car2.home-day-car2 ul li .home-car-down02 {
   max-width: 10rem;
 }
-.home-day-car.home-day-car2 ul li .home-scooter-down03, .home-day-car.home-night-car2 ul li .home-scooter-down03, .home-day-car2.home-day-car2 ul li .home-scooter-down03, .home-day-car2.home-night-car2 ul li .home-scooter-down03, .home-night-car.home-day-car2 ul li .home-scooter-down03, .home-night-car.home-night-car2 ul li .home-scooter-down03, .home-night-car2.home-day-car2 ul li .home-scooter-down03, .home-night-car2.home-night-car2 ul li .home-scooter-down03 {
+.home-day-car.home-day-car2 ul li .home-scooter-down03, .home-day-car2.home-day-car2 ul li .home-scooter-down03, .home-night-car.home-day-car2 ul li .home-scooter-down03, .home-night-car2.home-day-car2 ul li .home-scooter-down03 {
   max-width: 3.6rem;
 }
-.home-day-car.home-night-car ul li .home-car-up01, .home-day-car.home-night-car ul li .home-car-up04, .home-day-car2.home-night-car ul li .home-car-up01, .home-day-car2.home-night-car ul li .home-car-up04, .home-night-car.home-night-car ul li .home-car-up01, .home-night-car.home-night-car ul li .home-car-up04, .home-night-car2.home-night-car ul li .home-car-up01, .home-night-car2.home-night-car ul li .home-car-up04 {
+.home-day-car.home-night-car ul li .home-car-up01, .home-day-car2.home-night-car ul li .home-car-up01, .home-night-car.home-night-car ul li .home-car-up01, .home-night-car2.home-night-car ul li .home-car-up01 {
   max-width: 8.8rem;
 }
 .home-day-car.home-night-car ul li .home-scooter-up02, .home-day-car2.home-night-car ul li .home-scooter-up02, .home-night-car.home-night-car ul li .home-scooter-up02, .home-night-car2.home-night-car ul li .home-scooter-up02 {
-  max-width: 4.8rem;
+  max-width: 4.4rem;
 }
 .home-day-car.home-night-car ul li .home-car-up03, .home-day-car2.home-night-car ul li .home-car-up03, .home-night-car.home-night-car ul li .home-car-up03, .home-night-car2.home-night-car ul li .home-car-up03 {
-  max-width: 7.4rem;
+  max-width: 7rem;
+}
+.home-day-car.home-night-car ul li .home-car-up04, .home-day-car2.home-night-car ul li .home-car-up04, .home-night-car.home-night-car ul li .home-car-up04, .home-night-car2.home-night-car ul li .home-car-up04 {
+  max-width: 8rem;
+}
+.home-day-car.home-night-car2, .home-day-car2.home-night-car2, .home-night-car.home-night-car2, .home-night-car2.home-night-car2 {
+  top: -35px;
 }
 .home-day-car.home-night-car2 ul li .home-car-down01, .home-day-car2.home-night-car2 ul li .home-car-down01, .home-night-car.home-night-car2 ul li .home-car-down01, .home-night-car2.home-night-car2 ul li .home-car-down01 {
-  max-width: 9rem;
+  max-width: 10rem;
 }
 .home-day-car.home-night-car2 ul li .home-car-down02, .home-day-car2.home-night-car2 ul li .home-car-down02, .home-night-car.home-night-car2 ul li .home-car-down02, .home-night-car2.home-night-car2 ul li .home-car-down02 {
   max-width: 12rem;
 }
 .home-day-car.home-night-car2 ul li .home-scooter-down03, .home-day-car2.home-night-car2 ul li .home-scooter-down03, .home-night-car.home-night-car2 ul li .home-scooter-down03, .home-night-car2.home-night-car2 ul li .home-scooter-down03 {
   max-width: 5rem;
-}
-
-.arrow-pages-wrapper {
-  position: fixed;
-  top: 50vh;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  justify-content: space-between;
-  display: flex;
-  padding: 0 20px;
-}
-.arrow-pages-wrapper .arrow-pages-left a, .arrow-pages-wrapper .arrow-pages-right a {
-  display: block;
-}
-.arrow-pages-wrapper .arrow-pages-left a:hover .arrow-pages-style path, .arrow-pages-wrapper .arrow-pages-right a:hover .arrow-pages-style path {
-  fill: #F5E69A;
-}
-.arrow-pages-wrapper .arrow-pages-left a svg, .arrow-pages-wrapper .arrow-pages-right a svg {
-  width: 35px;
-  filter: drop-shadow(0px 3px 0px #4d3224);
-}
-.arrow-pages-wrapper .arrow-pages-left a svg path, .arrow-pages-wrapper .arrow-pages-right a svg path {
-  fill: #fff;
-  stroke: #4d3224;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2px;
-}
-
-.pp-scrollable .arrow-pages-wrapper {
-  top: 50%;
 }
 
 /* home end */
@@ -601,7 +613,7 @@ header {
   width: 100%;
 }
 .title-box .title-img.title-img-c {
-  max-width: 12rem;
+  max-width: 10.6rem;
 }
 
 .about-AirCamera-box, .skills-tortoise-box {
@@ -647,7 +659,7 @@ header {
 }
 
 .about-road-box {
-  padding-top: 3.4rem;
+  padding-top: 2rem;
 }
 
 .about-my-box, .about-people-box {
@@ -659,7 +671,7 @@ header {
   opacity: 0;
 }
 .about-my-box img, .about-people-box img {
-  width: 8.8rem;
+  width: 8.4rem;
 }
 
 .about-people-box {
@@ -680,8 +692,8 @@ header {
   height: 300px;
 }
 .about-city-box .about-bcity {
-  width: 1400px;
-  left: calc(50% - 700px);
+  width: 1440px;
+  left: calc(50% - 720px);
 }
 .about-city-box .about-cloud img {
   filter: drop-shadow(0px -6px 0px rgba(85, 150, 202, 0.8));
@@ -690,10 +702,12 @@ header {
 /* about end */
 /* skills */
 .skills-tortoise-box {
-  right: 10rem;
+  top: 4rem;
+  right: 20%;
+  max-width: 6.4rem;
 }
 .skills-tortoise-box img {
-  width: 8.7rem;
+  width: 100%;
 }
 
 .skills-fishs-wrapper {
@@ -732,7 +746,7 @@ header {
   padding-right: 1rem;
 }
 .skills-design-box .skills-design-img .design-svg img, .skills-design-box .skills-design-img .code-svg img, .skills-design-box .skills-code-img .design-svg img, .skills-design-box .skills-code-img .code-svg img, .skills-code-box .skills-design-img .design-svg img, .skills-code-box .skills-design-img .code-svg img, .skills-code-box .skills-code-img .design-svg img, .skills-code-box .skills-code-img .code-svg img {
-  width: 8rem;
+  max-width: 6.4rem;
 }
 .skills-design-box .skills-design-img .design-svg p, .skills-design-box .skills-design-img .code-svg p, .skills-design-box .skills-code-img .design-svg p, .skills-design-box .skills-code-img .code-svg p, .skills-code-box .skills-design-img .design-svg p, .skills-code-box .skills-design-img .code-svg p, .skills-code-box .skills-code-img .design-svg p, .skills-code-box .skills-code-img .code-svg p {
   color: #ffffff;
@@ -799,6 +813,7 @@ header {
 .skills-sea-box .skills-coral {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   bottom: 4rem;
   z-index: 10;
 }
@@ -812,16 +827,16 @@ header {
   top: 4rem;
 }
 .skills-sea-box .skills-my-box img {
-  width: 10rem;
+  width: 9rem;
 }
 
 /* skills end */
 /* works */
 .works-bird-box {
-  width: 2.5rem;
+  width: 1.8rem;
   position: absolute;
   left: calc(50% + 6rem);
-  bottom: 2.2rem;
+  bottom: 2.6rem;
   z-index: 5;
 }
 
@@ -829,7 +844,7 @@ header {
   margin-top: -6rem;
 }
 .works-mountain-wrapper .works-mountain-box {
-  height: 300px;
+  height: 200px;
   position: relative;
   bottom: -6px;
 }
@@ -841,10 +856,62 @@ header {
   position: absolute;
   width: 100%;
   z-index: 20;
-  bottom: 0.8rem;
+  bottom: 0.5rem;
 }
 .works-mountain-wrapper .works-mountain-box .works-my-box img {
-  width: 5rem;
+  width: 4.2rem;
+}
+
+.works-animal-box, .works-b-tree, .works-tree {
+  width: 1200px;
+  position: absolute;
+  left: calc(50% - 600px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.works-animal-box .works-animal-right-box, .works-animal-box .works-animal-left-box, .works-b-tree .works-animal-right-box, .works-b-tree .works-animal-left-box, .works-tree .works-animal-right-box, .works-tree .works-animal-left-box {
+  display: flex;
+  align-items: flex-end;
+}
+.works-animal-box .works-animal-right-box .works-pig img, .works-animal-box .works-animal-right-box .works-rabbit img, .works-animal-box .works-animal-right-box .works-LeopardCat img, .works-animal-box .works-animal-right-box .works-beer img, .works-animal-box .works-animal-right-box .works-deer img, .works-animal-box .works-animal-left-box .works-pig img, .works-animal-box .works-animal-left-box .works-rabbit img, .works-animal-box .works-animal-left-box .works-LeopardCat img, .works-animal-box .works-animal-left-box .works-beer img, .works-animal-box .works-animal-left-box .works-deer img, .works-b-tree .works-animal-right-box .works-pig img, .works-b-tree .works-animal-right-box .works-rabbit img, .works-b-tree .works-animal-right-box .works-LeopardCat img, .works-b-tree .works-animal-right-box .works-beer img, .works-b-tree .works-animal-right-box .works-deer img, .works-b-tree .works-animal-left-box .works-pig img, .works-b-tree .works-animal-left-box .works-rabbit img, .works-b-tree .works-animal-left-box .works-LeopardCat img, .works-b-tree .works-animal-left-box .works-beer img, .works-b-tree .works-animal-left-box .works-deer img, .works-tree .works-animal-right-box .works-pig img, .works-tree .works-animal-right-box .works-rabbit img, .works-tree .works-animal-right-box .works-LeopardCat img, .works-tree .works-animal-right-box .works-beer img, .works-tree .works-animal-right-box .works-deer img, .works-tree .works-animal-left-box .works-pig img, .works-tree .works-animal-left-box .works-rabbit img, .works-tree .works-animal-left-box .works-LeopardCat img, .works-tree .works-animal-left-box .works-beer img, .works-tree .works-animal-left-box .works-deer img {
+  width: 100%;
+}
+.works-animal-box .works-animal-right-box .works-pig.works-pig, .works-animal-box .works-animal-right-box .works-rabbit.works-pig, .works-animal-box .works-animal-right-box .works-LeopardCat.works-pig, .works-animal-box .works-animal-right-box .works-beer.works-pig, .works-animal-box .works-animal-right-box .works-deer.works-pig, .works-animal-box .works-animal-left-box .works-pig.works-pig, .works-animal-box .works-animal-left-box .works-rabbit.works-pig, .works-animal-box .works-animal-left-box .works-LeopardCat.works-pig, .works-animal-box .works-animal-left-box .works-beer.works-pig, .works-animal-box .works-animal-left-box .works-deer.works-pig, .works-b-tree .works-animal-right-box .works-pig.works-pig, .works-b-tree .works-animal-right-box .works-rabbit.works-pig, .works-b-tree .works-animal-right-box .works-LeopardCat.works-pig, .works-b-tree .works-animal-right-box .works-beer.works-pig, .works-b-tree .works-animal-right-box .works-deer.works-pig, .works-b-tree .works-animal-left-box .works-pig.works-pig, .works-b-tree .works-animal-left-box .works-rabbit.works-pig, .works-b-tree .works-animal-left-box .works-LeopardCat.works-pig, .works-b-tree .works-animal-left-box .works-beer.works-pig, .works-b-tree .works-animal-left-box .works-deer.works-pig, .works-tree .works-animal-right-box .works-pig.works-pig, .works-tree .works-animal-right-box .works-rabbit.works-pig, .works-tree .works-animal-right-box .works-LeopardCat.works-pig, .works-tree .works-animal-right-box .works-beer.works-pig, .works-tree .works-animal-right-box .works-deer.works-pig, .works-tree .works-animal-left-box .works-pig.works-pig, .works-tree .works-animal-left-box .works-rabbit.works-pig, .works-tree .works-animal-left-box .works-LeopardCat.works-pig, .works-tree .works-animal-left-box .works-beer.works-pig, .works-tree .works-animal-left-box .works-deer.works-pig {
+  max-width: 4.8rem;
+}
+.works-animal-box .works-animal-right-box .works-pig.works-rabbit, .works-animal-box .works-animal-right-box .works-rabbit.works-rabbit, .works-animal-box .works-animal-right-box .works-LeopardCat.works-rabbit, .works-animal-box .works-animal-right-box .works-beer.works-rabbit, .works-animal-box .works-animal-right-box .works-deer.works-rabbit, .works-animal-box .works-animal-left-box .works-pig.works-rabbit, .works-animal-box .works-animal-left-box .works-rabbit.works-rabbit, .works-animal-box .works-animal-left-box .works-LeopardCat.works-rabbit, .works-animal-box .works-animal-left-box .works-beer.works-rabbit, .works-animal-box .works-animal-left-box .works-deer.works-rabbit, .works-b-tree .works-animal-right-box .works-pig.works-rabbit, .works-b-tree .works-animal-right-box .works-rabbit.works-rabbit, .works-b-tree .works-animal-right-box .works-LeopardCat.works-rabbit, .works-b-tree .works-animal-right-box .works-beer.works-rabbit, .works-b-tree .works-animal-right-box .works-deer.works-rabbit, .works-b-tree .works-animal-left-box .works-pig.works-rabbit, .works-b-tree .works-animal-left-box .works-rabbit.works-rabbit, .works-b-tree .works-animal-left-box .works-LeopardCat.works-rabbit, .works-b-tree .works-animal-left-box .works-beer.works-rabbit, .works-b-tree .works-animal-left-box .works-deer.works-rabbit, .works-tree .works-animal-right-box .works-pig.works-rabbit, .works-tree .works-animal-right-box .works-rabbit.works-rabbit, .works-tree .works-animal-right-box .works-LeopardCat.works-rabbit, .works-tree .works-animal-right-box .works-beer.works-rabbit, .works-tree .works-animal-right-box .works-deer.works-rabbit, .works-tree .works-animal-left-box .works-pig.works-rabbit, .works-tree .works-animal-left-box .works-rabbit.works-rabbit, .works-tree .works-animal-left-box .works-LeopardCat.works-rabbit, .works-tree .works-animal-left-box .works-beer.works-rabbit, .works-tree .works-animal-left-box .works-deer.works-rabbit {
+  max-width: 2rem;
+  margin-left: 4rem;
+}
+.works-animal-box .works-animal-right-box .works-pig.works-LeopardCat, .works-animal-box .works-animal-right-box .works-rabbit.works-LeopardCat, .works-animal-box .works-animal-right-box .works-LeopardCat.works-LeopardCat, .works-animal-box .works-animal-right-box .works-beer.works-LeopardCat, .works-animal-box .works-animal-right-box .works-deer.works-LeopardCat, .works-animal-box .works-animal-left-box .works-pig.works-LeopardCat, .works-animal-box .works-animal-left-box .works-rabbit.works-LeopardCat, .works-animal-box .works-animal-left-box .works-LeopardCat.works-LeopardCat, .works-animal-box .works-animal-left-box .works-beer.works-LeopardCat, .works-animal-box .works-animal-left-box .works-deer.works-LeopardCat, .works-b-tree .works-animal-right-box .works-pig.works-LeopardCat, .works-b-tree .works-animal-right-box .works-rabbit.works-LeopardCat, .works-b-tree .works-animal-right-box .works-LeopardCat.works-LeopardCat, .works-b-tree .works-animal-right-box .works-beer.works-LeopardCat, .works-b-tree .works-animal-right-box .works-deer.works-LeopardCat, .works-b-tree .works-animal-left-box .works-pig.works-LeopardCat, .works-b-tree .works-animal-left-box .works-rabbit.works-LeopardCat, .works-b-tree .works-animal-left-box .works-LeopardCat.works-LeopardCat, .works-b-tree .works-animal-left-box .works-beer.works-LeopardCat, .works-b-tree .works-animal-left-box .works-deer.works-LeopardCat, .works-tree .works-animal-right-box .works-pig.works-LeopardCat, .works-tree .works-animal-right-box .works-rabbit.works-LeopardCat, .works-tree .works-animal-right-box .works-LeopardCat.works-LeopardCat, .works-tree .works-animal-right-box .works-beer.works-LeopardCat, .works-tree .works-animal-right-box .works-deer.works-LeopardCat, .works-tree .works-animal-left-box .works-pig.works-LeopardCat, .works-tree .works-animal-left-box .works-rabbit.works-LeopardCat, .works-tree .works-animal-left-box .works-LeopardCat.works-LeopardCat, .works-tree .works-animal-left-box .works-beer.works-LeopardCat, .works-tree .works-animal-left-box .works-deer.works-LeopardCat {
+  max-width: 3.2rem;
+  margin-bottom: -1rem;
+}
+.works-animal-box .works-animal-right-box .works-pig.works-beer, .works-animal-box .works-animal-right-box .works-rabbit.works-beer, .works-animal-box .works-animal-right-box .works-LeopardCat.works-beer, .works-animal-box .works-animal-right-box .works-beer.works-beer, .works-animal-box .works-animal-right-box .works-deer.works-beer, .works-animal-box .works-animal-left-box .works-pig.works-beer, .works-animal-box .works-animal-left-box .works-rabbit.works-beer, .works-animal-box .works-animal-left-box .works-LeopardCat.works-beer, .works-animal-box .works-animal-left-box .works-beer.works-beer, .works-animal-box .works-animal-left-box .works-deer.works-beer, .works-b-tree .works-animal-right-box .works-pig.works-beer, .works-b-tree .works-animal-right-box .works-rabbit.works-beer, .works-b-tree .works-animal-right-box .works-LeopardCat.works-beer, .works-b-tree .works-animal-right-box .works-beer.works-beer, .works-b-tree .works-animal-right-box .works-deer.works-beer, .works-b-tree .works-animal-left-box .works-pig.works-beer, .works-b-tree .works-animal-left-box .works-rabbit.works-beer, .works-b-tree .works-animal-left-box .works-LeopardCat.works-beer, .works-b-tree .works-animal-left-box .works-beer.works-beer, .works-b-tree .works-animal-left-box .works-deer.works-beer, .works-tree .works-animal-right-box .works-pig.works-beer, .works-tree .works-animal-right-box .works-rabbit.works-beer, .works-tree .works-animal-right-box .works-LeopardCat.works-beer, .works-tree .works-animal-right-box .works-beer.works-beer, .works-tree .works-animal-right-box .works-deer.works-beer, .works-tree .works-animal-left-box .works-pig.works-beer, .works-tree .works-animal-left-box .works-rabbit.works-beer, .works-tree .works-animal-left-box .works-LeopardCat.works-beer, .works-tree .works-animal-left-box .works-beer.works-beer, .works-tree .works-animal-left-box .works-deer.works-beer {
+  max-width: 6.2rem;
+  margin-bottom: -1rem;
+  margin-right: 2.4rem;
+}
+.works-animal-box .works-animal-right-box .works-pig.works-deer, .works-animal-box .works-animal-right-box .works-rabbit.works-deer, .works-animal-box .works-animal-right-box .works-LeopardCat.works-deer, .works-animal-box .works-animal-right-box .works-beer.works-deer, .works-animal-box .works-animal-right-box .works-deer.works-deer, .works-animal-box .works-animal-left-box .works-pig.works-deer, .works-animal-box .works-animal-left-box .works-rabbit.works-deer, .works-animal-box .works-animal-left-box .works-LeopardCat.works-deer, .works-animal-box .works-animal-left-box .works-beer.works-deer, .works-animal-box .works-animal-left-box .works-deer.works-deer, .works-b-tree .works-animal-right-box .works-pig.works-deer, .works-b-tree .works-animal-right-box .works-rabbit.works-deer, .works-b-tree .works-animal-right-box .works-LeopardCat.works-deer, .works-b-tree .works-animal-right-box .works-beer.works-deer, .works-b-tree .works-animal-right-box .works-deer.works-deer, .works-b-tree .works-animal-left-box .works-pig.works-deer, .works-b-tree .works-animal-left-box .works-rabbit.works-deer, .works-b-tree .works-animal-left-box .works-LeopardCat.works-deer, .works-b-tree .works-animal-left-box .works-beer.works-deer, .works-b-tree .works-animal-left-box .works-deer.works-deer, .works-tree .works-animal-right-box .works-pig.works-deer, .works-tree .works-animal-right-box .works-rabbit.works-deer, .works-tree .works-animal-right-box .works-LeopardCat.works-deer, .works-tree .works-animal-right-box .works-beer.works-deer, .works-tree .works-animal-right-box .works-deer.works-deer, .works-tree .works-animal-left-box .works-pig.works-deer, .works-tree .works-animal-left-box .works-rabbit.works-deer, .works-tree .works-animal-left-box .works-LeopardCat.works-deer, .works-tree .works-animal-left-box .works-beer.works-deer, .works-tree .works-animal-left-box .works-deer.works-deer {
+  max-width: 3rem;
+  margin-bottom: 0.4rem;
+}
+.works-animal-box.works-animal-box, .works-b-tree.works-animal-box, .works-tree.works-animal-box {
+  padding: 0 6rem;
+  bottom: 2.8rem;
+}
+.works-animal-box.works-b-tree, .works-b-tree.works-b-tree, .works-tree.works-b-tree {
+  bottom: 2rem;
+}
+.works-animal-box.works-b-tree img, .works-b-tree.works-b-tree img, .works-tree.works-b-tree img {
+  width: 100%;
+}
+.works-animal-box.works-tree, .works-b-tree.works-tree, .works-tree.works-tree {
+  bottom: 2rem;
+}
+.works-animal-box.works-tree img, .works-b-tree.works-tree img, .works-tree.works-tree img {
+  width: 100%;
 }
 
 .section-contant-container {
@@ -867,9 +934,10 @@ header {
 .tabs a {
   display: flex;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 20px;
+  letter-spacing: 2px;
   margin: 0px 0.4rem;
-  padding: 4px 16px;
+  padding: 0.4rem 1rem;
   border: 1px solid #ffffff;
   cursor: pointer;
   background-color: #94C28B;
@@ -908,9 +976,6 @@ header {
 }
 .works-web-box .works-web.col3:nth-child(3n+1), .works-web-box .works-vision.col3:nth-child(3n+1), .works-web-box .works-ui.col3:nth-child(3n+1), .works-vision-box .works-web.col3:nth-child(3n+1), .works-vision-box .works-vision.col3:nth-child(3n+1), .works-vision-box .works-ui.col3:nth-child(3n+1), .works-ui-box .works-web.col3:nth-child(3n+1), .works-ui-box .works-vision.col3:nth-child(3n+1), .works-ui-box .works-ui.col3:nth-child(3n+1) {
   margin-left: 0;
-}
-.works-web-box .works-web a, .works-web-box .works-vision a, .works-web-box .works-ui a, .works-vision-box .works-web a, .works-vision-box .works-vision a, .works-vision-box .works-ui a, .works-ui-box .works-web a, .works-ui-box .works-vision a, .works-ui-box .works-ui a {
-  text-decoration: none;
 }
 .works-web-box .works-web a:hover .web-text, .works-web-box .works-vision a:hover .web-text, .works-web-box .works-ui a:hover .web-text, .works-vision-box .works-web a:hover .web-text, .works-vision-box .works-vision a:hover .web-text, .works-vision-box .works-ui a:hover .web-text, .works-ui-box .works-web a:hover .web-text, .works-ui-box .works-vision a:hover .web-text, .works-ui-box .works-ui a:hover .web-text {
   opacity: 0.6;
@@ -951,45 +1016,23 @@ header {
 }
 
 .loadMore {
-  width: 200px;
+  max-width: 180px;
   color: #fff;
   display: block;
   text-align: center;
   margin: 0.5rem auto 4rem auto;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 0.6rem;
+  border-radius: 40px;
   border: 1px solid #fff;
   background-color: #94C28B;
-  text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
+  letter-spacing: 2px;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 .loadMore:hover {
   color: #94C28B;
   background-color: #fff;
-}
-
-.works-animal-box {
-  width: 1800px;
-  height: auto;
-  position: absolute;
-  left: calc(50% - 900px);
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-}
-.works-animal-box .works-beer, .works-animal-box .works-LeopardCat {
-  width: 12.8rem;
-  margin-top: 26rem;
-}
-.works-animal-box .works-beer img, .works-animal-box .works-LeopardCat img {
-  width: 100%;
-}
-.works-animal-box .works-beer.works-LeopardCat, .works-animal-box .works-LeopardCat.works-LeopardCat {
-  width: 5.8rem;
-  margin-top: 10rem;
-  margin-left: 10rem;
 }
 
 /* works end */
@@ -1082,18 +1125,21 @@ header {
   width: 100%;
 }
 .contact-contant-box .contant-box .my-contact-box {
-  margin-bottom: 0.5rem;
+  margin-top: 0.4rem;
 }
-.contact-contant-box .contant-box .my-contact-box li {
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-  line-height: 2.4;
+.contact-contant-box .contant-box .my-contact-box a {
   color: #ffffff;
+  font-size: 20px;
+  line-height: 2;
   letter-spacing: 1.5px;
+  text-align: center;
+  width: 100%;
 }
-.contact-contant-box .contant-box .my-contact-box li::before {
-  margin-right: 10px;
+.contact-contant-box .contant-box .my-contact-box a::before {
+  padding-right: 10px;
+}
+.contact-contant-box .contant-box .my-contact-box a:hover {
+  color: #F5E69A;
 }
 .contact-contant-box .contant-box .my-community-box {
   width: 100%;
@@ -1152,18 +1198,15 @@ header {
 }
 
 .contact-copyright {
-  padding: 0.2rem 0px;
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  bottom: 0px;
+  padding: 0.5rem 0px;
   background: #5596CA;
 }
 .contact-copyright p {
-  color: #ffffff;
+  color: #C3D6EA;
   width: 100%;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .contact-FishsIslands-box {
@@ -1236,9 +1279,15 @@ header {
   width: 4rem;
   padding-top: 0rem;
   margin-left: 1rem;
+  opacity: 1;
 }
 .contact-FishsIslands-box .contact-fishs-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img:nth-of-type(1), .contact-FishsIslands-box .contact-TurtleMedusa-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img:nth-of-type(1) {
   margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.m-contact-FishsIslands-box {
+  display: none;
 }
 
 /* contact end */
@@ -1266,48 +1315,75 @@ header {
   }
 
   .home-my-box {
-    width: 7rem;
+    width: 8rem;
+    top: 30%;
   }
 
   .home-road-box .home-ZebraRoad {
     width: 300px;
   }
 
-  .home-day-car.home-day-car ul li .home-car-up01, .home-day-car.home-day-car ul li .home-car-up04, .home-day-car2.home-day-car ul li .home-car-up01, .home-day-car2.home-day-car ul li .home-car-up04, .home-night-car.home-day-car ul li .home-car-up01, .home-night-car.home-day-car ul li .home-car-up04, .home-night-car2.home-day-car ul li .home-car-up01, .home-night-car2.home-day-car ul li .home-car-up04 {
-    max-width: 7.8rem;
+  .home-day-car.home-day-car ul li .home-car-up01, .home-day-car2.home-day-car ul li .home-car-up01, .home-night-car.home-day-car ul li .home-car-up01, .home-night-car2.home-day-car ul li .home-car-up01 {
+    max-width: 5.4rem;
   }
   .home-day-car.home-day-car ul li .home-scooter-up02, .home-day-car2.home-day-car ul li .home-scooter-up02, .home-night-car.home-day-car ul li .home-scooter-up02, .home-night-car2.home-day-car ul li .home-scooter-up02 {
-    max-width: 4rem;
+    max-width: 2.4rem;
   }
   .home-day-car.home-day-car ul li .home-car-up03, .home-day-car2.home-day-car ul li .home-car-up03, .home-night-car.home-day-car ul li .home-car-up03, .home-night-car2.home-day-car ul li .home-car-up03 {
-    max-width: 6.8rem;
+    max-width: 4.6rem;
   }
-  .home-day-car.home-night-car ul li .home-car-up01, .home-day-car.home-night-car ul li .home-car-up04, .home-day-car2.home-night-car ul li .home-car-up01, .home-day-car2.home-night-car ul li .home-car-up04, .home-night-car.home-night-car ul li .home-car-up01, .home-night-car.home-night-car ul li .home-car-up04, .home-night-car2.home-night-car ul li .home-car-up01, .home-night-car2.home-night-car ul li .home-car-up04 {
-    max-width: 7.8rem;
+  .home-day-car.home-day-car ul li .home-car-up04, .home-day-car2.home-day-car ul li .home-car-up04, .home-night-car.home-day-car ul li .home-car-up04, .home-night-car2.home-day-car ul li .home-car-up04 {
+    max-width: 5.4rem;
+  }
+  .home-day-car.home-day-car2 ul li .home-car-down01, .home-day-car2.home-day-car2 ul li .home-car-down01, .home-night-car.home-day-car2 ul li .home-car-down01, .home-night-car2.home-day-car2 ul li .home-car-down01 {
+    max-width: 5.6rem;
+  }
+  .home-day-car.home-day-car2 ul li .home-car-down02, .home-day-car2.home-day-car2 ul li .home-car-down02, .home-night-car.home-day-car2 ul li .home-car-down02, .home-night-car2.home-day-car2 ul li .home-car-down02 {
+    max-width: 8rem;
+  }
+  .home-day-car.home-day-car2 ul li .home-scooter-down03, .home-day-car2.home-day-car2 ul li .home-scooter-down03, .home-night-car.home-day-car2 ul li .home-scooter-down03, .home-night-car2.home-day-car2 ul li .home-scooter-down03 {
+    max-width: 3rem;
+  }
+  .home-day-car.home-night-car ul li .home-car-up01, .home-day-car2.home-night-car ul li .home-car-up01, .home-night-car.home-night-car ul li .home-car-up01, .home-night-car2.home-night-car ul li .home-car-up01 {
+    max-width: 7.4rem;
   }
   .home-day-car.home-night-car ul li .home-scooter-up02, .home-day-car2.home-night-car ul li .home-scooter-up02, .home-night-car.home-night-car ul li .home-scooter-up02, .home-night-car2.home-night-car ul li .home-scooter-up02 {
-    max-width: 4rem;
+    max-width: 3.8rem;
   }
   .home-day-car.home-night-car ul li .home-car-up03, .home-day-car2.home-night-car ul li .home-car-up03, .home-night-car.home-night-car ul li .home-car-up03, .home-night-car2.home-night-car ul li .home-car-up03 {
-    max-width: 6.8rem;
+    max-width: 6.2rem;
+  }
+  .home-day-car.home-night-car ul li .home-car-up04, .home-day-car2.home-night-car ul li .home-car-up04, .home-night-car.home-night-car ul li .home-car-up04, .home-night-car2.home-night-car ul li .home-car-up04 {
+    max-width: 7.4rem;
   }
   .home-day-car.home-night-car2 ul li .home-car-down01, .home-day-car2.home-night-car2 ul li .home-car-down01, .home-night-car.home-night-car2 ul li .home-car-down01, .home-night-car2.home-night-car2 ul li .home-car-down01 {
-    max-width: 8.8rem;
+    max-width: 8.6rem;
   }
   .home-day-car.home-night-car2 ul li .home-car-down02, .home-day-car2.home-night-car2 ul li .home-car-down02, .home-night-car.home-night-car2 ul li .home-car-down02, .home-night-car2.home-night-car2 ul li .home-car-down02 {
     max-width: 10rem;
   }
   .home-day-car.home-night-car2 ul li .home-scooter-down03, .home-day-car2.home-night-car2 ul li .home-scooter-down03, .home-night-car.home-night-car2 ul li .home-scooter-down03, .home-night-car2.home-night-car2 ul li .home-scooter-down03 {
-    max-width: 4.8rem;
+    max-width: 4.2rem;
+  }
+
+  /* menu */
+  .menu-contant-box .menu-text ul li h5 {
+    font-size: 18px;
+  }
+  .menu-contant-box .menu-text ul li h5 span {
+    font-size: 32px;
+  }
+  .menu-contant-box .fb-icon a svg, .menu-contant-box .ig-icon a svg {
+    width: 3.4rem;
   }
 
   /* about */
   .about-city-box {
-    height: 200px;
+    height: 240px;
   }
-  .about-city-box .about-bcity {
-    width: 1000px;
-    left: calc(50% - 500px);
+  .about-city-box .about-city, .about-city-box .about-cloud, .about-city-box .about-bcity {
+    width: 1440px;
+    left: calc(50% - 720px);
   }
 
   .about-contant-box {
@@ -1339,13 +1415,14 @@ header {
 
   .about-people-box {
     left: 0px;
+    top: -60px;
   }
   .about-people-box img {
-    width: 2.4rem;
+    width: 2rem;
   }
 
   .about-road-box {
-    padding-top: 2rem;
+    padding-top: 1.4rem;
   }
 
   .about-AirCamera-box svg {
@@ -1354,13 +1431,20 @@ header {
 
   /* skills */
   .skills-sea-box {
-    height: 300px;
+    height: 340px;
   }
-  .skills-sea-box .skills-coral img {
+  .skills-sea-box .skills-seabed, .skills-sea-box .skills-seasand, .skills-sea-box .skills-coral {
+    width: 1440px;
+    left: calc(50% - 720px);
+  }
+  .skills-sea-box .skills-seabed.skills-coral img, .skills-sea-box .skills-seasand.skills-coral img, .skills-sea-box .skills-coral.skills-coral img {
     width: 10rem;
   }
-  .skills-sea-box .skills-seabed {
-    bottom: 8rem;
+  .skills-sea-box .skills-seabed.skills-seasand, .skills-sea-box .skills-seasand.skills-seasand, .skills-sea-box .skills-coral.skills-seasand {
+    bottom: 0;
+  }
+  .skills-sea-box .skills-seabed.skills-seabed, .skills-sea-box .skills-seasand.skills-seabed, .skills-sea-box .skills-coral.skills-seabed {
+    bottom: 6rem;
   }
   .skills-sea-box .skills-my-box {
     top: 0px;
@@ -1392,69 +1476,182 @@ header {
   }
 
   /* work */
-  .works-mountain-wrapper .works-mountain-box {
-    height: 260px;
-  }
   .works-mountain-wrapper .works-mountain-box .works-my-box img {
     width: 4rem;
   }
 
-  .works-animal-box {
-    width: 1600px;
-    left: calc(50% - 800px);
-  }
-  .works-animal-box .works-beer, .works-animal-box .works-LeopardCat {
-    margin-right: 2rem;
-    width: 12rem;
-  }
-  .works-animal-box .works-beer.works-LeopardCat, .works-animal-box .works-LeopardCat.works-LeopardCat {
-    margin-left: 6rem;
-    width: 5rem;
-  }
-
-  .web-text h4 {
-    font-size: 20px;
-  }
   .web-text p {
     font-size: 16px;
   }
 
+  .works-web-box .works-web.col3, .works-web-box .works-vision.col3, .works-web-box .works-ui.col3, .works-vision-box .works-web.col3, .works-vision-box .works-vision.col3, .works-vision-box .works-ui.col3, .works-ui-box .works-web.col3, .works-ui-box .works-vision.col3, .works-ui-box .works-ui.col3 {
+    margin-bottom: calc(1.5rem * 3 / 2);
+  }
+
   .works-bird-box {
-    width: 1.8rem;
+    width: 1.4rem;
+    bottom: 2.2rem;
+  }
+
+  .tabs {
+    margin-bottom: 2.4rem;
   }
 
   /* contact */
-  .contact-contant-container {
-    padding-bottom: 3.2rem;
+  .contact-air-box .home-day-box, .contact-air-box .home-night-box {
+    height: 280px;
+  }
+  .contact-air-box .home-day-box .home-day-cloud, .contact-air-box .home-day-box .home-night-star, .contact-air-box .home-night-box .home-day-cloud, .contact-air-box .home-night-box .home-night-star {
+    width: 1440px;
+    height: auto;
+    position: absolute;
+    left: calc(50% - 720px);
+    top: 0;
   }
 
   .contact-contant-box .contant-box {
     padding: 1rem;
   }
-  .contact-contant-box .contant-box .my-contact-box li {
+  .contact-contant-box .contant-box .my-contact-box a {
     font-size: 16px;
   }
   .contact-contant-box .contact-myhitballoon {
-    max-width: 5.8rem;
+    max-width: 5.2rem;
   }
   .contact-contant-box .contact-myhitballoon-line {
     max-width: 8rem;
   }
 
-  .contact-FishsIslands-box .contact-islands-box .contact-islands {
-    width: 32rem;
-    height: 10.8rem;
-  }
-
-  .contact-hitballoon-left, .contact-hitballoon-right {
-    width: 4.4rem;
+  .contact-hitballoon-left.contact-hitballoon-left, .contact-hitballoon-right.contact-hitballoon-left {
+    width: 4rem;
   }
   .contact-hitballoon-left.contact-hitballoon-right, .contact-hitballoon-right.contact-hitballoon-right {
-    width: 3.4rem;
+    width: 2.8rem;
+  }
+
+  .contact-FishsIslands-box .contact-islands-box .contact-islands {
+    width: 28rem;
+    height: 9.4rem;
+  }
+  .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about.contact-islands-work, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work.contact-islands-work {
+    margin-top: -30px;
+    margin-right: 10px;
+  }
+
+  .contact-fishs-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img:nth-of-type(1), .contact-TurtleMedusa-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img:nth-of-type(1) {
+    width: 3.6rem;
   }
 
   .contact-contant-box .fb-icon a svg, .contact-contant-box .ig-icon a svg {
     width: 2.8rem;
+  }
+
+  .contact-sea-box .contact-wave {
+    width: 1000px;
+    left: calc(50% - 500px);
+  }
+  .contact-sea-box .contact-wave .contact-wave-right, .contact-sea-box .contact-wave .contact-wave-left {
+    max-width: 15rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    padding: 0 1.6rem;
+  }
+
+  .skills-design-box .skills-design-img .skills-bubble, .skills-design-box .skills-code-img .skills-bubble, .skills-code-box .skills-design-img .skills-bubble, .skills-code-box .skills-code-img .skills-bubble {
+    width: 11.8rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /* home */
+  .home-my-box {
+    width: 7rem;
+    top: 40%;
+  }
+
+  .home-road-box .home-ZebraRoad {
+    width: 240px;
+  }
+
+  /* about */
+  .about-contant-box .about-text {
+    padding-left: 2.8rem;
+    max-width: 34rem;
+  }
+
+  .about-city-box .about-bcity {
+    width: 1100px;
+    left: calc(50% - 550px);
+  }
+
+  .about-my-box img {
+    width: 6.2rem;
+  }
+
+  /* skills */
+  .skills-sea-box {
+    height: 240px;
+  }
+  .skills-sea-box .skills-my-box img {
+    width: 6.8rem;
+  }
+
+  .skills-fishs-wrapper img {
+    width: 15rem;
+  }
+
+  .skills-tortoise-box img {
+    width: 5.2rem;
+  }
+
+  .skills-contant-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skills-design-box, .skills-code-box {
+    width: 100%;
+    justify-content: center;
+  }
+  .skills-design-box.skills-design-box, .skills-code-box.skills-design-box {
+    padding-right: 8rem;
+  }
+  .skills-design-box.skills-code-box, .skills-code-box.skills-code-box {
+    padding-left: 8rem;
+    padding-top: 2rem;
+  }
+
+  .code-svg p {
+    font-size: 12px;
+  }
+
+  /* works */
+  .works-mountain-wrapper .works-mountain-box {
+    height: 260px;
+  }
+
+  .works-animal-box, .works-b-tree, .works-tree {
+    width: 1000px;
+    left: calc(50% - 500px);
+  }
+
+  .works-mountain-wrapper .works-mountain-box .works-my-box img {
+    width: 3.4rem;
+  }
+
+  .web-text h4 {
+    font-size: 20px;
+  }
+
+  .tabs a {
+    font-size: 18px;
+    padding: 0.3rem 1rem;
+  }
+
+  /* 關掉左右箭頭 */
+  .arrow-pages-left, .arrow-pages-right {
+    display: none;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1468,6 +1665,59 @@ header {
   }
 
   /* home */
+  .home-air-wrapper {
+    margin: 2rem 0;
+  }
+
+  .home-my-box {
+    left: 200px;
+  }
+
+  .about-contant-box {
+    flex-direction: column;
+    margin: 2rem 6rem 0 6rem;
+  }
+  .about-contant-box .about-text {
+    padding-left: 0;
+    max-width: 100%;
+  }
+  .about-contant-box .about-text p {
+    text-align: center;
+  }
+  .about-contant-box .about-img {
+    width: 14.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-AirCamera-box {
+    top: 2rem;
+  }
+
+  /* skills */
+  .skills-contant-box {
+    margin: 4rem 0;
+  }
+
+  .skills-design-box.skills-code-box, .skills-code-box.skills-code-box {
+    padding-left: 8rem;
+    padding-top: 3.2rem;
+  }
+
+  .skills-sea-box .skills-seabed.skills-seasand, .skills-sea-box .skills-seasand.skills-seasand, .skills-sea-box .skills-coral.skills-seasand {
+    bottom: -10px;
+  }
+  .skills-sea-box .skills-seabed.skills-seabed, .skills-sea-box .skills-seasand.skills-seabed, .skills-sea-box .skills-coral.skills-seabed {
+    bottom: 6rem;
+  }
+  .skills-sea-box .skills-seabed.skills-coral, .skills-sea-box .skills-seasand.skills-coral, .skills-sea-box .skills-coral.skills-coral {
+    width: 100%;
+    left: 0;
+    justify-content: flex-end;
+  }
+  .skills-sea-box .skills-seabed.skills-coral img:nth-of-type(1), .skills-sea-box .skills-seasand.skills-coral img:nth-of-type(1), .skills-sea-box .skills-coral.skills-coral img:nth-of-type(1) {
+    display: none;
+  }
+
   /* works */
   .works-web-box .works-web.col3.col2, .works-web-box .works-vision.col3.col2, .works-web-box .works-ui.col3.col2, .works-vision-box .works-web.col3.col2, .works-vision-box .works-vision.col3.col2, .works-vision-box .works-ui.col3.col2, .works-ui-box .works-web.col3.col2, .works-ui-box .works-vision.col3.col2, .works-ui-box .works-ui.col3.col2 {
     width: calc(100%/2 - 1rem);
@@ -1476,6 +1726,32 @@ header {
   }
   .works-web-box .works-web.col3.col2:nth-child(2n+1), .works-web-box .works-vision.col3.col2:nth-child(2n+1), .works-web-box .works-ui.col3.col2:nth-child(2n+1), .works-vision-box .works-web.col3.col2:nth-child(2n+1), .works-vision-box .works-vision.col3.col2:nth-child(2n+1), .works-vision-box .works-ui.col3.col2:nth-child(2n+1), .works-ui-box .works-web.col3.col2:nth-child(2n+1), .works-ui-box .works-vision.col3.col2:nth-child(2n+1), .works-ui-box .works-ui.col3.col2:nth-child(2n+1) {
     margin-left: 0;
+  }
+
+  /* contact */
+  .contact-contant-container {
+    padding-bottom: 0px;
+  }
+
+  .contact-contant-wrapper {
+    padding: 4rem 0;
+  }
+
+  .contact-contant-box .contant-box {
+    padding: 2rem;
+  }
+
+  .contact-copyright {
+    padding: 1.8rem 0rem;
+  }
+
+  .contact-FishsIslands-box, .contact-hitballoon-left, .contact-hitballoon-right {
+    display: none;
+  }
+
+  .m-contact-FishsIslands-box {
+    display: block;
+    padding: 0 1.6rem;
   }
 }
 .arrow-pages-left-an, .arrow-pages-right-an {
@@ -1526,11 +1802,11 @@ header {
 }
 
 .home-day-sun-an img {
-  -webkit-animation: turn-An 16s linear infinite;
-  animation: turn-An 16s linear infinite;
+  -webkit-animation: turn 16s linear infinite;
+  animation: turn 16s linear infinite;
 }
 
-@keyframes turn-An {
+@keyframes turn {
   from {
     -webkit-transform: rotateZ(0deg) translate3d(0, 0, 0);
     transform: rotateZ(0deg) translate3d(0, 0, 0);
@@ -1541,8 +1817,8 @@ header {
   }
 }
 .home-car-up-an li {
-  -webkit-animation: home-car-up-An 12s linear infinite;
-  animation: home-car-up-An 12s linear infinite;
+  -webkit-animation: home-car-up 12s linear infinite;
+  animation: home-car-up 12s linear infinite;
   -webkit-animation-delay: 5s;
   animation-delay: 5s;
 }
@@ -1559,7 +1835,7 @@ header {
   animation-delay: 14s;
 }
 
-@keyframes home-car-up-An {
+@keyframes home-car-up {
   from {
     opacity: 1;
     -webkit-transform: translateX(100%);
@@ -1571,17 +1847,17 @@ header {
     transform: translateX(-20%);
   }
 }
-.home-car-down li {
+.home-car-down-an li {
   -webkit-animation: home-car-down 12s linear infinite;
   animation: home-car-down 12s linear infinite;
   -webkit-animation-delay: 5s;
   animation-delay: 5s;
 }
-.home-car-down li:nth-child(2) {
+.home-car-down-an li:nth-child(2) {
   -webkit-animation-delay: 7s;
   animation-delay: 7s;
 }
-.home-car-down li:nth-child(3) {
+.home-car-down-an li:nth-child(3) {
   -webkit-animation-delay: 10s;
   animation-delay: 10s;
 }
@@ -1599,8 +1875,8 @@ header {
   }
 }
 .home-day-cloud-an2, .home-day-cloud-an3 {
-  -webkit-animation: home-day-cloud-an2 40s linear infinite;
-  animation: home-day-cloud-an2 40s linear infinite;
+  -webkit-animation: home-day-cloud 40s linear infinite;
+  animation: home-day-cloud 40s linear infinite;
   opacity: 0;
 }
 
@@ -1609,7 +1885,7 @@ header {
   animation-delay: 20s;
 }
 
-@keyframes home-day-cloud-an2 {
+@keyframes home-day-cloud {
   from {
     opacity: 1;
     -webkit-transform: translateX(-100%);
@@ -1622,12 +1898,12 @@ header {
   }
 }
 .home-moon-light-an img {
-  -webkit-animation: home-moon-light-an 4s ease-in-out infinite;
-  animation: home-moon-light-an 4s ease-in-out infinite;
+  -webkit-animation: home-moon-light 4s ease-in-out infinite;
+  animation: home-moon-light 4s ease-in-out infinite;
   opacity: 1;
 }
 
-@keyframes home-moon-light-an {
+@keyframes home-moon-light {
   0% {
     opacity: 0.8;
     -webkit-transform: scale(1);
@@ -1644,14 +1920,14 @@ header {
   }
 }
 .home-my-an {
-  -webkit-animation: home-my-an 1s ease-in 1 forwards;
-  animation: home-my-an 1s ease-in 1 forwards;
+  -webkit-animation: home-my 1s ease-in 1 forwards;
+  animation: home-my 1s ease-in 1 forwards;
   opacity: 0;
   -webkit-animation-delay: 4s;
   animation-delay: 4s;
 }
 
-@keyframes home-my-an {
+@keyframes home-my {
   from {
     opacity: 0;
     -webkit-transform: translate(0px, 0px);
@@ -1664,11 +1940,11 @@ header {
   }
 }
 .about-my-photo-bg-an {
-  -webkit-animation: turn-An 8s linear infinite;
-  animation: turn-An 8s linear infinite;
+  -webkit-animation: turn 8s linear infinite;
+  animation: turn 8s linear infinite;
 }
 
-.cc {
+.about-my-box-an {
   -webkit-animation: home-car-down 8s linear infinite;
   animation: home-car-down 8s linear infinite;
 }

@@ -48,9 +48,9 @@
 //home-sun-an
 .home-day-sun-an
     img
-        -webkit-animation: turn-An 16s linear infinite
-        animation: turn-An 16s linear infinite
-@keyframes turn-An
+        -webkit-animation: turn 16s linear infinite
+        animation: turn 16s linear infinite
+@keyframes turn
     from
         -webkit-transform: rotateZ(0deg) translate3d(0,0,0)
         transform: rotateZ(0deg) translate3d(0,0,0)
@@ -60,8 +60,8 @@
 //home-car-an
 .home-car-up-an
     li
-        -webkit-animation: home-car-up-An 12s linear infinite
-        animation: home-car-up-An 12s linear infinite
+        -webkit-animation: home-car-up 12s linear infinite
+        animation: home-car-up 12s linear infinite
         -webkit-animation-delay: 5s
         animation-delay: 5s
         &:nth-child(2)
@@ -73,7 +73,7 @@
         &:nth-child(4)
             -webkit-animation-delay: 14s
             animation-delay: 14s
-@keyframes home-car-up-An
+@keyframes home-car-up
     from
         opacity: 1
         -webkit-transform: translateX(100%)
@@ -82,7 +82,7 @@
         opacity: 1
         -webkit-transform: translateX(-20%)
         transform: translateX(-20%)
-.home-car-down
+.home-car-down-an
     li
         -webkit-animation: home-car-down 12s linear infinite
         animation: home-car-down 12s linear infinite
@@ -105,13 +105,13 @@
         transform: translateX(100%)
 //home-day-cloud-an
 .home-day-cloud-an2,.home-day-cloud-an3
-    -webkit-animation: home-day-cloud-an2 40s linear infinite
-    animation: home-day-cloud-an2 40s linear infinite
+    -webkit-animation: home-day-cloud 40s linear infinite
+    animation: home-day-cloud 40s linear infinite
     opacity: 0
 .home-day-cloud-an3
     -webkit-animation-delay: 20s
     animation-delay: 20s
-@keyframes home-day-cloud-an2
+@keyframes home-day-cloud
     from
         opacity: 1
         -webkit-transform: translateX(-100%)
@@ -124,10 +124,10 @@
 //home-moon-light-an
 .home-moon-light-an
     img
-        -webkit-animation: home-moon-light-an 4s ease-in-out infinite
-        animation: home-moon-light-an 4s ease-in-out infinite
+        -webkit-animation: home-moon-light 4s ease-in-out infinite
+        animation: home-moon-light 4s ease-in-out infinite
         opacity: 1
-@keyframes home-moon-light-an
+@keyframes home-moon-light
     0%
         opacity: 0.8
         -webkit-transform: scale(1)
@@ -142,12 +142,12 @@
 
 //home-my-an
 .home-my-an
-    -webkit-animation: home-my-an 1s ease-in 1 forwards
-    animation: home-my-an 1s ease-in 1 forwards
+    -webkit-animation: home-my 1s ease-in 1 forwards
+    animation: home-my 1s ease-in 1 forwards
     opacity: 0
     -webkit-animation-delay: 4s
     animation-delay: 4s
-@keyframes home-my-an
+@keyframes home-my
     from
         opacity: 0
         -webkit-transform: translate(0px,0px)
@@ -158,10 +158,10 @@
         transform: translate(20px,8px)
 //about an
 .about-my-photo-bg-an
-    -webkit-animation: turn-An 8s linear infinite
-    animation: turn-An 8s linear infinite
+    -webkit-animation: turn 8s linear infinite
+    animation: turn 8s linear infinite
 //直線游泳、腳踏車動畫
-.cc
+.about-my-box-an
     -webkit-animation: home-car-down 8s linear infinite
     animation: home-car-down 8s linear infinite
 .skills-my-box-an
