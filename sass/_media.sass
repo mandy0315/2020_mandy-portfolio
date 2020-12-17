@@ -69,7 +69,7 @@
                     h5
                         font-size: $h6
                         span
-                            font-size: 32px
+                            font-size: $mobile-l-title
         .fb-icon,.ig-icon
             a
                 svg
@@ -124,7 +124,7 @@
             &.skills-seabed
                 bottom: 6rem
         .skills-my-box
-            top: 0px
+            top: 4rem
             img
                 width: 8.8rem
     .skills-contant-box
@@ -192,8 +192,10 @@
     .contact-FishsIslands-box
         .contact-islands-box
             .contact-islands
-                width: 28rem
-                height: 9.4rem
+                // width: 28rem
+                // height: 9.4rem
+                width: 30rem
+                height: 10rem
                 .contact-islands-about,.contact-islands-work
                     &.contact-islands-work
                         margin-top: -30px 
@@ -217,16 +219,37 @@
             left: calc(50% - 500px)
             .contact-wave-right,.contact-wave-left
                 max-width: 15rem
-
+@media only screen and (max-width: 1366px)
+    /* home */
+    .home-air-wrapper
+        margin: 2rem 0
+    /* about */
+    .about-contant-box
+        margin: 2rem 6rem
+    /* skills */
+    .skills-contant-box
+        margin: 2rem 0
+    /* works */
+    .works-mountain-wrapper
+        .works-mountain-box
+            height: 260px
+    /* contact */
+    .contact-contant-container
+        padding-bottom: 0
+    .contact-air-box
+        padding: 4rem 0 6rem 0
 @media only screen and (max-width: 1200px)
     .wrapper
         padding: 0 1.6rem
+    /* skills */
     .skills-design-box,.skills-code-box
         .skills-design-img,.skills-code-img
             .skills-bubble
-                width: 11.8rem
+                width: 11rem
 @media only screen and (max-width: 1024px)
     /* home */
+    .home-air-wrapper
+        margin: -2rem 0 0 0
     .home-my-box
         width: 7rem
         top: 40%
@@ -235,9 +258,12 @@
             width: 240px
     /* about */
     .about-contant-box
+        margin: 1rem 6rem
+        .about-img
+            width: 30%
         .about-text
             padding-left: 2.8rem
-            max-width: 34rem
+            max-width: 70%
     .about-city-box
         .about-bcity
             width: 1100px
@@ -246,11 +272,22 @@
         img
             width: 6.2rem
     /* skills */
+    .skills-contant-box
+        margin: 1rem 0
     .skills-sea-box
-        height: 240px
+        height: 220px
         .skills-my-box
+            top: 0
             img
                 width: 6.8rem
+        .skills-seabed,.skills-seasand,.skills-coral
+            &.skills-coral
+                width: 100%
+                left: 0
+                justify-content: flex-end
+                img
+                    &:nth-of-type(1)
+                        display: none
     .skills-fishs-wrapper
         img
             width: 15rem
@@ -264,13 +301,13 @@
         width: 100%
         justify-content: center
         &.skills-design-box
-            padding-right: 8rem
+            padding-right: 15%
         &.skills-code-box
-            padding-left: 8rem
+            padding-left: 15%
             padding-top: 2rem
     .code-svg
         p
-            font-size: 12px  
+            font-size: 12px
     /* works */
     .works-mountain-wrapper
         .works-mountain-box
@@ -290,6 +327,9 @@
         a
             font-size: $h6
             padding: 0.3rem 1rem
+    /* works */
+    .contact-air-box
+        padding: 0 0 4rem 0
     /* 關掉左右箭頭 */
     .arrow-pages-left,.arrow-pages-right
         display: none 
@@ -303,7 +343,7 @@
         margin: auto
     /* home */
     .home-air-wrapper
-        margin: 2rem 0
+        margin: 4rem 0
     .home-my-box
         left: 200px
     .about-contant-box
@@ -312,19 +352,18 @@
         .about-text
             padding-left: 0
             max-width: 100%
-            p
-                text-align: center
         .about-img
             width: 14.2rem
             margin-bottom: 2rem
     .about-AirCamera-box
         top: 2rem
+    .about-road-box
+        padding-bottom: 6rem
     /* skills */
     .skills-contant-box
         margin: 4rem 0
     .skills-design-box,.skills-code-box
         &.skills-code-box
-            padding-left: 8rem
             padding-top: 3.2rem
     .skills-sea-box
         .skills-seabed,.skills-seasand,.skills-coral
@@ -332,13 +371,6 @@
                 bottom: -10px   
             &.skills-seabed
                 bottom: 6rem
-            &.skills-coral
-                width: 100%
-                left: 0
-                justify-content: flex-end
-                img
-                    &:nth-of-type(1)
-                        display: none
     /* works */ 
     .works-web-box,.works-vision-box,.works-ui-box
         .works-web,.works-vision,.works-ui
@@ -350,6 +382,8 @@
                     &:nth-child(2n+1)
                         margin-left: 0
     /* contact */
+    .contact-air-box
+        padding: 0
     .contact-contant-container
         padding-bottom: 0px
     .contact-contant-wrapper
@@ -364,8 +398,202 @@
     .m-contact-FishsIslands-box
         display: block
         padding: 0 1.6rem
-        
 
+@media only screen and (max-width: 640px)
+    /* header */
+    .menu-icon-wrapper
+        .menu-icon
+            width: 48px
+            height: 48px 
+            img
+                padding: 14px 10px
+    .logo-wrapper
+        a
+            width: 140px
+            height: 55px
+    /* menu */
+    .menu-bgw-box
+        display: none
+    .menu-contant-box
+        width: 100%
+        .menu-text
+            ul
+                li
+                    h5
+                        span
+                            font-size: $mobile-l-title
+                            line-height: 1.5
+    .menu-img-down
+        ul
+            .menu-hitballoon
+                width: 5.4rem
+    /* home */
+    .home-city-box
+        .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.works-b-tree,.contact-wave
+            width: 1200px
+            left: calc(50% - 600px)
+    .home-air-wrapper
+        margin: 0
+    .big-title-box
+        img
+            max-width: 200px
+    .home-road-box,.about-road-box,.about-seasand-bg,.works-mountain-bg
+        .home-ZebraRoad
+            left: 20px
+    .home-my-box
+        left: 20%
+    .home-day-box,.home-night-box
+        height: 240px
+    /* about */
+    .about-contant-box
+        margin: 2.4rem 2rem 0rem 2rem
+        .about-img
+            margin-bottom: 1.8rem
+        .about-text
+            max-width: 80%
+            p
+                span
+                    font-size: $h5
+    .about-AirCamera-box
+        top: 6.8rem
+        svg
+            width: 9.4rem
+    .title-box
+        .title-img
+            max-width: 7rem
+            &.title-img-c
+                max-width: 9.4rem
+    /* skills */
+    .skills-contant-box
+        margin: 2.4rem 0
+    .skills-design-box,.skills-code-box
+        &.skills-design-box
+            padding-right: 0px
+        &.skills-code-box
+            padding-left: 10%
+        .skills-design-text,.skills-code-text
+            h3
+                font-size: $h5
+    .skills-sea-box
+        .skills-seabed,.skills-seasand,.skills-coral
+            width: 1200px
+            left: calc(50% - 500px)
+            &.skills-seabed
+                bottom: 5.2rem
+    .skills-fishs-wrapper
+        display: none
+    .skills-tortoise-box
+        right: 4rem
+        max-width: 6.4rem
+    /* works */
+    .works-mountain-wrapper
+        .works-mountain-box
+            height: 220px
+    .works-web-box,.works-vision-box,.works-ui-box
+        .works-web,.works-vision,.works-ui
+            &.col3
+                &.col2
+                    margin-left: calc(0.6rem * 2 / 1)
+                    margin-bottom: calc(1.2rem * 2 / 1)
+    /* works */
+    .contact-contant-wrapper
+        padding: 0 0 1rem 0
+    .contact-copyright
+        padding: 0.2rem 0 0 0
+    .contact-contant-box
+        .contact-myhitballoon
+            max-width: 4rem
 @media only screen and (max-width: 414px)
+    /* header */
+    .header-box
+        height: 4rem
+    /* menu */
+    .menu-contant-box
+        .menu-text
+            ul
+                li
+                    padding-bottom: 1rem
+    /* home */
+    .home-city-box
+        height: 260px
+    .home-my-box
+        width: 6.4rem
+    /* about */
+    .about-contant-wrapper,.skills-contant-wrapper,.works-title-wrapper
+        padding-top: 2rem
+    .about-contant-box
+        .about-text
+            max-width: 100%
+        .about-img
+            margin-bottom: 1rem
+    .about-AirCamera-box
+        top: 8rem
+        right: 2rem
+    .about-people-box
+        display: none
+    /* skills */
+    .skills-contant-box
+        padding: 0
+    .skills-tortoise-box
+        top: 6.8rem
+        right: 1rem
+    .skills-design-box,.skills-code-box
+        &.skills-code-box
+            padding-left: 0
+            padding-top: 2rem
+        .skills-design-img,.skills-code-img
+            .skills-bubble
+                width: 9.4rem
+            .design-svg,.code-svg
+                img
+                    max-width: 4.8rem
+    .skills-sea-box
+        .skills-seabed,.skills-seasand,.skills-coral
+            &.skills-coral
+                img
+                    width: 7.4rem
+    /* works */
+    .works-b-tree,.works-tree,.works-animal-box
+        display: none
+    .works-web-box,.works-vision-box,.works-ui-box
+        padding: 0 1.4rem
+        .works-web,.works-vision,.works-ui
+            &.col3
+                &.col2
+                    &.col1
+                        width: calc(100%/1 - 0px)
+                        margin-left: calc(0px * 1 / 1)
+                        margin-bottom: 1rem
+    .works-mountain-box
+        .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.contact-wave
+            width: 1000px
+            left: calc(50% - 500px)
+    .m-works-b-tree
+        max-width: 280px
+        margin: 0 auto
+        position: relative
+        bottom: -30px
+        opacity: .6
+    .section-contant-container
+        padding-bottom: 4rem
+    .tab-content
+        margin-bottom: 0
+    .loadMore
+        margin: 1rem auto 2rem auto
+    /* contact */
+    .contact-contant-wrapper
+        padding: 1.2rem 0
+    .m-contact-FishsIslands-box
+        padding: 0
+    .contact-contant-box
+        max-width: 70%
+        .contant-box
+            padding: 1.2rem
+    .my-contact-box
+        ul
+            li
+                a
+                    word-wrap: break-word
+        
 @media only screen and (max-width: 375px)
 @media only screen and (max-width: 320px)						

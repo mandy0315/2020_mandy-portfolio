@@ -62,7 +62,18 @@ $(document).ready(function () {
     });
     // about-AirCamera-svg 載入
     $('.about-AirCamera-box').load("./share/AirCamera-svg.html");
-    // about-AirCamera-svg 載入
+    // 768px 判斷 執行
+    let mm = window.matchMedia("(max-width: 768px)");
+    resizeWidth(mm);
+    function resizeWidth(pMatchMedia) {
+        if (pMatchMedia.matches) {
+            $(".about,.works").addClass("pp-scrollable");
+            $(".about,.works").removeClass("pp-table");
+        }else {
+            $(".about,.works").removeClass("pp-scrollable");
+            $(".about,.works").addClass("pp-table");
+        }
+    }
     // Time 時間更換背景|動畫
     function getHomeTime() {
         $.ajax({
@@ -183,12 +194,14 @@ $(document).ready(function () {
             $("body").toggleClass("lock");
             $(".menu-bgw-box,.menu-contant-box").toggleClass("active");
             $(".menu-hitballoon").toggleClass("animate__animated animate__fadeInUp");
+            $(".logo-wrapper>a").fadeToggle(500);
         });
         $(".menu-bgw-box").click(function () {
             $(this).removeClass("active");
             $(".menu-contant-box").removeClass("active");
             $(".menu-icon-wrapper").removeClass("open-menu-icon-an");
             $(".menu-hitballoon").toggleClass("animate__animated animate__fadeInUp");
+            $(".logo-wrapper>a").fadeToggle(500);
         });
         $(".menu-text .menu-pages a").addClass('fas fa-arrow-circle-right');
         $(".menu-pages").click(function () { 

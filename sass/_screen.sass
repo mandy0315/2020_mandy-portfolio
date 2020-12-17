@@ -193,7 +193,6 @@ header
                     display: inline-block
                 .ig-icon
                     float: left
-
 //以contact共用
 .fb-icon,.ig-icon
     a
@@ -438,6 +437,7 @@ header
 .about-AirCamera-box,.skills-tortoise-box
     position: absolute
     right: 4rem
+    z-index: 10
     svg
         width: 12rem  
 .about-contant-box
@@ -459,7 +459,7 @@ header
             width: 100%
     .about-text
         padding-left: 1rem
-        max-width: 40rem
+        max-width: 65%
         p
             font-size: $l-p
             color: $white
@@ -518,7 +518,7 @@ header
     width: 50%
     display: flex
     align-items: center
-    flex-wrap: wrap
+    flex-wrap: nowrap
     .skills-design-img,.skills-code-img
         position: relative
         .design-svg,.code-svg
@@ -653,6 +653,8 @@ header
         bottom: 2rem
         img
             width: 100%
+    &.m-works-b-tree
+        display: none
     &.works-tree
         bottom: 2rem
         img
@@ -859,11 +861,11 @@ header
     &.day-contact-sea
         background: url(../images/contact/day-contact-sea.svg) repeat-x
         width: 100%
-        height: 200px
+        height: auto
     &.night-contact-sea
         background: url(../images/contact/night-contact-sea.svg) repeat-x
         width: 100%
-        height: 200px
+        height: auto
 .contact-sea-box
     height: auto
     position: relative

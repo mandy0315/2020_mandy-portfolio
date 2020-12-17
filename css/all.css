@@ -619,6 +619,7 @@ header {
 .about-AirCamera-box, .skills-tortoise-box {
   position: absolute;
   right: 4rem;
+  z-index: 10;
 }
 .about-AirCamera-box svg, .skills-tortoise-box svg {
   width: 12rem;
@@ -647,7 +648,7 @@ header {
 }
 .about-contant-box .about-text {
   padding-left: 1rem;
-  max-width: 40rem;
+  max-width: 65%;
 }
 .about-contant-box .about-text p {
   font-size: 18px;
@@ -729,7 +730,7 @@ header {
   width: 50%;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .skills-design-box .skills-design-img, .skills-design-box .skills-code-img, .skills-code-box .skills-design-img, .skills-code-box .skills-code-img {
   position: relative;
@@ -906,6 +907,9 @@ header {
 }
 .works-animal-box.works-b-tree img, .works-b-tree.works-b-tree img, .works-tree.works-b-tree img {
   width: 100%;
+}
+.works-animal-box.m-works-b-tree, .works-b-tree.m-works-b-tree, .works-tree.m-works-b-tree {
+  display: none;
 }
 .works-animal-box.works-tree, .works-b-tree.works-tree, .works-tree.works-tree {
   bottom: 2rem;
@@ -1169,12 +1173,12 @@ header {
 .contact-sea-wrapper.day-contact-sea {
   background: url(../images/contact/day-contact-sea.svg) repeat-x;
   width: 100%;
-  height: 200px;
+  height: auto;
 }
 .contact-sea-wrapper.night-contact-sea {
   background: url(../images/contact/night-contact-sea.svg) repeat-x;
   width: 100%;
-  height: 200px;
+  height: auto;
 }
 
 .contact-sea-box {
@@ -1371,7 +1375,7 @@ header {
     font-size: 18px;
   }
   .menu-contant-box .menu-text ul li h5 span {
-    font-size: 32px;
+    font-size: 34px;
   }
   .menu-contant-box .fb-icon a svg, .menu-contant-box .ig-icon a svg {
     width: 3.4rem;
@@ -1447,7 +1451,7 @@ header {
     bottom: 6rem;
   }
   .skills-sea-box .skills-my-box {
-    top: 0px;
+    top: 4rem;
   }
   .skills-sea-box .skills-my-box img {
     width: 8.8rem;
@@ -1530,8 +1534,8 @@ header {
   }
 
   .contact-FishsIslands-box .contact-islands-box .contact-islands {
-    width: 28rem;
-    height: 9.4rem;
+    width: 30rem;
+    height: 10rem;
   }
   .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about.contact-islands-work, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work.contact-islands-work {
     margin-top: -30px;
@@ -1554,17 +1558,52 @@ header {
     max-width: 15rem;
   }
 }
+@media only screen and (max-width: 1366px) {
+  /* home */
+  .home-air-wrapper {
+    margin: 2rem 0;
+  }
+
+  /* about */
+  .about-contant-box {
+    margin: 2rem 6rem;
+  }
+
+  /* skills */
+  .skills-contant-box {
+    margin: 2rem 0;
+  }
+
+  /* works */
+  .works-mountain-wrapper .works-mountain-box {
+    height: 260px;
+  }
+
+  /* contact */
+  .contact-contant-container {
+    padding-bottom: 0;
+  }
+
+  .contact-air-box {
+    padding: 4rem 0 6rem 0;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .wrapper {
     padding: 0 1.6rem;
   }
 
+  /* skills */
   .skills-design-box .skills-design-img .skills-bubble, .skills-design-box .skills-code-img .skills-bubble, .skills-code-box .skills-design-img .skills-bubble, .skills-code-box .skills-code-img .skills-bubble {
-    width: 11.8rem;
+    width: 11rem;
   }
 }
 @media only screen and (max-width: 1024px) {
   /* home */
+  .home-air-wrapper {
+    margin: -2rem 0 0 0;
+  }
+
   .home-my-box {
     width: 7rem;
     top: 40%;
@@ -1575,9 +1614,15 @@ header {
   }
 
   /* about */
+  .about-contant-box {
+    margin: 1rem 6rem;
+  }
+  .about-contant-box .about-img {
+    width: 30%;
+  }
   .about-contant-box .about-text {
     padding-left: 2.8rem;
-    max-width: 34rem;
+    max-width: 70%;
   }
 
   .about-city-box .about-bcity {
@@ -1590,11 +1635,26 @@ header {
   }
 
   /* skills */
+  .skills-contant-box {
+    margin: 1rem 0;
+  }
+
   .skills-sea-box {
-    height: 240px;
+    height: 220px;
+  }
+  .skills-sea-box .skills-my-box {
+    top: 0;
   }
   .skills-sea-box .skills-my-box img {
     width: 6.8rem;
+  }
+  .skills-sea-box .skills-seabed.skills-coral, .skills-sea-box .skills-seasand.skills-coral, .skills-sea-box .skills-coral.skills-coral {
+    width: 100%;
+    left: 0;
+    justify-content: flex-end;
+  }
+  .skills-sea-box .skills-seabed.skills-coral img:nth-of-type(1), .skills-sea-box .skills-seasand.skills-coral img:nth-of-type(1), .skills-sea-box .skills-coral.skills-coral img:nth-of-type(1) {
+    display: none;
   }
 
   .skills-fishs-wrapper img {
@@ -1615,10 +1675,10 @@ header {
     justify-content: center;
   }
   .skills-design-box.skills-design-box, .skills-code-box.skills-design-box {
-    padding-right: 8rem;
+    padding-right: 15%;
   }
   .skills-design-box.skills-code-box, .skills-code-box.skills-code-box {
-    padding-left: 8rem;
+    padding-left: 15%;
     padding-top: 2rem;
   }
 
@@ -1649,6 +1709,11 @@ header {
     padding: 0.3rem 1rem;
   }
 
+  /* works */
+  .contact-air-box {
+    padding: 0 0 4rem 0;
+  }
+
   /* 關掉左右箭頭 */
   .arrow-pages-left, .arrow-pages-right {
     display: none;
@@ -1666,7 +1731,7 @@ header {
 
   /* home */
   .home-air-wrapper {
-    margin: 2rem 0;
+    margin: 4rem 0;
   }
 
   .home-my-box {
@@ -1681,9 +1746,6 @@ header {
     padding-left: 0;
     max-width: 100%;
   }
-  .about-contant-box .about-text p {
-    text-align: center;
-  }
   .about-contant-box .about-img {
     width: 14.2rem;
     margin-bottom: 2rem;
@@ -1693,13 +1755,16 @@ header {
     top: 2rem;
   }
 
+  .about-road-box {
+    padding-bottom: 6rem;
+  }
+
   /* skills */
   .skills-contant-box {
     margin: 4rem 0;
   }
 
   .skills-design-box.skills-code-box, .skills-code-box.skills-code-box {
-    padding-left: 8rem;
     padding-top: 3.2rem;
   }
 
@@ -1708,14 +1773,6 @@ header {
   }
   .skills-sea-box .skills-seabed.skills-seabed, .skills-sea-box .skills-seasand.skills-seabed, .skills-sea-box .skills-coral.skills-seabed {
     bottom: 6rem;
-  }
-  .skills-sea-box .skills-seabed.skills-coral, .skills-sea-box .skills-seasand.skills-coral, .skills-sea-box .skills-coral.skills-coral {
-    width: 100%;
-    left: 0;
-    justify-content: flex-end;
-  }
-  .skills-sea-box .skills-seabed.skills-coral img:nth-of-type(1), .skills-sea-box .skills-seasand.skills-coral img:nth-of-type(1), .skills-sea-box .skills-coral.skills-coral img:nth-of-type(1) {
-    display: none;
   }
 
   /* works */
@@ -1729,6 +1786,10 @@ header {
   }
 
   /* contact */
+  .contact-air-box {
+    padding: 0;
+  }
+
   .contact-contant-container {
     padding-bottom: 0px;
   }
@@ -1752,6 +1813,272 @@ header {
   .m-contact-FishsIslands-box {
     display: block;
     padding: 0 1.6rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  /* header */
+  .menu-icon-wrapper .menu-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .menu-icon-wrapper .menu-icon img {
+    padding: 14px 10px;
+  }
+
+  .logo-wrapper a {
+    width: 140px;
+    height: 55px;
+  }
+
+  /* menu */
+  .menu-bgw-box {
+    display: none;
+  }
+
+  .menu-contant-box {
+    width: 100%;
+  }
+  .menu-contant-box .menu-text ul li h5 span {
+    font-size: 34px;
+    line-height: 1.5;
+  }
+
+  .menu-img-down ul .menu-hitballoon {
+    width: 5.4rem;
+  }
+
+  /* home */
+  .home-city-box .home-bluecity, .home-city-box .home-city, .home-city-box .about-city, .home-city-box .about-cloud, .home-city-box .about-bcity, .home-city-box .skills-seabed, .home-city-box .skills-seasand, .home-city-box .skills-coral, .home-city-box .works-mountain, .home-city-box .works-b-tree, .home-city-box .contact-wave {
+    width: 1200px;
+    left: calc(50% - 600px);
+  }
+
+  .home-air-wrapper {
+    margin: 0;
+  }
+
+  .big-title-box img {
+    max-width: 200px;
+  }
+
+  .home-road-box .home-ZebraRoad, .about-road-box .home-ZebraRoad, .about-seasand-bg .home-ZebraRoad, .works-mountain-bg .home-ZebraRoad {
+    left: 20px;
+  }
+
+  .home-my-box {
+    left: 20%;
+  }
+
+  .home-day-box, .home-night-box {
+    height: 240px;
+  }
+
+  /* about */
+  .about-contant-box {
+    margin: 2.4rem 2rem 0rem 2rem;
+  }
+  .about-contant-box .about-img {
+    margin-bottom: 1.8rem;
+  }
+  .about-contant-box .about-text {
+    max-width: 80%;
+  }
+  .about-contant-box .about-text p span {
+    font-size: 20px;
+  }
+
+  .about-AirCamera-box {
+    top: 6.8rem;
+  }
+  .about-AirCamera-box svg {
+    width: 9.4rem;
+  }
+
+  .title-box .title-img {
+    max-width: 7rem;
+  }
+  .title-box .title-img.title-img-c {
+    max-width: 9.4rem;
+  }
+
+  /* skills */
+  .skills-contant-box {
+    margin: 2.4rem 0;
+  }
+
+  .skills-design-box.skills-design-box, .skills-code-box.skills-design-box {
+    padding-right: 0px;
+  }
+  .skills-design-box.skills-code-box, .skills-code-box.skills-code-box {
+    padding-left: 10%;
+  }
+  .skills-design-box .skills-design-text h3, .skills-design-box .skills-code-text h3, .skills-code-box .skills-design-text h3, .skills-code-box .skills-code-text h3 {
+    font-size: 20px;
+  }
+
+  .skills-sea-box .skills-seabed, .skills-sea-box .skills-seasand, .skills-sea-box .skills-coral {
+    width: 1200px;
+    left: calc(50% - 500px);
+  }
+  .skills-sea-box .skills-seabed.skills-seabed, .skills-sea-box .skills-seasand.skills-seabed, .skills-sea-box .skills-coral.skills-seabed {
+    bottom: 5.2rem;
+  }
+
+  .skills-fishs-wrapper {
+    display: none;
+  }
+
+  .skills-tortoise-box {
+    right: 4rem;
+    max-width: 6.4rem;
+  }
+
+  /* works */
+  .works-mountain-wrapper .works-mountain-box {
+    height: 220px;
+  }
+
+  .works-web-box .works-web.col3.col2, .works-web-box .works-vision.col3.col2, .works-web-box .works-ui.col3.col2, .works-vision-box .works-web.col3.col2, .works-vision-box .works-vision.col3.col2, .works-vision-box .works-ui.col3.col2, .works-ui-box .works-web.col3.col2, .works-ui-box .works-vision.col3.col2, .works-ui-box .works-ui.col3.col2 {
+    margin-left: calc(0.6rem * 2 / 1);
+    margin-bottom: calc(1.2rem * 2 / 1);
+  }
+
+  /* works */
+  .contact-contant-wrapper {
+    padding: 0 0 1rem 0;
+  }
+
+  .contact-copyright {
+    padding: 0.2rem 0 0 0;
+  }
+
+  .contact-contant-box .contact-myhitballoon {
+    max-width: 4rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  /* header */
+  .header-box {
+    height: 4rem;
+  }
+
+  /* menu */
+  .menu-contant-box .menu-text ul li {
+    padding-bottom: 1rem;
+  }
+
+  /* home */
+  .home-city-box {
+    height: 260px;
+  }
+
+  .home-my-box {
+    width: 6.4rem;
+  }
+
+  /* about */
+  .about-contant-wrapper, .skills-contant-wrapper, .works-title-wrapper {
+    padding-top: 2rem;
+  }
+
+  .about-contant-box .about-text {
+    max-width: 100%;
+  }
+  .about-contant-box .about-img {
+    margin-bottom: 1rem;
+  }
+
+  .about-AirCamera-box {
+    top: 8rem;
+    right: 2rem;
+  }
+
+  .about-people-box {
+    display: none;
+  }
+
+  /* skills */
+  .skills-contant-box {
+    padding: 0;
+  }
+
+  .skills-tortoise-box {
+    top: 6.8rem;
+    right: 1rem;
+  }
+
+  .skills-design-box.skills-code-box, .skills-code-box.skills-code-box {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+  .skills-design-box .skills-design-img .skills-bubble, .skills-design-box .skills-code-img .skills-bubble, .skills-code-box .skills-design-img .skills-bubble, .skills-code-box .skills-code-img .skills-bubble {
+    width: 9.4rem;
+  }
+  .skills-design-box .skills-design-img .design-svg img, .skills-design-box .skills-design-img .code-svg img, .skills-design-box .skills-code-img .design-svg img, .skills-design-box .skills-code-img .code-svg img, .skills-code-box .skills-design-img .design-svg img, .skills-code-box .skills-design-img .code-svg img, .skills-code-box .skills-code-img .design-svg img, .skills-code-box .skills-code-img .code-svg img {
+    max-width: 4.8rem;
+  }
+
+  .skills-sea-box .skills-seabed.skills-coral img, .skills-sea-box .skills-seasand.skills-coral img, .skills-sea-box .skills-coral.skills-coral img {
+    width: 7.4rem;
+  }
+
+  /* works */
+  .works-b-tree, .works-tree, .works-animal-box {
+    display: none;
+  }
+
+  .works-web-box, .works-vision-box, .works-ui-box {
+    padding: 0 1.4rem;
+  }
+  .works-web-box .works-web.col3.col2.col1, .works-web-box .works-vision.col3.col2.col1, .works-web-box .works-ui.col3.col2.col1, .works-vision-box .works-web.col3.col2.col1, .works-vision-box .works-vision.col3.col2.col1, .works-vision-box .works-ui.col3.col2.col1, .works-ui-box .works-web.col3.col2.col1, .works-ui-box .works-vision.col3.col2.col1, .works-ui-box .works-ui.col3.col2.col1 {
+    width: calc(100%/1 - 0px);
+    margin-left: calc(0px * 1 / 1);
+    margin-bottom: 1rem;
+  }
+
+  .works-mountain-box .home-bluecity, .works-mountain-box .home-city, .works-mountain-box .about-city, .works-mountain-box .about-cloud, .works-mountain-box .about-bcity, .works-mountain-box .skills-seabed, .works-mountain-box .skills-seasand, .works-mountain-box .skills-coral, .works-mountain-box .works-mountain, .works-mountain-box .contact-wave {
+    width: 1000px;
+    left: calc(50% - 500px);
+  }
+
+  .m-works-b-tree {
+    max-width: 280px;
+    margin: 0 auto;
+    position: relative;
+    bottom: -30px;
+    opacity: 0.6;
+  }
+
+  .section-contant-container {
+    padding-bottom: 4rem;
+  }
+
+  .tab-content {
+    margin-bottom: 0;
+  }
+
+  .loadMore {
+    margin: 1rem auto 2rem auto;
+  }
+
+  /* contact */
+  .contact-contant-wrapper {
+    padding: 1.2rem 0;
+  }
+
+  .m-contact-FishsIslands-box {
+    padding: 0;
+  }
+
+  .contact-contant-box {
+    max-width: 70%;
+  }
+  .contact-contant-box .contant-box {
+    padding: 1.2rem;
+  }
+
+  .my-contact-box ul li a {
+    word-wrap: break-word;
   }
 }
 .arrow-pages-left-an, .arrow-pages-right-an {
