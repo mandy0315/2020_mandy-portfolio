@@ -908,14 +908,15 @@ header {
 .works-animal-box.works-b-tree img, .works-b-tree.works-b-tree img, .works-tree.works-b-tree img {
   width: 100%;
 }
-.works-animal-box.m-works-b-tree, .works-b-tree.m-works-b-tree, .works-tree.m-works-b-tree {
-  display: none;
-}
 .works-animal-box.works-tree, .works-b-tree.works-tree, .works-tree.works-tree {
   bottom: 2rem;
 }
 .works-animal-box.works-tree img, .works-b-tree.works-tree img, .works-tree.works-tree img {
   width: 100%;
+}
+
+.m-works-b-tree {
+  display: none;
 }
 
 .section-contant-container {
