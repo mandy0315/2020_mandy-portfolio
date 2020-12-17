@@ -2043,6 +2043,7 @@ header {
   }
 
   .m-works-b-tree {
+    display: block;
     max-width: 280px;
     margin: 0 auto;
     position: relative;
