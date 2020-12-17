@@ -964,25 +964,25 @@ header {
   margin-bottom: 4rem;
 }
 
-.works-web-box, .works-vision-box, .works-ui-box {
+.works-wrapper {
   width: 100%;
   display: block;
   overflow: hidden;
   font-size: 0;
 }
-.works-web-box .works-web, .works-web-box .works-vision, .works-web-box .works-ui, .works-vision-box .works-web, .works-vision-box .works-vision, .works-vision-box .works-ui, .works-ui-box .works-web, .works-ui-box .works-vision, .works-ui-box .works-ui {
+.works-wrapper .works-box {
   display: none;
 }
-.works-web-box .works-web.col3, .works-web-box .works-vision.col3, .works-web-box .works-ui.col3, .works-vision-box .works-web.col3, .works-vision-box .works-vision.col3, .works-vision-box .works-ui.col3, .works-ui-box .works-web.col3, .works-ui-box .works-vision.col3, .works-ui-box .works-ui.col3 {
+.works-wrapper .works-box.col3 {
   width: calc(100%/3 - 1rem);
   margin-left: calc(1rem * 3 / 2);
   margin-bottom: calc(2rem * 3 / 2);
   text-align: center;
 }
-.works-web-box .works-web.col3:nth-child(3n+1), .works-web-box .works-vision.col3:nth-child(3n+1), .works-web-box .works-ui.col3:nth-child(3n+1), .works-vision-box .works-web.col3:nth-child(3n+1), .works-vision-box .works-vision.col3:nth-child(3n+1), .works-vision-box .works-ui.col3:nth-child(3n+1), .works-ui-box .works-web.col3:nth-child(3n+1), .works-ui-box .works-vision.col3:nth-child(3n+1), .works-ui-box .works-ui.col3:nth-child(3n+1) {
+.works-wrapper .works-box.col3:nth-child(3n+1) {
   margin-left: 0;
 }
-.works-web-box .works-web a:hover .web-text, .works-web-box .works-vision a:hover .web-text, .works-web-box .works-ui a:hover .web-text, .works-vision-box .works-web a:hover .web-text, .works-vision-box .works-vision a:hover .web-text, .works-vision-box .works-ui a:hover .web-text, .works-ui-box .works-web a:hover .web-text, .works-ui-box .works-vision a:hover .web-text, .works-ui-box .works-ui a:hover .web-text {
+.works-wrapper .works-box a:hover .web-text {
   opacity: 0.6;
 }
 
@@ -1489,7 +1489,7 @@ header {
     font-size: 16px;
   }
 
-  .works-web-box .works-web.col3, .works-web-box .works-vision.col3, .works-web-box .works-ui.col3, .works-vision-box .works-web.col3, .works-vision-box .works-vision.col3, .works-vision-box .works-ui.col3, .works-ui-box .works-web.col3, .works-ui-box .works-vision.col3, .works-ui-box .works-ui.col3 {
+  .works-wrapper .works-box.col3 {
     margin-bottom: calc(1.5rem * 3 / 2);
   }
 
@@ -1777,12 +1777,12 @@ header {
   }
 
   /* works */
-  .works-web-box .works-web.col3.col2, .works-web-box .works-vision.col3.col2, .works-web-box .works-ui.col3.col2, .works-vision-box .works-web.col3.col2, .works-vision-box .works-vision.col3.col2, .works-vision-box .works-ui.col3.col2, .works-ui-box .works-web.col3.col2, .works-ui-box .works-vision.col3.col2, .works-ui-box .works-ui.col3.col2 {
+  .works-wrapper .works-box.col3.col2 {
     width: calc(100%/2 - 1rem);
     margin-left: calc(1rem * 2 / 1);
     margin-bottom: calc(2rem * 2 / 1);
   }
-  .works-web-box .works-web.col3.col2:nth-child(2n+1), .works-web-box .works-vision.col3.col2:nth-child(2n+1), .works-web-box .works-ui.col3.col2:nth-child(2n+1), .works-vision-box .works-web.col3.col2:nth-child(2n+1), .works-vision-box .works-vision.col3.col2:nth-child(2n+1), .works-vision-box .works-ui.col3.col2:nth-child(2n+1), .works-ui-box .works-web.col3.col2:nth-child(2n+1), .works-ui-box .works-vision.col3.col2:nth-child(2n+1), .works-ui-box .works-ui.col3.col2:nth-child(2n+1) {
+  .works-wrapper .works-box.col3.col2:nth-child(2n+1) {
     margin-left: 0;
   }
 
@@ -1939,7 +1939,7 @@ header {
     height: 220px;
   }
 
-  .works-web-box .works-web.col3.col2, .works-web-box .works-vision.col3.col2, .works-web-box .works-ui.col3.col2, .works-vision-box .works-web.col3.col2, .works-vision-box .works-vision.col3.col2, .works-vision-box .works-ui.col3.col2, .works-ui-box .works-web.col3.col2, .works-ui-box .works-vision.col3.col2, .works-ui-box .works-ui.col3.col2 {
+  .works-wrapper .works-box.col3.col2 {
     margin-left: calc(0.6rem * 2 / 1);
     margin-bottom: calc(1.2rem * 2 / 1);
   }
@@ -2028,10 +2028,10 @@ header {
     display: none;
   }
 
-  .works-web-box, .works-vision-box, .works-ui-box {
+  .works-wrapper {
     padding: 0 1.4rem;
   }
-  .works-web-box .works-web.col3.col2.col1, .works-web-box .works-vision.col3.col2.col1, .works-web-box .works-ui.col3.col2.col1, .works-vision-box .works-web.col3.col2.col1, .works-vision-box .works-vision.col3.col2.col1, .works-vision-box .works-ui.col3.col2.col1, .works-ui-box .works-web.col3.col2.col1, .works-ui-box .works-vision.col3.col2.col1, .works-ui-box .works-ui.col3.col2.col1 {
+  .works-wrapper .works-box.col3.col2.col1 {
     width: calc(100%/1 - 0px);
     margin-left: calc(0px * 1 / 1);
     margin-bottom: 1rem;
