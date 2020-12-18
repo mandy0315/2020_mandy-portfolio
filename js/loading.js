@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  if($("body").hasClass('home')){
+  if($("body").hasClass('container')){
     LoadingInit();
   }
   function LoadingInit(){
@@ -10,7 +10,7 @@ $(document).ready(function(){
   }
 });
 $(window).on('load',function () {
-  if ($("body").hasClass('home')) {
+  if ($("body").hasClass('container')) {
     LoadingClose();
   }
   function LoadingClose() {

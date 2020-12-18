@@ -134,7 +134,7 @@ a {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 2000;
+  z-index: 1000;
   background: rgba(255, 255, 255, 0.8);
 }
 .mobileH-window h3 {
@@ -506,7 +506,7 @@ header {
 .home-my-box {
   position: absolute;
   top: 45%;
-  z-index: 40;
+  z-index: 80;
   left: 240px;
   width: 8.8rem;
 }
@@ -1586,7 +1586,7 @@ header {
 @media only screen and (max-width: 1366px) {
   /* home */
   .home-air-wrapper {
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
   /* about */
@@ -1610,7 +1610,7 @@ header {
   }
 
   .contact-air-box {
-    padding: 4rem 0 6rem 0;
+    padding: 2rem 0 4rem 0;
   }
 }
 @media only screen and (max-width: 1200px) {

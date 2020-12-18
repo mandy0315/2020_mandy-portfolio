@@ -62,6 +62,7 @@ $(document).ready(function () {
     });
     // about-AirCamera-svg 載入
     $('.about-AirCamera-box').load("./share/AirCamera-svg.html");
+    $('#loading-bg').load("./share/loading.html");
     // 768px 判斷 執行
     let mm = window.matchMedia("(max-width: 768px)");
     resizeWidth(mm);
@@ -304,7 +305,7 @@ $(document).ready(function () {
         let hashNumAn = data2[hashNameAn]
         $("#pagepiling [data-num=" + hashNumAn + "] .about-my-box").addClass("about-my-box-an");
     }
-    // 540 後偵測水平呼叫提醒
+    // 540 後偵測水平
     let ms = window.matchMedia("(max-width: 540px)");
     resizeSWidth(ms);
     function resizeSWidth(SMatchMedia) {
