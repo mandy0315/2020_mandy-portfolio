@@ -1955,7 +1955,7 @@ header {
   }
 
   .contact-contant-box .contact-myhitballoon {
-    max-width: 4rem;
+    max-width: 4.6rem;
   }
 }
 @media only screen and (max-width: 414px) {
@@ -2077,7 +2077,7 @@ header {
     max-width: 70%;
   }
   .contact-contant-box .contant-box {
-    padding: 1.2rem;
+    padding: 0.5rem;
   }
 
   .my-contact-box ul li a {
