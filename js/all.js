@@ -56,8 +56,10 @@ $(document).ready(function () {
         HomeTime();
         ArrowPages();
         MenuAnchor();
-        $(".logo-wrapper a").click(function(){
-            window.location.href = 'index.html'
+        $(".logo-wrapper>a").click(function(){
+            // window.location.href = 'index.html'
+             let ToHome = $(this).attr('data-ToHome');
+            window.location.href = '#'+ToHome
         })
     });
     // about-AirCamera-svg 載入
