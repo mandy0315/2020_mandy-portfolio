@@ -43,7 +43,6 @@ $(document).ready(function () {
     // 停止滾動
     $.fn.pagepiling.setAllowScrolling(false);
     // 執行呼叫
-    MobileH();
     SectionSlide();
     BlueBgMousemove();
     worksTabs();
@@ -73,27 +72,6 @@ $(document).ready(function () {
         }else {
             $(".about,.skills").removeClass("pp-scrollable");
             $(".about,.skills").addClass("pp-table");
-        }
-    }
-    function MobileH() {
-        mode = Math.abs(window.orientation) == 90 ? 'landscape' : 'portrait';
-        // 在 Android 上使用 Opera Mobile 測試, 發現要另外這樣判斷
-        if ( $.browser.opera )
-        {
-            width = screen.width;
-            height = screen.height;
-            mode = width > height ? "landscape" : "portrait";
-        }
-        // 本例為希望在使用者用橫向瀏覽時，就秀出遮罩或警示訊息
-        if (mode == 'landscape')
-        {
-        // 警語遮罩 顯示
-            alert("open");
-            // $("#mask").show();
-        } else {
-        // 警語遮罩 關閉
-            alert("close");
-            // $("#mask").hide();
         }
     }
     // Time 時間更換背景|動畫
@@ -325,6 +303,26 @@ $(document).ready(function () {
         let hashNameAn = window.location.hash
         let hashNumAn = data2[hashNameAn]
         $("#pagepiling [data-num=" + hashNumAn + "] .about-my-box").addClass("about-my-box-an");
+    }
+    // 540 後偵測水平呼叫提醒
+    let ms = window.matchMedia("(max-width: 540px)");
+    resizeWidth(ms);
+    function resizeWidth(pMatchMedia) {
+        if (pMatchMedia.matches) {
+            //用户变化屏幕方向时调用
+            $(window).bind( 'orientationchange', function(e){
+                MobileH();
+            });
+            MobileH();
+        }
+    }
+    function MobileH() {
+        if (window.orientation==90||window.orientation==-90) {
+        //ipad、iphone竖屏
+            $(".mobileH-window").show()
+        } else {
+            $(".mobileH-window").fadeOut(500)
+        }
     }
 
 });
