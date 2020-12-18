@@ -58,7 +58,7 @@ $(document).ready(function () {
         MenuAnchor();
         $(".logo-wrapper>a").click(function(){
             // window.location.href = 'index.html'
-             let ToHome = $(this).attr('data-ToHome');
+            let ToHome = $(this).attr('data-ToHome');
             window.location.href = '#'+ToHome
         })
     });
