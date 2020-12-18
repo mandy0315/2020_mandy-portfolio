@@ -1967,9 +1967,6 @@ header {
   .menu-contant-box .menu-text ul li {
     padding-bottom: 1rem;
   }
-  .menu-contant-box .menu-img-down ul .menu-hitballoon {
-    width: 4.6rem;
-  }
 
   /* home */
   .home-city-box {
@@ -2037,7 +2034,7 @@ header {
   .works-wrapper .works-box.col3.col2.col1 {
     width: calc(100%/1 - 0px);
     margin-left: calc(0px * 1 / 1);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .works-mountain-box .home-bluecity, .works-mountain-box .home-city, .works-mountain-box .about-city, .works-mountain-box .about-cloud, .works-mountain-box .about-bcity, .works-mountain-box .skills-seabed, .works-mountain-box .skills-seasand, .works-mountain-box .skills-coral, .works-mountain-box .works-mountain, .works-mountain-box .contact-wave {
@@ -2056,6 +2053,10 @@ header {
 
   .section-contant-container {
     padding-bottom: 4rem;
+  }
+
+  .tabs {
+    margin-bottom: 2.8rem;
   }
 
   .tab-content {
