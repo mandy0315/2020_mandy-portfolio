@@ -180,13 +180,14 @@ $(document).ready(function () {
             $(".menu-contant-box").removeClass("active");
             $(".menu-icon-wrapper").removeClass("open-menu-icon-an");
             $(".menu-hitballoon").toggleClass("animate__animated animate__fadeInUp");
-            $(".logo-wrapper>a").fadeToggle(200);
+            $(".logo-wrapper>a").fadeIn(200);
         });
         $(".menu-text .menu-pages a").addClass('fas fa-arrow-circle-right');
         $(".menu-pages").click(function () { 
             $(".menu-bgw-box").removeClass("active");
             $(".menu-contant-box").removeClass("active");
             $(".menu-hitballoon").toggleClass("animate__animated animate__fadeInUp");
+            $(".logo-wrapper>a").fadeIn(200);
         });
         CommunityIcon();
         MenuPagesHover();
