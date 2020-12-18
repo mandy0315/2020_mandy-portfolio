@@ -57,7 +57,7 @@ $(document).ready(function () {
         ArrowPages();
         MenuAnchor();
         $(".logo-wrapper>a").click(function(){
-            window.location.href = 'index.html'
+            window.location.href = 'index.html#home'
         })
     });
     // about-AirCamera-svg 載入
