@@ -173,14 +173,14 @@ $(document).ready(function () {
             $("body").toggleClass("lock");
             $(".menu-bgw-box,.menu-contant-box").toggleClass("active");
             $(".menu-hitballoon").toggleClass("animate__animated animate__fadeInUp");
-            $(".logo-wrapper>a").fadeToggle(500);
+            $(".logo-wrapper>a").fadeToggle(200);
         });
         $(".menu-bgw-box").click(function () {
             $(this).removeClass("active");
             $(".menu-contant-box").removeClass("active");
             $(".menu-icon-wrapper").removeClass("open-menu-icon-an");
             $(".menu-hitballoon").toggleClass("animate__animated animate__fadeInUp");
-            $(".logo-wrapper>a").fadeToggle(500);
+            $(".logo-wrapper>a").fadeToggle(200);
         });
         $(".menu-text .menu-pages a").addClass('fas fa-arrow-circle-right');
         $(".menu-pages").click(function () { 
