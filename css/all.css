@@ -1844,8 +1844,7 @@ header {
     font-size: 34px;
     line-height: 1.5;
   }
-
-  .menu-img-down ul .menu-hitballoon {
+  .menu-contant-box .menu-img-down ul .menu-hitballoon {
     width: 5.4rem;
   }
 
@@ -1967,6 +1966,9 @@ header {
   /* menu */
   .menu-contant-box .menu-text ul li {
     padding-bottom: 1rem;
+  }
+  .menu-contant-box .menu-img-down ul .menu-hitballoon {
+    width: 4.6rem;
   }
 
   /* home */
