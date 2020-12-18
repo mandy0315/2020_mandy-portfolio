@@ -119,6 +119,10 @@ a {
   background: #3A64A1;
 }
 
+.ui-loader {
+  display: none;
+}
+
 /* loading */
 #loading-box {
   position: fixed;
