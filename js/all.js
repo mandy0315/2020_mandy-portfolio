@@ -56,7 +56,7 @@ $(document).ready(function () {
         HomeTime();
         ArrowPages();
         MenuAnchor();
-        $(".logo-wrapper>a").click(function(){
+        $(".ccc").click(function(){
             // window.location.href = 'index.html'
             let ToHome = $(this).attr('data-ToHome');
             window.location.href = '#'+ToHome
