@@ -62,7 +62,6 @@ $(document).ready(function () {
     });
     // about-AirCamera-svg 載入
     $('.about-AirCamera-box').load("./share/AirCamera-svg.html");
-    $('#loading-bg').load("./share/loading.html");
     // 768px 判斷 執行
     let mm = window.matchMedia("(max-width: 768px)");
     resizeWidth(mm);
