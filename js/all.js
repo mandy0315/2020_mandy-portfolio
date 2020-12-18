@@ -305,24 +305,24 @@ $(document).ready(function () {
         $("#pagepiling [data-num=" + hashNumAn + "] .about-my-box").addClass("about-my-box-an");
     }
     // 540 後偵測水平呼叫提醒
-    let ms = window.matchMedia("(max-width: 540px)");
-    resizeWidth(ms);
-    function resizeWidth(pMatchMedia) {
-        if (pMatchMedia.matches) {
-            //用户变化屏幕方向时调用
-            $(window).bind( 'orientationchange', function(e){
-                MobileH();
-            });
-            MobileH();
-        }
-    }
-    function MobileH() {
-        if (window.orientation==90||window.orientation==-90) {
-        //ipad、iphone竖屏
-            $(".mobileH-window").show()
-        } else {
-            $(".mobileH-window").fadeOut(500)
-        }
-    }
+    // let ms = window.matchMedia("(max-width: 540px)");
+    // resizeSWidth(ms);
+    // function resizeSWidth(cc) {
+    //     if (cc.matches) {
+    //         //用户变化屏幕方向时调用
+    //         $(window).bind( 'orientationchange', function(e){
+    //             MobileH();
+    //         });
+    //         MobileH();
+    //     }
+    // }
+    // function MobileH() {
+    //     if (window.orientation==90||window.orientation==-90) {
+    //     //ipad、iphone竖屏
+    //         $(".mobileH-window").show()
+    //     } else {
+    //         $(".mobileH-window").fadeOut(500)
+    //     }
+    // }
 
 });
