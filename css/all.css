@@ -69,13 +69,6 @@ button {
 
 /*reset end */
 /* Custom CSS */
-.container {
-  padding-top: constant(safe-area-inset-top);
-  padding-right: constant(safe-area-inset-right);
-  padding-bottom: constant(safe-area-inset-bottom);
-  padding-left: constant(safe-area-inset-left);
-}
-
 body, html {
   font-family: "Noto Sans TC", sans-serif, "微軟正黑體";
 }
