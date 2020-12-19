@@ -1637,7 +1637,7 @@ a {
 
   .home-my-box {
     width: 7rem;
-    top: calc(50% - 2rem);
+    top: calc(50% - 11rem);
   }
 
   .home-road-box .home-ZebraRoad {
@@ -2168,6 +2168,7 @@ a {
 
   .home-my-box {
     width: 5.2rem;
+    top: calc(50% - 8rem);
   }
 
   .home-road-box .home-ZebraRoad {
@@ -2234,7 +2235,7 @@ a {
 
   .home-my-box {
     width: 4.6rem;
-    top: calc(50% - 1.2rem);
+    top: calc(50% - 6.8rem);
   }
 
   .m-contact-FishsIslands-box {
