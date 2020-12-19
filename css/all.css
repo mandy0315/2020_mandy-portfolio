@@ -505,17 +505,6 @@ a {
   bottom: -2px;
 }
 
-.home-my-box {
-  position: absolute;
-  top: calc(50% - 14rem);
-  z-index: 100;
-  left: 240px;
-  width: 8.8rem;
-}
-.home-my-box img {
-  width: 100%;
-}
-
 .home-road-box, .about-road-box, .about-seasand-bg, .works-mountain-bg {
   position: relative;
 }
@@ -526,6 +515,7 @@ a {
   background-size: contain;
   position: absolute;
   left: 140px;
+  z-index: 10;
 }
 
 .home-day-car, .home-day-car2, .home-night-car, .home-night-car2 {
@@ -591,6 +581,17 @@ a {
 }
 .home-day-car.home-night-car2 ul li .home-scooter-down03, .home-day-car2.home-night-car2 ul li .home-scooter-down03, .home-night-car.home-night-car2 ul li .home-scooter-down03, .home-night-car2.home-night-car2 ul li .home-scooter-down03 {
   max-width: 5rem;
+}
+
+.home-my-box {
+  position: absolute;
+  top: calc(50% - 14rem);
+  z-index: 100;
+  left: 240px;
+  width: 8.8rem;
+}
+.home-my-box img {
+  width: 100%;
 }
 
 /* home end */
