@@ -507,8 +507,8 @@ a {
 
 .home-my-box {
   position: absolute;
-  top: 45%;
-  z-index: 80;
+  top: calc(50% - 14rem);
+  z-index: 100;
   left: 240px;
   width: 8.8rem;
 }
@@ -1051,7 +1051,7 @@ a {
   color: #fff;
   display: block;
   text-align: center;
-  margin: 0.5rem auto 4rem auto;
+  margin: 0 auto;
   padding: 0.6rem;
   border-radius: 40px;
   border: 1px solid #fff;
@@ -1347,7 +1347,7 @@ a {
 
   .home-my-box {
     width: 8rem;
-    top: 30%;
+    top: calc(50% - 12.4rem);
   }
 
   .home-road-box .home-ZebraRoad {
@@ -1637,7 +1637,7 @@ a {
 
   .home-my-box {
     width: 7rem;
-    top: 40%;
+    top: calc(50% - 2rem);
   }
 
   .home-road-box .home-ZebraRoad {
@@ -1762,7 +1762,7 @@ a {
 
   /* home */
   .home-air-wrapper {
-    margin: 4rem 0;
+    margin: 2rem 0;
   }
 
   .home-day-box .home-day-sun, .home-day-box .home-night-moon-box, .home-day-box .home-day-cloud, .home-day-box .home-night-star, .home-night-box .home-day-sun, .home-night-box .home-night-moon-box, .home-night-box .home-day-cloud, .home-night-box .home-night-star, .home-city-box .home-day-sun, .home-city-box .home-night-moon-box, .home-city-box .home-day-cloud, .home-city-box .home-night-star, .about-city-box .home-day-sun, .about-city-box .home-night-moon-box, .about-city-box .home-day-cloud, .about-city-box .home-night-star {
@@ -1815,10 +1815,14 @@ a {
   .works-wrapper .works-box.col3.col2 {
     width: calc(100%/2 - 1rem);
     margin-left: calc(1rem * 2 / 1);
-    margin-bottom: calc(2rem * 2 / 1);
+    margin-bottom: calc(1.4rem * 2 / 1);
   }
   .works-wrapper .works-box.col3.col2:nth-child(2n+1) {
     margin-left: 0;
+  }
+
+  .tab-content {
+    margin-bottom: 6rem;
   }
 
   /* contact */
@@ -1831,7 +1835,7 @@ a {
   }
 
   .contact-contant-wrapper {
-    padding: 4rem 0;
+    padding: 2rem 0;
   }
 
   .contact-contant-box .contant-box {
@@ -1839,7 +1843,7 @@ a {
   }
 
   .contact-copyright {
-    padding: 1.8rem 0rem;
+    padding: 1rem 0rem;
   }
 
   .contact-FishsIslands-box, .contact-hitballoon-left, .contact-hitballoon-right {
@@ -2230,6 +2234,7 @@ a {
 
   .home-my-box {
     width: 4.6rem;
+    top: calc(50% - 1.2rem);
   }
 
   .m-contact-FishsIslands-box {
