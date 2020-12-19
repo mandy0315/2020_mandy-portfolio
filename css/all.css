@@ -504,9 +504,13 @@ a {
   z-index: 15;
   bottom: -2px;
 }
+.home-city-box .home-bluecity-down, .about-city-box .home-bluecity-down, .skills-sea-box .home-bluecity-down, .works-mountain-box .home-bluecity-down, .contact-sea-box .home-bluecity-down {
+  z-index: 5;
+}
 
 .home-road-box, .about-road-box, .about-seasand-bg, .works-mountain-bg {
   position: relative;
+  z-index: 20;
 }
 .home-road-box .home-ZebraRoad, .about-road-box .home-ZebraRoad, .about-seasand-bg .home-ZebraRoad, .works-mountain-bg .home-ZebraRoad {
   background: url(../images/home/home-ZebraRoad.svg) no-repeat;
@@ -586,7 +590,7 @@ a {
 .home-my-box {
   position: absolute;
   top: calc(50% - 14rem);
-  z-index: 100;
+  z-index: 20;
   left: 240px;
   width: 8.8rem;
 }
