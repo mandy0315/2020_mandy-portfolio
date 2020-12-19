@@ -195,7 +195,7 @@ $(document).ready(function () {
         resizeWidth(mm);
         function resizeWidth(pMatchMedia) {
             if (pMatchMedia.matches) {
-            MenuPagesHover();
+                MenuPagesHover();
             }
         }
     }
