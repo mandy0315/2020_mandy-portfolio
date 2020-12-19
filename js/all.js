@@ -191,7 +191,13 @@ $(document).ready(function () {
             $(".logo-wrapper>a").fadeIn(200);
         });
         CommunityIcon();
-        MenuPagesHover();
+        let mm = window.matchMedia("(min-width: 1024px)");
+        resizeWidth(mm);
+        function resizeWidth(pMatchMedia) {
+            if (pMatchMedia.matches) {
+            MenuPagesHover();
+            }
+        }
     }
     // 載入更多
     function getLoadMore() {
@@ -329,7 +335,7 @@ $(document).ready(function () {
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-FishsIslands-box").addClass("contact-FishsIslands-box-An");
     }
-    // 540 後偵測水平
+    // 900 後偵測水平
     let ms = window.matchMedia("(max-width: 900px)");
     resizeSWidth(ms);
     function resizeSWidth(SMatchMedia) {
@@ -347,5 +353,6 @@ $(document).ready(function () {
             $(".mobileH-window").fadeOut(500);
         }
     }
+    
 
 });
