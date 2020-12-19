@@ -247,6 +247,7 @@ a {
   position: absolute;
 }
 .menu-contant-box .menu-img-up, .menu-contant-box .menu-img-down {
+  width: 6.8rem;
   max-width: 6.8rem;
   margin-top: -1px;
 }
@@ -254,6 +255,7 @@ a {
   width: 100%;
 }
 .menu-contant-box .menu-img-down {
+  width: 8rem;
   max-width: 8rem;
   bottom: -1px;
   right: 0px;
@@ -463,6 +465,7 @@ a {
 }
 .home-day-box .home-day-sun.home-night-moon, .home-day-box .home-night-moon.home-night-moon, .home-night-box .home-day-sun.home-night-moon, .home-night-box .home-night-moon.home-night-moon, .home-city-box .home-day-sun.home-night-moon, .home-city-box .home-night-moon.home-night-moon, .about-city-box .home-day-sun.home-night-moon, .about-city-box .home-night-moon.home-night-moon {
   max-width: 6.4rem;
+  width: 6.4rem;
 }
 .home-day-box .home-night-moon, .home-day-box .home-moon-light, .home-night-box .home-night-moon, .home-night-box .home-moon-light, .home-city-box .home-night-moon, .home-city-box .home-moon-light, .about-city-box .home-night-moon, .about-city-box .home-moon-light {
   position: absolute;
@@ -637,12 +640,14 @@ a {
 }
 .title-box .title-img {
   max-width: 8.6rem;
+  width: 8.6rem;
 }
 .title-box .title-img img {
   width: 100%;
 }
 .title-box .title-img.title-img-c {
   max-width: 10.6rem;
+  width: 10.6rem;
 }
 
 .about-AirCamera-box, .skills-tortoise-box {
@@ -919,22 +924,27 @@ a {
 }
 .works-animal-box .works-animal-right-box .works-pig.works-pig, .works-animal-box .works-animal-right-box .works-rabbit.works-pig, .works-animal-box .works-animal-right-box .works-LeopardCat.works-pig, .works-animal-box .works-animal-right-box .works-beer.works-pig, .works-animal-box .works-animal-right-box .works-deer.works-pig, .works-animal-box .works-animal-left-box .works-pig.works-pig, .works-animal-box .works-animal-left-box .works-rabbit.works-pig, .works-animal-box .works-animal-left-box .works-LeopardCat.works-pig, .works-animal-box .works-animal-left-box .works-beer.works-pig, .works-animal-box .works-animal-left-box .works-deer.works-pig, .works-b-tree .works-animal-right-box .works-pig.works-pig, .works-b-tree .works-animal-right-box .works-rabbit.works-pig, .works-b-tree .works-animal-right-box .works-LeopardCat.works-pig, .works-b-tree .works-animal-right-box .works-beer.works-pig, .works-b-tree .works-animal-right-box .works-deer.works-pig, .works-b-tree .works-animal-left-box .works-pig.works-pig, .works-b-tree .works-animal-left-box .works-rabbit.works-pig, .works-b-tree .works-animal-left-box .works-LeopardCat.works-pig, .works-b-tree .works-animal-left-box .works-beer.works-pig, .works-b-tree .works-animal-left-box .works-deer.works-pig, .works-tree .works-animal-right-box .works-pig.works-pig, .works-tree .works-animal-right-box .works-rabbit.works-pig, .works-tree .works-animal-right-box .works-LeopardCat.works-pig, .works-tree .works-animal-right-box .works-beer.works-pig, .works-tree .works-animal-right-box .works-deer.works-pig, .works-tree .works-animal-left-box .works-pig.works-pig, .works-tree .works-animal-left-box .works-rabbit.works-pig, .works-tree .works-animal-left-box .works-LeopardCat.works-pig, .works-tree .works-animal-left-box .works-beer.works-pig, .works-tree .works-animal-left-box .works-deer.works-pig {
   max-width: 4.8rem;
+  width: 4.8rem;
 }
 .works-animal-box .works-animal-right-box .works-pig.works-rabbit, .works-animal-box .works-animal-right-box .works-rabbit.works-rabbit, .works-animal-box .works-animal-right-box .works-LeopardCat.works-rabbit, .works-animal-box .works-animal-right-box .works-beer.works-rabbit, .works-animal-box .works-animal-right-box .works-deer.works-rabbit, .works-animal-box .works-animal-left-box .works-pig.works-rabbit, .works-animal-box .works-animal-left-box .works-rabbit.works-rabbit, .works-animal-box .works-animal-left-box .works-LeopardCat.works-rabbit, .works-animal-box .works-animal-left-box .works-beer.works-rabbit, .works-animal-box .works-animal-left-box .works-deer.works-rabbit, .works-b-tree .works-animal-right-box .works-pig.works-rabbit, .works-b-tree .works-animal-right-box .works-rabbit.works-rabbit, .works-b-tree .works-animal-right-box .works-LeopardCat.works-rabbit, .works-b-tree .works-animal-right-box .works-beer.works-rabbit, .works-b-tree .works-animal-right-box .works-deer.works-rabbit, .works-b-tree .works-animal-left-box .works-pig.works-rabbit, .works-b-tree .works-animal-left-box .works-rabbit.works-rabbit, .works-b-tree .works-animal-left-box .works-LeopardCat.works-rabbit, .works-b-tree .works-animal-left-box .works-beer.works-rabbit, .works-b-tree .works-animal-left-box .works-deer.works-rabbit, .works-tree .works-animal-right-box .works-pig.works-rabbit, .works-tree .works-animal-right-box .works-rabbit.works-rabbit, .works-tree .works-animal-right-box .works-LeopardCat.works-rabbit, .works-tree .works-animal-right-box .works-beer.works-rabbit, .works-tree .works-animal-right-box .works-deer.works-rabbit, .works-tree .works-animal-left-box .works-pig.works-rabbit, .works-tree .works-animal-left-box .works-rabbit.works-rabbit, .works-tree .works-animal-left-box .works-LeopardCat.works-rabbit, .works-tree .works-animal-left-box .works-beer.works-rabbit, .works-tree .works-animal-left-box .works-deer.works-rabbit {
   max-width: 2rem;
+  width: 2rem;
   margin-left: 4rem;
 }
 .works-animal-box .works-animal-right-box .works-pig.works-LeopardCat, .works-animal-box .works-animal-right-box .works-rabbit.works-LeopardCat, .works-animal-box .works-animal-right-box .works-LeopardCat.works-LeopardCat, .works-animal-box .works-animal-right-box .works-beer.works-LeopardCat, .works-animal-box .works-animal-right-box .works-deer.works-LeopardCat, .works-animal-box .works-animal-left-box .works-pig.works-LeopardCat, .works-animal-box .works-animal-left-box .works-rabbit.works-LeopardCat, .works-animal-box .works-animal-left-box .works-LeopardCat.works-LeopardCat, .works-animal-box .works-animal-left-box .works-beer.works-LeopardCat, .works-animal-box .works-animal-left-box .works-deer.works-LeopardCat, .works-b-tree .works-animal-right-box .works-pig.works-LeopardCat, .works-b-tree .works-animal-right-box .works-rabbit.works-LeopardCat, .works-b-tree .works-animal-right-box .works-LeopardCat.works-LeopardCat, .works-b-tree .works-animal-right-box .works-beer.works-LeopardCat, .works-b-tree .works-animal-right-box .works-deer.works-LeopardCat, .works-b-tree .works-animal-left-box .works-pig.works-LeopardCat, .works-b-tree .works-animal-left-box .works-rabbit.works-LeopardCat, .works-b-tree .works-animal-left-box .works-LeopardCat.works-LeopardCat, .works-b-tree .works-animal-left-box .works-beer.works-LeopardCat, .works-b-tree .works-animal-left-box .works-deer.works-LeopardCat, .works-tree .works-animal-right-box .works-pig.works-LeopardCat, .works-tree .works-animal-right-box .works-rabbit.works-LeopardCat, .works-tree .works-animal-right-box .works-LeopardCat.works-LeopardCat, .works-tree .works-animal-right-box .works-beer.works-LeopardCat, .works-tree .works-animal-right-box .works-deer.works-LeopardCat, .works-tree .works-animal-left-box .works-pig.works-LeopardCat, .works-tree .works-animal-left-box .works-rabbit.works-LeopardCat, .works-tree .works-animal-left-box .works-LeopardCat.works-LeopardCat, .works-tree .works-animal-left-box .works-beer.works-LeopardCat, .works-tree .works-animal-left-box .works-deer.works-LeopardCat {
   max-width: 3.2rem;
+  width: 3.2rem;
   margin-bottom: -1rem;
 }
 .works-animal-box .works-animal-right-box .works-pig.works-beer, .works-animal-box .works-animal-right-box .works-rabbit.works-beer, .works-animal-box .works-animal-right-box .works-LeopardCat.works-beer, .works-animal-box .works-animal-right-box .works-beer.works-beer, .works-animal-box .works-animal-right-box .works-deer.works-beer, .works-animal-box .works-animal-left-box .works-pig.works-beer, .works-animal-box .works-animal-left-box .works-rabbit.works-beer, .works-animal-box .works-animal-left-box .works-LeopardCat.works-beer, .works-animal-box .works-animal-left-box .works-beer.works-beer, .works-animal-box .works-animal-left-box .works-deer.works-beer, .works-b-tree .works-animal-right-box .works-pig.works-beer, .works-b-tree .works-animal-right-box .works-rabbit.works-beer, .works-b-tree .works-animal-right-box .works-LeopardCat.works-beer, .works-b-tree .works-animal-right-box .works-beer.works-beer, .works-b-tree .works-animal-right-box .works-deer.works-beer, .works-b-tree .works-animal-left-box .works-pig.works-beer, .works-b-tree .works-animal-left-box .works-rabbit.works-beer, .works-b-tree .works-animal-left-box .works-LeopardCat.works-beer, .works-b-tree .works-animal-left-box .works-beer.works-beer, .works-b-tree .works-animal-left-box .works-deer.works-beer, .works-tree .works-animal-right-box .works-pig.works-beer, .works-tree .works-animal-right-box .works-rabbit.works-beer, .works-tree .works-animal-right-box .works-LeopardCat.works-beer, .works-tree .works-animal-right-box .works-beer.works-beer, .works-tree .works-animal-right-box .works-deer.works-beer, .works-tree .works-animal-left-box .works-pig.works-beer, .works-tree .works-animal-left-box .works-rabbit.works-beer, .works-tree .works-animal-left-box .works-LeopardCat.works-beer, .works-tree .works-animal-left-box .works-beer.works-beer, .works-tree .works-animal-left-box .works-deer.works-beer {
   max-width: 6.2rem;
+  width: 6.2rem;
   margin-bottom: -1rem;
   margin-right: 2.4rem;
 }
 .works-animal-box .works-animal-right-box .works-pig.works-deer, .works-animal-box .works-animal-right-box .works-rabbit.works-deer, .works-animal-box .works-animal-right-box .works-LeopardCat.works-deer, .works-animal-box .works-animal-right-box .works-beer.works-deer, .works-animal-box .works-animal-right-box .works-deer.works-deer, .works-animal-box .works-animal-left-box .works-pig.works-deer, .works-animal-box .works-animal-left-box .works-rabbit.works-deer, .works-animal-box .works-animal-left-box .works-LeopardCat.works-deer, .works-animal-box .works-animal-left-box .works-beer.works-deer, .works-animal-box .works-animal-left-box .works-deer.works-deer, .works-b-tree .works-animal-right-box .works-pig.works-deer, .works-b-tree .works-animal-right-box .works-rabbit.works-deer, .works-b-tree .works-animal-right-box .works-LeopardCat.works-deer, .works-b-tree .works-animal-right-box .works-beer.works-deer, .works-b-tree .works-animal-right-box .works-deer.works-deer, .works-b-tree .works-animal-left-box .works-pig.works-deer, .works-b-tree .works-animal-left-box .works-rabbit.works-deer, .works-b-tree .works-animal-left-box .works-LeopardCat.works-deer, .works-b-tree .works-animal-left-box .works-beer.works-deer, .works-b-tree .works-animal-left-box .works-deer.works-deer, .works-tree .works-animal-right-box .works-pig.works-deer, .works-tree .works-animal-right-box .works-rabbit.works-deer, .works-tree .works-animal-right-box .works-LeopardCat.works-deer, .works-tree .works-animal-right-box .works-beer.works-deer, .works-tree .works-animal-right-box .works-deer.works-deer, .works-tree .works-animal-left-box .works-pig.works-deer, .works-tree .works-animal-left-box .works-rabbit.works-deer, .works-tree .works-animal-left-box .works-LeopardCat.works-deer, .works-tree .works-animal-left-box .works-beer.works-deer, .works-tree .works-animal-left-box .works-deer.works-deer {
   max-width: 3rem;
+  width: 3rem;
   margin-bottom: 0.4rem;
 }
 .works-animal-box.works-animal-box, .works-b-tree.works-animal-box, .works-tree.works-animal-box {
@@ -942,7 +952,7 @@ a {
   bottom: 2.8rem;
 }
 .works-animal-box.works-b-tree, .works-b-tree.works-b-tree, .works-tree.works-b-tree {
-  bottom: 2rem;
+  bottom: 1rem;
 }
 .works-animal-box.works-b-tree img, .works-b-tree.works-b-tree img, .works-tree.works-b-tree img {
   width: 100%;
@@ -1244,6 +1254,7 @@ a {
 }
 .contact-sea-box .contact-wave .contact-wave-left, .contact-sea-box .contact-wave .contact-wave-right {
   max-width: 18rem;
+  width: 18rem;
 }
 .contact-sea-box .contact-wave .contact-wave-left img, .contact-sea-box .contact-wave .contact-wave-right img {
   width: 100%;
@@ -1252,7 +1263,7 @@ a {
 .contact-copyright {
   position: relative;
   z-index: 25;
-  padding: 0.5rem 0px;
+  padding: 0.5rem 0px 20rem 0;
   background: #5596CA;
 }
 .contact-copyright p {
@@ -1460,9 +1471,11 @@ a {
   }
   .title-box .title-img {
     max-width: 7.6rem;
+    width: 7.6rem;
   }
   .title-box .title-img.title-img-c {
     max-width: 10rem;
+    width: 10rem;
   }
 
   .about-my-box img {
@@ -1608,6 +1621,7 @@ a {
   }
   .contact-sea-box .contact-wave .contact-wave-right, .contact-sea-box .contact-wave .contact-wave-left {
     max-width: 15rem;
+    width: 15rem;
   }
 }
 @media only screen and (max-width: 1366px) {
@@ -1868,7 +1882,7 @@ a {
   }
 
   .contact-copyright {
-    padding: 1rem 0rem;
+    padding: 1rem 0rem 20rem 0;
   }
 
   .contact-FishsIslands-box, .contact-hitballoon-left, .contact-hitballoon-right {
@@ -1975,9 +1989,11 @@ a {
 
   .title-box .title-img {
     max-width: 7rem;
+    width: 7rem;
   }
   .title-box .title-img.title-img-c {
     max-width: 9.4rem;
+    width: 9.4rem;
   }
 
   /* skills */
@@ -2032,7 +2048,7 @@ a {
   }
 
   .contact-copyright {
-    padding: 0.2rem 0 0 0;
+    padding: 0.2rem 0 20rem 0;
   }
 
   .contact-contant-box .contact-myhitballoon {
@@ -2247,6 +2263,7 @@ a {
 
   .title-box .title-img.title-img-c {
     max-width: 8rem;
+    width: 8rem;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -2283,6 +2300,7 @@ a {
   }
   .title-box .title-img {
     max-width: 6.6rem;
+    width: 6.6rem;
   }
 
   .tabs a {
