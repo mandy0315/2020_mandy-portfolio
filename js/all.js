@@ -186,6 +186,7 @@ $(document).ready(function () {
         $(".menu-pages").click(function () { 
             $(".menu-bgw-box").removeClass("active");
             $(".menu-contant-box").removeClass("active");
+            $(".menu-icon-wrapper").removeClass("open-menu-icon-an");
             $(".menu-hitballoon").toggleClass("animate__animated animate__fadeInUp");
             $(".logo-wrapper>a").fadeIn(200);
         });
