@@ -226,11 +226,11 @@ $(document).ready(function () {
             $content = $tabContent.find('> div');
 
         $tab.eq(0).addClass('active');
-        $content.eq(0).fadeIn(500).css('display', 'block').siblings().css('display', 'none');
+        $content.eq(0).css('display', 'block').siblings().css('display', 'none');
         $tab.on('click', function () {
             let $tabIndex = $(this).index();
             $(this).addClass('active').siblings().removeClass('active');
-            $content.eq($tabIndex).fadeIn(500).css('display', 'block').siblings().css('display', 'none');
+            $content.eq($tabIndex).addClass("animate__animated animate__backInUp").css('display', 'block').siblings().css('display', 'none');
         });
     }
     // 偵測跳頁-左右滑動
@@ -288,7 +288,18 @@ $(document).ready(function () {
     function NavClassAn() {
         $('#pp-nav>ul>li>a').click(function (e) { 
             let getAName = $(this).attr('href');
+            //about
             $("#pagepiling [data-num=" + data2[getAName] + "] .about-my-box").addClass("about-my-box-an");
+            $("#pagepiling [data-num=" + data2[getAName] + "] .about-contant-box").addClass("animate__animated animate__fadeInUp");
+            //skills
+            $("#pagepiling [data-num=" + data2[getAName] + "] .skills-my-box").addClass("skills-my-box-an");
+            $("#pagepiling [data-num=" + data2[getAName] + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
+             //works
+            $("#pagepiling [data-num=" + data2[getAName] + "] .works-my-box").addClass("works-my-box-an");
+            $("#pagepiling [data-num=" + data2[getAName] + "] .tab-wrapper").addClass("animate__animated animate__fadeInUp");
+            $("#pagepiling [data-num=" + data2[getAName] + "] .works-animal-box").addClass("works-animal-box-an");
+            //contact
+            $("#pagepiling [data-num=" + data2[getAName] + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
         });
     }
     // hash&行動-指定段落執行動畫
@@ -303,7 +314,19 @@ $(document).ready(function () {
     function HashContant() {
         let hashNameAn = window.location.hash
         let hashNumAn = data2[hashNameAn]
+        //about
         $("#pagepiling [data-num=" + hashNumAn + "] .about-my-box").addClass("about-my-box-an");
+        $("#pagepiling [data-num=" + hashNumAn + "] .about-contant-box").addClass("animate__animated animate__fadeInUp");
+        //skills
+        $("#pagepiling [data-num=" + hashNumAn + "] .skills-my-box").addClass("skills-my-box-an");
+        $("#pagepiling [data-num=" + hashNumAn + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
+        //works
+        $("#pagepiling [data-num=" + hashNumAn + "] .works-my-box").addClass("works-my-box-an");
+        $("#pagepiling [data-num=" + hashNumAn + "] .tab-wrapper").addClass("animate__animated animate__fadeInUp");
+        $("#pagepiling [data-num=" + hashNumAn + "] .works-animal-box").addClass("works-animal-box-an");
+        //contact
+        $("#pagepiling [data-num=" + hashNumAn + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
+        $("#pagepiling [data-num=" + hashNumAn + "] .contact-FishsIslands-box").addClass("contact-FishsIslands-box-An");
     }
     // 540 後偵測水平
     let ms = window.matchMedia("(max-width: 900px)");

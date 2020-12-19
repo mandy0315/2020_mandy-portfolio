@@ -655,6 +655,7 @@ a {
 }
 
 .about-contant-box {
+  opacity: 0;
   margin: 2rem 6rem 0 6rem;
   width: 100%;
   display: flex;
@@ -703,6 +704,9 @@ a {
 .about-my-box img, .about-people-box img {
   width: 8.4rem;
 }
+.about-my-box.about-my-box, .about-people-box.about-my-box {
+  opacity: 0;
+}
 
 .about-people-box {
   top: -90px;
@@ -750,6 +754,7 @@ a {
 }
 
 .skills-contant-box {
+  opacity: 0;
   margin-top: 4rem;
   width: 100%;
   display: flex;
@@ -851,6 +856,7 @@ a {
   width: 16rem;
 }
 .skills-sea-box .skills-my-box {
+  opacity: 0;
   position: absolute;
   width: 100%;
   z-index: 10;
@@ -883,6 +889,7 @@ a {
   z-index: 10;
 }
 .works-mountain-wrapper .works-mountain-box .works-my-box {
+  opacity: 0;
   position: absolute;
   width: 100%;
   z-index: 20;
@@ -903,6 +910,9 @@ a {
 .works-animal-box .works-animal-right-box, .works-animal-box .works-animal-left-box, .works-b-tree .works-animal-right-box, .works-b-tree .works-animal-left-box, .works-tree .works-animal-right-box, .works-tree .works-animal-left-box {
   display: flex;
   align-items: flex-end;
+}
+.works-animal-box .works-animal-right-box .works-pig, .works-animal-box .works-animal-right-box .works-rabbit, .works-animal-box .works-animal-right-box .works-LeopardCat, .works-animal-box .works-animal-right-box .works-beer, .works-animal-box .works-animal-right-box .works-deer, .works-animal-box .works-animal-left-box .works-pig, .works-animal-box .works-animal-left-box .works-rabbit, .works-animal-box .works-animal-left-box .works-LeopardCat, .works-animal-box .works-animal-left-box .works-beer, .works-animal-box .works-animal-left-box .works-deer, .works-b-tree .works-animal-right-box .works-pig, .works-b-tree .works-animal-right-box .works-rabbit, .works-b-tree .works-animal-right-box .works-LeopardCat, .works-b-tree .works-animal-right-box .works-beer, .works-b-tree .works-animal-right-box .works-deer, .works-b-tree .works-animal-left-box .works-pig, .works-b-tree .works-animal-left-box .works-rabbit, .works-b-tree .works-animal-left-box .works-LeopardCat, .works-b-tree .works-animal-left-box .works-beer, .works-b-tree .works-animal-left-box .works-deer, .works-tree .works-animal-right-box .works-pig, .works-tree .works-animal-right-box .works-rabbit, .works-tree .works-animal-right-box .works-LeopardCat, .works-tree .works-animal-right-box .works-beer, .works-tree .works-animal-right-box .works-deer, .works-tree .works-animal-left-box .works-pig, .works-tree .works-animal-left-box .works-rabbit, .works-tree .works-animal-left-box .works-LeopardCat, .works-tree .works-animal-left-box .works-beer, .works-tree .works-animal-left-box .works-deer {
+  opacity: 0;
 }
 .works-animal-box .works-animal-right-box .works-pig img, .works-animal-box .works-animal-right-box .works-rabbit img, .works-animal-box .works-animal-right-box .works-LeopardCat img, .works-animal-box .works-animal-right-box .works-beer img, .works-animal-box .works-animal-right-box .works-deer img, .works-animal-box .works-animal-left-box .works-pig img, .works-animal-box .works-animal-left-box .works-rabbit img, .works-animal-box .works-animal-left-box .works-LeopardCat img, .works-animal-box .works-animal-left-box .works-beer img, .works-animal-box .works-animal-left-box .works-deer img, .works-b-tree .works-animal-right-box .works-pig img, .works-b-tree .works-animal-right-box .works-rabbit img, .works-b-tree .works-animal-right-box .works-LeopardCat img, .works-b-tree .works-animal-right-box .works-beer img, .works-b-tree .works-animal-right-box .works-deer img, .works-b-tree .works-animal-left-box .works-pig img, .works-b-tree .works-animal-left-box .works-rabbit img, .works-b-tree .works-animal-left-box .works-LeopardCat img, .works-b-tree .works-animal-left-box .works-beer img, .works-b-tree .works-animal-left-box .works-deer img, .works-tree .works-animal-right-box .works-pig img, .works-tree .works-animal-right-box .works-rabbit img, .works-tree .works-animal-right-box .works-LeopardCat img, .works-tree .works-animal-right-box .works-beer img, .works-tree .works-animal-right-box .works-deer img, .works-tree .works-animal-left-box .works-pig img, .works-tree .works-animal-left-box .works-rabbit img, .works-tree .works-animal-left-box .works-LeopardCat img, .works-tree .works-animal-left-box .works-beer img, .works-tree .works-animal-left-box .works-deer img {
   width: 100%;
@@ -955,6 +965,7 @@ a {
 }
 
 .tab-wrapper {
+  opacity: 0;
   position: relative;
   z-index: 10;
   max-width: 1200px;
@@ -1096,6 +1107,7 @@ a {
 }
 
 .contact-contant-wrapper {
+  opacity: 0;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -1202,6 +1214,10 @@ a {
   justify-content: center;
 }
 
+.contact-sea-wrapper {
+  position: relative;
+  z-index: 20;
+}
 .contact-sea-wrapper.day-contact-sea {
   background: url(../images/contact/day-contact-sea.svg) repeat-x;
   width: 100%;
@@ -1259,6 +1275,7 @@ a {
   justify-content: center;
 }
 .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work {
+  opacity: 0;
   width: 46%;
   margin-top: -20px;
   margin-left: 10px;
@@ -1283,6 +1300,7 @@ a {
   display: flex;
   align-items: center;
   margin: 0 1.4rem;
+  opacity: 0;
 }
 .contact-FishsIslands-box .contact-fishs-box ul, .contact-FishsIslands-box .contact-TurtleMedusa-box ul {
   margin-top: 4rem;
@@ -2313,6 +2331,10 @@ a {
     width: 5rem;
   }
 }
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 1s;
+}
+
 .arrow-pages-left-an, .arrow-pages-right-an {
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
@@ -2503,21 +2525,29 @@ a {
   animation: turn 8s linear infinite;
 }
 
-.about-my-box-an {
-  -webkit-animation: home-car-down 8s linear infinite;
-  animation: home-car-down 8s linear infinite;
+.skills-design-img-An, .skills-code-img-An {
+  -webkit-animation: water-An 1.8s ease-in-out infinite;
+  animation: water-An 1.8s ease-in-out infinite;
+}
+.skills-design-img-An.skills-code-img-An, .skills-code-img-An.skills-code-img-An {
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
 }
 
-.skills-my-box-an {
-  -webkit-animation: home-car-down 16s linear infinite;
-  animation: home-car-down 16s linear infinite;
+@keyframes water-An {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
 }
-
-.works-my-box-an {
-  -webkit-animation: home-car-down 20s linear infinite;
-  animation: home-car-down 20s linear infinite;
-}
-
 .works-web a .web-img-an img, .works-vision a .web-img-an img, .works-ui a .web-img-an img {
   transform: scale(1);
   -webkit-transform: scale(1);
@@ -2531,10 +2561,66 @@ a {
   transition: all 4s ease-in-out;
 }
 
-.home.active .about-contant-wrapper, .about.active .about-contant-wrapper, .skills.active .about-contant-wrapper {
-  opacity: 1;
-  transform: translateY(0px);
-  -webkit-transform: translateY(0px);
-  -webkit-transition: all 2s 1 ease-in-out;
-  transition: all 2s 1 ease-in-out;
+.contact-hitballoon-right-an, .contact-hitballoon-left-an {
+  -webkit-animation: water-An 2.4s ease-in-out infinite;
+  animation: water-An 2.4s ease-in-out infinite;
+}
+.contact-hitballoon-right-an.contact-hitballoon-left-an, .contact-hitballoon-left-an.contact-hitballoon-left-an {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.contact-wave-right, .contact-wave-left {
+  -webkit-animation: water-An 3.2s ease-in-out infinite;
+  animation: water-An 3.2s ease-in-out infinite;
+}
+
+.contact-FishsIslands-box-An .contact-islands-about, .contact-FishsIslands-box-An .contact-islands-work, .contact-FishsIslands-box-An .contact-TurtleMedusa-box, .contact-FishsIslands-box-An .contact-fishs-box, .contact-FishsIslands-box-An .works-pig, .contact-FishsIslands-box-An .works-rabbit, .contact-FishsIslands-box-An .works-LeopardCat, .contact-FishsIslands-box-An .works-beer, .contact-FishsIslands-box-An .works-deer, .works-animal-box-an .contact-islands-about, .works-animal-box-an .contact-islands-work, .works-animal-box-an .contact-TurtleMedusa-box, .works-animal-box-an .contact-fishs-box, .works-animal-box-an .works-pig, .works-animal-box-an .works-rabbit, .works-animal-box-an .works-LeopardCat, .works-animal-box-an .works-beer, .works-animal-box-an .works-deer {
+  -webkit-animation: islands-An 1s ease-in-out 1 forwards;
+  animation: islands-An 1s ease-in-out 1 forwards;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.contact-FishsIslands-box-An .contact-islands-about.contact-islands-work, .contact-FishsIslands-box-An .contact-islands-about.works-pig, .contact-FishsIslands-box-An .contact-islands-work.contact-islands-work, .contact-FishsIslands-box-An .contact-islands-work.works-pig, .contact-FishsIslands-box-An .contact-TurtleMedusa-box.contact-islands-work, .contact-FishsIslands-box-An .contact-TurtleMedusa-box.works-pig, .contact-FishsIslands-box-An .contact-fishs-box.contact-islands-work, .contact-FishsIslands-box-An .contact-fishs-box.works-pig, .contact-FishsIslands-box-An .works-pig.contact-islands-work, .contact-FishsIslands-box-An .works-pig.works-pig, .contact-FishsIslands-box-An .works-rabbit.contact-islands-work, .contact-FishsIslands-box-An .works-rabbit.works-pig, .contact-FishsIslands-box-An .works-LeopardCat.contact-islands-work, .contact-FishsIslands-box-An .works-LeopardCat.works-pig, .contact-FishsIslands-box-An .works-beer.contact-islands-work, .contact-FishsIslands-box-An .works-beer.works-pig, .contact-FishsIslands-box-An .works-deer.contact-islands-work, .contact-FishsIslands-box-An .works-deer.works-pig, .works-animal-box-an .contact-islands-about.contact-islands-work, .works-animal-box-an .contact-islands-about.works-pig, .works-animal-box-an .contact-islands-work.contact-islands-work, .works-animal-box-an .contact-islands-work.works-pig, .works-animal-box-an .contact-TurtleMedusa-box.contact-islands-work, .works-animal-box-an .contact-TurtleMedusa-box.works-pig, .works-animal-box-an .contact-fishs-box.contact-islands-work, .works-animal-box-an .contact-fishs-box.works-pig, .works-animal-box-an .works-pig.contact-islands-work, .works-animal-box-an .works-pig.works-pig, .works-animal-box-an .works-rabbit.contact-islands-work, .works-animal-box-an .works-rabbit.works-pig, .works-animal-box-an .works-LeopardCat.contact-islands-work, .works-animal-box-an .works-LeopardCat.works-pig, .works-animal-box-an .works-beer.contact-islands-work, .works-animal-box-an .works-beer.works-pig, .works-animal-box-an .works-deer.contact-islands-work, .works-animal-box-an .works-deer.works-pig {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.contact-FishsIslands-box-An .contact-islands-about.contact-TurtleMedusa-box, .contact-FishsIslands-box-An .contact-islands-about.contact-fishs-box, .contact-FishsIslands-box-An .contact-islands-about.works-rabbit, .contact-FishsIslands-box-An .contact-islands-about.works-LeopardCat, .contact-FishsIslands-box-An .contact-islands-work.contact-TurtleMedusa-box, .contact-FishsIslands-box-An .contact-islands-work.contact-fishs-box, .contact-FishsIslands-box-An .contact-islands-work.works-rabbit, .contact-FishsIslands-box-An .contact-islands-work.works-LeopardCat, .contact-FishsIslands-box-An .contact-TurtleMedusa-box.contact-TurtleMedusa-box, .contact-FishsIslands-box-An .contact-TurtleMedusa-box.contact-fishs-box, .contact-FishsIslands-box-An .contact-TurtleMedusa-box.works-rabbit, .contact-FishsIslands-box-An .contact-TurtleMedusa-box.works-LeopardCat, .contact-FishsIslands-box-An .contact-fishs-box.contact-TurtleMedusa-box, .contact-FishsIslands-box-An .contact-fishs-box.contact-fishs-box, .contact-FishsIslands-box-An .contact-fishs-box.works-rabbit, .contact-FishsIslands-box-An .contact-fishs-box.works-LeopardCat, .contact-FishsIslands-box-An .works-pig.contact-TurtleMedusa-box, .contact-FishsIslands-box-An .works-pig.contact-fishs-box, .contact-FishsIslands-box-An .works-pig.works-rabbit, .contact-FishsIslands-box-An .works-pig.works-LeopardCat, .contact-FishsIslands-box-An .works-rabbit.contact-TurtleMedusa-box, .contact-FishsIslands-box-An .works-rabbit.contact-fishs-box, .contact-FishsIslands-box-An .works-rabbit.works-rabbit, .contact-FishsIslands-box-An .works-rabbit.works-LeopardCat, .contact-FishsIslands-box-An .works-LeopardCat.contact-TurtleMedusa-box, .contact-FishsIslands-box-An .works-LeopardCat.contact-fishs-box, .contact-FishsIslands-box-An .works-LeopardCat.works-rabbit, .contact-FishsIslands-box-An .works-LeopardCat.works-LeopardCat, .contact-FishsIslands-box-An .works-beer.contact-TurtleMedusa-box, .contact-FishsIslands-box-An .works-beer.contact-fishs-box, .contact-FishsIslands-box-An .works-beer.works-rabbit, .contact-FishsIslands-box-An .works-beer.works-LeopardCat, .contact-FishsIslands-box-An .works-deer.contact-TurtleMedusa-box, .contact-FishsIslands-box-An .works-deer.contact-fishs-box, .contact-FishsIslands-box-An .works-deer.works-rabbit, .contact-FishsIslands-box-An .works-deer.works-LeopardCat, .works-animal-box-an .contact-islands-about.contact-TurtleMedusa-box, .works-animal-box-an .contact-islands-about.contact-fishs-box, .works-animal-box-an .contact-islands-about.works-rabbit, .works-animal-box-an .contact-islands-about.works-LeopardCat, .works-animal-box-an .contact-islands-work.contact-TurtleMedusa-box, .works-animal-box-an .contact-islands-work.contact-fishs-box, .works-animal-box-an .contact-islands-work.works-rabbit, .works-animal-box-an .contact-islands-work.works-LeopardCat, .works-animal-box-an .contact-TurtleMedusa-box.contact-TurtleMedusa-box, .works-animal-box-an .contact-TurtleMedusa-box.contact-fishs-box, .works-animal-box-an .contact-TurtleMedusa-box.works-rabbit, .works-animal-box-an .contact-TurtleMedusa-box.works-LeopardCat, .works-animal-box-an .contact-fishs-box.contact-TurtleMedusa-box, .works-animal-box-an .contact-fishs-box.contact-fishs-box, .works-animal-box-an .contact-fishs-box.works-rabbit, .works-animal-box-an .contact-fishs-box.works-LeopardCat, .works-animal-box-an .works-pig.contact-TurtleMedusa-box, .works-animal-box-an .works-pig.contact-fishs-box, .works-animal-box-an .works-pig.works-rabbit, .works-animal-box-an .works-pig.works-LeopardCat, .works-animal-box-an .works-rabbit.contact-TurtleMedusa-box, .works-animal-box-an .works-rabbit.contact-fishs-box, .works-animal-box-an .works-rabbit.works-rabbit, .works-animal-box-an .works-rabbit.works-LeopardCat, .works-animal-box-an .works-LeopardCat.contact-TurtleMedusa-box, .works-animal-box-an .works-LeopardCat.contact-fishs-box, .works-animal-box-an .works-LeopardCat.works-rabbit, .works-animal-box-an .works-LeopardCat.works-LeopardCat, .works-animal-box-an .works-beer.contact-TurtleMedusa-box, .works-animal-box-an .works-beer.contact-fishs-box, .works-animal-box-an .works-beer.works-rabbit, .works-animal-box-an .works-beer.works-LeopardCat, .works-animal-box-an .works-deer.contact-TurtleMedusa-box, .works-animal-box-an .works-deer.contact-fishs-box, .works-animal-box-an .works-deer.works-rabbit, .works-animal-box-an .works-deer.works-LeopardCat {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.contact-FishsIslands-box-An .contact-islands-about.works-beer, .contact-FishsIslands-box-An .contact-islands-work.works-beer, .contact-FishsIslands-box-An .contact-TurtleMedusa-box.works-beer, .contact-FishsIslands-box-An .contact-fishs-box.works-beer, .contact-FishsIslands-box-An .works-pig.works-beer, .contact-FishsIslands-box-An .works-rabbit.works-beer, .contact-FishsIslands-box-An .works-LeopardCat.works-beer, .contact-FishsIslands-box-An .works-beer.works-beer, .contact-FishsIslands-box-An .works-deer.works-beer, .works-animal-box-an .contact-islands-about.works-beer, .works-animal-box-an .contact-islands-work.works-beer, .works-animal-box-an .contact-TurtleMedusa-box.works-beer, .works-animal-box-an .contact-fishs-box.works-beer, .works-animal-box-an .works-pig.works-beer, .works-animal-box-an .works-rabbit.works-beer, .works-animal-box-an .works-LeopardCat.works-beer, .works-animal-box-an .works-beer.works-beer, .works-animal-box-an .works-deer.works-beer {
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+.contact-FishsIslands-box-An .contact-islands-about.works-deer, .contact-FishsIslands-box-An .contact-islands-work.works-deer, .contact-FishsIslands-box-An .contact-TurtleMedusa-box.works-deer, .contact-FishsIslands-box-An .contact-fishs-box.works-deer, .contact-FishsIslands-box-An .works-pig.works-deer, .contact-FishsIslands-box-An .works-rabbit.works-deer, .contact-FishsIslands-box-An .works-LeopardCat.works-deer, .contact-FishsIslands-box-An .works-beer.works-deer, .contact-FishsIslands-box-An .works-deer.works-deer, .works-animal-box-an .contact-islands-about.works-deer, .works-animal-box-an .contact-islands-work.works-deer, .works-animal-box-an .contact-TurtleMedusa-box.works-deer, .works-animal-box-an .contact-fishs-box.works-deer, .works-animal-box-an .works-pig.works-deer, .works-animal-box-an .works-rabbit.works-deer, .works-animal-box-an .works-LeopardCat.works-deer, .works-animal-box-an .works-beer.works-deer, .works-animal-box-an .works-deer.works-deer {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+@keyframes islands-An {
+  from {
+    opacity: 0;
+    transform: scale(0.2) translateY(80px);
+    -webkit-transform: scale(0.2) translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    -webkit-transform: scale(1) translateY(0px);
+  }
+}
+.about-my-box-an {
+  -webkit-animation: home-car-down 10s linear infinite;
+  animation: home-car-down 10s linear infinite;
+}
+
+.skills-my-box-an {
+  -webkit-animation: home-car-down 10s linear infinite;
+  animation: home-car-down 10s linear infinite;
+}
+
+.works-my-box-an {
+  -webkit-animation: home-car-down 16s linear infinite;
+  animation: home-car-down 16s linear infinite;
 }

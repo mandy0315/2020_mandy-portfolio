@@ -16,6 +16,6 @@ $(window).on('load',function () {
   function LoadingClose() {
   setTimeout(() => {
     $("#loading-box").slideUp(500);
-  }, 2000);
+  }, 1000);
   }
 });

@@ -1,3 +1,6 @@
+// animate 設定
+.animate__animated.animate__fadeInUp
+    --animate-duration: 1s
 // arrow-pages
 .arrow-pages-left-an,.arrow-pages-right-an
     -webkit-transform: translateX(0px)
@@ -160,16 +163,24 @@
 .about-my-photo-bg-an
     -webkit-animation: turn 8s linear infinite
     animation: turn 8s linear infinite
-//直線游泳、腳踏車動畫
-.about-my-box-an
-    -webkit-animation: home-car-down 8s linear infinite
-    animation: home-car-down 8s linear infinite
-.skills-my-box-an
-    -webkit-animation: home-car-down 16s linear infinite
-    animation: home-car-down 16s linear infinite 
-.works-my-box-an
-    -webkit-animation: home-car-down 20s linear infinite
-    animation: home-car-down 20s linear infinite 
+// skills
+.skills-design-img-An,.skills-code-img-An
+    -webkit-animation: water-An 1.8s ease-in-out infinite
+    animation: water-An 1.8s ease-in-out infinite
+    &.skills-code-img-An
+        -webkit-animation-delay: 900ms
+        animation-delay: 900ms
+
+@keyframes water-An
+    0%
+        -webkit-transform: translateY(0px)
+        transform: translateY(0px)
+    50%
+        -webkit-transform: translateY(-8px)
+        transform: translateY(-8px)
+    100%
+        -webkit-transform: translateY(0px)
+        transform: translateY(0px)
 // work
 .works-web,.works-vision,.works-ui
     a
@@ -186,19 +197,55 @@
                     -webkit-transform: scale(1.4)
                     -webkit-transition: all 4s ease-in-out
                     transition: all 4s ease-in-out
+//contact
+.contact-hitballoon-right-an,.contact-hitballoon-left-an
+    -webkit-animation: water-An 2.4s ease-in-out infinite
+    animation: water-An 2.4s ease-in-out infinite
+    &.contact-hitballoon-left-an
+        -webkit-animation-delay: 1.2s
+        animation-delay: 1.2s
+.contact-wave-right,.contact-wave-left
+    -webkit-animation: water-An 3.2s ease-in-out infinite
+    animation: water-An 3.2s ease-in-out infinite
 
+.contact-FishsIslands-box-An,.works-animal-box-an
+    .contact-islands-about,.contact-islands-work,.contact-TurtleMedusa-box,.contact-fishs-box,.works-pig,.works-rabbit,.works-LeopardCat,.works-beer,.works-deer
+        -webkit-animation: islands-An 1s ease-in-out 1 forwards
+        animation: islands-An 1s ease-in-out 1 forwards
+        -webkit-animation-delay: .4s
+        animation-delay: .4s
+        &.contact-islands-work,&.works-pig
+            -webkit-animation-delay: .8s
+            animation-delay: .8s
+        &.contact-TurtleMedusa-box,&.contact-fishs-box,&.works-rabbit,&.works-LeopardCat
+            -webkit-animation-delay: 1.2s
+            animation-delay: 1.2s
+        &.works-beer
+            -webkit-animation-delay: 1.6s
+            animation-delay: 1.6s
+        &.works-deer
+            -webkit-animation-delay: 2s
+            animation-delay: 2s
+        
+@keyframes islands-An
+    from
+        opacity: 0
+        transform: scale(0.2) translateY(80px)
+        -webkit-transform: scale(0.2) translateY(80px)
+    to
+        opacity: 1
+        transform: scale(1) translateY(0px)
+        -webkit-transform: scale(1) translateY(0px)
+//直線游泳、腳踏車動畫
+.about-my-box-an
+    -webkit-animation: home-car-down 10s linear infinite
+    animation: home-car-down 10s linear infinite
+.skills-my-box-an
+    -webkit-animation: home-car-down 10s linear infinite
+    animation: home-car-down 10s linear infinite 
+.works-my-box-an
+    -webkit-animation: home-car-down 16s linear infinite
+    animation: home-car-down 16s linear infinite 
 // 換section 開啟動畫
-.home,.about,.skills
-    &.active
-        .about-contant-wrapper
-            opacity: 1
-            transform: translateY(0px)
-            -webkit-transform: translateY(0px)
-            -webkit-transition: all 2s 1 ease-in-out
-            transition: all 2s 1 ease-in-out
-    // .vv,.bb
-    //     opacity: 0
-    //     transform: translateY(100px)
-    //     -webkit-transform: translateY(100px)
-    //     -webkit-transition: all 2s ease-in-out
-    //     transition: all 2s ease-in-out
+// .home,.about,.skills
+//     &.active
