@@ -230,8 +230,7 @@ $(document).ready(function () {
         $tab.on('click', function () {
             let $tabIndex = $(this).index();
             $(this).addClass('active').siblings().removeClass('active');
-            // $content.eq($tabIndex).addClass("animate__animated animate__backInUp").fadeIn(500).css('display', 'block').siblings().css('display', 'none');
-            $content.eq($tabIndex).fadeIn(500).css('display', 'block').siblings().css('display', 'none');
+            $content.eq($tabIndex).fadeIn(1500).addClass("animate__animated animate__backInUp").css('display', 'block').siblings().css('display', 'none').removeClass("animate__animated animate__backInUp");
         });
     }
     // 偵測跳頁-左右滑動
