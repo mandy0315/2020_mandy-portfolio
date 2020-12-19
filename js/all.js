@@ -226,7 +226,7 @@ $(document).ready(function () {
             $content = $tabContent.find('> div');
 
         $tab.eq(0).addClass('active');
-        $content.eq(0).css('display', 'block').siblings().css('display', 'none');
+        $content.eq(0).fadeIn(500).css('display', 'block').siblings().css('display', 'none');
         $tab.on('click', function () {
             let $tabIndex = $(this).index();
             $(this).addClass('active').siblings().removeClass('active');
