@@ -346,7 +346,7 @@ $(document).ready(function () {
             renderer: 'svg', 
             loop: true,
             autoplay: true,
-            path: '../json/bicycle.json'
+            path: './json/bicycle.json'
         });
     }
     function HitballoonAn(){
@@ -355,7 +355,7 @@ $(document).ready(function () {
             renderer: 'svg', 
             loop: true,
             autoplay: true,
-            path: '../json/HotBalloon.json'
+            path: './json/HotBalloon.json'
         });
     }
     function WalkAn(){
@@ -364,7 +364,7 @@ $(document).ready(function () {
             renderer: 'svg', 
             loop: true,
             autoplay: true,
-            path: '../json/walk.json'
+            path: './json/walk.json'
         });
     }
 
