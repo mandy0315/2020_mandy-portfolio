@@ -48,6 +48,9 @@ $(document).ready(function () {
     worksTabs();
     NavClassAn();
     HashClassAn();
+    BicycleAn();
+    HitballoonAn();
+    WalkAn();
     // nav 虛線匯入
     $('#pp-nav').append('<div class="line-dotted"></div>');
     // header 載入
@@ -56,6 +59,7 @@ $(document).ready(function () {
         HomeTime();
         ArrowPages();
         MenuAnchor();
+        HitballoonAn();
         $(".logo-wrapper>a").click(function(){
             window.location.href = 'index.html#home'
         })
@@ -335,6 +339,35 @@ $(document).ready(function () {
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-FishsIslands-box").addClass("contact-FishsIslands-box-An");
     }
+    // bodymovin
+    function BicycleAn(){
+        lottie.loadAnimation({
+            container: document.querySelector('.about-my-img'),
+            renderer: 'svg', 
+            loop: true,
+            autoplay: true,
+            path: '../json/bicycle.json'
+        });
+    }
+    function HitballoonAn(){
+        lottie.loadAnimation({
+            container: document.querySelector('.contact-myhitballoon,.menu-hitballoon'),
+            renderer: 'svg', 
+            loop: true,
+            autoplay: true,
+            path: '../json/HotBalloon.json'
+        });
+    }
+    function WalkAn(){
+        lottie.loadAnimation({
+            container: document.querySelector('.works-my-img'),
+            renderer: 'svg', 
+            loop: true,
+            autoplay: true,
+            path: '../json/walk.json'
+        });
+    }
+
     // 900 後偵測水平
     let ms = window.matchMedia("(max-width: 900px)");
     resizeSWidth(ms);

@@ -706,8 +706,8 @@ a {
   width: 100%;
   opacity: 0;
 }
-.about-my-box img, .about-people-box img {
-  width: 8.4rem;
+.about-my-box .about-my-img, .about-people-box .about-my-img {
+  width: 12rem;
 }
 .about-my-box.about-my-box, .about-people-box.about-my-box {
   opacity: 0;
@@ -898,10 +898,10 @@ a {
   position: absolute;
   width: 100%;
   z-index: 20;
-  bottom: 0.5rem;
+  bottom: 0;
 }
-.works-mountain-wrapper .works-mountain-box .works-my-box img {
-  width: 4.2rem;
+.works-mountain-wrapper .works-mountain-box .works-my-box .works-my-img {
+  width: 5.8rem;
 }
 
 .works-animal-box, .works-b-tree, .works-tree {
@@ -1478,8 +1478,8 @@ a {
     width: 10rem;
   }
 
-  .about-my-box img {
-    width: 7.2rem;
+  .about-my-box .about-my-img {
+    width: 8.8rem;
   }
 
   .about-people-box {
@@ -1545,7 +1545,7 @@ a {
   }
 
   /* work */
-  .works-mountain-wrapper .works-mountain-box .works-my-box img {
+  .works-mountain-wrapper .works-mountain-box .works-my-box .works-my-img {
     width: 4rem;
   }
 
@@ -1700,8 +1700,8 @@ a {
     left: calc(50% - 550px);
   }
 
-  .about-my-box img {
-    width: 6.2rem;
+  .about-my-box .about-my-img {
+    width: 7.8rem;
   }
 
   /* skills */
@@ -1766,7 +1766,7 @@ a {
     left: calc(50% - 500px);
   }
 
-  .works-mountain-wrapper .works-mountain-box .works-my-box img {
+  .works-mountain-wrapper .works-mountain-box .works-my-box .works-my-img {
     width: 3.4rem;
   }
 
@@ -2320,8 +2320,8 @@ a {
     width: 8.4rem;
   }
 
-  .about-my-box img {
-    width: 5.2rem;
+  .about-my-box .about-my-img {
+    width: 6.8rem;
   }
 
   .about-contant-box .about-img {
@@ -2339,7 +2339,7 @@ a {
   .works-mountain-wrapper .works-mountain-box {
     height: 196px;
   }
-  .works-mountain-wrapper .works-mountain-box .works-my-box img {
+  .works-mountain-wrapper .works-mountain-box .works-my-box .works-my-img {
     width: 3rem;
   }
 
@@ -2641,6 +2641,6 @@ a {
 }
 
 .works-my-box-an {
-  -webkit-animation: home-car-down 16s linear infinite;
-  animation: home-car-down 16s linear infinite;
+  -webkit-animation: home-car-down 20s linear infinite;
+  animation: home-car-down 20s linear infinite;
 }
