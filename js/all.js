@@ -49,8 +49,8 @@ $(document).ready(function () {
     NavClassAn();
     HashClassAn();
     BicycleAn();
-    HitballoonAn();
     WalkAn();
+    HitballoonAn();
     // nav 虛線匯入
     $('#pp-nav').append('<div class="line-dotted"></div>');
     // header 載入
@@ -59,7 +59,6 @@ $(document).ready(function () {
         HomeTime();
         ArrowPages();
         MenuAnchor();
-        HitballoonAn();
         $(".logo-wrapper>a").click(function(){
             window.location.href = 'index.html#home'
         })
@@ -311,6 +310,7 @@ $(document).ready(function () {
             $("#pagepiling [data-num=" + data2[getAName] + "] .works-animal-box").addClass("works-animal-box-an");
             //contact
             $("#pagepiling [data-num=" + data2[getAName] + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
+            $("#pagepiling [data-num=" + data2[getAName] + "]  .contact-FishsIslands-box").addClass("contact-FishsIslands-box-An");
         });
     }
     // hash&行動-指定段落執行動畫
@@ -323,21 +323,26 @@ $(document).ready(function () {
         HashContant();
     }
     function HashContant() {
+        var flag = false;
         let hashNameAn = window.location.hash
         let hashNumAn = data2[hashNameAn]
         //about
         $("#pagepiling [data-num=" + hashNumAn + "] .about-my-box").addClass("about-my-box-an");
+
         $("#pagepiling [data-num=" + hashNumAn + "] .about-contant-box").addClass("animate__animated animate__fadeInUp");
         //skills
         $("#pagepiling [data-num=" + hashNumAn + "] .skills-my-box").addClass("skills-my-box-an");
         $("#pagepiling [data-num=" + hashNumAn + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
         //works
         $("#pagepiling [data-num=" + hashNumAn + "] .works-my-box").addClass("works-my-box-an");
+
         $("#pagepiling [data-num=" + hashNumAn + "] .tab-wrapper").addClass("animate__animated animate__fadeInUp");
         $("#pagepiling [data-num=" + hashNumAn + "] .works-animal-box").addClass("works-animal-box-an");
         //contact
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
+  
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-FishsIslands-box").addClass("contact-FishsIslands-box-An");
+        flag = true;
     }
     // bodymovin
     function BicycleAn(){
@@ -348,15 +353,7 @@ $(document).ready(function () {
             autoplay: true,
             path: './json/bicycle.json'
         });
-    }
-    function HitballoonAn(){
-        lottie.loadAnimation({
-            container: document.querySelector('.contact-myhitballoon,.menu-hitballoon'),
-            renderer: 'svg', 
-            loop: true,
-            autoplay: true,
-            path: './json/HotBalloon.json'
-        });
+
     }
     function WalkAn(){
         lottie.loadAnimation({
@@ -366,6 +363,17 @@ $(document).ready(function () {
             autoplay: true,
             path: './json/walk.json'
         });
+
+    }
+    function HitballoonAn(){
+        lottie.loadAnimation({
+            container: document.querySelector('.contact-myhitballoon'),
+            renderer: 'svg', 
+            loop: true,
+            autoplay: true,
+            path: './json/HotBalloon.json'
+        });
+
     }
 
     // 900 後偵測水平

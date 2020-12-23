@@ -901,7 +901,7 @@ a {
   bottom: 0;
 }
 .works-mountain-wrapper .works-mountain-box .works-my-box .works-my-img {
-  width: 5.8rem;
+  width: 5.6rem;
 }
 
 .works-animal-box, .works-b-tree, .works-tree {
@@ -2641,6 +2641,6 @@ a {
 }
 
 .works-my-box-an {
-  -webkit-animation: home-car-down 20s linear infinite;
-  animation: home-car-down 20s linear infinite;
+  -webkit-animation: home-car-down 24s linear infinite;
+  animation: home-car-down 24s linear infinite;
 }
