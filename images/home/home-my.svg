@@ -154,7 +154,7 @@
             <g class="phone-light">
                 <path class="cls-43" d="M194.27,105.77,178.93,84.18s-11.86-5-18.2,2.78l14.94,13.91Z" transform="translate(-0.12)"/>
                 <path class="cls-44" d="M175.67,100.87,160.73,87s-20,16.75-21.62,32.37l23.25,15.91Z" transform="translate(-0.12)"/>
-                <animate attributeType="auto" attributeName="opacity" dur="1.5s" values="0.6;1;0.6" repeatCount="indefinite" begin="0"/>
+                <animate attributeType="auto" attributeName="opacity" dur="1.5s" values="0.4;1;0.4" repeatCount="indefinite" begin="0"/>
             </g>
             <polygon class="cls-45" points="166.94 126.85 165.16 127.86 164.77 128.88 166.43 128.21 166.94 126.85"/>
             <path class="cls-13" d="M184.59,148.43c-1.2-3.14,3.13-5.67,4.26-8.87a52,52,0,0,0,2.7-8.51,8.77,8.77,0,0,0-3.25-7.84c-3.12-2.2-2.21,3.59-1.53,5,.83,1.73.67,1.8-.49,3.18s-1.21,2.8-1.54,4.39a53.25,53.25,0,0,0-1.55,7.46c-.18,2.32-.3,5.46,1,7.54C184.87,152,182.16,153.32,184.59,148.43Z" transform="translate(-0.12)"/>

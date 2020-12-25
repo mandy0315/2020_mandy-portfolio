@@ -51,6 +51,8 @@ $(document).ready(function () {
     BicycleAn();
     WalkAn();
     HitballoonAn();
+    SwimAn();
+    AirCameraAn();
     // nav 虛線匯入
     $('#pp-nav').append('<div class="line-dotted"></div>');
     // header 載入
@@ -63,8 +65,6 @@ $(document).ready(function () {
             window.location.href = 'index.html#home'
         })
     });
-    // about-AirCamera-svg 載入
-    $('.about-AirCamera-box').load("./share/AirCamera-svg.html");
     // 768px 判斷 執行
     let mm = window.matchMedia("(max-width: 768px)");
     resizeWidth(mm);
@@ -323,7 +323,6 @@ $(document).ready(function () {
         HashContant();
     }
     function HashContant() {
-        var flag = false;
         let hashNameAn = window.location.hash
         let hashNumAn = data2[hashNameAn]
         //about
@@ -340,7 +339,6 @@ $(document).ready(function () {
         $("#pagepiling [data-num=" + hashNumAn + "] .works-animal-box").addClass("works-animal-box-an");
         //contact
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
-  
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-FishsIslands-box").addClass("contact-FishsIslands-box-An");
         flag = true;
     }
@@ -375,8 +373,27 @@ $(document).ready(function () {
         });
 
     }
+     function SwimAn(){
+        lottie.loadAnimation({
+            container: document.querySelector('.skills-my-img'),
+            renderer: 'svg', 
+            loop: true,
+            autoplay: true,
+            path: './json/swim.json'
+        });
 
-    // 900 後偵測水平
+    }
+    function AirCameraAn(){
+        lottie.loadAnimation({
+            container: document.querySelector('.about-AirCamera-img'),
+            renderer: 'svg', 
+            loop: true,
+            autoplay: true,
+            path: './json/AirCamera.json'
+        });
+
+    }
+    // 900px 後偵測橫屏
     let ms = window.matchMedia("(max-width: 900px)");
     resizeSWidth(ms);
     function resizeSWidth(SMatchMedia) {
