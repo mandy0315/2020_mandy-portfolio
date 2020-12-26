@@ -325,7 +325,7 @@
         .works-mountain-box
             .works-my-box
                 .works-my-img
-                    width: 3.4rem
+                    width: 4.4rem
     .web-text 
         h4
             font-size: $h5
@@ -369,6 +369,13 @@
         top: 2rem
     .about-road-box
         padding-bottom: 6rem
+    .about-city-up
+        display: none
+    .about-city-box
+        .m-about-city
+            display: block
+            width: 768px
+            left: calc(50% - 384px)
     /* skills */
     .skills-contant-box
         margin: 4rem 0
@@ -405,11 +412,28 @@
             padding: 2rem
     .contact-copyright
         padding: 1rem 0rem 20rem 0
-    .contact-FishsIslands-box,.contact-hitballoon-left,.contact-hitballoon-right
+    .contact-hitballoon-left,.contact-hitballoon-right
         display: none
-    .m-contact-FishsIslands-box
+    .contact-FishsIslands-box
+        .contact-islands-box
+            .contact-islands
+                max-width: 90%
+                width: 90%
+                margin: 0 auto
+                .contact-islands-about,.contact-islands-work
+                    margin-top: -10px
+                    &.contact-islands-work
+                        margin-top: -20px
+                    .islands-about-title,.islands-works-title
+                        width: 3rem
+                        padding-top: 14px
+        .contact-fishs-box,.contact-TurtleMedusa-box
+            display: none
+    .m-contact-FishsTurtleMedusa-box
         display: block
-        padding: 0 1.6rem
+        width: 100%
+    .contact-sea-wrapper
+        padding-top: 3.2rem
     
 @media only screen and (max-width: 640px)
     /* header */
@@ -523,10 +547,15 @@
     .contact-contant-wrapper
         padding: 0 0 1rem 0
     .contact-copyright
-        padding: 0.2rem 0 20rem 0
+        padding: 0.2rem 0 0 0
     .contact-contant-box
+        .contant-box
+            padding: 1rem
         .contact-myhitballoon
             max-width: 4.6rem
+    .my-community-box
+        display: none
+    
 @media only screen and (max-width: 414px)
     /* header */
     .header-box
@@ -555,6 +584,11 @@
         right: 2rem
     .about-people-box
         display: none
+    .about-city-box
+        .m-about-city
+            display: block
+            width: 500px
+            left: calc(50% - 250px)
     /* skills */
     .skills-contant-box
         padding: 0 1rem
@@ -610,19 +644,26 @@
     /* contact */
     .contact-contant-wrapper
         padding: 1.2rem 0
-    .m-contact-FishsIslands-box
-        padding: 0
     .contact-contant-box
         max-width: 70%
-        .contant-box
-            padding: 0.5rem
     .my-contact-box
         ul
             li
                 a
                     word-wrap: break-word
-    .m-contact-FishsIslands-box
-        padding: 0 1rem
+    .m-contact-FishsTurtleMedusa-box
+        bottom: -1rem
+        ul
+            li
+                .m-contact-fishs-img
+                    width: 2rem
+                .m-contact-TurtleMedusa-img
+                    img:nth-of-type(1) 
+                        width: 3rem
+                    img:nth-of-type(2) 
+                        width: 3rem  
+    .contact-sea-wrapper
+        padding-top: 2.8rem
 @media only screen and (max-width: 375px)
     .menu-contant-box
         .menu-text
@@ -682,6 +723,17 @@
             &.title-img-c
                 max-width: 8rem
                 width: 8rem
+    .contact-FishsIslands-box
+        .contact-islands-box
+            .contact-islands
+                height: 7.6rem
+                .contact-islands-about,.contact-islands-work
+                    .islands-about-title,.islands-works-title
+                        padding-top: 20px
+                        .islands-works-title
+                            -webkit-transform: translateX(16px)
+                            transform: translateX(16px)
+
 @media only screen and (max-width: 320px)
     .home-day-box,.home-night-box
         height: 200px
@@ -690,8 +742,6 @@
     .home-my-box
         width: 4.6rem
         top: calc(50% - 6.8rem)
-    .m-contact-FishsIslands-box	
-        display: none
     .contact-contant-wrapper
         padding: 1.2rem 0 2rem 0		
     .contact-contant-box
@@ -739,6 +789,13 @@
     .skills-tortoise-box
         img
             width: 5rem
+    .contact-sea-wrapper
+        padding-top: 0rem
+    .contact-copyright
+        display: none
+    .contact-contant-box
+        .contant-box
+            padding: .5rem
 
 
 

@@ -65,7 +65,7 @@ $(document).ready(function () {
             window.location.href = 'index.html#home'
         })
     });
-    // 768px 判斷 執行
+    // 768px 執行滾動
     let mm = window.matchMedia("(max-width: 768px)");
     resizeWidth(mm);
     function resizeWidth(pMatchMedia) {
@@ -411,6 +411,4 @@ $(document).ready(function () {
             $(".mobileH-window").fadeOut(500);
         }
     }
-    
-
 });

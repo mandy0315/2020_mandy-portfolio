@@ -182,7 +182,7 @@
         -webkit-transform: translateY(0px)
         transform: translateY(0px)
 // work
-.works-web,.works-vision,.works-ui
+.works-box
     a
         .web-img-an
             img
@@ -246,6 +246,13 @@
 .works-my-box-an
     -webkit-animation: home-car-down 24s linear infinite
     animation: home-car-down 24s linear infinite 
-// 換section 開啟動畫
-// .home,.about,.skills
-//     &.active
+@media only screen and (max-width: 768px)
+    .about-my-box-an
+        -webkit-animation: home-car-down 6s linear infinite
+        animation: home-car-down 6s linear infinite
+    .skills-my-box-an
+        -webkit-animation: home-car-down 8s linear infinite
+        animation: home-car-down 8s linear infinite 
+    .works-my-box-an
+        -webkit-animation: home-car-down 10s linear infinite
+        animation: home-car-down 10s linear infinite 
