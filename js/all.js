@@ -310,7 +310,7 @@ $(document).ready(function () {
             $("#pagepiling [data-num=" + data2[getAName] + "] .works-animal-box").addClass("works-animal-box-an");
             //contact
             $("#pagepiling [data-num=" + data2[getAName] + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
-            $("#pagepiling [data-num=" + data2[getAName] + "]  .contact-FishsIslands-box").addClass("contact-FishsIslands-box-An");
+            $("#pagepiling [data-num=" + data2[getAName] + "]  .contact-FishsIslands-box,#pagepiling [data-num=" + data2[getAName] + "]  .m-contact-FishsTurtleMedusa-box").addClass("contact-FishsIslands-box-An");
         });
     }
     // hash&行動-指定段落執行動畫
@@ -339,8 +339,7 @@ $(document).ready(function () {
         $("#pagepiling [data-num=" + hashNumAn + "] .works-animal-box").addClass("works-animal-box-an");
         //contact
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
-        $("#pagepiling [data-num=" + hashNumAn + "] .contact-FishsIslands-box").addClass("contact-FishsIslands-box-An");
-        flag = true;
+        $("#pagepiling [data-num=" + hashNumAn + "] .contact-FishsIslands-box,#pagepiling [data-num=" + hashNumAn + "] .m-contact-FishsTurtleMedusa-box").addClass("contact-FishsIslands-box-An");
     }
     // bodymovin
     function BicycleAn(){
