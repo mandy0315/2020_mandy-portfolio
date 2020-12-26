@@ -2260,9 +2260,9 @@ a {
   .contact-contant-box {
     max-width: 70%;
   }
-
-  .my-contact-box ul li a {
+  .contact-contant-box .contant-box .my-contact-box ul li a {
     word-wrap: break-word;
+    letter-spacing: 0px;
   }
 
   .m-contact-FishsTurtleMedusa-box {
