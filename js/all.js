@@ -348,9 +348,8 @@ $(document).ready(function () {
             renderer: 'svg', 
             loop: true,
             autoplay: true,
-            path: './json/bicycle.json'
+            path: './json/bicycle.min.json'
         });
-
     }
     function WalkAn(){
         lottie.loadAnimation({
@@ -358,7 +357,7 @@ $(document).ready(function () {
             renderer: 'svg', 
             loop: true,
             autoplay: true,
-            path: './json/walk.json'
+            path: './json/walk.min.json'
         });
 
     }
@@ -368,7 +367,7 @@ $(document).ready(function () {
             renderer: 'svg', 
             loop: true,
             autoplay: true,
-            path: './json/HotBalloon.json'
+            path: './json/HotBalloon.min.json'
         });
 
     }
@@ -378,7 +377,7 @@ $(document).ready(function () {
             renderer: 'svg', 
             loop: true,
             autoplay: true,
-            path: './json/swim.json'
+            path: './json/swim.min.json'
         });
 
     }
@@ -388,7 +387,7 @@ $(document).ready(function () {
             renderer: 'svg', 
             loop: true,
             autoplay: true,
-            path: './json/AirCamera.json'
+            path: './json/AirCamera.min.json'
         });
 
     }

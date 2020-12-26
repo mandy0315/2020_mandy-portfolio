@@ -1300,14 +1300,6 @@ a {
 .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about img, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work img {
   width: 100%;
 }
-.contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about .islands-about-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about .islands-works-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work .islands-about-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work .islands-works-title {
-  width: 4rem;
-  margin: -50px auto 0px auto;
-}
-.contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about .islands-about-title.islands-works-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about .islands-works-title.islands-works-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work .islands-about-title.islands-works-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work .islands-works-title.islands-works-title {
-  position: relative;
-  right: 32px;
-}
 .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about.contact-islands-work, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work.contact-islands-work {
   width: 54%;
   margin-top: -40px;
@@ -1330,7 +1322,6 @@ a {
   width: 2.8rem;
   float: left;
   padding-top: 1.6rem;
-  opacity: 0.8;
 }
 .contact-FishsIslands-box .contact-fishs-box ul li img, .contact-FishsIslands-box .contact-TurtleMedusa-box ul li img {
   width: 100%;
@@ -1352,8 +1343,8 @@ a {
   margin-left: 1rem;
   opacity: 1;
 }
-.contact-FishsIslands-box .contact-fishs-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img:nth-of-type(1), .contact-FishsIslands-box .contact-TurtleMedusa-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img:nth-of-type(1) {
-  margin-bottom: 0.5rem;
+.contact-FishsIslands-box .contact-fishs-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img, .contact-FishsIslands-box .contact-TurtleMedusa-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img {
+  padding-top: 1rem;
   opacity: 0.8;
 }
 
@@ -1380,12 +1371,9 @@ a {
   align-items: flex-end;
   width: 100%;
 }
-.m-contact-FishsTurtleMedusa-box ul li .m-contact-TurtleMedusa-img img:nth-of-type(1) {
+.m-contact-FishsTurtleMedusa-box ul li .m-contact-TurtleMedusa-img img {
   width: 4rem;
   padding-bottom: 1rem;
-}
-.m-contact-FishsTurtleMedusa-box ul li .m-contact-TurtleMedusa-img img:nth-of-type(2) {
-  width: 3rem;
 }
 
 /* contact end */
@@ -1641,7 +1629,7 @@ a {
     margin-right: 10px;
   }
 
-  .contact-fishs-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img:nth-of-type(1), .contact-TurtleMedusa-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img:nth-of-type(1) {
+  .contact-fishs-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img, .contact-TurtleMedusa-box.contact-TurtleMedusa-box ul li:nth-of-type(2) img {
     width: 3.6rem;
   }
 
@@ -1948,10 +1936,6 @@ a {
   .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about.contact-islands-work, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work.contact-islands-work {
     margin-top: -20px;
   }
-  .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about .islands-about-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about .islands-works-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work .islands-about-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work .islands-works-title {
-    width: 3rem;
-    padding-top: 14px;
-  }
   .contact-FishsIslands-box .contact-fishs-box, .contact-FishsIslands-box .contact-TurtleMedusa-box {
     display: none;
   }
@@ -2006,7 +1990,7 @@ a {
   }
   .home-city-box .home-bluecity, .home-city-box .home-city, .home-city-box .about-city, .home-city-box .about-cloud, .home-city-box .about-bcity, .home-city-box .skills-seabed, .home-city-box .skills-seasand, .home-city-box .skills-coral, .home-city-box .works-mountain, .home-city-box .works-b-tree, .home-city-box .contact-wave {
     width: 1200px;
-    left: calc(50% - 600px);
+    left: calc(50% - 700px);
   }
 
   .home-day-car, .home-day-car2, .home-night-car, .home-night-car2 {
@@ -2261,21 +2245,19 @@ a {
     max-width: 70%;
   }
   .contact-contant-box .contant-box .my-contact-box ul li a {
-    word-wrap: break-word;
-    letter-spacing: 0px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
   }
 
   .m-contact-FishsTurtleMedusa-box {
-    bottom: -1rem;
+    bottom: 2rem;
   }
   .m-contact-FishsTurtleMedusa-box ul li .m-contact-fishs-img {
     width: 2rem;
   }
-  .m-contact-FishsTurtleMedusa-box ul li .m-contact-TurtleMedusa-img img:nth-of-type(1) {
+  .m-contact-FishsTurtleMedusa-box ul li .m-contact-TurtleMedusa-img img {
     width: 3rem;
-  }
-  .m-contact-FishsTurtleMedusa-box ul li .m-contact-TurtleMedusa-img img:nth-of-type(2) {
-    width: 3rem;
+    padding-bottom: 0.2rem;
   }
 
   .contact-sea-wrapper {
@@ -2297,7 +2279,7 @@ a {
   }
   .home-city-box .home-bluecity, .home-city-box .home-city, .home-city-box .about-city, .home-city-box .about-cloud, .home-city-box .about-bcity, .home-city-box .skills-seabed, .home-city-box .skills-seasand, .home-city-box .skills-coral, .home-city-box .works-mountain, .home-city-box .works-b-tree, .home-city-box .contact-wave {
     width: 1000px;
-    left: calc(50% - 500px);
+    left: calc(50% - 580px);
   }
 
   .home-my-box {
@@ -2362,12 +2344,9 @@ a {
   .contact-FishsIslands-box .contact-islands-box .contact-islands {
     height: 7.6rem;
   }
-  .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about .islands-about-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about .islands-works-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work .islands-about-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work .islands-works-title {
-    padding-top: 20px;
-  }
-  .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about .islands-about-title .islands-works-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about .islands-works-title .islands-works-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work .islands-about-title .islands-works-title, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work .islands-works-title .islands-works-title {
-    -webkit-transform: translateX(16px);
-    transform: translateX(16px);
+
+  .m-contact-FishsTurtleMedusa-box {
+    bottom: 0;
   }
 }
 @media only screen and (max-width: 320px) {

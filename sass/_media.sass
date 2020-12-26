@@ -182,7 +182,7 @@
             padding: 1rem
             .my-contact-box
                 a
-                    font-size: 16px
+                    font-size: $mobile-l-p
         .contact-myhitballoon
             max-width: 5.8rem
         .contact-myhitballoon-line
@@ -209,8 +209,7 @@
                 li
                     &:nth-of-type(2)
                         img
-                            &:nth-of-type(1)
-                                width: 3.6rem
+                            width: 3.6rem
     .contact-contant-box
         .fb-icon,.ig-icon
             a
@@ -426,9 +425,6 @@
                     margin-top: -10px
                     &.contact-islands-work
                         margin-top: -20px
-                    .islands-about-title,.islands-works-title
-                        width: 3rem
-                        padding-top: 14px
         .contact-fishs-box,.contact-TurtleMedusa-box
             display: none
     .m-contact-FishsTurtleMedusa-box
@@ -472,7 +468,7 @@
         height: 280px
         .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.works-b-tree,.contact-wave
             width: 1200px
-            left: calc(50% - 600px)
+            left: calc(50% - 700px)
     .home-day-car,.home-day-car2,.home-night-car,.home-night-car2
         top: -80px
         &.home-day-car2,&.home-night-car2
@@ -655,19 +651,18 @@
                 ul
                     li
                         a
-                            word-wrap: break-word
-                            letter-spacing: 0px
+                            font-size: 15px
+                            letter-spacing: .5px
     .m-contact-FishsTurtleMedusa-box
-        bottom: -1rem
+        bottom: 2rem
         ul
             li
                 .m-contact-fishs-img
                     width: 2rem
                 .m-contact-TurtleMedusa-img
-                    img:nth-of-type(1) 
+                    img
                         width: 3rem
-                    img:nth-of-type(2) 
-                        width: 3rem  
+                        padding-bottom: .2rem
     .contact-sea-wrapper
         padding-top: 2.8rem
 @media only screen and (max-width: 375px)
@@ -686,7 +681,7 @@
         height: 200px
         .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.works-b-tree,.contact-wave
             width: 1000px
-            left: calc(50% - 500px)
+            left: calc(50% - 580px)
     .home-my-box
         width: 5.2rem
         top: calc(50% - 8rem)
@@ -733,12 +728,8 @@
         .contact-islands-box
             .contact-islands
                 height: 7.6rem
-                .contact-islands-about,.contact-islands-work
-                    .islands-about-title,.islands-works-title
-                        padding-top: 20px
-                        .islands-works-title
-                            -webkit-transform: translateX(16px)
-                            transform: translateX(16px)
+    .m-contact-FishsTurtleMedusa-box
+        bottom: 0
 
 @media only screen and (max-width: 320px)
     .home-day-box,.home-night-box
