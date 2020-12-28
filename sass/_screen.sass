@@ -59,7 +59,7 @@ a
     z-index: 200
     position: relative
     display: block
-    idth: 100%
+    width: 100%
 .logo-wrapper,.menu-icon-wrapper
     display: inline-block
     position: fixed
@@ -489,12 +489,13 @@ a
     .about-text
         padding-left: 1rem
         max-width: 65%
+        color: $white
         p
             font-size: $l-p
-            color: $white
-            span
-                font-size: $h3
-                margin-bottom: 1rem
+        h4
+            color: $yellow
+            font-size: $h5
+            line-height: 1.8
 .about-road-box
     padding-top: 2rem
 .about-my-box,.about-people-box
@@ -567,24 +568,29 @@ a
             padding-right: 1rem
             img
                 max-width: 6.4rem
-            p
+            svg
+                max-width: 7.4rem
+            .text-box
+                width: 100%
                 color: $white
                 margin-top: 10px
-                &:after
-                    content: ">"
-                    display: inline-block 
-                &:before
-                    content: "<"
+                text-align: center
+                font-size: $s-p
+                display: block
+                height: 1rem
+                .text
                     display: inline-block
         .design-svg
             padding-left: 2rem
             padding-top: 1rem
+            transform: translate(10px,16px)
+            -webkit-transform: translate(10px,16px)
         .skills-bubble
             width: 14rem
     .skills-design-text,.skills-code-text
         color: $white
-        h3
-            font-size: $h3
+        h4
+            font-size: $h4
             &:before
                 content: ""
                 display: inline-block

@@ -151,7 +151,7 @@ a {
   z-index: 200;
   position: relative;
   display: block;
-  idth: 100%;
+  width: 100%;
 }
 
 .logo-wrapper, .menu-icon-wrapper {
@@ -684,14 +684,15 @@ a {
 .about-contant-box .about-text {
   padding-left: 1rem;
   max-width: 65%;
+  color: #ffffff;
 }
 .about-contant-box .about-text p {
   font-size: 18px;
-  color: #ffffff;
 }
-.about-contant-box .about-text p span {
-  font-size: 28px;
-  margin-bottom: 1rem;
+.about-contant-box .about-text h4 {
+  color: #F5E69A;
+  font-size: 20px;
+  line-height: 1.8;
 }
 
 .about-road-box {
@@ -792,21 +793,26 @@ a {
 .skills-design-box .skills-design-img .design-svg img, .skills-design-box .skills-design-img .code-svg img, .skills-design-box .skills-code-img .design-svg img, .skills-design-box .skills-code-img .code-svg img, .skills-code-box .skills-design-img .design-svg img, .skills-code-box .skills-design-img .code-svg img, .skills-code-box .skills-code-img .design-svg img, .skills-code-box .skills-code-img .code-svg img {
   max-width: 6.4rem;
 }
-.skills-design-box .skills-design-img .design-svg p, .skills-design-box .skills-design-img .code-svg p, .skills-design-box .skills-code-img .design-svg p, .skills-design-box .skills-code-img .code-svg p, .skills-code-box .skills-design-img .design-svg p, .skills-code-box .skills-design-img .code-svg p, .skills-code-box .skills-code-img .design-svg p, .skills-code-box .skills-code-img .code-svg p {
+.skills-design-box .skills-design-img .design-svg svg, .skills-design-box .skills-design-img .code-svg svg, .skills-design-box .skills-code-img .design-svg svg, .skills-design-box .skills-code-img .code-svg svg, .skills-code-box .skills-design-img .design-svg svg, .skills-code-box .skills-design-img .code-svg svg, .skills-code-box .skills-code-img .design-svg svg, .skills-code-box .skills-code-img .code-svg svg {
+  max-width: 7.4rem;
+}
+.skills-design-box .skills-design-img .design-svg .text-box, .skills-design-box .skills-design-img .code-svg .text-box, .skills-design-box .skills-code-img .design-svg .text-box, .skills-design-box .skills-code-img .code-svg .text-box, .skills-code-box .skills-design-img .design-svg .text-box, .skills-code-box .skills-design-img .code-svg .text-box, .skills-code-box .skills-code-img .design-svg .text-box, .skills-code-box .skills-code-img .code-svg .text-box {
+  width: 100%;
   color: #ffffff;
   margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  height: 1rem;
 }
-.skills-design-box .skills-design-img .design-svg p:after, .skills-design-box .skills-design-img .code-svg p:after, .skills-design-box .skills-code-img .design-svg p:after, .skills-design-box .skills-code-img .code-svg p:after, .skills-code-box .skills-design-img .design-svg p:after, .skills-code-box .skills-design-img .code-svg p:after, .skills-code-box .skills-code-img .design-svg p:after, .skills-code-box .skills-code-img .code-svg p:after {
-  content: ">";
-  display: inline-block;
-}
-.skills-design-box .skills-design-img .design-svg p:before, .skills-design-box .skills-design-img .code-svg p:before, .skills-design-box .skills-code-img .design-svg p:before, .skills-design-box .skills-code-img .code-svg p:before, .skills-code-box .skills-design-img .design-svg p:before, .skills-code-box .skills-design-img .code-svg p:before, .skills-code-box .skills-code-img .design-svg p:before, .skills-code-box .skills-code-img .code-svg p:before {
-  content: "<";
+.skills-design-box .skills-design-img .design-svg .text-box .text, .skills-design-box .skills-design-img .code-svg .text-box .text, .skills-design-box .skills-code-img .design-svg .text-box .text, .skills-design-box .skills-code-img .code-svg .text-box .text, .skills-code-box .skills-design-img .design-svg .text-box .text, .skills-code-box .skills-design-img .code-svg .text-box .text, .skills-code-box .skills-code-img .design-svg .text-box .text, .skills-code-box .skills-code-img .code-svg .text-box .text {
   display: inline-block;
 }
 .skills-design-box .skills-design-img .design-svg, .skills-design-box .skills-code-img .design-svg, .skills-code-box .skills-design-img .design-svg, .skills-code-box .skills-code-img .design-svg {
   padding-left: 2rem;
   padding-top: 1rem;
+  transform: translate(10px, 16px);
+  -webkit-transform: translate(10px, 16px);
 }
 .skills-design-box .skills-design-img .skills-bubble, .skills-design-box .skills-code-img .skills-bubble, .skills-code-box .skills-design-img .skills-bubble, .skills-code-box .skills-code-img .skills-bubble {
   width: 14rem;
@@ -814,10 +820,10 @@ a {
 .skills-design-box .skills-design-text, .skills-design-box .skills-code-text, .skills-code-box .skills-design-text, .skills-code-box .skills-code-text {
   color: #ffffff;
 }
-.skills-design-box .skills-design-text h3, .skills-design-box .skills-code-text h3, .skills-code-box .skills-design-text h3, .skills-code-box .skills-code-text h3 {
-  font-size: 28px;
+.skills-design-box .skills-design-text h4, .skills-design-box .skills-code-text h4, .skills-code-box .skills-design-text h4, .skills-code-box .skills-code-text h4 {
+  font-size: 24px;
 }
-.skills-design-box .skills-design-text h3:before, .skills-design-box .skills-code-text h3:before, .skills-code-box .skills-design-text h3:before, .skills-code-box .skills-code-text h3:before {
+.skills-design-box .skills-design-text h4:before, .skills-design-box .skills-code-text h4:before, .skills-code-box .skills-design-text h4:before, .skills-code-box .skills-code-text h4:before {
   content: "";
   display: inline-block;
   border-top: 1.5px dashed #ffffff;
@@ -1481,8 +1487,8 @@ a {
   .about-contant-box .about-text p {
     font-size: 16px;
   }
-  .about-contant-box .about-text p span {
-    font-size: 24px;
+  .about-contant-box .about-text h4 {
+    font-size: 18px;
   }
 
   .title-box .title-text h4 {
@@ -1549,14 +1555,17 @@ a {
     padding: 0 6rem;
   }
 
-  .skills-design-box .skills-design-text h3, .skills-design-box .skills-code-text h3, .skills-code-box .skills-design-text h3, .skills-code-box .skills-code-text h3 {
-    font-size: 24px;
+  .skills-design-box .skills-design-text h4, .skills-design-box .skills-code-text h4, .skills-code-box .skills-design-text h4, .skills-code-box .skills-code-text h4 {
+    font-size: 20px;
   }
   .skills-design-box .skills-design-text .design-text li, .skills-design-box .skills-design-text .code-text li, .skills-design-box .skills-code-text .design-text li, .skills-design-box .skills-code-text .code-text li, .skills-code-box .skills-design-text .design-text li, .skills-code-box .skills-design-text .code-text li, .skills-code-box .skills-code-text .design-text li, .skills-code-box .skills-code-text .code-text li {
     font-size: 16px;
   }
   .skills-design-box .skills-design-img .design-svg img, .skills-design-box .skills-design-img .code-svg img, .skills-design-box .skills-code-img .design-svg img, .skills-design-box .skills-code-img .code-svg img, .skills-code-box .skills-design-img .design-svg img, .skills-code-box .skills-design-img .code-svg img, .skills-code-box .skills-code-img .design-svg img, .skills-code-box .skills-code-img .code-svg img {
-    width: 6rem;
+    max-width: 6rem;
+  }
+  .skills-design-box .skills-design-img .design-svg svg, .skills-design-box .skills-design-img .code-svg svg, .skills-design-box .skills-code-img .design-svg svg, .skills-design-box .skills-code-img .code-svg svg, .skills-code-box .skills-design-img .design-svg svg, .skills-code-box .skills-design-img .code-svg svg, .skills-code-box .skills-code-img .design-svg svg, .skills-code-box .skills-code-img .code-svg svg {
+    max-width: 7rem;
   }
   .skills-design-box .skills-design-img .skills-bubble, .skills-design-box .skills-code-img .skills-bubble, .skills-code-box .skills-design-img .skills-bubble, .skills-code-box .skills-code-img .skills-bubble {
     width: 12.6rem;
@@ -2031,9 +2040,6 @@ a {
   .about-contant-box .about-text {
     max-width: 80%;
   }
-  .about-contant-box .about-text p span {
-    font-size: 20px;
-  }
 
   .about-AirCamera-box {
     top: 6.8rem;
@@ -2061,9 +2067,6 @@ a {
   }
   .skills-design-box.skills-code-box, .skills-code-box.skills-code-box {
     padding-left: 10%;
-  }
-  .skills-design-box .skills-design-text h3, .skills-design-box .skills-code-text h3, .skills-code-box .skills-design-text h3, .skills-code-box .skills-code-text h3 {
-    font-size: 20px;
   }
 
   .skills-sea-box .skills-seabed, .skills-sea-box .skills-seasand, .skills-sea-box .skills-coral {
@@ -2186,6 +2189,9 @@ a {
   }
   .skills-design-box .skills-design-img .design-svg img, .skills-design-box .skills-design-img .code-svg img, .skills-design-box .skills-code-img .design-svg img, .skills-design-box .skills-code-img .code-svg img, .skills-code-box .skills-design-img .design-svg img, .skills-code-box .skills-design-img .code-svg img, .skills-code-box .skills-code-img .design-svg img, .skills-code-box .skills-code-img .code-svg img {
     max-width: 4.8rem;
+  }
+  .skills-design-box .skills-design-img .design-svg svg, .skills-design-box .skills-design-img .code-svg svg, .skills-design-box .skills-code-img .design-svg svg, .skills-design-box .skills-code-img .code-svg svg, .skills-code-box .skills-design-img .design-svg svg, .skills-code-box .skills-design-img .code-svg svg, .skills-code-box .skills-code-img .design-svg svg, .skills-code-box .skills-code-img .code-svg svg {
+    max-width: 5.8rem;
   }
 
   .skills-sea-box .skills-seabed.skills-coral img, .skills-sea-box .skills-seasand.skills-coral img, .skills-sea-box .skills-coral.skills-coral img {

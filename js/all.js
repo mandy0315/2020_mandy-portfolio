@@ -112,7 +112,8 @@ $(document).ready(function () {
             }
         });
     }
-    // home-day-box 動畫
+    // TweenMax 動畫
+    // home-day-box 
     function DayTimelineAn() {
         var scene = document.querySelector('.home-day-box');
         var mainTimeline = new TimelineMax();
@@ -127,7 +128,7 @@ $(document).ready(function () {
             .staggerFrom(bigTitle, 0.4, { opacity: 0, scale: 0.2, x: 50, y: 30, ease: Back.easeOut })
             .to(clouds, 28, { x: '130%', ease: Back.ease })
     }
-    // home-night-box 動畫
+    // home-night-box
     function NightTimelineAn() {
         const scene2 = document.querySelector('.home-night-box');
         const mainTimeline = new TimelineMax();
@@ -138,6 +139,69 @@ $(document).ready(function () {
         mainTimeline
             .staggerFrom(stars, 0.8, { opacity: 0, y: 100, ease: Back.easeOut }, 1)
             .staggerFrom(bigTitle, 0.4, { opacity: 0, scale: 0.2, x: 30, y: 30, ease: Back.easeOut })
+    }
+    let AnimateDesign = function($main) {
+        this.svgContainer = $main.find("#design-skill");
+        if (this.svgContainer.length === 0) {
+            return;
+        }
+        this.pen = this.svgContainer.find('#design-pen');
+        this.penHeight = 40;
+        this.penWidth = 82;
+        this.penpoint = this.svgContainer.find('#pen-point');
+        this.penpoint.css('opacity', '0');
+        this.penpoint2 = this.svgContainer.find('#pen-point2');
+        this.penpoint2.css('opacity', '0');
+        this.heart = this.svgContainer.find('#design-line');
+        this.heartPath = this.heart.find('#design-line-path')[0];
+
+        if (!this.heartPath) {
+            return;
+        }
+        this.pathobj = {
+            length: 0,
+            pathLength: this.heartPath.getTotalLength()
+        }
+        
+        this.pen.css('transform-origin', '-6px -19px 195px');
+        this.timeLine = new TimelineMax({
+            yoyo: true,
+            paused: true,
+            repeat: -1
+        })
+        
+        .to(this.penpoint, 0.4, {
+            opacity: 1
+
+        })
+
+        .to(this.pathobj, 2, {
+            length: this.pathobj.pathLength,
+            ease: Linear.easeNone,
+            onUpdateScope: this,
+            onUpdate: function() {
+                this.heartPath.style.strokeDasharray = [this.pathobj.length, this.pathobj.pathLength].join(' ');
+
+                var coords = this.heartPath.getPointAtLength(this.pathobj.length);
+
+                coords.y = coords.y + 50;
+                coords.x = coords.x - 50;
+                this.pen.css('transform', 'translate(' + coords.x + 'px, ' + coords.y + 'px) rotate(-45deg)');
+            }
+        })
+        .to(this.penpoint2, 0.4, {
+            opacity: 1
+
+        });
+        this.timeLine.play();
+    };
+    function DesignAnimation($main) {
+        var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
+        if(!is_firefox){  
+            //firefox 31 bug
+            new AnimateDesign($main);
+        }
     }
     // 滑鼠移動動態
     function BlueBgMousemove() {
@@ -224,8 +288,12 @@ $(document).ready(function () {
     }
     // tabs 切換功能
     function worksTabs() {
-        $('.WorksTabs-web').load("./share/WorksTabs-web.html");
-        $('.WorksTabs-ui').load("./share/WorksTabs-ui.html");
+        $('.WorksTabs-web').load("./share/WorksTabs-web.html",function () {
+            getLoadMore();
+        });
+        $('.WorksTabs-ui').load("./share/WorksTabs-ui.html",function () {
+            getLoadMore();
+        });
         $('.WorksTabs-vision').load("./share/WorksTabs-vision.html", function () {
             getLoadMore();
         });
@@ -302,8 +370,14 @@ $(document).ready(function () {
             $("#pagepiling [data-num=" + data2[getAName] + "] .about-my-box").addClass("about-my-box-an");
             $("#pagepiling [data-num=" + data2[getAName] + "] .about-contant-box").addClass("animate__animated animate__fadeInUp");
             //skills
-            $("#pagepiling [data-num=" + data2[getAName] + "] .skills-my-box").addClass("skills-my-box-an");
-            $("#pagepiling [data-num=" + data2[getAName] + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
+            if ($("#pagepiling [data-num=" + data2[getAName] + "].section").hasClass("skills")) {
+                $('.design-svg').load('./share/skills-design.html',function () {
+                    DesignAnimation($(".design-svg"));
+                });
+                $("#pagepiling [data-num=" + data2[getAName] + "] .skills-my-box").addClass("skills-my-box-an");
+                $("#pagepiling [data-num=" + data2[getAName] + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
+                TypingTextAn();
+            }
              //works
             $("#pagepiling [data-num=" + data2[getAName] + "] .works-my-box").addClass("works-my-box-an");
             $("#pagepiling [data-num=" + data2[getAName] + "] .tab-wrapper").addClass("animate__animated animate__fadeInUp");
@@ -330,8 +404,15 @@ $(document).ready(function () {
 
         $("#pagepiling [data-num=" + hashNumAn + "] .about-contant-box").addClass("animate__animated animate__fadeInUp");
         //skills
-        $("#pagepiling [data-num=" + hashNumAn + "] .skills-my-box").addClass("skills-my-box-an");
-        $("#pagepiling [data-num=" + hashNumAn + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
+        if ($("#pagepiling [data-num=" + hashNumAn + "].section").hasClass("skills")) {
+            $('.design-svg').load('./share/skills-design.html',function () {
+                DesignAnimation($(".design-svg"));
+            });
+            $("#pagepiling [data-num=" + hashNumAn + "] .skills-my-box").addClass("skills-my-box-an");
+            $("#pagepiling [data-num=" + hashNumAn + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
+            TypingTextAn();
+        }
+
         //works
         $("#pagepiling [data-num=" + hashNumAn + "] .works-my-box").addClass("works-my-box-an");
 
@@ -341,7 +422,7 @@ $(document).ready(function () {
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
         $("#pagepiling [data-num=" + hashNumAn + "] .contact-FishsIslands-box,#pagepiling [data-num=" + hashNumAn + "] .m-contact-FishsTurtleMedusa-box").addClass("contact-FishsIslands-box-An");
     }
-    // bodymovin
+    // bodymovin lottie動畫
     function BicycleAn(){
         lottie.loadAnimation({
             container: document.querySelector('.about-my-img'),
@@ -390,6 +471,18 @@ $(document).ready(function () {
             path: './json/AirCamera.min.json'
         });
 
+    }
+    // 打字動畫
+    function TypingTextAn(){
+        $(".text-box>.text").typed({
+            //逗點換行
+            strings:['IMG Dory.jpg'],
+            typeSpeed: 70,
+            backSpeed: 40,
+            backDelay: 1500,
+            showCursor: true,
+            loop: true
+        });
     }
     // 900px 後偵測橫屏
     let ms = window.matchMedia("(max-width: 900px)");
