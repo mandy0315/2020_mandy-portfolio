@@ -807,6 +807,7 @@ a {
   height: 1rem;
 }
 .skills-design-box .skills-design-img .design-svg .text-box .text, .skills-design-box .skills-design-img .code-svg .text-box .text, .skills-design-box .skills-code-img .design-svg .text-box .text, .skills-design-box .skills-code-img .code-svg .text-box .text, .skills-code-box .skills-design-img .design-svg .text-box .text, .skills-code-box .skills-design-img .code-svg .text-box .text, .skills-code-box .skills-code-img .design-svg .text-box .text, .skills-code-box .skills-code-img .code-svg .text-box .text {
+  letter-spacing: 1px;
   display: inline-block;
 }
 .skills-design-box .skills-design-img .design-svg, .skills-design-box .skills-code-img .design-svg, .skills-code-box .skills-design-img .design-svg, .skills-code-box .skills-code-img .design-svg {

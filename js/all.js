@@ -476,7 +476,7 @@ $(document).ready(function () {
     function TypingTextAn(){
         $(".text-box>.text").typed({
             //逗點換行
-            strings:['IMG Dory.jpg'],
+            strings:['img src="Dory.jpg"'],
             typeSpeed: 70,
             backSpeed: 40,
             backDelay: 1500,
