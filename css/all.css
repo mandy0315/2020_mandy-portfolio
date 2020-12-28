@@ -809,6 +809,7 @@ a {
 .skills-design-box .skills-design-img .design-svg .text-box .text, .skills-design-box .skills-design-img .code-svg .text-box .text, .skills-design-box .skills-code-img .design-svg .text-box .text, .skills-design-box .skills-code-img .code-svg .text-box .text, .skills-code-box .skills-design-img .design-svg .text-box .text, .skills-code-box .skills-design-img .code-svg .text-box .text, .skills-code-box .skills-code-img .design-svg .text-box .text, .skills-code-box .skills-code-img .code-svg .text-box .text {
   letter-spacing: 1px;
   display: inline-block;
+  font-size: 14px;
 }
 .skills-design-box .skills-design-img .design-svg, .skills-design-box .skills-code-img .design-svg, .skills-code-box .skills-design-img .design-svg, .skills-code-box .skills-code-img .design-svg {
   padding-left: 2rem;
@@ -2150,6 +2151,9 @@ a {
   .about-contant-box .about-text {
     max-width: 100%;
   }
+  .about-contant-box .about-text br {
+    display: none;
+  }
   .about-contant-box .about-img {
     margin-bottom: 1rem;
   }
@@ -2194,6 +2198,13 @@ a {
   }
   .skills-design-box .skills-design-img .design-svg svg, .skills-design-box .skills-design-img .code-svg svg, .skills-design-box .skills-code-img .design-svg svg, .skills-design-box .skills-code-img .code-svg svg, .skills-code-box .skills-design-img .design-svg svg, .skills-code-box .skills-design-img .code-svg svg, .skills-code-box .skills-code-img .design-svg svg, .skills-code-box .skills-code-img .code-svg svg {
     max-width: 5.8rem;
+  }
+  .skills-design-box .skills-design-img .design-svg .text-box, .skills-design-box .skills-design-img .code-svg .text-box, .skills-design-box .skills-code-img .design-svg .text-box, .skills-design-box .skills-code-img .code-svg .text-box, .skills-code-box .skills-design-img .design-svg .text-box, .skills-code-box .skills-design-img .code-svg .text-box, .skills-code-box .skills-code-img .design-svg .text-box, .skills-code-box .skills-code-img .code-svg .text-box {
+    font-size: 12px;
+  }
+  .skills-design-box .skills-design-img .design-svg .text-box .text, .skills-design-box .skills-design-img .code-svg .text-box .text, .skills-design-box .skills-code-img .design-svg .text-box .text, .skills-design-box .skills-code-img .code-svg .text-box .text, .skills-code-box .skills-design-img .design-svg .text-box .text, .skills-code-box .skills-design-img .code-svg .text-box .text, .skills-code-box .skills-code-img .design-svg .text-box .text, .skills-code-box .skills-code-img .code-svg .text-box .text {
+    font-size: 12px;
+    letter-spacing: 0;
   }
 
   .skills-sea-box .skills-seabed.skills-coral img, .skills-sea-box .skills-seasand.skills-coral img, .skills-sea-box .skills-coral.skills-coral img {
@@ -2758,5 +2769,21 @@ a {
   .works-my-box-an {
     -webkit-animation: home-car-down 10s linear infinite;
     animation: home-car-down 10s linear infinite;
+  }
+}
+.typed-cursor {
+  -webkit-animation: typed-cursor-An 800ms linear infinite;
+  animation: typed-cursor-An 800ms linear infinite;
+}
+
+@keyframes typed-cursor-An {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
