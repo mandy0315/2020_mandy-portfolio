@@ -1,5 +1,35 @@
 $(document).ready(function () {
-    // 偵測網址資料庫
+       // pagepiling 自訂
+    $('#pagepiling').pagepiling({
+        //水平換頁
+        direction: 'horizontal',
+        menu: '#menu',
+        //換頁速度
+        scrollingSpeed: 700,
+        //循環回到首頁
+        loopBottom: true,
+        // 背景色
+        sectionsColor: ['#E3E3E3', '#E3E3E3', '#F1CA9E', '#94C28B', '#5596CA'],
+        // 連結名稱
+        anchors: ['home', 'about', 'skills', 'works', 'contact'],
+        // 點瀏覽
+        navigation: {
+            'position': 'nav-position',
+            'tooltips': ['Home', 'About', 'Skills', 'Works', 'Contact']
+        },
+        afterRender: function () {
+            $('#pp-nav').addClass('custom');
+        },
+        afterLoad: function (anchorLink, index) {
+            if (index > 1) {
+                $('#pp-nav').removeClass('custom');
+            } else {
+                $('#pp-nav').addClass('custom');
+            }
+        }
+    });
+    // 停止滾動
+    $.fn.pagepiling.setAllowScrolling(false);
     //header 載入
     $('header').load('./share/header.html', function () {
         MenuPlay();
