@@ -10,7 +10,7 @@ $(document).ready(function () {
         "#works": "3",
         "#contact": "4"
     }
-    // let hashName = window.location.hash
+    let hashName = window.location.hash
     // 執行呼叫
     // SectionSlide();
     ArrowPages();

@@ -32,7 +32,7 @@ $(document).ready(function () {
             
             let targetAnchorNum = $(this).attr('data-anchor')
             hashNum = data[targetAnchorNum]
-            window.location.href = '../' + '#' + hashNum;
+            window.location.href = '../' + 'index.html' + '#' + hashNum;
         })
     }
     // Time 時間更換背景
