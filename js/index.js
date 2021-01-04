@@ -11,8 +11,6 @@ $(document).ready(function () {
         "#contact": "4"
     }
     let hashName = window.location.hash
-    // 停止滾動
-    $.fn.pagepiling.setAllowScrolling(false);
     // 執行呼叫
     SectionSlide();
     HomeTime();
@@ -245,15 +243,6 @@ $(document).ready(function () {
             }
             window.location.href = '#'+data[hashNum]
         });
-    }
-    // nav跳頁-漢堡選單 
-    function MenuAnchor() {
-        $(".menu-pages").click(function(){
-            let targetAnchorNum = $(this).attr('data-anchor')
-            $("#pp-nav > ul > li:nth-child("+targetAnchorNum+") a").click()
-            hashName = window.location.hash
-            hashNum = data2[hashName];
-        })
     }
     // nav跳頁-指定段落執行動畫
     function NavClassAn() {
