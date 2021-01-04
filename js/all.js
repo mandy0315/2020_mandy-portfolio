@@ -31,6 +31,7 @@ $(document).ready(function () {
     // 停止滾動
     $.fn.pagepiling.setAllowScrolling(false);
     // header 載入
+    // $('.section').prepend('<header><noscript>請升級您的瀏覽器以便預覽此網站</noscript></header>');
     $('header').load('./share/header.html', function () {
         MenuPlay();
         TimeBg();
