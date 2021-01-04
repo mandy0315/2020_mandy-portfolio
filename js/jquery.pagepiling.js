@@ -6,7 +6,7 @@
  *
  * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo
  */
-$(document).ready(function () {
+(function ($, document, window, undefined) {
 
     $.fn.pagepiling = function (custom) {
         var PP = $.fn.pagepiling;
@@ -983,4 +983,4 @@ $(document).ready(function () {
         }
 
     };
-});
+})(jQuery, document, window);
