@@ -289,11 +289,11 @@ $(document).ready(function () {
     }
     // hash&行動-指定段落執行動畫
     function HashClassAn() {
-        if ("onhashchange" in window) {
-            setTimeout(() => {
+        window.addEventListener('hashchange',function(){
+             setTimeout(() => {
                 HashContant();
             }, 1000);
-        }
+        });
         HashContant();
     }
     function HashContant() {
