@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    // 偵測網址資料庫
+    let hashNum = 0
+    let data = ["home","about","skills","works","contact"]
+    let data2 = {
+        "": "0",
+        "#home": "0",
+        "#about": "1",
+        "#skills": "2",
+        "#works": "3",
+        "#contact": "4"
+    }
+    let hashName = window.location.hash
     //header 載入
     $('.header-index').load('./share/header.html', function () {
         MenuPlay();
@@ -13,7 +25,16 @@ $(document).ready(function () {
         $(".logo-wrapper>a").click(function(){
              window.location.href = "../index.html";
         })
+        MenuAnchor();
     });
+    function MenuAnchor() {
+        $(".menu-pages").click(function(){
+            
+            let targetAnchorNum = $(this).attr('data-anchor')
+            hashNum = data[targetAnchorNum]
+            window.location.href = '../' + '#' + hashNum;
+        })
+    }
     // Time 時間更換背景
     function TimeBg() {
         $.ajax({
