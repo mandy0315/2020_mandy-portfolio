@@ -13,7 +13,7 @@ $(document).ready(function () {
     let hashName = window.location.hash
     // 執行呼叫
     SectionSlide();
-    
+    ArrowPages();
     HomeTime();
     BlueBgMousemove();
     worksTabs();
