@@ -1,4 +1,20 @@
 $(document).ready(function () {
+    //header 載入
+    $('.header-index').load('./share/header.html', function () {
+        MenuPlay();
+        TimeBg();
+        $(".logo-wrapper>a").click(function(){
+             window.location.href = "index.html";
+        })
+    });
+    $('.header-work').load('.././share/header-work.html', function () {
+        MenuPlay();
+        TimeBg();
+        $(".logo-wrapper>a").click(function(){
+             window.location.href = "../index.html";
+        })
+        // MenuAnchor();
+    });
        // pagepiling 自訂
     $('#pagepiling').pagepiling({
         //水平換頁
@@ -30,22 +46,6 @@ $(document).ready(function () {
     });
     // 停止滾動
     $.fn.pagepiling.setAllowScrolling(false);
-    //header 載入
-    $('header').load('./share/header.html', function () {
-        MenuPlay();
-        TimeBg();
-        $(".logo-wrapper>a").click(function(){
-             window.location.href = "index.html";
-        })
-    });
-    $('.header-work').load('.././share/header-work.html', function () {
-        MenuPlay();
-        TimeBg();
-        $(".logo-wrapper>a").click(function(){
-             window.location.href = "../index.html";
-        })
-        // MenuAnchor();
-    });
     // function MenuAnchor() {
     //     $(".menu-pages").click(function(){
             
