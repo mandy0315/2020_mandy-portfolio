@@ -108,12 +108,12 @@ $(document).ready(function () {
         });
     }
     // nav跳頁-漢堡選單 
-    function MenuAnchor() {
-        $(".menu-pages").click(function(){
-            let targetAnchorNum = $(this).attr('data-anchor')
-            $("#pp-nav > ul > li:nth-child("+targetAnchorNum+") a").click()
-            hashName = window.location.hash
-            hashNum = data2[hashName];
-        })
-    }
+    // function MenuAnchor() {
+    //     $(".menu-pages").click(function(){
+    //         let targetAnchorNum = $(this).attr('data-anchor')
+    //         $("#pp-nav > ul > li:nth-child("+targetAnchorNum+") a").click()
+    //         hashName = window.location.hash
+    //         hashNum = data2[hashName];
+    //     })
+    // }
 });
