@@ -1084,6 +1084,12 @@ a {
   margin-right: 10px;
   vertical-align: middle;
 }
+.web-text p.icon-ui:before {
+  background: url(../images/icon/icon-ui.svg) no-repeat;
+}
+.web-text p.icon-vision:before {
+  background: url(../images/icon/icon-vision.svg) no-repeat;
+}
 
 .loadMore {
   max-width: 180px;
