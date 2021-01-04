@@ -293,11 +293,11 @@ $(document).ready(function () {
     }
     // hash&行動-指定段落執行動畫
     function HashClassAn() {
-        window.addEventListener('hashchange',function(){
-             setTimeout(() => {
+        $(window).hashchange( function(){
+            setTimeout(() => {
                 HashContant();
             }, 1000);
-        });
+        })
         HashContant();
     }
     function HashContant() {
