@@ -1,45 +1,20 @@
 $(document).ready(function () {
-    // pagepiling 自訂
-    $('#pagepiling').pagepiling({
-        //水平換頁
-        direction: 'horizontal',
-        menu: '#menu',
-        //換頁速度
-        scrollingSpeed: 700,
-        //循環回到首頁
-        loopBottom: true,
-        // 背景色
-        sectionsColor: ['#E3E3E3', '#E3E3E3', '#F1CA9E', '#94C28B', '#5596CA'],
-        // 連結名稱
-        anchors: ['home', 'about', 'skills', 'works', 'contact'],
-        // 點瀏覽
-        navigation: {
-            'position': 'nav-position',
-            'tooltips': ['Home', 'About', 'Skills', 'Works', 'Contact']
-        },
-        afterRender: function () {
-            $('#pp-nav').addClass('custom');
-        },
-        afterLoad: function (anchorLink, index) {
-            if (index > 1) {
-                $('#pp-nav').removeClass('custom');
-            } else {
-                $('#pp-nav').addClass('custom');
-            }
-        }
-    });
-    // 停止滾動
-    $.fn.pagepiling.setAllowScrolling(false);
     // header 載入
-    // $('.section').prepend('<header><noscript>請升級您的瀏覽器以便預覽此網站</noscript></header>');
-    $('header').load('./share/header.html', function () {
+    //header 載入
+    $('.header-index').load('./share/header.html', function () {
         MenuPlay();
         TimeBg();
-        // ArrowPages();
-        // MenuAnchor();
         $(".logo-wrapper>a").click(function(){
-            window.location.href = 'index.html#home'
+             window.location.href = "index.html";
         })
+    });
+    $('.header-work').load('.././share/header-work.html', function () {
+        MenuPlay();
+        TimeBg();
+        $(".logo-wrapper>a").click(function(){
+             window.location.href = "../index.html";
+        })
+        // MenuAnchor();
     });
     // menu 執行 
     function MenuPlay() {
