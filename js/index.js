@@ -10,11 +10,11 @@ $(document).ready(function () {
         "#works": "3",
         "#contact": "4"
     }
-    let hashName = window.location.hash
+    // let hashName = window.location.hash
     // 執行呼叫
-    SectionSlide();
-    HomeTime();
+    // SectionSlide();
     ArrowPages();
+    HomeTime();
     BlueBgMousemove();
     worksTabs();
     NavClassAn();
@@ -38,7 +38,7 @@ $(document).ready(function () {
             $(".about,.skills").addClass("pp-table");
         }
     }
-    // Time 時間更換動畫
+    // Time 時間更換背景|動畫
     function HomeTime() {
         $.ajax({
             type: 'GET',
@@ -181,7 +181,7 @@ $(document).ready(function () {
         let $MoreBtn = $(".loadMore")
         $(".works-wrapper").each(function (index, element) {
             $WorksBox = $(this).find(".works-box")
-            $WorksBox.slice(0, 6).css('display', 'inline-block'); 
+            $WorksBox.slice(0, 6).css('display', 'inline-block');
         });
         // .on指定事件
         $MoreBtn.on("click", function (e) {
@@ -221,26 +221,26 @@ $(document).ready(function () {
         });
     }
     // 偵測跳頁-左右滑動
-    function SectionSlide() {
-        $(".section").on("swipeleft", function(e){
-            hashName = window.location.hash
-            hashNum = data2[hashName]
-            hashNum++
-            if(hashNum>4){
-                hashNum = 0
-            }
-            window.location.href = '#'+data[hashNum]
-        });
-         $(".section").on("swiperight", function(e){
-            hashName = window.location.hash
-            hashNum = data2[hashName]
-            hashNum--
-            if(hashNum<0){
-                hashNum = 4
-            }
-            window.location.href = '#'+data[hashNum]
-        });
-    }
+    // function SectionSlide() {
+    //     $(".section").on("swipeleft", function(e){
+    //         hashName = window.location.hash
+    //         hashNum = data2[hashName]
+    //         hashNum++
+    //         if(hashNum>4){
+    //             hashNum = 0
+    //         }
+    //         window.location.href = '#'+data[hashNum]
+    //     });
+    //      $(".section").on("swiperight", function(e){
+    //         hashName = window.location.hash
+    //         hashNum = data2[hashName]
+    //         hashNum--
+    //         if(hashNum<0){
+    //             hashNum = 4
+    //         }
+    //         window.location.href = '#'+data[hashNum]
+    //     });
+    // }
     // hash偵測跳頁-左右箭頭
     function ArrowPages() {
         $(".arrow-pages-right").click(function(e){
@@ -289,11 +289,11 @@ $(document).ready(function () {
     }
     // hash&行動-指定段落執行動畫
     function HashClassAn() {
-        $(window).hashchange( function(){
+        if ("onhashchange" in window) {
             setTimeout(() => {
                 HashContant();
             }, 1000);
-        })
+        }
         HashContant();
     }
     function HashContant() {

@@ -1,28 +1,17 @@
 $(document).ready(function () {
-    // 偵測網址資料庫
-    let data2 = {
-        "": "0",
-        "#home": "0",
-        "#about": "1",
-        "#skills": "2",
-        "#works": "3",
-        "#contact": "4"
-    }
     //header 載入
-    $('header').load('./share/header.html', function () {
+    $('.header-index').load('./share/header.html', function () {
         MenuPlay();
         TimeBg();
-        MenuAnchor();
         $(".logo-wrapper>a").click(function(){
-            window.location.href = 'index.html#home'
+             window.location.href = "index.html";
         })
     });
-    $('.header-work').load('../share/header-work.html', function () {
+    $('.header-work').load('.././share/header-work.html', function () {
         MenuPlay();
         TimeBg();
-        MenuAnchor();
         $(".logo-wrapper>a").click(function(){
-            window.location.href = 'index.html#home'
+             window.location.href = "../index.html";
         })
     });
     // Time 時間更換背景
@@ -91,15 +80,6 @@ $(document).ready(function () {
             let getAMenuName = $(this).attr('data-hoverAn');
             $(".menu-icon-wrapper").toggleClass(getAMenuName);
         });
-    }
-    // nav跳頁-漢堡選單 
-    function MenuAnchor() {
-        $(".menu-pages").click(function(){
-            let targetAnchorNum = $(this).attr('data-anchor')
-            $("#pp-nav > ul > li:nth-child("+targetAnchorNum+") a").click()
-            hashName = window.location.hash
-            hashNum = data2[hashName];
-        })
     }
     // 900px 後偵測橫屏
     let ms = window.matchMedia("(max-width: 900px)");
