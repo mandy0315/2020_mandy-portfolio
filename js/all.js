@@ -19,14 +19,14 @@ $(document).ready(function () {
              window.location.href = "index.html";
         })
     });
-    $('.header-work').load('.././share/header-work.html', function () {
-        MenuPlay();
-        TimeBg();
-        $(".logo-wrapper>a").click(function(){
-             window.location.href = "../index.html";
-        })
-        // MenuAnchor();
-    });
+    // $('.header-work').load('.././share/header-work.html', function () {
+    //     MenuPlay();
+    //     TimeBg();
+    //     $(".logo-wrapper>a").click(function(){
+    //          window.location.href = "../index.html";
+    //     })
+    //     // MenuAnchor();
+    // });
     // function MenuAnchor() {
     //     $(".menu-pages").click(function(){
             
