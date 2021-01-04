@@ -13,6 +13,7 @@ $(document).ready(function () {
     let hashName = window.location.hash
     // 執行呼叫
     SectionSlide();
+    ArrowPages()
     HomeTime();
     BlueBgMousemove();
     worksTabs();
@@ -178,6 +179,27 @@ $(document).ready(function () {
             $(".home-bluecity-down img").css("transform", "translateX(" + starRX + "px)")
         });
     };
+     // hash偵測跳頁-左右箭頭
+    function ArrowPages() {
+        $(".arrow-pages-right").click(function(e){
+            hashName = window.location.hash
+            hashNum = data2[hashName]
+            hashNum++
+            if(hashNum>4){
+                hashNum = 0
+            }
+            window.location.href = '#'+data[hashNum]
+        })
+        $(".arrow-pages-left").click(function(e){
+            hashName = window.location.hash
+            hashNum = data2[hashName]
+            hashNum--
+            if(hashNum<0){
+                hashNum = 4
+            }
+            window.location.href = '#'+data[hashNum]
+        })
+    }
     // 載入更多
     function getLoadMore() {
         let $WorksBox
@@ -271,11 +293,11 @@ $(document).ready(function () {
     }
     // hash&行動-指定段落執行動畫
     function HashClassAn() {
-        $(window).hashchange( function(){
-            setTimeout(() => {
+        window.addEventListener('hashchange',function(){
+             setTimeout(() => {
                 HashContant();
             }, 1000);
-        })
+        });
         HashContant();
     }
     function HashContant() {

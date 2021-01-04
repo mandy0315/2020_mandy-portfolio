@@ -34,8 +34,8 @@ $(document).ready(function () {
     $('header').load('./share/header.html', function () {
         MenuPlay();
         TimeBg();
-        ArrowPages();
-        MenuAnchor();
+        // ArrowPages();
+        // MenuAnchor();
         $(".logo-wrapper>a").click(function(){
             window.location.href = 'index.html#home'
         })
@@ -106,27 +106,6 @@ $(document).ready(function () {
                 }
             }
         });
-    }
-    // hash偵測跳頁-左右箭頭
-    function ArrowPages() {
-        $(".arrow-pages-right").click(function(e){
-            hashName = window.location.hash
-            hashNum = data2[hashName]
-            hashNum++
-            if(hashNum>4){
-                hashNum = 0
-            }
-            window.location.href = '#'+data[hashNum]
-        })
-        $(".arrow-pages-left").click(function(e){
-            hashName = window.location.hash
-            hashNum = data2[hashName]
-            hashNum--
-            if(hashNum<0){
-                hashNum = 4
-            }
-            window.location.href = '#'+data[hashNum]
-        })
     }
     // nav跳頁-漢堡選單 
     function MenuAnchor() {
