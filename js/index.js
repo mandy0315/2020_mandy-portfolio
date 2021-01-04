@@ -13,7 +13,7 @@ $(document).ready(function () {
     let hashName = window.location.hash
     // 執行呼叫
     SectionSlide();
-    ArrowPages()
+    
     HomeTime();
     BlueBgMousemove();
     worksTabs();
@@ -293,11 +293,11 @@ $(document).ready(function () {
     }
     // hash&行動-指定段落執行動畫
     function HashClassAn() {
-        $(window).hashchange( function(){
-            setTimeout(() => {
+        window.addEventListener('hashchange',function(){
+             setTimeout(() => {
                 HashContant();
             }, 1000);
-        })
+        });
         HashContant();
     }
     function HashContant() {
