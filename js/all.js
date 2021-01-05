@@ -1,5 +1,14 @@
 $(document).ready(function () {
-    // header 載入
+    // 偵測網址資料庫
+    let data2 = {
+        "": "0",
+        "#home": "0",
+        "#about": "1",
+        "#skills": "2",
+        "#works": "3",
+        "#contact": "4"
+    }
+    let hashName = window.location.hash
     //header 載入
     $('.header-index').load('./share/header.html', function () {
         MenuPlay();
@@ -12,6 +21,7 @@ $(document).ready(function () {
     $('.header-work').load('.././share/header-work.html', function () {
         MenuPlay();
         TimeBg();
+        MMenuAnchor();
         $(".logo-wrapper>a").click(function(){
              window.location.href = "../index.html";
         })
@@ -62,6 +72,15 @@ $(document).ready(function () {
     function MenuAnchor() {
         $(".menu-pages").click(function(){
             let targetAnchorNum = $(this).attr('data-anchor')
+            $("#pp-nav > ul > li:nth-child("+targetAnchorNum+") a").click()
+            hashName = window.location.hash
+            hashNum = data2[hashName];
+        })
+    }
+    function MMenuAnchor() {
+        $(".menu-pages").click(function(){
+            let targetAnchorNum = $(this).attr('data-anchor')
+            window.location.href='../'+ '#' +
             $("#pp-nav > ul > li:nth-child("+targetAnchorNum+") a").click()
             hashName = window.location.hash
             hashNum = data2[hashName];

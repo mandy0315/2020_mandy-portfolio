@@ -245,27 +245,39 @@ $(document).ready(function () {
             $content.eq($tabIndex).fadeIn(900).css('display', 'block').siblings().css('display', 'none');
         });
     }
-    // 偵測跳頁-左右滑動
+    // 手機版 左右滑動 
     function SectionSlide() {
-        $(".section").on("swipeleft", function(e){
-            hashName = window.location.hash
-            hashNum = data2[hashName]
-            hashNum++
-            if(hashNum>4){
-                hashNum = 0
-            }
-            window.location.href = '#'+data[hashNum]
-        });
-         $(".section").on("swiperight", function(e){
-            hashName = window.location.hash
-            hashNum = data2[hashName]
-            hashNum--
-            if(hashNum<0){
-                hashNum = 4
-            }
-            window.location.href = '#'+data[hashNum]
+        // 不需要jQuery mobile ,調整滑動的靈敏度，請調整5和-5
+        $('.section').on('touchstart', function(event){
+            const xClick = event.originalEvent.touches[0].pageX;
+            $(this).one('touchmove', function(event){
+                const xMove = event.originalEvent.touches[0].pageX;
+                const sensitivityInPx = 5;
+                if( Math.floor(xClick - xMove) > sensitivityInPx ){
+                    hashName = window.location.hash
+                    hashNum = data2[hashName]
+                    hashNum++
+                    if(hashNum>4){
+                        hashNum = 0
+                    }
+                    window.location.href = '#'+data[hashNum]
+                }
+                else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
+                    hashName = window.location.hash
+                    hashNum = data2[hashName]
+                    hashNum--
+                    if(hashNum<0){
+                    hashNum = 4
+                    }
+                    window.location.href = '#'+data[hashNum]
+                }
+            });
+            $(this).on('touchend', function(){
+                $(this).off('touchmove');
+            });
         });
     }
+
     // nav跳頁-指定段落執行動畫
     function NavClassAn() {
         $('#pp-nav>ul>li>a').click(function (e) { 
