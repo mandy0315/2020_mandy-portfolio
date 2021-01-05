@@ -406,4 +406,5 @@ $(document).ready(function () {
             $(".mobileH-window").fadeOut(500);
         }
     }
+
 });
