@@ -650,6 +650,7 @@ header
     bottom: 2.6rem
     z-index: 5
 .works-mountain-wrapper
+    position: relative
     margin-top: -6rem
     .works-mountain-box
         height: 200px
@@ -712,6 +713,12 @@ header
         bottom: 2rem
         img
             width: 100%
+    &.worksPages-b-tree
+        width: 1920px
+        left: calc(50% - 960px)
+        bottom: -2rem
+        &:nth-of-type(1)
+            bottom: -2.8rem
 .m-works-b-tree
     display: none
 .section-contant-container
@@ -815,6 +822,150 @@ header
         color: $green
         background-color: #fff
 /* works end */ 
+/* works-pages */
+.worksPages-btitle-wrapper
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+.worksPages-left-img,.worksPages-right-img
+    .worksPages-day,.worksPages-night
+        width: 12rem
+        display: none
+        &.worksPages-night
+            width: 16rem
+.worksPages-title-wrapper
+    padding: 1.5rem 0 0 0
+.worksPages-nav
+    width: 100%
+    padding: 1rem 0
+    ul
+        width: 100%
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        li
+            font-size: $l-p
+            float: left
+            color: $white
+            letter-spacing: 2px
+            line-height: 2
+            &::after
+                content: ""
+                width: 18px
+                margin: 0 4px 6px 4px
+                height: 1px
+                background-color: $white
+                display: inline-block
+            &:last-child
+                &::after
+                    display: none
+            a
+                font-size: $l-p
+                color: $white
+                flex-direction: column
+                &:hover
+                    color: $yellow
+.worksPages-animal
+    position: absolute
+    bottom: 0
+    left: 4rem
+    z-index: 20
+    .worksPages-animal-img
+        width: 16rem
+.worksPages-bird-box
+    display: flex
+    justify-content: flex-end
+    padding: 0rem 6rem
+    margin-bottom: -0.2rem 
+    .worksPages-bird-img
+        width: 2.4rem
+.worksPages-contant
+    position: relative
+    padding: 4rem 6rem
+    z-index: 10
+    border: 2px solid $brown
+    width: 100%
+    background: url(../images/works/worksPages-Bg2.svg) repeat-y
+.worksPages-text-wrapper
+    width: 100%
+    padding: 2.8rem 2rem
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    .worksPages-text-left,.worksPages-text-right
+        width: 50%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &.worksPages-text-right
+            p
+                color: $brown
+                font-size: $l-p
+        &.worksPages-text-left
+            .worksPages-stitle
+                margin-bottom: 2rem
+                h4
+                    color: $brown
+                    font-size: $h4
+                    font-weight: bold
+                    padding-bottom: .4rem
+                a
+                    color: #5596CA
+                    flex-direction: column
+                    font-size: 16px
+                    width: 100%
+                    word-wrap: break-word
+                    line-height: 1.4
+                    &::before
+                        margin-right: 10px
+                    &:hover
+                        opacity: 0.5 
+            .worksPages-myskills
+                color: $brown
+                border-left: 2px dashed rgba(77,50,36,.6)
+                padding-left: 20px
+                h5
+                    font-size: $h5
+                    font-weight: bold
+                ul
+                    width: 100%
+                    display: block
+                    li
+                        font-size: $l-p
+                        font-weight: normal
+                        line-height: 2
+                        letter-spacing: 2px
+                        padding-right: 20px
+                        display: inline-block
+                        float: left
+.worksPages-mountain-wrapper
+    margin-top: -10rem
+.scroll-top
+    position: absolute
+    bottom: -1px
+    right: 0
+    a
+        display: inline-block
+        flex-direction: column
+        background-color: $brown
+        padding: .4rem
+        svg
+            width: 1.8rem
+            fill: $white
+            -webkit-transform: translateY(0.2rem) rotate(-90deg)
+            transform: translateY(0.2rem) rotate(-90deg)
+            transition: all 0.3s ease-out
+            -webkit-transition: all 0.3s ease-out
+        &:hover
+            svg
+                fill: $yellow
+                transition: all 0.3s ease-in
+                -webkit-transition: all 0.3s ease-in
+                -webkit-transform: translateY(-0.1rem) rotate(-90deg)
+                transform: translateY(-0.1rem) rotate(-90deg)
+
+/* works-pages end */ 
 /* contact */
 .contact-contant-container
     padding-bottom: 6rem          
@@ -943,7 +1094,7 @@ header
             width: 18rem
             img
                 width: 100%
-.contact-copyright
+.contact-copyright,.worksPages-copyright
     position: relative
     z-index: 25
     padding: 0.5rem 0px 20rem 0
@@ -954,6 +1105,11 @@ header
         text-align: center
         font-size: 12px
         font-weight: normal
+    &.worksPages-copyright
+        padding: 0.5rem 0px
+        background: $green
+        p
+            color: $white
 .contact-FishsIslands-box
     display: flex
     justify-content: center

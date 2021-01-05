@@ -105,9 +105,14 @@ $(document).ready(function () {
                 if (hh >= 6 && hh <= 16) {
                     //背景
                     $(".section-AirBg-wrapper,.menu-contant-box").addClass("day");
+                    $('.worksPages-day').fadeIn(500);
+                    $('.worksPages-night').hide;
+
                 } else {
                     //背景
                     $(".section-AirBg-wrapper,.menu-contant-box").addClass("night");
+                    $('.worksPages-night').fadeIn(500);
+                    $('.worksPages-day').hide;
                 }
             }
         });

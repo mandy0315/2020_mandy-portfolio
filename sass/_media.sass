@@ -169,6 +169,34 @@
         bottom: 2.2rem
     .tabs
         margin-bottom: 2.4rem
+    .worksPages-text-wrapper
+        padding: 2.8rem 2rem 6rem 2rem
+    /* workPages */ 
+    .worksPages-nav
+        ul
+            li
+                font-size: $mobile-l-p
+                a
+                    font-size: $mobile-l-p
+    .worksPages-text-wrapper
+        .worksPages-text-left,.worksPages-text-right
+            &.worksPages-text-right
+                p
+                    font-size: $mobile-l-p
+            &.worksPages-text-left
+                .worksPages-stitle
+                    h4
+                        font-size: $h5
+                .worksPages-myskills
+                    h5
+                        font-size: $h6
+                    ul
+                        li
+                            font-size: $mobile-l-p
+    .works-animal-box,.works-b-tree,.works-tree
+        &.worksPages-b-tree
+            width: 1600px
+            left: calc(50% - 800px)
     /* contact */
     .contact-air-box
         .home-day-box,.home-night-box
@@ -238,6 +266,10 @@
     .works-mountain-wrapper
         .works-mountain-box
             height: 260px
+    .worksPages-mountain-wrapper
+        margin-top: -12rem
+    .worksPages-contant
+        padding: 4rem 4rem
     /* contact */
     .contact-contant-container
         padding-bottom: 0
@@ -251,8 +283,16 @@
         .skills-design-img,.skills-code-img
             .skills-bubble
                 width: 11rem
+    /* works */
     .tab-wrapper
         padding: 0 1.6rem
+    .works-animal-box,.works-b-tree,.works-tree
+        &.worksPages-b-tree
+            display: none
+    .worksPages-left-img,.worksPages-right-img
+        .worksPages-day,.worksPages-night
+            &.worksPages-day
+                width: 10rem
 @media only screen and (max-width: 1024px)
     /* home */
     .home-air-wrapper
@@ -336,7 +376,17 @@
         a
             font-size: $h6
             padding: 0.3rem 1rem
-    /* works */
+    .worksPages-contant
+        padding: 4rem 2rem
+    .worksPages-animal
+        left: 1.6rem
+    .worksPages-left-img,.worksPages-right-img
+        .worksPages-day,.worksPages-night
+            &.worksPages-night
+                width: 11rem
+    .worksPages-bird-box
+        padding: 0rem 1.6rem
+    /* contact */
     .contact-air-box
         padding: 0 0 4rem 0
     /* 關掉左右箭頭 */
@@ -359,6 +409,7 @@
             left: calc(50% - 500px)
     .home-my-box
         left: 200px
+    /* about */
     .about-contant-box
         flex-direction: column
         margin: 2rem 6rem 0 6rem
@@ -403,6 +454,24 @@
                         margin-left: 0
     .tab-content
         margin-bottom: 6rem
+    .worksPages-text-wrapper
+        .worksPages-text-left,.worksPages-text-right
+            width: 100%
+            &.worksPages-text-left
+                .worksPages-stitle
+                    margin-bottom: 1.2rem
+            &.worksPages-text-right
+                margin: 2rem 0
+    .worksPages-left-img,.worksPages-right-img
+        .worksPages-day,.worksPages-night
+            &.worksPages-day
+                width: 8rem
+            &.worksPages-night
+                width: 8rem
+    .worksPages-contant
+        padding: 2.4rem 2rem
+    .worksPages-text-wrapper
+        padding: 1.5rem 1rem 6rem 1rem
     /* contact */
     .contact-air-box
         padding: 0
@@ -537,7 +606,17 @@
                     margin-bottom: calc(1.2rem * 2 / 1)
     .tab-wrapper
         padding: 0 1rem
-    /* works */
+    .worksPages-bird-box
+        .worksPages-bird-img
+            width: 2rem
+    .worksPages-animal
+        .worksPages-animal-img
+            width: 14rem
+    .worksPages-left-img,.worksPages-right-img
+        .worksPages-day,.worksPages-night
+            &.worksPages-day
+                width: 6rem
+    /* contact */
     .contact-contant-wrapper
         padding: 0 0 1rem 0
     .contact-copyright
@@ -647,6 +726,27 @@
         margin-bottom: 0
     .loadMore
         margin: 1rem auto 2rem auto
+    .worksPages-left-img,.worksPages-right-img
+        display: none
+    .worksPages-nav
+        ul
+            li
+                &::after
+                    width: 10px
+    .worksPages-text-wrapper
+        padding: 1.5rem 1rem 4rem 1rem
+    .worksPages-animal
+        .worksPages-animal-img
+            width: 12rem
+    .worksPages-bird-box
+        .worksPages-bird-img
+            width: 1.6rem
+    .worksPages-contant
+        padding: 1.6rem
+    .worksPages-mountain-wrapper
+        margin-top: 0rem
+        .works-mountain-box
+            height: 80px
     /* contact */
     .contact-contant-wrapper
         padding: 1.2rem 0
@@ -706,10 +806,12 @@
             height: 58px
             img
                 padding: 4px 12px 0px 12px
+    /* about */
     .about-contant-box
         margin: 2.4rem 1rem 0rem 1rem
         .about-img
             width: 12rem
+    /* skills */
     .skills-design-box,.skills-code-box
         flex-wrap: wrap
         .skills-design-text,.skills-code-text
@@ -720,6 +822,10 @@
                     padding-left: 0
             .design-text,.code-text
                 padding-left: 0
+    /* works */
+    .worksPages-text-wrapper
+        padding: 1.5rem 0
+    /* contact */
     .contact-contant-wrapper
         padding: 1rem 0
     .contact-contant-box
@@ -738,6 +844,7 @@
         bottom: 0
 
 @media only screen and (max-width: 320px)
+    /* home */
     .home-day-box,.home-night-box
         height: 200px
     .home-city-box
@@ -745,6 +852,49 @@
     .home-my-box
         width: 4.6rem
         top: calc(50% - 6.8rem)
+    /* about */
+    .about-contant-box
+        margin: 2.4rem 0 0 0
+    .about-AirCamera-box
+        .about-AirCamera-img
+            width: 8.4rem
+    .about-my-box
+        .about-my-img
+            width: 6.8rem
+    .about-contant-box
+        .about-img
+            width: 11rem
+    /* skills */
+    .skills-contant-box
+        padding: 0
+    .skills-sea-box
+        .skills-my-box
+            .skills-my-img
+                width: 5.8rem
+    .skills-tortoise-box
+        img
+            width: 5rem
+    /* works */
+    .tabs
+        a
+            font-size: 16px
+            padding: 0.3rem .8rem
+    .tab-wrapper
+        padding: 0
+    .works-mountain-wrapper
+        .works-mountain-box
+            height: 196px
+            .works-my-box
+                .works-my-img
+                    width: 3rem
+    .m-works-b-tree
+        max-width: 220px
+    .worksPages-contant
+        padding: 1.2rem
+    .worksPages-mountain-wrapper
+        .works-mountain-box
+            height: 90px
+    /* contact */
     .contact-contant-wrapper
         padding: 1.2rem 0 2rem 0		
     .contact-contant-box
@@ -758,40 +908,6 @@
         .title-img
             max-width: 6.6rem
             width: 6.6rem
-    .tabs
-        a
-            font-size: 16px
-            padding: 0.3rem .8rem
-    .tab-wrapper
-        padding: 0
-    .about-contant-box
-        margin: 2.4rem 0 0 0
-    .about-AirCamera-box
-        .about-AirCamera-img
-            width: 8.4rem
-    .about-my-box
-        .about-my-img
-            width: 6.8rem
-    .about-contant-box
-        .about-img
-            width: 11rem
-    .skills-contant-box
-        padding: 0
-    .skills-sea-box
-        .skills-my-box
-            .skills-my-img
-                width: 5.8rem
-    .works-mountain-wrapper
-        .works-mountain-box
-            height: 196px
-            .works-my-box
-                .works-my-img
-                    width: 3rem
-    .m-works-b-tree
-        max-width: 220px
-    .skills-tortoise-box
-        img
-            width: 5rem
     .contact-sea-wrapper
         padding-top: 0rem
     .contact-copyright
@@ -799,8 +915,3 @@
     .contact-contant-box
         .contant-box
             padding: .5rem
-
-
-
-
-                

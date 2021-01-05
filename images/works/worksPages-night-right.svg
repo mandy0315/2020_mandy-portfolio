@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 239.41 66.96">
+    <defs>
+        <style>.cls-1{fill:#f2f2f3;}.cls-2{fill:#f5e69a;}</style>
+    </defs>
+    <title>worksPages-night-right</title>
+    <g class="star-w">
+        <path class="cls-1" d="M231,67c0-6.58-1.85-8.43-8.42-8.43,6.57,0,8.42-1.85,8.42-8.43,0,6.58,1.85,8.43,8.43,8.43C232.83,58.53,231,60.38,231,67Z"/>
+        <path class="cls-1" d="M10.53,21.06c0-8.22-2.31-10.53-10.53-10.53C8.22,10.53,10.53,8.22,10.53,0c0,8.22,2.31,10.53,10.53,10.53C12.84,10.53,10.53,12.84,10.53,21.06Z"/>
+        <animate attributeType="auto" attributeName="opacity" dur="1.4s" values="0.2;1;0.2" repeatCount="indefinite" begin="700ms"/>
+    </g>
+    <g class="star-y">
+        <path class="cls-2" d="M78.78,60.46c-.17-9.31-2.84-11.88-12.15-11.71,9.31-.17,11.88-2.84,11.71-12.15.17,9.31,2.84,11.88,12.15,11.71C81.18,48.48,78.61,51.15,78.78,60.46Z"/>
+        <path class="cls-2" d="M171.16,16.37c-.1-5.73-1.75-7.31-7.47-7.2,5.72-.11,7.31-1.75,7.2-7.48C171,7.42,172.64,9,178.37,8.9,172.64,9,171.06,10.64,171.16,16.37Z"/>
+        <animate attributeType="auto" attributeName="opacity" dur="1.4s" values="0.2;1;0.2" repeatCount="indefinite"/>
+    </g>
+</svg>
