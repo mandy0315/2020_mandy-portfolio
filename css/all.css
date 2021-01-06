@@ -1246,6 +1246,10 @@ header {
 .worksPages-text-wrapper .worksPages-text-left.worksPages-text-left .worksPages-stitle a:hover, .worksPages-text-wrapper .worksPages-text-right.worksPages-text-left .worksPages-stitle a:hover {
   opacity: 0.5;
 }
+.worksPages-text-wrapper .worksPages-text-left.worksPages-text-left .worksPages-stitle a.no-link, .worksPages-text-wrapper .worksPages-text-right.worksPages-text-left .worksPages-stitle a.no-link {
+  color: #858585;
+  pointer-events: none;
+}
 .worksPages-text-wrapper .worksPages-text-left.worksPages-text-left .worksPages-myskills, .worksPages-text-wrapper .worksPages-text-right.worksPages-text-left .worksPages-myskills {
   color: #4D3224;
   border-left: 2px dashed rgba(77, 50, 36, 0.6);
