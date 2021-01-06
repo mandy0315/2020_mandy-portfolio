@@ -18,7 +18,7 @@ $(document).ready(function () {
              window.location.href = "index.html";
         })
     });
-    $('.header-work').load('.././share/header-work.html', function () {
+    $('.header-works').load('.././share/header-works.html', function () {
         MenuPlay();
         TimeBg();
         MMenuAnchor();
