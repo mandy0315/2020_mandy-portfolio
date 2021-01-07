@@ -1090,13 +1090,21 @@ header {
 }
 .web-text p:before {
   content: "";
-  background: url(../images/icon/icon-web.svg) no-repeat;
   display: inline-block;
   background-size: contain;
   width: 22px;
   height: 20px;
   margin-right: 10px;
   vertical-align: middle;
+}
+.web-text p.icon-web:before {
+  background: url(../images/icon/icon-web.svg) no-repeat;
+}
+.web-text p.icon-ui:before {
+  background: url(../images/icon/icon-ui.svg) no-repeat;
+}
+.web-text p.icon-vision:before {
+  background: url(../images/icon/icon-vision.svg) no-repeat;
 }
 
 .loadMore {
@@ -1139,10 +1147,33 @@ header {
 .worksPages-title-wrapper {
   padding: 1.5rem 0 0 0;
 }
+.worksPages-title-wrapper .title-box .title-text h4 {
+  display: block;
+}
+.worksPages-title-wrapper .title-box .title-text h4::before {
+  content: "";
+  display: inline-block;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.worksPages-title-wrapper .title-box .title-text h4.icon-web::before {
+  background: url(../images/icon/icon-web.svg) no-repeat;
+}
+.worksPages-title-wrapper .title-box .title-text h4.icon-ui::before {
+  background: url(../images/icon/icon-ui.svg) no-repeat;
+}
+.worksPages-title-wrapper .title-box .title-text h4.icon-vision::before {
+  background: url(../images/icon/icon-vision.svg) no-repeat;
+}
 
 .worksPages-nav {
   width: 100%;
   padding: 1rem 0;
+  position: relative;
+  z-index: 10;
 }
 .worksPages-nav ul {
   width: 100%;
@@ -2715,6 +2746,14 @@ header {
   }
 }
 @media only screen and (max-width: 320px) {
+  .title-box .title-text h4 {
+    font-size: 18px;
+  }
+  .title-box .title-img {
+    max-width: 6.6rem;
+    width: 6.6rem;
+  }
+
   /* home */
   .home-day-box, .home-night-box {
     height: 200px;
@@ -2788,6 +2827,11 @@ header {
     height: 90px;
   }
 
+  .worksPages-title-wrapper .title-box .title-text h4::before {
+    width: 18px;
+    height: 18px;
+  }
+
   /* contact */
   .contact-contant-wrapper {
     padding: 1.2rem 0 2rem 0;
@@ -2798,14 +2842,6 @@ header {
   }
   .contact-contant-box .contact-myhitballoon {
     max-width: 3rem;
-  }
-
-  .title-box .title-text h4 {
-    font-size: 18px;
-  }
-  .title-box .title-img {
-    max-width: 6.6rem;
-    width: 6.6rem;
   }
 
   .contact-sea-wrapper {

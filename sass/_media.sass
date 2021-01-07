@@ -844,6 +844,13 @@
         bottom: 0
 
 @media only screen and (max-width: 320px)
+    .title-box
+        .title-text
+            h4
+                font-size: $h6
+        .title-img
+            max-width: 6.6rem
+            width: 6.6rem
     /* home */
     .home-day-box,.home-night-box
         height: 200px
@@ -894,6 +901,13 @@
     .worksPages-mountain-wrapper
         .works-mountain-box
             height: 90px
+    .worksPages-title-wrapper
+        .title-box
+            .title-text
+                h4
+                    &::before
+                        width: 18px
+                        height: 18px
     /* contact */
     .contact-contant-wrapper
         padding: 1.2rem 0 2rem 0		
@@ -901,13 +915,6 @@
         max-width: 80%
         .contact-myhitballoon
             max-width: 3rem
-    .title-box
-        .title-text
-            h4
-                font-size: $h6
-        .title-img
-            max-width: 6.6rem
-            width: 6.6rem
     .contact-sea-wrapper
         padding-top: 0rem
     .contact-copyright
