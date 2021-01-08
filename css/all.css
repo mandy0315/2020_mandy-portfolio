@@ -855,10 +855,8 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  top: 20%;
   padding-bottom: 2rem;
   padding-right: 1rem;
 }
@@ -883,6 +881,7 @@ header {
   font-size: 14px;
 }
 .skills-design-box .skills-design-img .design-svg, .skills-design-box .skills-code-img .design-svg, .skills-code-box .skills-design-img .design-svg, .skills-code-box .skills-code-img .design-svg {
+  top: 6%;
   padding-left: 2rem;
   padding-top: 1rem;
   transform: translate(10px, 16px);
