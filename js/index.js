@@ -27,15 +27,15 @@ $(document).ready(function () {
     // nav 虛線匯入
     $('#pp-nav').append('<div class="line-dotted"></div>');
     // 768px 執行滾動
-    let mm = window.matchMedia("(max-width: 768px)");
+    let mm = window.matchMedia("(max-width: 1440px)");
     resizeWidth(mm);
     function resizeWidth(pMatchMedia) {
         if (pMatchMedia.matches) {
-            $(".about,.skills").addClass("pp-scrollable");
-            $(".about,.skills").removeClass("pp-table");
+            $(".about,.skills,.home,.contact").addClass("pp-scrollable");
+            $(".about,.skills,.home,.contact").removeClass("pp-table");
         }else {
-            $(".about,.skills").removeClass("pp-scrollable");
-            $(".about,.skills").addClass("pp-table");
+            $(".about,.skills,.home,.contact").removeClass("pp-scrollable");
+            $(".about,.skills,.home,.contact").addClass("pp-table");
         }
     }
     // Time 時間更換背景|動畫

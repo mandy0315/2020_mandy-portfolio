@@ -26,9 +26,9 @@ $(document).ready(function(){
 		}, time);
 	}
 	
-		function LoadingClose() {
-			setTimeout(() =>{
-				$('#loading-container').fadeOut(400);
-			}, time);
-		}
+	function LoadingClose() {
+		setTimeout(() =>{
+			$('#loading-container').fadeOut(400);
+		}, time);
+	}
 });
