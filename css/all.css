@@ -83,6 +83,7 @@ body.lock {
 h1, h2, h3, h4, h5, h6, p {
   letter-spacing: 2px;
   line-height: 2;
+  font-weight: normal;
 }
 
 a {
@@ -100,7 +101,7 @@ a {
 }
 
 .font-en {
-  font-family: "Lobster", cursive;
+  font-family: "Lobster", cursive !important;
   font-weight: bold;
 }
 
@@ -117,15 +118,79 @@ a {
 }
 
 /* loading */
-#loading-box, #loading-works-box {
+#loading-container {
   position: fixed;
   z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  background-color: #E8E8E8;
+}
+
+.loading-box {
+  position: absolute;
+  top: calc(50% - 180px);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 500px;
+  margin: auto;
+  z-index: 1001;
+}
+.loading-box#loading-map {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 80px;
+}
+.loading-box#loading-map svg {
+  width: 35px;
+}
+
+.loading-my {
+  position: relative;
+  left: -80px;
+  width: 80px;
+  bottom: -5px;
+  margin-left: 0%;
+  z-index: 5;
+}
+
+.loader-box {
+  position: relative;
+  z-index: 10;
+  height: 30px;
+  width: 100%;
+  border: 2px solid #4D3224;
+  border-radius: 20px;
+}
+.loader-box .loadbar-hidden {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
   opacity: 1;
-  -webkit-transition: opacity 1s 0s;
-  transition: opacity 1s 0s;
+}
+.loader-box .loadbar {
+  width: 0%;
+  height: 100%;
+  background: #D75968;
+  border-right: 1px solid #4D3224;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.loading-text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 24px;
+  color: #4D3224;
+  letter-spacing: 3px;
+}
+.loading-text span {
+  font-size: 28px;
 }
 
 /* loading end */
@@ -296,6 +361,7 @@ header {
   color: #ffffff;
   font-size: 20px;
   line-height: 1.2;
+  font-weight: bold;
 }
 .menu-contant-box .menu-text ul li h5 span {
   font-size: 36px;
@@ -696,7 +762,7 @@ header {
 }
 .about-contant-box .about-text h4 {
   color: #F5E69A;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.8;
   padding-bottom: 0.5rem;
 }
@@ -1222,7 +1288,9 @@ header {
   display: flex;
   justify-content: flex-end;
   padding: 0rem 6rem;
-  margin-bottom: -0.2rem;
+  position: relative;
+  bottom: -3px;
+  z-index: 15;
 }
 .worksPages-bird-box .worksPages-bird-img {
   width: 2.4rem;
@@ -1234,7 +1302,9 @@ header {
   z-index: 10;
   border: 2px solid #4D3224;
   width: 100%;
-  background: url(../images/works/worksPages-Bg2.svg) repeat-y;
+  height: 100%;
+  background: url(../images/home/Bg2.jpg) repeat-y;
+  background-size: contain;
 }
 
 .worksPages-text-wrapper {
@@ -2128,6 +2198,29 @@ header {
   }
 }
 @media only screen and (max-width: 768px) {
+  /* loading */
+  .loading-box {
+    max-width: 375px;
+  }
+  .loading-box#loading-map {
+    margin-top: 65px;
+  }
+  .loading-box#loading-map svg {
+    width: 30px;
+  }
+
+  .loading-my {
+    position: relative;
+    left: -65px;
+    width: 65px;
+    bottom: -5px;
+  }
+
+  .loading-text {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
   /* jquery.pagepiling */
   #pp-nav.nav-position {
     left: 0px;
@@ -2462,6 +2555,28 @@ header {
   }
 }
 @media only screen and (max-width: 414px) {
+  /* loading */
+  .loading-box {
+    max-width: 240px;
+  }
+  .loading-box#loading-map {
+    margin-top: 55px;
+  }
+  .loading-box#loading-map svg {
+    width: 25px;
+  }
+
+  .loading-my {
+    position: relative;
+    left: -55px;
+    width: 55px;
+    bottom: -5px;
+  }
+
+  .loading-text {
+    font-size: 18px;
+  }
+
   /* header */
   .header-box {
     height: 4rem;
@@ -2489,7 +2604,7 @@ header {
   .about-contant-box .about-text {
     max-width: 100%;
   }
-  .about-contant-box .about-text br {
+  .about-contant-box .about-text h4 br {
     display: none;
   }
   .about-contant-box .about-img {
@@ -3194,4 +3309,16 @@ header {
   100% {
     transform: scale(1);
   }
+}
+.loading-text-an span {
+  -webkit-animation: typed-cursor-An 800ms linear infinite;
+  animation: typed-cursor-An 800ms linear infinite;
+}
+.loading-text-an span:nth-of-type(2) {
+  -webkit-animation-delay: 100ms;
+  animation-delay: 100ms;
+}
+.loading-text-an span:nth-of-type(3) {
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
 }

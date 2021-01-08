@@ -393,6 +393,21 @@
     .arrow-pages-left,.arrow-pages-right
         display: none 
 @media only screen and (max-width: 768px)
+    /* loading */ 
+    .loading-box
+        max-width: 375px
+        &#loading-map
+            margin-top: 65px
+            svg
+                width: 30px
+    .loading-my
+        position: relative
+        left: -65px
+        width: 65px
+        bottom: -5px
+    .loading-text
+        font-size: $h5
+        margin-top: 0
     /* jquery.pagepiling */ 
     #pp-nav.nav-position
         left: 0px
@@ -630,6 +645,20 @@
         display: none
     
 @media only screen and (max-width: 414px)
+    /* loading */ 
+    .loading-box
+        max-width: 240px
+        &#loading-map
+            margin-top: 55px
+            svg
+                width: 25px
+    .loading-my
+        position: relative
+        left: -55px
+        width: 55px
+        bottom: -5px
+    .loading-text
+        font-size: $l-p
     /* header */
     .header-box
         height: 4rem
@@ -650,8 +679,9 @@
     .about-contant-box
         .about-text
             max-width: 100%
-            br
-                display: none
+            h4
+                br
+                    display: none
         .about-img
             margin-bottom: 1rem
     .about-AirCamera-box
