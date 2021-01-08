@@ -14,7 +14,6 @@ $(document).ready(function(){
 			LoadingInit();
 		});
 		LoadingInit();
-		LoadingClose();
 	}
 	function LoadingInit(){
 		// Loadbar Animation 
@@ -25,9 +24,14 @@ $(document).ready(function(){
 			marginLeft: 100 + "%"
 		}, time);
 	}
-	function LoadingClose() {
-		setTimeout(() =>{
-			$('#loading-container').fadeOut(400);
-		}, time);
-	}
+	$(window).on('load', function () {
+		 if($("body").hasClass('container')){
+			LoadingClose()
+		}
+		function LoadingClose() {
+			setTimeout(() =>{
+				$('#loading-container').fadeOut(400);
+			}, time);
+		}
+	});
 });

@@ -2057,6 +2057,10 @@ header {
   }
 }
 @media only screen and (max-width: 1024px) {
+  .title-box .title-text h4 {
+    font-weight: bold;
+  }
+
   /* home */
   .home-air-wrapper {
     margin: -2rem 0 0 0;
