@@ -26,7 +26,7 @@ $(document).ready(function () {
     AirCameraAn();
     // nav 虛線匯入
     $('#pp-nav').append('<div class="line-dotted"></div>');
-    // 768px 執行滾動
+    // 1440px 執行滾動
     let mm = window.matchMedia("(max-width: 1440px)");
     resizeWidth(mm);
     function resizeWidth(pMatchMedia) {
