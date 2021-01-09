@@ -13,8 +13,6 @@ $(document).ready(function () {
         var container = $(this);
         var lastScrolledDestiny;
         var lastAnimation = 0;
-        var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));
-        var touchStartY = 0, touchStartX = 0, touchEndY = 0, touchEndX = 0;
         var scrollings = [];
 
         //Defines the delay to take place before being able to scroll to the next section
@@ -40,9 +38,6 @@ $(document).ready(function () {
                 position: 'right',
                 tooltips: []
             },
-            normalScrollElements: null,
-            normalScrollElementTouchThreshold: 5,
-            touchSensitivity: 5,
             keyboardScrolling: true,
             sectionSelector: '.section',
             animateAnchor: false,
@@ -72,19 +67,6 @@ $(document).ready(function () {
                 addMouseWheelHandler();
             }else{
                 removeMouseWheelHandler();
-            }
-        };
-
-        /**
-        * Adds or remove the possiblity of scrolling through sections by using the mouse wheel/trackpad or touch gestures.
-        */
-        PP.setAllowScrolling = function (value){
-            if(value){
-                PP.setMouseWheelScrolling(true);
-                addTouchHandler();
-            }else{
-                PP.setMouseWheelScrolling(false);
-                removeTouchHandler();
             }
         };
 
@@ -160,9 +142,6 @@ $(document).ready(function () {
             '-ms-touch-action': 'none',  /* Touch detection for Windows 8 */
             'touch-action': 'none'       /* IE 11 on Windows Phone 8.1*/
         });
-
-        //init
-        PP.setAllowScrolling(true);
 
         //creating the navigation dots
         if (!$.isEmptyObject(options.navigation) ) {
@@ -715,31 +694,6 @@ $(document).ready(function () {
             }
         }
 
-        /**
-        * Adds the possibility to auto scroll through sections on touch devices. */
-        function addTouchHandler(){
-            if(isTouch){
-                //Microsoft pointers
-                var MSPointer = getMSPointer();
-
-                container.off('touchstart ' +  MSPointer.down).on('touchstart ' + MSPointer.down, touchStartHandler);
-                container.off('touchmove ' + MSPointer.move).on('touchmove ' + MSPointer.move, touchMoveHandler);
-            }
-        }
-
-        /**
-        * Removes the auto scrolling for touch devices.
-        */
-        function removeTouchHandler(){
-            if(isTouch){
-                //Microsoft pointers
-                var MSPointer = getMSPointer();
-
-                container.off('touchstart ' + MSPointer.down);
-                container.off('touchmove ' + MSPointer.move);
-            }
-        }
-
         /*
         * Returns and object with Microsoft pointers (for IE<11 and for IE >= 11)
         * http://msdn.microsoft.com/en-us/library/ie/dn304886(v=vs.85).aspx
@@ -792,51 +746,6 @@ $(document).ready(function () {
                 var touchEvents = getEventsPage(e);
                 touchStartY = touchEvents.y;
                 touchStartX = touchEvents.x;
-            }
-        }
-
-        /* Detecting touch events
-        */
-        function touchMoveHandler(event){
-            var e = event.originalEvent;
-
-            // additional: if one of the normalScrollElements isn't within options.normalScrollElementTouchThreshold hops up the DOM chain
-            if ( !checkParentForNormalScrollElement(event.target) && isReallyTouch(e) ) {
-
-                var activeSection = $('.pp-section.active');
-                var scrollable = isScrollable(activeSection);
-
-                if(!scrollable.length){
-                    event.preventDefault();
-                }
-
-                if (!isMoving()) {
-                    var touchEvents = getEventsPage(e);
-                    touchEndY = touchEvents.y;
-                    touchEndX = touchEvents.x;
-
-                  //$('body').append('<span style="position:fixed; top: 250px; left: 20px; z-index:88; font-size: 25px; color: #000;">touchEndY: ' + touchEndY  + '</div>');
-
-                    //X movement bigger than Y movement?
-                    if (options.direction === 'horizontal' && Math.abs(touchStartX - touchEndX) > (Math.abs(touchStartY - touchEndY))) {
-                        //is the movement greater than the minimum resistance to scroll?
-                        if (Math.abs(touchStartX - touchEndX) > (container.width() / 100 * options.touchSensitivity)) {
-                            if (touchStartX > touchEndX) {
-                                scrolling('down', scrollable);
-                            } else if (touchEndX > touchStartX) {
-                                scrolling('up', scrollable);
-                            }
-                        }
-                    } else {
-                        if (Math.abs(touchStartY - touchEndY) > (container.height() / 100 * options.touchSensitivity)) {
-                            if (touchStartY > touchEndY) {
-                                scrolling('down', scrollable);
-                            } else if (touchEndY > touchStartY) {
-                                scrolling('up', scrollable);
-                            }
-                        }
-                    }
-                }
             }
         }
 
@@ -1012,7 +921,5 @@ $(document).ready(function () {
             }
         }
     });
-    // 停止滾動
-    $.fn.pagepiling.setAllowScrolling(false);
 
 });
