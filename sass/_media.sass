@@ -284,8 +284,6 @@
     .contact-FishsIslands-box
         .contact-islands-box
             .contact-islands
-                // width: 28rem
-                // height: 9.4rem
                 width: 30rem
                 height: 10rem
                 .contact-islands-about,.contact-islands-work
@@ -566,21 +564,28 @@
         display: none
     .contact-FishsIslands-box
         .contact-islands-box
+            width: 100%
             .contact-islands
-                max-width: 90%
-                width: 90%
+                max-width: 100%
+                width: 100%
                 margin: 0 auto
+                height: 12rem
                 .contact-islands-about,.contact-islands-work
                     margin-top: -10px
                     &.contact-islands-work
-                        margin-top: -20px
+                        margin-top: -35px
         .contact-fishs-box,.contact-TurtleMedusa-box
             display: none
     .m-contact-FishsTurtleMedusa-box
         display: block
         width: 100%
+        bottom: 0
     .contact-sea-wrapper
         padding-top: 3.2rem
+        .contact-sea-box
+            height: auto
+            width: 70%
+            margin: auto
     
 @media only screen and (max-width: 640px)
     /* header */
@@ -704,6 +709,11 @@
             max-width: 4.6rem
     .my-community-box
         display: none
+    .contact-sea-wrapper
+        .contact-sea-box
+            width: 80%
+    .m-contact-FishsTurtleMedusa-box
+        padding: 0px
     
 @media only screen and (max-width: 414px)
     /* loading */ 
@@ -783,7 +793,6 @@
                     .text
                         font-size: 12px
                         letter-spacing: 0
-
     .skills-sea-box
         .skills-seabed,.skills-seasand,.skills-coral
             &.skills-coral
@@ -865,9 +874,16 @@
                         padding-bottom: .2rem
     .contact-sea-wrapper
         padding-top: 2.8rem
+        .contact-sea-box
+            width: 80%
     .contact-copyright
         padding: 0 0 6rem 0
-
+    .contact-FishsIslands-box
+        .contact-islands-box
+            .contact-islands
+                .contact-islands-about,.contact-islands-work
+                    &.contact-islands-work
+                        margin-top: -20px
 @media only screen and (max-width: 375px)
     .menu-contant-box
         .menu-text
@@ -928,6 +944,11 @@
     .contact-contant-box
         .contact-myhitballoon
             max-width: 3.6rem
+    .contact-sea-wrapper
+        .contact-sea-box
+            margin-bottom: 2rem
+    .m-contact-FishsTurtleMedusa-box
+        bottom: -1rem
     .title-box
         .title-img
             &.title-img-c
@@ -937,8 +958,6 @@
         .contact-islands-box
             .contact-islands
                 height: 7.6rem
-    .m-contact-FishsTurtleMedusa-box
-        bottom: 0
 
 @media only screen and (max-width: 320px)
     .title-box
@@ -1014,6 +1033,10 @@
             max-width: 3rem
     .contact-sea-wrapper
         padding-top: 0rem
+        .contact-sea-box
+            margin-bottom: 0
     .contact-contant-box
         .contant-box
             padding: .5rem
+    .m-contact-FishsTurtleMedusa-box
+        bottom: 0

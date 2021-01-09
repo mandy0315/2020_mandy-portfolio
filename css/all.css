@@ -2423,16 +2423,20 @@ header {
     display: none;
   }
 
+  .contact-FishsIslands-box .contact-islands-box {
+    width: 100%;
+  }
   .contact-FishsIslands-box .contact-islands-box .contact-islands {
-    max-width: 90%;
-    width: 90%;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
+    height: 12rem;
   }
   .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work {
     margin-top: -10px;
   }
   .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about.contact-islands-work, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work.contact-islands-work {
-    margin-top: -20px;
+    margin-top: -35px;
   }
   .contact-FishsIslands-box .contact-fishs-box, .contact-FishsIslands-box .contact-TurtleMedusa-box {
     display: none;
@@ -2441,10 +2445,16 @@ header {
   .m-contact-FishsTurtleMedusa-box {
     display: block;
     width: 100%;
+    bottom: 0;
   }
 
   .contact-sea-wrapper {
     padding-top: 3.2rem;
+  }
+  .contact-sea-wrapper .contact-sea-box {
+    height: auto;
+    width: 70%;
+    margin: auto;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -2613,6 +2623,14 @@ header {
 
   .my-community-box {
     display: none;
+  }
+
+  .contact-sea-wrapper .contact-sea-box {
+    width: 80%;
+  }
+
+  .m-contact-FishsTurtleMedusa-box {
+    padding: 0px;
   }
 }
 @media only screen and (max-width: 414px) {
@@ -2834,9 +2852,16 @@ header {
   .contact-sea-wrapper {
     padding-top: 2.8rem;
   }
+  .contact-sea-wrapper .contact-sea-box {
+    width: 80%;
+  }
 
   .contact-copyright {
     padding: 0 0 6rem 0;
+  }
+
+  .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about.contact-islands-work, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work.contact-islands-work {
+    margin-top: -20px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -2919,6 +2944,14 @@ header {
     max-width: 3.6rem;
   }
 
+  .contact-sea-wrapper .contact-sea-box {
+    margin-bottom: 2rem;
+  }
+
+  .m-contact-FishsTurtleMedusa-box {
+    bottom: -1rem;
+  }
+
   .title-box .title-img.title-img-c {
     max-width: 8rem;
     width: 8rem;
@@ -2926,10 +2959,6 @@ header {
 
   .contact-FishsIslands-box .contact-islands-box .contact-islands {
     height: 7.6rem;
-  }
-
-  .m-contact-FishsTurtleMedusa-box {
-    bottom: 0;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -3034,9 +3063,16 @@ header {
   .contact-sea-wrapper {
     padding-top: 0rem;
   }
+  .contact-sea-wrapper .contact-sea-box {
+    margin-bottom: 0;
+  }
 
   .contact-contant-box .contant-box {
     padding: 0.5rem;
+  }
+
+  .m-contact-FishsTurtleMedusa-box {
+    bottom: 0;
   }
 }
 .animate__animated.animate__fadeInUp {
