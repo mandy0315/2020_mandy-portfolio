@@ -1,3 +1,62 @@
+// 960px後 橫式手機
+.mH-menu-contant-box
+    width: 100%
+    .menu-text
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        ul
+            height: 40%
+            width: 84%
+            flex-direction: row
+            padding: 0
+            align-items: center
+            flex-wrap: wrap
+            justify-content: flex-start
+            .menu-pages
+                width: 20%
+                a
+                    h5
+                        span
+                            font-size: 32px
+            .menu-line
+                display: none
+    .menu-bgw-box
+        display: none
+@media only screen and (max-width: 812px)
+    .mH-menu-contant-box
+        .menu-text
+            ul
+                .menu-pages
+                    width: 33.3%
+        .menu-img-down
+            ul
+                .menu-hitballoon
+                    width: 4.6rem
+                    bottom: 10px
+@media only screen and (max-width: 568px)
+    .mH-menu-contant-box
+        .menu-text
+            ul
+                height: 60%
+                width: 80%
+            .menu-pages
+                width: 20%
+                a
+                    h5
+                        font-size: 16px
+                        span
+                            font-size: 28px
+            .menu-community
+                h5
+                    font-size: 16px
+        .menu-img-down
+            ul
+                .menu-hitballoon
+                    display: none
+
+// 電腦直式橫式;手機直式
 @media only screen and (max-width: 1440px)
     /* home */ 
     .home-city-box
@@ -415,7 +474,7 @@
     /* jquery.pagepiling */ 
     #pp-nav.nav-position
         left: 0px
-        right: 0px
+        right: 0px !important
         display: block
         max-width: 180px
         margin: auto
@@ -502,7 +561,7 @@
         .contant-box
             padding: 2rem
     .contact-copyright
-        padding: 1rem 0rem 20rem 0
+        padding: 1rem 0rem 6rem 0
     .contact-hitballoon-left,.contact-hitballoon-right
         display: none
     .contact-FishsIslands-box
@@ -538,17 +597,17 @@
             width: 140px
             height: 60px
     /* menu */
-    .menu-bgw-box
-        display: none
     .menu-contant-box
-        width: 100%
         .menu-text
             ul
                 li
                     h5
+                        font-size: $mobile-l-p
                         span
-                            font-size: $mobile-l-title
-                            line-height: 1.5
+                            font-size: $h3
+        .menu-community
+            h5
+                font-size: $h3
         .menu-img-down
             ul
                 .menu-hitballoon
@@ -638,8 +697,6 @@
     /* contact */
     .contact-contant-wrapper
         padding: 0 0 1rem 0
-    .contact-copyright
-        padding: 0.2rem 0 0 0
     .contact-contant-box
         .contant-box
             padding: 1rem
@@ -667,7 +724,10 @@
     .header-box
         height: 4rem
     /* menu */
+    .menu-bgw-box
+        display: none
     .menu-contant-box
+        width: 100%
         .menu-text
             ul
                 li
@@ -805,6 +865,9 @@
                         padding-bottom: .2rem
     .contact-sea-wrapper
         padding-top: 2.8rem
+    .contact-copyright
+        padding: 0 0 6rem 0
+
 @media only screen and (max-width: 375px)
     .menu-contant-box
         .menu-text
@@ -951,8 +1014,6 @@
             max-width: 3rem
     .contact-sea-wrapper
         padding-top: 0rem
-    .contact-copyright
-        display: none
     .contact-contant-box
         .contant-box
             padding: .5rem

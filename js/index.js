@@ -400,23 +400,5 @@ $(document).ready(function () {
             loop: true
         });
     }
-    // 900px 後偵測橫屏
-    let ms = window.matchMedia("(max-width: 900px)");
-    resizeSWidth(ms);
-    function resizeSWidth(SMatchMedia) {
-        if (SMatchMedia.matches) {
-            //用户变化屏幕方向时调用
-            $(window).bind( 'orientationchange', function(e){
-                MobileH();
-            });
-        }
-    }
-    function MobileH() {
-        if (window.orientation==90||window.orientation==-90) {
-            $(".mobileH-window").show()
-        } else {
-            $(".mobileH-window").fadeOut(500);
-        }
-    }
 
 });

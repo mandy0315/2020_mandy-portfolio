@@ -117,5 +117,23 @@ $(document).ready(function () {
             }
         });
     }
+    // 960px後 手機橫屏
+    let ms = window.matchMedia("(max-width: 960px)");
+    resizeSWidth(ms);
+    function resizeSWidth(SMatchMedia) {
+        if (SMatchMedia.matches) {
+            //用户变化屏幕方向时调用
+            $(window).bind( 'orientationchange', function(e){
+                MobileH();
+            });
+        }
+    }
+    function MobileH() {
+        if (window.orientation==90||window.orientation==-90) {
+            $('.menu-contant-box').addClass('mH-menu-contant-box');
+        } else {
+            $('.menu-contant-box').removeClass('mH-menu-contant-box');
+        }
+    }
 
 });
