@@ -117,11 +117,6 @@ a {
   display: none;
 }
 
-.section {
-  width: 100%;
-  overflow: hidden;
-}
-
 /* loading */
 #loading-container {
   position: fixed;
