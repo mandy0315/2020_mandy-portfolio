@@ -182,15 +182,12 @@ a {
   overflow: hidden;
 }
 
-.loading-text {
-  margin-top: 10px;
+.loading-text-box {
   text-align: center;
-  font-size: 24px;
-  color: #4D3224;
-  letter-spacing: 3px;
+  margin-top: 1rem;
 }
-.loading-text span {
-  font-size: 28px;
+.loading-text-box svg {
+  width: 8rem;
 }
 
 /* loading end */
@@ -2299,9 +2296,8 @@ header {
     bottom: -5px;
   }
 
-  .loading-text {
-    font-size: 20px;
-    margin-top: 0;
+  .loading-text-box svg {
+    width: 7.5rem;
   }
 
   /* jquery.pagepiling */
@@ -2672,8 +2668,8 @@ header {
     bottom: -5px;
   }
 
-  .loading-text {
-    font-size: 18px;
+  .loading-text-box svg {
+    width: 6rem;
   }
 
   /* header */
