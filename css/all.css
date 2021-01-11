@@ -3147,74 +3147,36 @@ header {
   animation: turn 16s linear infinite;
 }
 
-@keyframes turn {
-  from {
-    -webkit-transform: rotateZ(0deg) translate3d(0, 0, 0);
-    transform: rotateZ(0deg) translate3d(0, 0, 0);
-  }
-  to {
-    -webkit-transform: rotateZ(-360deg) translate3d(0, 0, 0);
-    transform: rotateZ(-360deg) translate3d(0, 0, 0);
-  }
-}
-.home-car-up-an li {
+.home-day-car.home-car-up-an.active li, .home-night-car.home-car-up-an.active li {
   -webkit-animation: home-car-up 12s linear infinite;
   animation: home-car-up 12s linear infinite;
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
 }
-.home-car-up-an li:nth-child(2) {
+.home-day-car.home-car-up-an.active li:nth-child(2), .home-night-car.home-car-up-an.active li:nth-child(2) {
   -webkit-animation-delay: 9s;
   animation-delay: 9s;
 }
-.home-car-up-an li:nth-child(3) {
+.home-day-car.home-car-up-an.active li:nth-child(3), .home-night-car.home-car-up-an.active li:nth-child(3) {
   -webkit-animation-delay: 10s;
   animation-delay: 10s;
 }
-.home-car-up-an li:nth-child(4) {
+.home-day-car.home-car-up-an.active li:nth-child(4), .home-night-car.home-car-up-an.active li:nth-child(4) {
   -webkit-animation-delay: 14s;
   animation-delay: 14s;
 }
 
-@keyframes home-car-up {
-  from {
-    opacity: 1;
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(-20%);
-    transform: translateX(-20%);
-  }
-}
-.home-car-down-an li {
+.home-day-car2.home-car-down-an.active li, .home-night-car2.home-car-down-an.active li {
   -webkit-animation: home-car-down 12s linear infinite;
   animation: home-car-down 12s linear infinite;
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
 }
-.home-car-down-an li:nth-child(2) {
+.home-day-car2.home-car-down-an.active li:nth-child(2), .home-night-car2.home-car-down-an.active li:nth-child(2) {
   -webkit-animation-delay: 7s;
   animation-delay: 7s;
 }
-.home-car-down-an li:nth-child(3) {
+.home-day-car2.home-car-down-an.active li:nth-child(3), .home-night-car2.home-car-down-an.active li:nth-child(3) {
   -webkit-animation-delay: 10s;
   animation-delay: 10s;
 }
 
-@keyframes home-car-down {
-  from {
-    opacity: 1;
-    -webkit-transform: translateX(-20%);
-    transform: translateX(-20%);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
 .home-day-cloud-an2, .home-day-cloud-an3 {
   -webkit-animation: home-day-cloud 40s linear infinite;
   animation: home-day-cloud 40s linear infinite;
@@ -3226,40 +3188,12 @@ header {
   animation-delay: 20s;
 }
 
-@keyframes home-day-cloud {
-  from {
-    opacity: 1;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
 .home-moon-light-an img {
   -webkit-animation: home-moon-light 4s ease-in-out infinite;
   animation: home-moon-light 4s ease-in-out infinite;
   opacity: 1;
 }
 
-@keyframes home-moon-light {
-  0% {
-    opacity: 0.8;
-    -webkit-transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
-  }
-  100% {
-    opacity: 0.8;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
 .home-my-an {
   -webkit-animation: home-my 1s ease-in 1 forwards;
   animation: home-my 1s ease-in 1 forwards;
@@ -3268,18 +3202,6 @@ header {
   animation-delay: 4s;
 }
 
-@keyframes home-my {
-  from {
-    opacity: 0;
-    -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate(20px, 8px);
-    transform: translate(20px, 8px);
-  }
-}
 .about-my-photo-bg-an {
   -webkit-animation: turn 8s linear infinite;
   animation: turn 8s linear infinite;
@@ -3294,20 +3216,6 @@ header {
   animation-delay: 900ms;
 }
 
-@keyframes water-An {
-  0% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-  50% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-}
 .works-box a .web-img-an img {
   transform: scale(1);
   -webkit-transform: scale(1);
@@ -3358,18 +3266,6 @@ header {
   animation-delay: 2s;
 }
 
-@keyframes islands-An {
-  from {
-    opacity: 0;
-    transform: scale(0.2) translateY(80px);
-    -webkit-transform: scale(0.2) translateY(80px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0px);
-    -webkit-transform: scale(1) translateY(0px);
-  }
-}
 .about-my-box-an {
   -webkit-animation: home-car-down 10s linear infinite;
   animation: home-car-down 10s linear infinite;
@@ -3402,11 +3298,117 @@ header {
   }
 }
 .typed-cursor {
-  -webkit-animation: typed-cursor-An 800ms linear infinite;
-  animation: typed-cursor-An 800ms linear infinite;
+  -webkit-animation: opacityAn 800ms linear infinite;
+  animation: opacityAn 800ms linear infinite;
 }
 
-@keyframes typed-cursor-An {
+.worksPages-img-an img {
+  -webkit-animation: scaleImgAn 10s 0s ease-in-out infinite alternate;
+  animation: scaleImgAn 10s ease-in-out infinite alternate;
+}
+
+/* ------------------------ */
+@keyframes turn {
+  from {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 0, 0);
+    transform: rotateZ(0deg) translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: rotateZ(-360deg) translate3d(0, 0, 0);
+    transform: rotateZ(-360deg) translate3d(0, 0, 0);
+  }
+}
+@keyframes home-my {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(20px, 8px);
+    transform: translate(20px, 8px);
+  }
+}
+@keyframes home-car-up {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-25%);
+    transform: translateX(-25%);
+  }
+}
+@keyframes home-car-down {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(-25%);
+    transform: translateX(-25%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+@keyframes home-day-cloud {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+@keyframes home-moon-light {
+  0% {
+    opacity: 0.8;
+    -webkit-transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 0.8;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes water-An {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+@keyframes islands-An {
+  from {
+    opacity: 0;
+    transform: scale(0.2) translateY(80px);
+    -webkit-transform: scale(0.2) translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    -webkit-transform: scale(1) translateY(0px);
+  }
+}
+@keyframes opacityAn {
   0% {
     opacity: 0;
   }
@@ -3417,28 +3419,11 @@ header {
     opacity: 0;
   }
 }
-.worksPages-img-an img {
-  -webkit-animation: worksPages-img-An 10s 0s ease-in-out infinite alternate;
-  animation: worksPages-img-An 10s ease-in-out infinite alternate;
-}
-
-@keyframes worksPages-img-An {
+@keyframes scaleImgAn {
   0% {
     transform: scale(1.2);
   }
   100% {
     transform: scale(1);
   }
-}
-.loading-text-an span {
-  -webkit-animation: typed-cursor-An 800ms linear infinite;
-  animation: typed-cursor-An 800ms linear infinite;
-}
-.loading-text-an span:nth-of-type(2) {
-  -webkit-animation-delay: 100ms;
-  animation-delay: 100ms;
-}
-.loading-text-an span:nth-of-type(3) {
-  -webkit-animation-delay: 200ms;
-  animation-delay: 200ms;
 }

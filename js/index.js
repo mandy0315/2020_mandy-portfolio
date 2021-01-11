@@ -19,11 +19,7 @@ $(document).ready(function () {
     worksTabs();
     NavClassAn();
     HashClassAn();
-    BicycleAn();
-    WalkAn();
-    HitballoonAn();
-    SwimAn();
-    AirCameraAn();
+    lottieAn();
     // nav 虛線匯入
     $('#pp-nav').append('<div class="line-dotted"></div>');
     // 1440px 執行滾動
@@ -58,6 +54,7 @@ $(document).ready(function () {
                     $(".contact-sea-wrapper").addClass("day-contact-sea");
                     // Timeline動畫
                     DayTimelineAn();
+   
                 } else {
                     $(".home-night-box").addClass("active");
                     $(".home-day-box").removeClass("active");
@@ -72,6 +69,91 @@ $(document).ready(function () {
                 }
             }
         });
+    }
+    // nav跳頁-指定段落執行動畫
+    function NavClassAn() {
+        $('#pp-nav>ul>li>a').click(function (e) { 
+            let getAName = $(this).attr('href');
+            //home
+            if ($("#pagepiling [data-num=" + data2[getAName] + "].section").hasClass("home")) {
+                $(".home-day-car,.home-night-car").toggleClass("home-car-up-an");
+                $(".home-day-car2,.home-night-car2").toggleClass("home-car-down-an");
+            }
+            //about
+            if ($("#pagepiling [data-num=" + data2[getAName] + "].section").hasClass("about")) {
+                $(".about-my-box").toggleClass("about-my-box-an");
+                $(".about-my-photo-bg").toggleClass("about-my-photo-bg-an");
+            }
+            $("#pagepiling [data-num=" + data2[getAName] + "] .about-contant-box").addClass("animate__animated animate__fadeInUp");
+            //skills
+            if ($("#pagepiling [data-num=" + data2[getAName] + "].section").hasClass("skills")) {
+                $(".skills-my-box").toggleClass("skills-my-box-an");
+                TypingTextAn();
+                SkillsDesignAnimation();
+            }else{
+            }
+            $("#pagepiling [data-num=" + data2[getAName] + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
+             //works
+            if ($("#pagepiling [data-num=" + data2[getAName] + "].section").hasClass("works")) {
+                $(".works-my-box").toggleClass("works-my-box-an");
+            }
+            $("#pagepiling [data-num=" + data2[getAName] + "] .works-my-box").addClass("works-my-box-an");
+            $("#pagepiling [data-num=" + data2[getAName] + "] .tab-wrapper").addClass("animate__animated animate__fadeInUp");
+            $("#pagepiling [data-num=" + data2[getAName] + "] .works-animal-box").addClass("works-animal-box-an");
+            //contact
+            $("#pagepiling [data-num=" + data2[getAName] + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
+            $("#pagepiling [data-num=" + data2[getAName] + "]  .contact-FishsIslands-box,#pagepiling [data-num=" + data2[getAName] + "]  .m-contact-FishsTurtleMedusa-box").addClass("contact-FishsIslands-box-An");
+        });
+    }
+    // hash&行動-指定段落執行動畫
+    function HashClassAn() {
+        window.addEventListener('hashchange',function(){
+             setTimeout(() => {
+                HashContant();
+            }, 1000);
+        });
+        HashContant();
+    }
+    function HashContant() {
+        let hashNameAn = window.location.hash
+        let hashNumAn = data2[hashNameAn]
+        //home
+        if ($("#pagepiling [data-num=" + hashNumAn + "].section").hasClass("home")) {
+            $(".home-day-car,.home-night-car").addClass("home-car-up-an");
+            $(".home-day-car2,.home-night-car2").addClass("home-car-down-an");
+        }else{
+            $(".home-day-car,.home-night-car").removeClass("home-car-up-an");
+            $(".home-day-car2,.home-night-car2").removeClass("home-car-down-an");
+        }
+        //about
+        if ($("#pagepiling [data-num=" + hashNumAn + "].section").hasClass("about")) {
+            $(".about-my-box").addClass("about-my-box-an");
+            $(".about-my-photo-bg").addClass("about-my-photo-bg-an");
+        }else{
+            $(".about-my-box").removeClass("about-my-box-an");
+            $(".about-my-photo-bg").removeClass("about-my-photo-bg-an");
+        }
+        $("#pagepiling [data-num=" + hashNumAn + "] .about-contant-box").addClass("animate__animated animate__fadeInUp");
+        //skills
+        if ($("#pagepiling [data-num=" + hashNumAn + "].section").hasClass("skills")) {
+            $(".skills-my-box").addClass("skills-my-box-an");
+            TypingTextAn();
+            SkillsDesignAnimation();
+        }else{
+            $(".skills-my-box").removeClass("skills-my-box-an");
+        }
+        $("#pagepiling [data-num=" + hashNumAn + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
+        //works
+        if ($("#pagepiling [data-num=" + hashNumAn + "].section").hasClass("works")) {
+            $(".works-my-box").addClass("works-my-box-an");
+        }else{
+            $(".works-my-box").removeClass("works-my-box-an");
+        }
+        $("#pagepiling [data-num=" + hashNumAn + "] .tab-wrapper").addClass("animate__animated animate__fadeInUp");
+        $("#pagepiling [data-num=" + hashNumAn + "] .works-animal-box").addClass("works-animal-box-an");
+        //contact
+        $("#pagepiling [data-num=" + hashNumAn + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
+        $("#pagepiling [data-num=" + hashNumAn + "] .contact-FishsIslands-box,#pagepiling [data-num=" + hashNumAn + "] .m-contact-FishsTurtleMedusa-box").addClass("contact-FishsIslands-box-An");
     }
     // TweenMax 動畫
     // home-day-box 
@@ -101,61 +183,6 @@ $(document).ready(function () {
             .staggerFrom(stars, 0.8, { opacity: 0, y: 100, ease: Back.easeOut }, 1)
             .staggerFrom(bigTitle, 0.4, { opacity: 0, scale: 0.2, x: 30, y: 30, ease: Back.easeOut })
     }
-    let AnimateDesign = function($main) {
-        this.svgContainer = $main.find("#design-skill");
-        if (this.svgContainer.length === 0) {
-            return;
-        }
-        this.pen = this.svgContainer.find('#design-pen');
-        this.penHeight = 40;
-        this.penWidth = 82;
-        this.penpoint = this.svgContainer.find('#pen-point');
-        this.penpoint.css('opacity', '0');
-        this.penpoint2 = this.svgContainer.find('#pen-point2');
-        this.penpoint2.css('opacity', '0');
-        this.heart = this.svgContainer.find('#design-line');
-        this.heartPath = this.heart.find('#design-line-path')[0];
-
-        if (!this.heartPath) {
-            return;
-        }
-        this.pathobj = {
-            length: 0,
-            pathLength: this.heartPath.getTotalLength()
-        }
-        
-        this.pen.css('transform-origin', '-6px -19px 195px');
-        this.timeLine = new TimelineMax({
-            yoyo: true,
-            paused: true,
-            repeat: -1
-        })
-        
-        .to(this.penpoint, 0.4, {
-            opacity: 1
-
-        })
-
-        .to(this.pathobj, 2, {
-            length: this.pathobj.pathLength,
-            ease: Linear.easeNone,
-            onUpdateScope: this,
-            onUpdate: function() {
-                this.heartPath.style.strokeDasharray = [this.pathobj.length, this.pathobj.pathLength].join(' ');
-
-                var coords = this.heartPath.getPointAtLength(this.pathobj.length);
-
-                coords.y = coords.y + 50;
-                coords.x = coords.x - 50;
-                this.pen.css('transform', 'translate(' + coords.x + 'px, ' + coords.y + 'px) rotate(-45deg)');
-            }
-        })
-        .to(this.penpoint2, 0.4, {
-            opacity: 1
-
-        });
-        this.timeLine.play();
-    };
     function DesignAnimation($main) {
         var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
@@ -267,116 +294,43 @@ $(document).ready(function () {
             window.location.href = '#'+data[hashNum]
         });
     }
-
-    // nav跳頁-指定段落執行動畫
-    function NavClassAn() {
-        $('#pp-nav>ul>li>a').click(function (e) { 
-            let getAName = $(this).attr('href');
-            //about
-            $("#pagepiling [data-num=" + data2[getAName] + "] .about-my-box").addClass("about-my-box-an");
-            $("#pagepiling [data-num=" + data2[getAName] + "] .about-contant-box").addClass("animate__animated animate__fadeInUp");
-            //skills
-            if ($("#pagepiling [data-num=" + data2[getAName] + "].section").hasClass("skills")) {
-                $('.design-svg').load('./share/skills-design.html',function () {
-                    DesignAnimation($(".design-svg"));
-                });
-                $("#pagepiling [data-num=" + data2[getAName] + "] .skills-my-box").addClass("skills-my-box-an");
-                $("#pagepiling [data-num=" + data2[getAName] + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
-                TypingTextAn();
-            }
-             //works
-            $("#pagepiling [data-num=" + data2[getAName] + "] .works-my-box").addClass("works-my-box-an");
-            $("#pagepiling [data-num=" + data2[getAName] + "] .tab-wrapper").addClass("animate__animated animate__fadeInUp");
-            $("#pagepiling [data-num=" + data2[getAName] + "] .works-animal-box").addClass("works-animal-box-an");
-            //contact
-            $("#pagepiling [data-num=" + data2[getAName] + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
-            $("#pagepiling [data-num=" + data2[getAName] + "]  .contact-FishsIslands-box,#pagepiling [data-num=" + data2[getAName] + "]  .m-contact-FishsTurtleMedusa-box").addClass("contact-FishsIslands-box-An");
-        });
-    }
-    // hash&行動-指定段落執行動畫
-    function HashClassAn() {
-        window.addEventListener('hashchange',function(){
-             setTimeout(() => {
-                HashContant();
-            }, 1000);
-        });
-        HashContant();
-    }
-    function HashContant() {
-        let hashNameAn = window.location.hash
-        let hashNumAn = data2[hashNameAn]
-        //about
-        $("#pagepiling [data-num=" + hashNumAn + "] .about-my-box").addClass("about-my-box-an");
-
-        $("#pagepiling [data-num=" + hashNumAn + "] .about-contant-box").addClass("animate__animated animate__fadeInUp");
-        //skills
-        if ($("#pagepiling [data-num=" + hashNumAn + "].section").hasClass("skills")) {
-            $('.design-svg').load('./share/skills-design.html',function () {
-                DesignAnimation($(".design-svg"));
-            });
-            $("#pagepiling [data-num=" + hashNumAn + "] .skills-my-box").addClass("skills-my-box-an");
-            $("#pagepiling [data-num=" + hashNumAn + "] .skills-contant-box").addClass("animate__animated animate__fadeInUp");
-            TypingTextAn();
-        }
-
-        //works
-        $("#pagepiling [data-num=" + hashNumAn + "] .works-my-box").addClass("works-my-box-an");
-
-        $("#pagepiling [data-num=" + hashNumAn + "] .tab-wrapper").addClass("animate__animated animate__fadeInUp");
-        $("#pagepiling [data-num=" + hashNumAn + "] .works-animal-box").addClass("works-animal-box-an");
-        //contact
-        $("#pagepiling [data-num=" + hashNumAn + "] .contact-contant-wrapper").addClass("animate__animated animate__fadeInUp");
-        $("#pagepiling [data-num=" + hashNumAn + "] .contact-FishsIslands-box,#pagepiling [data-num=" + hashNumAn + "] .m-contact-FishsTurtleMedusa-box").addClass("contact-FishsIslands-box-An");
-    }
     // bodymovin lottie動畫
-    function BicycleAn(){
-        lottie.loadAnimation({
+    function lottieAn(){
+        let BicycleAn  = lottie.loadAnimation({
             container: document.querySelector('.about-my-img'),
             renderer: 'svg', 
             loop: true,
             autoplay: true,
             path: './json/bicycle.min.json'
-        });
-    }
-    function WalkAn(){
-        lottie.loadAnimation({
-            container: document.querySelector('.works-my-img'),
-            renderer: 'svg', 
-            loop: true,
-            autoplay: true,
-            path: './json/walk.min.json'
-        });
-
-    }
-    function HitballoonAn(){
-        lottie.loadAnimation({
-            container: document.querySelector('.contact-myhitballoon'),
-            renderer: 'svg', 
-            loop: true,
-            autoplay: true,
-            path: './json/HotBalloon.min.json'
-        });
-
-    }
-     function SwimAn(){
-        lottie.loadAnimation({
+        })
+        let SwimAn = lottie.loadAnimation({
             container: document.querySelector('.skills-my-img'),
             renderer: 'svg', 
             loop: true,
             autoplay: true,
             path: './json/swim.min.json'
-        });
-
-    }
-    function AirCameraAn(){
-        lottie.loadAnimation({
+        })
+        let WalkAn = lottie.loadAnimation({
+            container: document.querySelector('.works-my-img'),
+            renderer: 'svg', 
+            loop: true,
+            autoplay: true,
+            path: './json/walk.min.json'
+        })
+        let HitballoonAn = lottie.loadAnimation({
+            container: document.querySelector('.contact-myhitballoon'),
+            renderer: 'svg', 
+            loop: true,
+            autoplay: true,
+            path: './json/HotBalloon.min.json'
+        })
+        let AirCameraAn = lottie.loadAnimation({
             container: document.querySelector('.about-AirCamera-img'),
             renderer: 'svg', 
             loop: true,
             autoplay: true,
             path: './json/AirCamera.min.json'
-        });
-
+        })
     }
     // 打字動畫
     function TypingTextAn(){
@@ -390,5 +344,66 @@ $(document).ready(function () {
             loop: true
         });
     }
+    // skills design動畫
+    function SkillsDesignAnimation(){
+        $('.design-svg').load('./share/skills-design.html',function () {
+            DesignAnimation($(".design-svg"));
+        });
+     }
+    let AnimateDesign = function($main) {
+        this.svgContainer = $main.find("#design-skill");
+        if (this.svgContainer.length === 0) {
+            return;
+        }
+        this.pen = this.svgContainer.find('#design-pen');
+        this.penHeight = 40;
+        this.penWidth = 82;
+        this.penpoint = this.svgContainer.find('#pen-point');
+        this.penpoint.css('opacity', '0');
+        this.penpoint2 = this.svgContainer.find('#pen-point2');
+        this.penpoint2.css('opacity', '0');
+        this.heart = this.svgContainer.find('#design-line');
+        this.heartPath = this.heart.find('#design-line-path')[0];
+
+        if (!this.heartPath) {
+            return;
+        }
+        this.pathobj = {
+            length: 0,
+            pathLength: this.heartPath.getTotalLength()
+        }
+        
+        this.pen.css('transform-origin', '-6px -19px 195px');
+        this.timeLine = new TimelineMax({
+            yoyo: true,
+            paused: true,
+            repeat: -1
+        })
+        
+        .to(this.penpoint, 0.4, {
+            opacity: 1
+
+        })
+
+        .to(this.pathobj, 2, {
+            length: this.pathobj.pathLength,
+            ease: Linear.easeNone,
+            onUpdateScope: this,
+            onUpdate: function() {
+                this.heartPath.style.strokeDasharray = [this.pathobj.length, this.pathobj.pathLength].join(' ');
+
+                var coords = this.heartPath.getPointAtLength(this.pathobj.length);
+
+                coords.y = coords.y + 50;
+                coords.x = coords.x - 50;
+                this.pen.css('transform', 'translate(' + coords.x + 'px, ' + coords.y + 'px) rotate(-45deg)');
+            }
+        })
+        .to(this.penpoint2, 0.4, {
+            opacity: 1
+
+        });
+        this.timeLine.play();
+    };
 
 });
