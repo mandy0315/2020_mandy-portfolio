@@ -82,13 +82,15 @@
                     -webkit-animation-delay: 10s
                     animation-delay: 10s
 //home-day-cloud-an
-.home-day-cloud-an2,.home-day-cloud-an3
-    -webkit-animation: home-day-cloud 40s linear infinite
-    animation: home-day-cloud 40s linear infinite
-    opacity: 0
-.home-day-cloud-an3
-    -webkit-animation-delay: 20s
-    animation-delay: 20s
+.home-day-box
+    &.active
+        .home-day-cloud-an2,.home-day-cloud-an3
+            -webkit-animation: home-day-cloud 40s linear infinite
+            animation: home-day-cloud 40s linear infinite
+            opacity: 0
+            &.home-day-cloud-an3
+                -webkit-animation-delay: 20s
+                animation-delay: 20s
 //home-moon-light-an
 .home-moon-light-an
     img
@@ -159,21 +161,21 @@
             animation-delay: 2s
 //直線游泳、腳踏車動畫
 .about-my-box-an
-    -webkit-animation: home-car-down 10s linear infinite
-    animation: home-car-down 10s linear infinite
+    -webkit-animation: home-car-down 14s linear infinite
+    animation: home-car-down 14s linear infinite
 .skills-my-box-an
-    -webkit-animation: home-car-down 16s linear infinite
-    animation: home-car-down 16s linear infinite 
+    -webkit-animation: home-car-down 14s linear infinite
+    animation: home-car-down 14s linear infinite 
 .works-my-box-an
-    -webkit-animation: home-car-down 24s linear infinite
-    animation: home-car-down 24s linear infinite 
+    -webkit-animation: home-car-down 20s linear infinite
+    animation: home-car-down 20s linear infinite 
 @media only screen and (max-width: 768px)
     .about-my-box-an
         -webkit-animation: home-car-down 6s linear infinite
         animation: home-car-down 6s linear infinite
     .skills-my-box-an
-        -webkit-animation: home-car-down 8s linear infinite
-        animation: home-car-down 8s linear infinite 
+        -webkit-animation: home-car-down 6s linear infinite
+        animation: home-car-down 6s linear infinite 
     .works-my-box-an
         -webkit-animation: home-car-down 10s linear infinite
         animation: home-car-down 10s linear infinite 

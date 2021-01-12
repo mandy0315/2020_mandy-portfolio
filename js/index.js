@@ -405,5 +405,4 @@ $(document).ready(function () {
         });
         this.timeLine.play();
     };
-
 });
