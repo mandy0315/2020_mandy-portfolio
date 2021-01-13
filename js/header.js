@@ -131,8 +131,10 @@ $(document).ready(function () {
     function MobileH() {
         if (window.orientation==90||window.orientation==-90) {
             $('.menu-contant-box').addClass('mH-menu-contant-box');
+            $('.home').addClass('H-home');
         } else {
             $('.menu-contant-box').removeClass('mH-menu-contant-box');
+            $('.home').removeClass('H-home');
         }
     }
 

@@ -46,8 +46,7 @@
     &.menu-contact-hoverAn
         img
             transform: rotateZ(390deg)
-            -webkit-transform: rotateZ(390deg)
-    
+            -webkit-transform: rotateZ(390deg) 
 //home-sun-an
 .home-day-sun-an
     img
@@ -60,33 +59,49 @@
             li
                 -webkit-animation: right-move 12s linear infinite
                 animation: right-move 12s linear infinite
+                -webkit-animation-delay: 2s
+                animation-delay: 2s
                 &:nth-child(2)
-                    -webkit-animation-delay: 1.8s
-                    animation-delay: 1.8s
+                    -webkit-animation-delay: 2.8s
+                    animation-delay: 2.8s
                 &:nth-child(3)
-                    -webkit-animation-delay: 2.4s
-                    animation-delay: 2.4s
-                &:nth-child(4)
                     -webkit-animation-delay: 4s
                     animation-delay: 4s
+                &:nth-child(4)
+                    -webkit-animation-delay: 6s
+                    animation-delay: 6s
 .home-day-car2,.home-night-car2
     &.home-car-down-an
         &.active
             li
                 -webkit-animation: left-move 12s linear infinite
                 animation: left-move 12s linear infinite
+                -webkit-animation-delay: 2s
+                animation-delay: 2s
                 &:nth-child(2)
-                    -webkit-animation-delay: 1.6s
-                    animation-delay: 1.6s
-                &:nth-child(3)
                     -webkit-animation-delay: 4s
                     animation-delay: 4s
-//home-day-cloud-an
+                &:nth-child(3)
+                    -webkit-animation-delay: 6s
+                    animation-delay: 6s
+@media only screen and (min-width: 1921px)
+    .home-day-car,.home-night-car
+        &.home-car-up-an
+            &.active
+                li
+                    -webkit-animation: right-move 10s linear infinite
+                    animation: right-move 10s linear infinite
+    .home-day-car2,.home-night-car2
+        &.home-car-down-an
+            &.active
+                li
+                    -webkit-animation: left-move 10s linear infinite
+                    animation: left-move 10s linear infinite
 .home-day-box
     &.active
         .home-day-cloud-an2,.home-day-cloud-an3
-            -webkit-animation: left-move 40s linear infinite
-            animation: left-move 40s linear infinite
+            -webkit-animation: cloud-move 40s linear infinite
+            animation: cloud-move 40s linear infinite
             opacity: 0
             &.home-day-cloud-an3
                 -webkit-animation-delay: 20s
@@ -161,24 +176,24 @@
             animation-delay: 2s
 //直線游泳、腳踏車動畫
 .about-my-box-an
-    -webkit-animation: left-move 10s linear infinite
-    animation: left-move 10s linear infinite
+    -webkit-animation: left-move 8.8s linear infinite
+    animation: left-move 8.8s linear infinite
 .skills-my-box-an
-    -webkit-animation: left-move 10s linear infinite
-    animation: left-move 10s linear infinite 
+    -webkit-animation: left-move 8.8s linear infinite
+    animation: left-move 8.8s linear infinite 
 .works-my-box-an
-    -webkit-animation: left-move 18s linear infinite
-    animation: left-move 18s linear infinite 
+    -webkit-animation: left-move 14s linear infinite
+    animation: left-move 14s linear infinite 
 @media only screen and (max-width: 768px)
     .about-my-box-an
-        -webkit-animation: left-move 6s linear infinite
-        animation: left-move 6s linear infinite
+        -webkit-animation: left-move 4s linear infinite
+        animation: left-move 4s linear infinite
     .skills-my-box-an
+        -webkit-animation: left-move 4s linear infinite
+        animation: left-move 4s linear infinite 
+    .works-my-box-an
         -webkit-animation: left-move 6s linear infinite
         animation: left-move 6s linear infinite 
-    .works-my-box-an
-        -webkit-animation: left-move 10s linear infinite
-        animation: left-move 10s linear infinite 
 //打字線
 .typed-cursor
     -webkit-animation: opacity 800ms linear infinite
@@ -212,13 +227,22 @@
         transform: translateX(100%)
     to
         opacity: 1
-        -webkit-transform: translateX(-50%)
-        transform: translateX(-50%)
+        -webkit-transform: translateX(-25%)
+        transform: translateX(-25%)
 @keyframes left-move
     from
         opacity: 1
-        -webkit-transform: translateX(-50%)
-        transform: translateX(-50%)
+        -webkit-transform: translateX(-25%)
+        transform: translateX(-25%)
+    to
+        opacity: 1
+        -webkit-transform: translateX(100%)
+        transform: translateX(100%)
+@keyframes cloud-move
+    from
+        opacity: 1
+        -webkit-transform: translateX(-100%)
+        transform: translateX(-100%)
     to
         opacity: 1
         -webkit-transform: translateX(100%)

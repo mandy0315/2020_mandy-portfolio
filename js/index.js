@@ -66,6 +66,7 @@ $(document).ready(function () {
                     $(".contact-sea-wrapper").addClass("day-contact-sea");
                     // Timeline動畫
                     DayTimelineAn();
+                    
                 } else {
                     $(".home-night-box").addClass("active");
                     $(".home-day-box").removeClass("active");
@@ -75,7 +76,7 @@ $(document).ready(function () {
                     //背景
                     $(".section-AirBg-wrapper,.menu-contant-box").addClass("night");
                     $(".contact-sea-wrapper").addClass("night-contact-sea");
-                    // Timeline動畫
+                    //Timeline動畫
                     NightTimelineAn();
                 }
             }

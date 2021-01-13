@@ -24,6 +24,11 @@
                 display: none
     .menu-bgw-box
         display: none
+.H-home
+    .m-icon-swipe
+        bottom: -1rem
+    .home-ZebraRoad
+        padding-bottom: 14rem
 @media only screen and (max-width: 812px)
     .mH-menu-contant-box
         .menu-text
@@ -122,8 +127,13 @@
         .title-line-dashed
             border-top: 2px dashed #ffffff
     //home
+    .home-day-box,.home-night-box,.home-city-box,.about-city-box
+        .home-day-sun,.home-night-moon-box,.home-day-cloud,.home-night-star
+            &.home-day-cloud
+                img
+                    width: 80%
     .home-city-box,.about-city-box,.skills-sea-box,.works-mountain-box,.contact-sea-box,.home-day-box,.home-night-box,.home-city-box,.about-city-box
-        height: 600px
+        height: 500px
         &.contact-sea-box
             height: 300px
         .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.contact-wave,.m-about-city,.home-day-sun,.home-night-moon-box,.home-day-cloud,.home-night-star
@@ -161,7 +171,49 @@
         .home-moon-light
             right: -10px
             top: 100px
-
+    .home-day-car,.home-day-car2,.home-night-car,.home-night-car2
+        &.home-night-car
+            ul
+                li
+                    .home-car-up01
+                        max-width: 10rem
+                    .home-scooter-up02
+                        max-width: 6rem
+                    .home-car-up03
+                        max-width: 10rem
+                    .home-car-up04
+                        max-width: 12rem
+        &.home-night-car2
+            top: -35px
+            ul
+                li
+                    .home-car-down01
+                        max-width: 13rem
+                    .home-car-down02
+                        max-width: 15rem
+                    .home-scooter-down03
+                        max-width: 7rem
+        &.home-day-car
+            ul
+                li
+                    .home-car-up01
+                        max-width: 7.8rem
+                    .home-scooter-up02
+                        max-width: 5rem
+                    .home-car-up03
+                        max-width: 7.8rem
+                    .home-car-up04
+                        max-width: 9rem
+        &.home-day-car2
+            top: -35px
+            ul
+                li
+                    .home-car-down01
+                        max-width: 11rem
+                    .home-car-down02
+                        max-width: 13rem
+                    .home-scooter-down03
+                        max-width: 6.6rem
     //about
     .about-contant-box
         .about-img
@@ -181,10 +233,13 @@
                 max-width: 8rem
     //skill
     .skills-sea-box
+        margin-top: 4rem
         .skills-my-box
-            top: 10rem
+            top: 8rem
             .skills-my-img
                 width: 14rem
+        .skills-seabed
+            bottom: 11rem
     .skills-design-box,.skills-code-box
         .skills-design-img,.skills-code-img
             .skills-bubble
@@ -201,6 +256,8 @@
         .skills-design-text,.skills-code-text
             h4
                 font-size: $h3
+    .skills-code-box
+        padding-top: 8rem
     //works
     .tab-wrapper
         max-width: 1440px
@@ -569,8 +626,6 @@
     /* contact */
     .contact-contant-container
         padding-bottom: 0
-    .contact-air-box
-        padding: 2rem 0 4rem 0
 @media only screen and (max-width: 1200px)
     .wrapper
         padding: 0 1.6rem
@@ -597,9 +652,6 @@
     /* home */
     .home-air-wrapper
         margin: -2rem 0 0 0
-    .home-my-box
-        width: 7rem
-        top: calc(50% - 11rem)
     .home-road-box
         .home-ZebraRoad
             width: 240px
@@ -691,7 +743,7 @@
         padding: 0rem 1.6rem
     /* contact */
     .contact-air-box
-        padding: 0 0 4rem 0
+        padding: 2rem 0 6rem 0
     /* 關掉左右箭頭 */
     .arrow-pages-left,.arrow-pages-right
         display: none 
@@ -719,6 +771,49 @@
         max-width: 180px
         margin: auto
     /* home */
+    .home-day-car,.home-day-car2,.home-night-car,.home-night-car2
+        &.home-day-car
+            ul
+                li
+                    .home-car-up01
+                        max-width: 4.6rem
+                    .home-scooter-up02
+                        max-width: 2rem
+                    .home-car-up03
+                        max-width: 4.6rem
+                    .home-car-up04
+                        max-width: 5rem
+        &.home-day-car2
+            top: -35px
+            ul
+                li
+                    .home-car-down01
+                        max-width: 4.8rem
+                    .home-car-down02
+                        max-width: 6rem
+                    .home-scooter-down03
+                        max-width: 3.2rem
+        &.home-night-car
+            ul
+                li
+                    .home-car-up01
+                        max-width: 6.8rem
+                    .home-scooter-up02
+                        max-width: 3.4rem
+                    .home-car-up03
+                        max-width: 6.8rem
+                    .home-car-up04
+                        max-width: 7rem
+        &.home-night-car2
+            top: -35px
+            ul
+                li
+                    .home-car-down01
+                        max-width: 8rem
+                    .home-car-down02
+                        max-width: 10rem
+                    .home-scooter-down03
+                        max-width: 4.2rem
     .home-air-wrapper
         margin: 2rem 0
     .home-day-box,.home-night-box,.home-city-box,.about-city-box
@@ -863,6 +958,48 @@
                 .menu-hitballoon
                     width: 5.4rem
     /* home */
+    .home-day-car,.home-day-car2,.home-night-car,.home-night-car2
+        &.home-day-car
+            ul
+                li
+                    .home-car-up01
+                        max-width: 4.6rem
+                    .home-scooter-up02
+                        max-width: 2rem
+                    .home-car-up03
+                        max-width: 4.6rem
+                    .home-car-up04
+                        max-width: 5rem
+        &.home-day-car2
+            top: -35px
+            ul
+                li
+                    .home-car-down01
+                        max-width: 4.8rem
+                    .home-car-down02
+                        max-width: 6rem
+                    .home-scooter-down03
+                        max-width: 3.2rem
+        &.home-night-car
+            ul
+                li
+                    .home-car-up01
+                        max-width: 5rem
+                    .home-scooter-up02
+                        max-width: 3.4rem
+                    .home-car-up03
+                        max-width: 5rem
+                    .home-car-up04
+                        max-width: 6rem
+        &.home-night-car2
+            ul
+                li
+                    .home-car-down01
+                        max-width: 5.2rem
+                    .home-car-down02
+                        max-width: 6.8rem
+                    .home-scooter-down03
+                        max-width: 3.8rem
     .home-city-box
         height: 280px
         .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.works-b-tree,.contact-wave
@@ -881,8 +1018,9 @@
         .home-ZebraRoad
             left: 20px
     .home-my-box
-        left: 20%
         width: 6.4rem
+        left: 20%
+        top: calc(50% - 10rem)
     .home-day-box,.home-night-box
         height: 200px
     /* about */
@@ -993,8 +1131,6 @@
     /* home */
     .home-city-box
         height: 260px
-    .home-my-box
-        width: 6.4rem
     /* about */
     .about-contant-wrapper,.skills-contant-wrapper,.works-title-wrapper
         padding-top: 2rem
@@ -1150,12 +1286,9 @@
         .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.works-b-tree,.contact-wave
             width: 1000px
             left: calc(50% - 580px)
-    .home-my-box
-        width: 5.2rem
-        top: calc(50% - 8rem)
     .home-road-box
         .home-ZebraRoad
-            width: 220px
+            width: 200px
     .menu-icon-wrapper
         .menu-icon
             width: 42px
