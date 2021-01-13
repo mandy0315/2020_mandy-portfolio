@@ -2438,86 +2438,25 @@ header {
   }
 }
 @media only screen and (max-width: 1366px) {
-  /* home */
-  .home-air-wrapper {
-    margin: 1rem 0;
-  }
-
-  /* about */
-  .about-contant-box {
-    margin: 2rem 6rem;
-  }
-
-  /* skills */
-  .skills-contant-box {
-    margin: 2rem 0;
-  }
-
-  /* works */
-  .works-mountain-wrapper .works-mountain-box {
-    height: 260px;
-  }
-
-  .worksPages-mountain-wrapper {
-    margin-top: -12rem;
-  }
-
-  .worksPages-contant {
-    padding: 4rem 4rem;
-  }
-
-  /* contact */
-  .contact-contant-container {
-    padding-bottom: 0;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .wrapper {
-    padding: 0 1.6rem;
-  }
-
-  /* skills */
-  .skills-design-box .skills-design-img .skills-bubble, .skills-design-box .skills-code-img .skills-bubble, .skills-code-box .skills-design-img .skills-bubble, .skills-code-box .skills-code-img .skills-bubble {
-    width: 11rem;
-  }
-
-  /* works */
-  .tab-wrapper {
-    padding: 0 1.6rem;
-  }
-
-  .works-animal-box.worksPages-b-tree, .works-b-tree.worksPages-b-tree, .works-tree.worksPages-b-tree {
-    display: none;
-  }
-
-  .worksPages-left-img .worksPages-day.worksPages-day, .worksPages-left-img .worksPages-night.worksPages-day, .worksPages-right-img .worksPages-day.worksPages-day, .worksPages-right-img .worksPages-night.worksPages-day {
-    width: 10rem;
-  }
-}
-@media only screen and (max-width: 1366px) {
   .title-box .title-text h4 {
     font-weight: bold;
   }
 
   /* home */
   .home-air-wrapper {
-    margin: -2rem 0 0 0;
+    margin: 2rem 0;
   }
 
   .home-road-box .home-ZebraRoad {
     width: 240px;
   }
 
-  .m-icon-swipe {
-    display: block;
-  }
-
   /* about */
   .about-contant-box {
-    margin: 1rem 6rem;
+    margin: 4rem 6rem;
   }
   .about-contant-box .about-img {
-    width: 30%;
+    width: 25%;
   }
   .about-contant-box .about-text {
     padding-left: 2.8rem;
@@ -2539,7 +2478,11 @@ header {
 
   /* skills */
   .skills-contant-box {
-    margin: 1rem 0;
+    margin: 6rem 0;
+  }
+
+  .skills-code-box {
+    padding-top: 6rem;
   }
 
   .skills-sea-box {
@@ -2568,6 +2511,105 @@ header {
     width: 5.2rem;
   }
 
+  .code-svg p {
+    font-size: 12px;
+  }
+
+  /* works */
+  .works-animal-box, .works-b-tree, .works-tree {
+    width: 1000px;
+    left: calc(50% - 500px);
+  }
+  .works-animal-box.works-b-tree, .works-b-tree.works-b-tree, .works-tree.works-b-tree {
+    bottom: 2rem;
+  }
+
+  .worksPages-mountain-wrapper {
+    margin-top: -12rem;
+  }
+  .worksPages-mountain-wrapper .works-mountain-box {
+    height: 260px;
+  }
+  .worksPages-mountain-wrapper .works-mountain-box .works-my-box .works-my-img {
+    width: 4.4rem;
+  }
+
+  .web-text h4 {
+    font-size: 20px;
+  }
+
+  .tabs a {
+    font-size: 18px;
+    padding: 0.3rem 1rem;
+  }
+
+  .tab-wrapper, .wrapper {
+    max-width: 1024px;
+  }
+
+  .worksPages-contant {
+    padding: 4rem 2rem;
+  }
+
+  .worksPages-animal {
+    left: 1.6rem;
+  }
+
+  .worksPages-left-img .worksPages-day.worksPages-night, .worksPages-left-img .worksPages-night.worksPages-night, .worksPages-right-img .worksPages-day.worksPages-night, .worksPages-right-img .worksPages-night.worksPages-night {
+    width: 11rem;
+  }
+
+  .works-animal-box.worksPages-b-tree, .works-b-tree.worksPages-b-tree, .works-tree.worksPages-b-tree {
+    bottom: 0;
+  }
+  .works-animal-box.worksPages-b-tree:nth-of-type(1), .works-b-tree.worksPages-b-tree:nth-of-type(1), .works-tree.worksPages-b-tree:nth-of-type(1) {
+    bottom: -1rem;
+  }
+
+  .worksPages-bird-box {
+    padding: 0rem 1.6rem;
+  }
+
+  /* contact */
+  .contact-air-box {
+    padding: 2rem 0 6rem 0;
+  }
+
+  .contact-contant-container {
+    padding-bottom: 0;
+  }
+
+  .contact-FishsIslands-box .contact-islands-box .contact-islands {
+    width: 38rem;
+    height: 14rem;
+  }
+  .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-about.contact-islands-work, .contact-FishsIslands-box .contact-islands-box .contact-islands .contact-islands-work.contact-islands-work {
+    margin-top: -45px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  /* skills */
+  .skills-design-box .skills-design-img .skills-bubble, .skills-design-box .skills-code-img .skills-bubble, .skills-code-box .skills-design-img .skills-bubble, .skills-code-box .skills-code-img .skills-bubble {
+    width: 11rem;
+  }
+
+  /* works */
+  .works-animal-box.worksPages-b-tree, .works-b-tree.worksPages-b-tree, .works-tree.worksPages-b-tree {
+    display: none;
+  }
+
+  .worksPages-left-img .worksPages-day.worksPages-day, .worksPages-left-img .worksPages-night.worksPages-day, .worksPages-right-img .worksPages-day.worksPages-day, .worksPages-right-img .worksPages-night.worksPages-day {
+    width: 10rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .tab-wrapper.wrapper, .wrapper.wrapper {
+    padding: 0 4rem;
+  }
+  .tab-wrapper.tab-wrapper, .wrapper.tab-wrapper {
+    padding: 0 4rem;
+  }
+
   .skills-contant-box {
     display: flex;
     flex-direction: column;
@@ -2585,60 +2627,22 @@ header {
     padding-top: 2rem;
   }
 
-  .code-svg p {
-    font-size: 12px;
-  }
-
-  /* works */
-  .works-mountain-wrapper .works-mountain-box {
-    height: 260px;
-  }
-
-  .works-animal-box, .works-b-tree, .works-tree {
-    width: 1000px;
-    left: calc(50% - 500px);
-  }
-
-  .works-mountain-wrapper .works-mountain-box .works-my-box .works-my-img {
-    width: 4.4rem;
-  }
-
-  .web-text h4 {
-    font-size: 20px;
-  }
-
-  .tabs a {
-    font-size: 18px;
-    padding: 0.3rem 1rem;
-  }
-
-  .worksPages-contant {
-    padding: 4rem 2rem;
-  }
-
-  .worksPages-animal {
-    left: 1.6rem;
-  }
-
-  .worksPages-left-img .worksPages-day.worksPages-night, .worksPages-left-img .worksPages-night.worksPages-night, .worksPages-right-img .worksPages-day.worksPages-night, .worksPages-right-img .worksPages-night.worksPages-night {
-    width: 11rem;
-  }
-
-  .worksPages-bird-box {
-    padding: 0rem 1.6rem;
-  }
-
-  /* contact */
-  .contact-air-box {
-    padding: 2rem 0 6rem 0;
-  }
-
-  /* 關掉左右箭頭 */
-  .arrow-pages-left, .arrow-pages-right {
-    display: none;
+  .about-contant-box .about-img {
+    width: 30%;
   }
 }
 @media only screen and (max-width: 768px) {
+  .loading-box {
+    top: calc(50% - 120px);
+  }
+
+  .tab-wrapper.wrapper, .wrapper.wrapper {
+    padding: 0 2rem;
+  }
+  .tab-wrapper.tab-wrapper, .wrapper.tab-wrapper {
+    padding: 0 2rem;
+  }
+
   /* loading */
   .loading-box {
     max-width: 375px;
@@ -2737,6 +2741,10 @@ header {
     bottom: 4rem;
   }
 
+  .m-icon-swipe {
+    display: block;
+  }
+
   /* about */
   .about-contant-box {
     flex-direction: column;
@@ -2784,6 +2792,10 @@ header {
   }
   .skills-sea-box .skills-seabed.skills-seabed, .skills-sea-box .skills-seasand.skills-seabed, .skills-sea-box .skills-coral.skills-seabed {
     bottom: 6rem;
+  }
+
+  .skills-contant-wrapper {
+    margin-bottom: 4rem;
   }
 
   /* works */
@@ -2876,12 +2888,17 @@ header {
   }
 
   .contact-sea-wrapper {
-    padding-top: 3.2rem;
+    padding-top: 4rem;
   }
   .contact-sea-wrapper .contact-sea-box {
     height: auto;
     width: 70%;
     margin: auto;
+  }
+
+  /* 關掉左右箭頭 */
+  .arrow-pages-left, .arrow-pages-right {
+    display: none;
   }
 }
 @media only screen and (max-width: 640px) {
