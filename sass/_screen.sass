@@ -1,0 +1,1291 @@
+/* Custom CSS */
+body,html
+    font-family: 'Noto Sans TC', sans-serif ,"微軟正黑體"
+
+body.lock
+    overflow: hidden
+    position: fixed
+    height: 100%
+    width: 100%
+h1,h2,h3,h4,h5,h6,p
+    letter-spacing: 2px
+    line-height: 2
+    font-weight: normal
+a
+    text-decoration: none
+.wrapper
+    max-width: 1200px
+    margin: 0 auto
+    width: 100%
+.clearfix 
+    clear: both
+.font-en
+    font-family: 'Lobster', cursive !important
+    font-weight: bold
+.day
+    background: $day
+.night
+    background: $night
+.ui-loader
+    display: none
+/* loading */
+#loading-container
+    position: fixed
+    z-index: 1000
+    width: 100%
+    height: 100%
+    background-color: #E8E8E8
+.loading-box
+    position: absolute
+    top: calc(50% - 180px)
+    left: 0
+    bottom: 0
+    right: 0
+    max-width: 500px
+    margin: auto
+    z-index: 1001
+    &#loading-map
+        display: none
+        flex-direction: column
+        align-items: flex-end
+        margin-top: 80px
+        svg
+            width: 35px
+.loading-my
+    position: relative
+    left: -80px
+    width: 80px
+    bottom: -5px
+    margin-left: 0%
+    z-index: 5
+.loader-box
+    position: relative
+    z-index: 10
+    height: 30px
+    width: 100% 
+    border: 2px solid $brown
+    border-radius: 20px
+    .loadbar-hidden 
+        width: 100%
+        height: 100%
+        border-radius: 20px
+        overflow: hidden
+        position: relative
+        opacity: 1
+    .loadbar 
+        width: 0%
+        height: 100%
+        background: #D75968
+        border-right: 1px solid $brown
+        position: absolute
+        top: 0
+        left: 0
+        overflow: hidden
+.loading-text-box
+    text-align: center
+    margin-top: 1rem
+    svg
+        width: 8rem
+/* loading end */
+.mobileH-window
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 1000
+    background: rgba(255,255,255,.8)
+    h3
+        font-size: $h3
+        color: $brown
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+/* header */
+header
+    height: 80px
+    position: absolute 
+.header-container
+    z-index: 200
+    position: relative
+    display: block
+    width: 100%
+.logo-wrapper,.menu-icon-wrapper
+    display: inline-block
+    position: fixed
+    filter: drop-shadow(0px 6px 0px rgba(85,150,202,.8))
+    padding: .4rem 1rem
+    a,.menu-icon
+        display: flex
+        flex-direction: column
+        justify-content: center
+        background: url(../images/icon/logo-bg.svg) no-repeat 
+        // 下方為logo尺寸範圍
+        width: 162px
+        height: 68px
+        background-size: contain
+        img
+            z-index: 120
+            width: 100%
+            padding: 10px 18px 0px 18px
+    &.logo-wrapper
+        left: 0px
+    &.menu-icon-wrapper
+        right: 0px
+        padding: .8rem 1rem
+.menu-icon-wrapper
+    .menu-icon
+        display: inline-block
+        background: url(../images/icon/menu.svg) no-repeat 
+        width: 58px
+        height: 58px 
+        img
+            padding: 20px 10px
+            transform: rotateZ(90deg) translate3d(0,0,0)
+            -webkit-transform: rotateZ(90deg) translate3d(0,0,0)
+            -webkit-transition: all 500ms ease-in-out
+            transition: all 500ms ease-in-out
+
+.header-box
+    width: 100%
+    height: 5rem
+/* header end*/
+/* menu */
+.menu-bgw-box
+    position: fixed
+    z-index: 100
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background: $white
+    opacity: .75
+    -webkit-transform: translate3d(100%,0,0)
+    transform: translate3d(100%,0,0)
+    -webkit-transition: all 500ms ease-in-out
+    transition: all 500ms ease-in-out
+    &.active
+        -webkit-transform: translate3d(0,0,0)
+        transform: translate3d(0,0,0)
+        -webkit-transition: all 500ms ease-in-out
+        transition: all 500ms ease-in-out
+.menu-contant-box
+    position: fixed
+    z-index: 150
+    top: 0
+    right: 0px
+    width: 25rem
+    height: 100%
+    display: block
+    -webkit-transform: translate3d(100%,0,0)
+    transform: translate3d(100%,0,0)
+    -webkit-transition: all 350ms ease-in-out
+    transition: all 350ms ease-in-out
+    &.active
+        -webkit-transform: translate3d(0,0,0)
+        transform: translate3d(0,0,0)
+        -webkit-transition: all 350ms 200ms cubic-bezier(.32,-0.05,.44,1.41)
+        transition: all 350ms 200ms cubic-bezier(.32,-0.05,.44,1.41)
+    >div
+        position: absolute
+    .menu-img-up,.menu-img-down
+        width: 6.8rem
+        max-width: 6.8rem
+        margin-top: -1px
+        img
+            width: 100%
+    .menu-img-down
+        width: 8rem
+        max-width: 8rem
+        bottom: -1px
+        right: 0px
+        ul
+            position: relative
+            .menu-hitballoon
+                opacity: 0
+                position: absolute
+                width: 6.2rem
+                bottom: 20px
+                right: 20px
+                &.animate__fadeInUp
+                    &:root
+                        --animate-delay: 2s
+    .menu-text
+        height: 100%
+        ul
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding: 0px 2.5rem
+            li
+                padding-bottom: 1.5rem
+                h5
+                    letter-spacing: 2px
+                    color: $white
+                    font-size: $h5
+                    line-height: 1.2
+                    font-weight: bold
+                    span
+                        font-size: $h2
+                        font-weight: normal
+            .menu-pages
+                a
+                    display: flex
+                    -webkit-transform: translateX(0px)
+                    transform: translateX(0px)
+                    -webkit-transition: all 0.2s ease-in-out
+                    transition: all 0.2s ease-in-out
+                    &.fa-arrow-circle-right
+                        &:before
+                            display: none
+                        &:after
+                            content: "\f0a9"
+                            font-size: $h5
+                            color: $white
+                            margin-left: 0.5rem
+                            margin-top: 1rem
+                    &:hover
+                        -webkit-transform: translateX(20px)
+                        transform: translateX(20px)
+                        -webkit-transition: all 0.2s ease-in-out
+                        transition: all 0.2s ease-in-out
+                        h5
+                            color: $yellow
+                        &.fa-arrow-circle-right
+                            &:after
+                                color: $yellow
+            .menu-line  
+                img
+                    width: 12rem
+            .menu-community
+                h5
+                    padding-bottom: 0.8rem
+                .fb-icon
+                    display: inline-block
+                .ig-icon
+                    float: left
+//以contact共用
+.fb-icon,.ig-icon
+    a
+        svg
+            width: 3.8rem
+            fill: $white
+            margin-right: .8rem
+            -webkit-transform: translateY(0px)
+            transform: translateY(0px)
+            -webkit-transition: all 0.2s ease-in-out
+            transition: all 0.2s ease-in-out
+            &:hover
+                fill: $yellow
+                -webkit-transform: translateY(-5px)
+                transform: translateY(-5px)
+                -webkit-transition: all 0.2s ease-in-out
+                transition: all 0.2s ease-in-out
+/* menu end */
+/* nav */
+.line-dotted
+    border-top: 2px dotted #4D3224
+    opacity: .5
+    position: relative
+    bottom: 15px
+/* nav end */
+/* arrow */ 
+.arrow-pages-left,.arrow-pages-right
+    display: inline-block
+    position: fixed
+    z-index: 50
+    top: 50%
+    a
+        display: block
+        &:hover
+            .arrow-pages-style
+                path
+                    fill: $yellow
+        svg
+            width: 35px
+            filter: drop-shadow(0px 3px 0px rgba(77, 50, 36, 1))
+            path
+                fill: #fff
+                stroke: #4d3224
+                stroke-linecap: round
+                stroke-linejoin: round
+                stroke-width: 2px
+    &.arrow-pages-right
+        right: 20px
+    &.arrow-pages-left
+        left: 20px
+/* arrow end */
+/* home */
+.section
+    overflow: hidden
+    width: 100%
+    margin: 0 auto
+    position: relative
+.big-title-box
+    display: flex
+    justify-content: center
+    position: absolute
+    width: 100%
+    z-index: 10
+    align-items: center
+    height: 100%
+    img
+        max-width: 280px
+        width: 100%
+        filter: drop-shadow(0px 6px 0px rgba(85,150,202,.8))
+.home-air-wrapper,.home-city-wrapper
+    margin-top: -2rem
+    position: relative
+.home-air-wrapper
+    margin-bottom: 1rem
+.home-city-wrapper
+    margin-top: -40px
+//日夜 remove/add class
+.home-day-box,.home-night-box,.home-day-car,.home-day-car2,.home-night-car,.home-night-car2
+    display: none
+    width: 100%
+    &.active
+        display: block
+.home-day-box,.home-night-box,.home-city-box,.about-city-box
+    width: 100%
+    height: 300px
+    margin: 0 auto
+    position: relative
+    .home-day-sun,.home-night-moon-box,.home-day-cloud,.home-night-star
+        width: 1400px
+        height: auto
+        position: absolute
+        left: calc(50% - 700px)
+        top: 0
+        img
+            width: 100%
+    .home-day-sun,.home-night-moon
+        top: 100px
+        padding: 0 0 0 4rem
+        max-width: 7.4rem
+        img
+            width: 100%
+        &.home-night-moon
+            max-width: 6.4rem
+            width: 6.4rem
+    .home-night-moon,.home-moon-light
+        position: absolute
+        right: 0px
+        z-index: 5
+    .home-moon-light
+        right: -20px
+        top: 80px
+        z-index: 0
+        img
+            width: 100%
+.m-icon-swipe
+    width: 100%
+    position: absolute
+    bottom: .5rem
+    text-align: center
+    display: none
+    z-index: 100
+    img
+        width: 35px
+
+//home-day-cloud 重複雲朵
+.home-day-cloud-an2
+    ul
+        &:nth-of-type(2)
+            position: relative
+            left: -90%
+            height: 300px
+.home-city-box,.about-city-box,.skills-sea-box,.works-mountain-box,.contact-sea-box
+    height: 400px
+    .home-bluecity,.home-city,.about-city,.about-cloud,.about-bcity,.skills-seabed,.skills-seasand,.skills-coral,.works-mountain,.contact-wave,.m-about-city
+        width: 1920px
+        height: auto
+        position: absolute
+        left: calc(50% - 960px)
+        bottom: 0
+        img
+            width: 100%
+    .home-bluecity-up,.about-cloud-up
+        z-index: 10
+    .home-city-up,.about-city-up,.m-about-city
+        z-index: 15
+        bottom: -2px
+    .home-bluecity-down
+        z-index: 5
+.home-road-box,.about-road-box,.about-seasand-bg,.works-mountain-bg
+    position: relative
+    z-index: 20
+    .home-ZebraRoad
+        background: url(../images/home/home-ZebraRoad.svg) no-repeat
+        width: 320px
+        height: 120px
+        background-size: contain
+        position: absolute
+        left: 140px
+        z-index: 10
+//home-day-car,home-night-car車
+.home-day-car,.home-day-car2,.home-night-car,.home-night-car2
+    position: absolute
+    z-index: 15
+    top: -70px
+    ul
+        position: relative
+        height: 120px
+        width: 100%
+        li
+            opacity: 0
+            position: absolute
+            bottom: 0
+            width: 100%
+    &.home-day-car
+        ul
+            li
+                .home-car-up01
+                    max-width: 6.6rem
+                .home-scooter-up02
+                    max-width: 3rem
+                .home-car-up03
+                    max-width: 5.8rem
+                .home-car-up04
+                    max-width: 8rem
+    &.home-day-car2
+        top: -35px
+        ul
+            li
+                .home-car-down01
+                    max-width: 6.8rem
+                .home-car-down02
+                    max-width: 10rem
+                .home-scooter-down03
+                    max-width: 3.6rem
+    &.home-night-car
+        ul
+            li
+                .home-car-up01
+                    max-width: 8.8rem
+                .home-scooter-up02
+                    max-width: 4.4rem
+                .home-car-up03
+                    max-width: 7rem
+                .home-car-up04
+                    max-width: 8rem
+    &.home-night-car2
+        top: -35px
+        ul
+            li
+                .home-car-down01
+                    max-width: 10rem
+                .home-car-down02
+                    max-width: 12rem
+                .home-scooter-down03
+                    max-width: 5rem
+.home-my-box
+    position: absolute
+    top: calc(50% - 14rem)
+    z-index: 20
+    left: 240px
+    width: 8.8rem
+    img
+        width: 100%
+/* home end */  
+/* about */ 
+.about-contant-wrapper,.skills-contant-wrapper,.works-title-wrapper
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    padding: 1.5rem 0
+    z-index: 10
+.title-box
+    display: flex
+    justify-content: center
+    position: relative
+    width: 100%
+    .title-line-dashed
+        border-top: 1.5px dashed $white
+        width: 2.5rem
+        position: relative
+        top: 50%
+        margin: 0 0.8rem
+    .title-text
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        h4
+            font-size: $h4
+            color: $white
+            line-height: 2
+            &:before
+                padding-right: .4rem
+    .title-img
+        max-width: 8.6rem
+        width: 8.6rem
+        img
+            width: 100%
+        &.title-img-c
+            max-width: 10.6rem
+            width: 10.6rem
+.about-AirCamera-box,.skills-tortoise-box
+    position: absolute
+    right: 2rem
+    z-index: 10
+    .about-AirCamera-img
+        width: 16rem  
+.about-contant-box
+    opacity: 0
+    margin: 2rem 6rem 0 6rem
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .about-img
+        width: 18rem
+        position: relative
+        display: flex
+        align-items: center
+        .about-my-photo
+            position: absolute
+            top: 5px
+            z-index: 5
+        img
+            width: 100%
+    .about-text
+        padding-left: 1rem
+        max-width: 65%
+        color: $white
+        p
+            font-size: $l-p
+        h4
+            color: $yellow
+            font-size: $h4
+            line-height: 1.8
+            padding-bottom: .5rem
+.about-road-box
+    padding-top: 2rem
+.about-my-box,.about-people-box
+    position: absolute
+    top: -40px
+    z-index: 20
+    left: 0px
+    width: 100%
+    opacity: 0
+    .about-my-img
+        width: 11rem
+    &.about-my-box
+        opacity: 0
+.about-people-box
+    top: -90px
+    z-index: 15
+    left: -10rem
+    display: flex
+    justify-content: flex-end
+    padding-right: 16rem
+    opacity: 1
+    img
+        width: 2.4rem
+.about-city-box
+    margin-top: -2rem
+    height: 300px
+    .about-bcity
+        width: 1440px
+        left: calc(50% - 720px)
+    .about-cloud
+        img
+            filter: drop-shadow(0px -6px 0px rgba(85,150,202,.8))
+.m-about-city
+    display: none
+/* about end */
+/* skills */ 
+.skills-tortoise-box
+    top: 4rem
+    right: 20%
+    max-width: 6.4rem
+    img
+        width: 100%
+.skills-fishs-wrapper
+    position: absolute
+    width: 100%
+    top: 10%
+    img
+        width: 20rem
+.skills-contant-box
+    opacity: 0
+    margin-top: 4rem
+    width: 100%
+    display: flex
+.skills-design-box,.skills-code-box
+    width: 50%
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    .skills-design-img,.skills-code-img
+        position: relative
+        .design-svg,.code-svg
+            position: absolute
+            width: 100%
+            height: 100%
+            text-align: center
+            top: 20%
+            padding-bottom: 2rem
+            padding-right: 1rem
+            img
+                max-width: 6.4rem
+            svg
+                max-width: 7.4rem
+            .text-box
+                width: 100%
+                color: $white
+                margin-top: 10px
+                text-align: center
+                display: block
+                height: 1rem
+                font-size: $s-p
+                .text
+                    letter-spacing: 1px
+                    display: inline-block
+                    font-size: $s-p
+        .design-svg
+            top: 6%
+            padding-left: 2rem
+            padding-top: 1rem
+            transform: translate(10px,16px)
+            -webkit-transform: translate(10px,16px)
+        .skills-bubble
+            width: 14rem
+    .skills-design-text,.skills-code-text
+        color: $white
+        h4
+            font-size: $h4
+            &:before
+                content: ""
+                display: inline-block
+                border-top: 1.5px dashed $white
+                width: 20px
+                position: relative
+                bottom: 0.5rem
+                margin-right: 10px
+        .design-text,.code-text
+            padding-left: 2rem
+            li
+                font-size: $l-p
+                letter-spacing: 2px
+                line-height: 2
+        .code-text
+            display: flex
+            flex-wrap: wrap
+.skills-code-box
+    padding-top: 4rem
+.skills-sea-box
+    position: relative
+    bottom: -5px
+    .skills-seabed
+        bottom: 8rem
+    .skills-seasand
+        bottom: -1.2rem
+        z-index: 10
+    .skills-coral
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        bottom: 4rem
+        z-index: 10
+        img
+            width: 16rem
+    .skills-my-box
+        opacity: 0
+        position: absolute
+        width: 100%
+        z-index: 10
+        top: 4rem
+        .skills-my-img
+            width: 11rem
+/* skills end */ 
+/* works */
+.works-bird-box
+    width: 1.8rem
+    position: absolute
+    left: calc(50% + 6rem)
+    bottom: 2.6rem
+    z-index: 5
+.works-mountain-wrapper
+    position: relative
+    margin-top: -6rem
+    .works-mountain-box
+        height: 200px
+        position: relative
+        bottom: -6px
+        .skills-seasand
+            bottom: 0px
+            z-index: 10
+        .works-my-box
+            opacity: 0
+            position: absolute
+            width: 100%
+            z-index: 20
+            bottom: 0
+            .works-my-img
+                width: 5.6rem
+        .works-mountain
+            overflow: hidden
+.works-animal-box,.works-b-tree,.works-tree
+    width: 1200px
+    position: absolute
+    left: calc(50% - 600px)
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    .works-animal-right-box,.works-animal-left-box
+        display: flex
+        align-items: flex-end
+        .works-pig,.works-rabbit,.works-LeopardCat,.works-beer,.works-deer
+            opacity: 0
+            img
+                width: 100%
+            &.works-pig
+                max-width: 4.8rem
+                width: 4.8rem
+            &.works-rabbit
+                max-width: 2rem
+                width: 2rem
+                margin-left: 4rem
+            &.works-LeopardCat
+                max-width: 3.2rem
+                width: 3.2rem
+                margin-bottom: -1rem
+            &.works-beer
+                max-width: 7.4rem
+                width: 7.4rem
+                margin-bottom: -1rem
+                margin-right: 2.4rem
+            &.works-deer
+                max-width: 3rem
+                width: 3rem
+                margin-bottom: .4rem
+    &.works-animal-box
+        padding: 0 6rem
+        bottom: 2.8rem
+    &.works-b-tree
+        bottom: 1rem
+        img
+            width: 100%
+    &.works-tree
+        bottom: 2rem
+        img
+            width: 100%
+    &.worksPages-b-tree
+        width: 1920px
+        left: calc(50% - 960px)
+        bottom: -2rem
+        &:nth-of-type(1)
+            bottom: -2.8rem
+.m-works-b-tree
+    display: none
+.section-contant-container
+    position: relative
+    z-index: 20
+    top: 0px
+//tab style
+.tab-wrapper
+    opacity: 0
+    position: relative
+    z-index: 10
+    max-width: 1200px
+    margin: 0 auto
+.tabs
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-bottom: 2.8rem
+    a
+        display: flex
+        color: $white
+        font-size: $h5
+        letter-spacing: 2px
+        margin: 0px 0.4rem
+        padding: .4rem 1rem
+        border: 1px solid $white
+        cursor: pointer
+        background-color: $green
+        border-radius: 20px
+        &:hover,&.active
+            cursor: pointer
+            background-color: $white
+            color: $green
+.tab-content
+    >div
+        display: none
+        font-size: 14px
+        color: #666
+//works style
+.tab-content
+    margin-bottom: 4rem
+.works-wrapper
+    width: 100%
+    display: block
+    overflow: hidden
+    font-size: 0
+    .works-box
+        display: none
+        &.col3
+            width: calc(100%/3 - 1rem)
+            margin-left: calc(1rem * 3 / 2)
+            margin-bottom: calc(2rem * 3 / 2)
+            text-align: center
+            &:nth-child(3n+1)
+                margin-left: 0
+        a
+            &:hover
+                .web-text
+                    opacity: 0.6
+.web-img
+    width: 100%
+    height: auto
+    overflow: hidden
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: 50% 50%
+.web-text
+    margin-top: .5rem
+    color: $white
+    h4
+        font-size: $h4
+    p
+        font-size: $l-p
+        line-height: 1.5
+        &:before
+            content: ""
+            display: inline-block
+            background-size: contain
+            width: 22px
+            height: 20px
+            margin-right: 10px
+            vertical-align: middle
+        &.icon-web
+            &:before
+                background: url(../images/icon/icon-web.svg) no-repeat
+        &.icon-ui
+            &:before
+                background: url(../images/icon/icon-ui.svg) no-repeat
+        &.icon-vision
+            &:before
+                background: url(../images/icon/icon-vision.svg) no-repeat
+            
+.loadMore
+    max-width: 180px
+    color: #fff
+    display: block
+    text-align: center
+    margin: 0 auto
+    padding: 0.6rem
+    border-radius: 40px
+    border: 1px solid #fff
+    background-color: $green
+    font-size: $h6
+    letter-spacing: 2px
+    -webkit-transition: all 500ms ease-in-out
+    transition: all 500ms ease-in-out
+    &:hover
+        color: $green
+        background-color: #fff
+/* works end */ 
+/* works-pages */
+.worksPages-btitle-wrapper
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+.worksPages-left-img,.worksPages-right-img
+    .worksPages-day,.worksPages-night
+        width: 12rem
+        display: none
+        &.worksPages-night
+            width: 16rem
+.worksPages-title-wrapper
+    padding: 1.5rem 0 0 0
+    .title-box
+        .title-text
+            h4
+                display: block
+                &::before
+                    content: ""
+                    display: inline-block
+                    background-size: contain
+                    width: 20px
+                    height: 20px
+                    margin-right: 10px
+                    vertical-align: middle
+                &.icon-web
+                    &::before
+                        background: url(../images/icon/icon-web.svg) no-repeat
+                &.icon-ui
+                    &::before
+                        background: url(../images/icon/icon-ui.svg) no-repeat
+                &.icon-vision
+                    &::before
+                        background: url(../images/icon/icon-vision.svg) no-repeat
+.worksPages-nav
+    width: 100%
+    padding: 1rem 0
+    position: relative
+    z-index: 10
+    ul
+        width: 100%
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        li
+            font-size: $l-p
+            float: left
+            color: $white
+            letter-spacing: 2px
+            line-height: 2
+            &::after
+                content: ""
+                width: 18px
+                margin: 0 4px 6px 4px
+                height: 1px
+                background-color: $white
+                display: inline-block
+            &:last-child
+                &::after
+                    display: none
+            a
+                font-size: $l-p
+                color: $white
+                flex-direction: column
+                &:hover
+                    color: $yellow
+.worksPages-animal
+    position: absolute
+    bottom: 0
+    left: 4rem
+    z-index: 20
+    .worksPages-animal-img
+        width: 16rem
+.worksPages-bird-box
+    display: flex
+    justify-content: flex-end
+    padding: 0rem 6rem
+    position: relative
+    bottom: -3px
+    z-index: 15
+    .worksPages-bird-img
+        width: 2.4rem
+.worksPages-contant
+    position: relative
+    padding: 4rem 6rem
+    z-index: 10
+    border: 2px solid $brown
+    width: 100%
+    height: 100%
+    background: url(../images/home/Bg2.jpg) repeat-y
+    background-size: contain
+.worksPages-text-wrapper
+    width: 100%
+    padding: 2.8rem 2rem
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    .worksPages-text-left,.worksPages-text-right
+        width: 50%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &.worksPages-text-right
+            p
+                color: $brown
+                font-size: $l-p
+        &.worksPages-text-left
+            .worksPages-stitle
+                margin-bottom: 2rem
+                h4
+                    color: $brown
+                    font-size: $h4
+                    font-weight: bold
+                    padding-bottom: .4rem
+                a
+                    color: #5596CA
+                    flex-direction: column
+                    font-size: 16px
+                    width: 100%
+                    word-wrap: break-word
+                    line-height: 1.4
+                    &::before
+                        margin-right: 10px
+                    &:hover
+                        opacity: 0.5 
+                    &.no-link
+                        color: #858585
+                        pointer-events: none
+            .worksPages-myskills
+                color: $brown
+                border-left: 2px dashed rgba(77,50,36,.6)
+                padding-left: 20px
+                h5
+                    font-size: $h5
+                    font-weight: bold
+                ul
+                    width: 100%
+                    display: block
+                    li
+                        font-size: $l-p
+                        font-weight: normal
+                        line-height: 2
+                        letter-spacing: 2px
+                        padding-right: 20px
+                        display: inline-block
+                        float: left
+.worksPages-mountain-wrapper
+    margin-top: -10rem
+.scroll-top
+    position: absolute
+    bottom: -1px
+    right: 0
+    a
+        display: inline-block
+        flex-direction: column
+        background-color: $brown
+        padding: .4rem
+        svg
+            width: 1.8rem
+            fill: $white
+            -webkit-transform: translateY(0.2rem) rotate(-90deg)
+            transform: translateY(0.2rem) rotate(-90deg)
+            transition: all 0.3s ease-out
+            -webkit-transition: all 0.3s ease-out
+        &:hover
+            svg
+                fill: $yellow
+                transition: all 0.3s ease-in
+                -webkit-transition: all 0.3s ease-in
+                -webkit-transform: translateY(-0.1rem) rotate(-90deg)
+                transform: translateY(-0.1rem) rotate(-90deg)
+
+/* works-pages end */ 
+/* contact */
+.contact-contant-container
+    padding-bottom: 6rem          
+.contact-air-box
+    position: relative
+    z-index: 5
+    .home-day-box,.home-night-box
+        position: absolute
+        opacity: .8
+        height: 340px
+        top: 20%
+        .home-day-cloud
+            width: 1920px
+            height: auto
+            position: absolute
+            left: calc(50% - 960px)
+            top: 0
+.contact-contant-wrapper
+    opacity: 0
+    margin: 0 auto
+    display: flex
+    justify-content: center
+.contact-hitballoon-left,.contact-hitballoon-right
+    position: relative
+    width: 5.4rem
+    margin: 0 4rem
+    z-index: 10
+    img
+        position: absolute
+        width: 100%
+        top: 40%
+    &.contact-hitballoon-right
+        width: 4.4rem
+        img
+            position: absolute
+            bottom: 20%
+            top: initial
+.contact-contant-box
+    max-width: 24rem
+    .contact-myhitballoon,.contact-myhitballoon-line
+        max-width: 6.8rem
+        margin: 0 auto
+        img
+            width: 100%
+        &.contact-myhitballoon-line
+            max-width: 12rem
+            padding-bottom: 4px
+            margin-top: -16px
+    .contant-box
+        position: relative
+        z-index: 10
+        width: 100%
+        background-color: rgba(198,233,255,.3)
+        border-radius: 0.2rem
+        padding: 20px 16px
+        &:before
+            content: ''
+            display: block
+            border-radius: 0.2rem
+            border: 3.2px solid rgb(198,233,255)
+            position: absolute
+            top: 0px
+            bottom: 0px
+            left: 0px
+            right: 0px
+            margin: -8px
+            z-index: -1
+        .title-box,.my-contact-box
+            width: 100%
+        .my-contact-box
+            margin-top: 0.4rem
+            a
+                color: $white
+                font-size: $h5
+                line-height: 2
+                letter-spacing: 1.5px
+                text-align: center
+                width: 100%
+                &::before
+                    padding-right: 10px
+                &:hover
+                    color: $yellow
+        .my-community-box
+            width: 100%
+            .community-title
+                display: flex
+                width: 100%
+                align-items: center
+                justify-content: center
+                .title-line-dashed
+                    width: 33.3%
+                    border-top: 1.5px dashed $white
+                h6
+                    padding: 0 1rem
+                    color: $white
+                    font-size: $h6
+            .community-icon
+                margin-top: 1rem
+                width: 100%
+                display: flex
+                justify-content: center
+.contact-sea-wrapper
+    position: relative
+    z-index: 20
+    &.day-contact-sea
+        background: url(../images/contact/day-contact-sea.svg) repeat-x
+        width: 100%
+        height: auto
+    &.night-contact-sea
+        background: url(../images/contact/night-contact-sea.svg) repeat-x
+        width: 100%
+        height: auto
+.contact-sea-box
+    height: auto
+    position: relative
+    .contact-wave
+        opacity: .4
+        top: 0px
+        bottom: initial
+        display: flex
+        justify-content: space-between
+        width: 1440px
+        left: calc(50% - 720px)
+        .contact-wave-left,.contact-wave-right
+            max-width: 18rem
+            width: 18rem
+            img
+                width: 100%
+.contact-copyright,.worksPages-copyright
+    position: relative
+    z-index: 25
+    padding: 0.5rem 0px 1rem 0
+    background: #5596CA
+    p
+        color: #C3D6EA
+        width: 100%
+        text-align: center
+        font-size: 12px
+        font-weight: normal
+    &.worksPages-copyright
+        padding: 0.5rem 0px
+        background: $green
+        p
+            color: $white
+.contact-FishsIslands-box
+    display: flex
+    justify-content: center
+    margin: 0 auto
+    .contact-islands-box
+        .contact-islands
+            background: url(../images/contact/contact-islands.svg) no-repeat
+            width: 38rem
+            height: 12.8rem
+            background-size: contain
+            // margin: 0 auto
+            display: flex
+            justify-content: center
+            .contact-islands-about,.contact-islands-work
+                opacity: 0
+                width: 46%
+                margin-top: -20px
+                margin-left: 10px
+                img
+                    width: 100%
+                &.contact-islands-work
+                    width: 54%
+                    margin-top: -40px 
+                    margin-right: 20px
+    .contact-fishs-box,.contact-TurtleMedusa-box
+        display: flex
+        align-items: center
+        margin: 0 1.4rem
+        opacity: 0
+        ul
+            margin-top: 4rem
+            li
+                width: 1rem
+                float: right
+                &:nth-of-type(2)
+                    width: 2.8rem
+                    float: left
+                    padding-top: 1.6rem
+                img
+                    width: 100%
+        &.contact-TurtleMedusa-box
+            margin: 0 .4rem
+            ul
+                display: flex
+                li
+                    float: initial
+                    width: 2.4rem
+                    padding-top: 3.4rem
+                    &:nth-of-type(2)
+                        width: 4rem
+                        padding-top: 0rem
+                        margin-left: 1rem 
+                        opacity: 1
+                        img
+                            padding-top: 1rem
+                            opacity: 0.8
+.m-contact-FishsTurtleMedusa-box
+    display: none
+    position: absolute
+    bottom: 0
+    padding: 0 2rem
+    ul
+        display: flex
+        width: 100%
+        li
+            width: 50%
+            opacity: 0
+            .m-contact-fishs-img
+                width: 2.8rem
+            .m-contact-TurtleMedusa-img
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                width: 100%
+                img
+                    width: 4rem
+                    padding-bottom: 1rem
+
+/* contact end */ 
+
