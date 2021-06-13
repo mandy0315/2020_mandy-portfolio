@@ -754,11 +754,15 @@ header {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .about-contant-box .about-img .about-my-photo {
   position: absolute;
   top: 5px;
   z-index: 5;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 85%;
 }
 .about-contant-box .about-img img {
   width: 100%;
@@ -1336,6 +1340,10 @@ header {
 .worksPages-text-wrapper .worksPages-text-left.worksPages-text-right p, .worksPages-text-wrapper .worksPages-text-right.worksPages-text-right p {
   color: #4D3224;
   font-size: 18px;
+}
+.worksPages-text-right p span{
+  font-size: 20px;
+  font-weight: bold;
 }
 .worksPages-text-wrapper .worksPages-text-left.worksPages-text-left .worksPages-stitle, .worksPages-text-wrapper .worksPages-text-right.worksPages-text-left .worksPages-stitle {
   margin-bottom: 2rem;
