@@ -1,4 +1,9 @@
+import header from "./compose/header.js";
+import loading from "./compose/loading.js";
+
 $(document).ready(function () {
+  loading.init();
+  header.init();
   // 偵測網址資料庫
   let hashNum = 0;
   let data = ["home", "about", "skills", "works", "contact"];
@@ -48,38 +53,31 @@ $(document).ready(function () {
   }
   // Time 時間更換背景|動畫
   function HomeTime() {
-    $.ajax({
-      type: "GET",
-      url: "",
-      cache: false,
-      success: function (e) {
-        todayDate = new Date();
-        let hh = todayDate.getHours();
-        if (hh >= 6 && hh <= 16) {
-          $(".home-day-box").addClass("active");
-          $(".home-night-box").removeClass("active");
-          // 車子動畫
-          $(".home-day-car,.home-day-car2").addClass("active");
-          $(".home-night-car,.home-night-car2").removeClass("active");
-          //背景
-          $(".section-AirBg-wrapper,.menu-contant-box").addClass("day");
-          $(".contact-sea-wrapper").addClass("day-contact-sea");
-          // Timeline動畫
-          DayTimelineAn();
-        } else {
-          $(".home-night-box").addClass("active");
-          $(".home-day-box").removeClass("active");
-          // 車子動畫
-          $(".home-night-car,.home-night-car2").addClass("active");
-          $(".home-day-car,.home-day-car2").removeClass("active");
-          //背景
-          $(".section-AirBg-wrapper,.menu-contant-box").addClass("night");
-          $(".contact-sea-wrapper").addClass("night-contact-sea");
-          //Timeline動畫
-          NightTimelineAn();
-        }
-      },
-    });
+    let todayDate = new Date();
+    let hh = todayDate.getHours();
+    if (hh >= 6 && hh <= 16) {
+      $(".home-day-box").addClass("active");
+      $(".home-night-box").removeClass("active");
+      // 車子動畫
+      $(".home-day-car,.home-day-car2").addClass("active");
+      $(".home-night-car,.home-night-car2").removeClass("active");
+      //背景
+      $(".section-AirBg-wrapper,.menu-contant-box").addClass("day");
+      $(".contact-sea-wrapper").addClass("day-contact-sea");
+      // Timeline動畫
+      DayTimelineAn();
+    } else {
+      $(".home-night-box").addClass("active");
+      $(".home-day-box").removeClass("active");
+      // 車子動畫
+      $(".home-night-car,.home-night-car2").addClass("active");
+      $(".home-day-car,.home-day-car2").removeClass("active");
+      //背景
+      $(".section-AirBg-wrapper,.menu-contant-box").addClass("night");
+      $(".contact-sea-wrapper").addClass("night-contact-sea");
+      //Timeline動畫
+      NightTimelineAn();
+    }
   }
   // nav跳頁-指定段落執行動畫
   function NavClassAn() {
