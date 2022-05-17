@@ -10,22 +10,13 @@ const init = function () {
   };
   let hashName = window.location.hash;
   //header 載入
-  $(".header-index").load("./share/header.html", function () {
+  $("header").load("/share/header.html", function () {
     MenuPlay();
     TimeBg();
     MenuAnchor();
-    $(".logo-wrapper>a").click(function () {
-      window.location.href = "index.html";
+    $(".logo-wrapper>a").click(() => {
+      window.location.href = `${window.location.origin}/index.html`;
     });
-  });
-  $(".header-works").load(".././share/header-works.html", function () {
-    MenuPlay();
-    TimeBg();
-    MMenuAnchor();
-    $(".logo-wrapper>a").click(function () {
-      window.location.href = "../index.html";
-    });
-    // MenuAnchor();
   });
   // menu 執行
   function MenuPlay() {
