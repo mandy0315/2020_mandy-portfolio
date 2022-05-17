@@ -10,12 +10,12 @@ const init = function () {
   };
   let hashName = window.location.hash;
   //header 載入
-  $(".header-index").load("./share/header.html", function () {
+  $(".header-index").load("share/header.html", function () {
     MenuPlay();
     TimeBg();
     MenuAnchor();
     $(".logo-wrapper>a").click(function () {
-      window.location.href = "index.html";
+      window.location.href = `${window.location.origin}/index.html`;
     });
   });
   $(".header-works").load(".././share/header-works.html", function () {
