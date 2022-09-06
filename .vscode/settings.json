@@ -1,3 +1,25 @@
 {
-    "liveServer.settings.port": 5504
+  // 設定輸出的 CSS 格式與儲存位置。
+"liveSassCompile.settings.formats": [
+  {
+    "format": "compressed",
+    "extensionName": ".min.css",
+    "savePath": "/css"
+  }
+],
+
+// 排除特定檔案，不執行編譯。
+"liveSassCompile.settings.excludeList": [ 
+    "**/node_modules/**",
+    ".vscode/**" 
+],
+
+// 是否產生 .map 檔案
+"liveSassCompile.settings.generateMap": false,
+
+// 設定 autoprefix 後處理器。
+"liveSassCompile.settings.autoprefix": [
+    "> 1%",
+    "last 2 versions"
+  ],
 }
