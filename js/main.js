@@ -380,13 +380,6 @@ $(document).ready(function () {
   }
   // bodymovin lottie動畫
   function lottieAn() {
-    let BicycleAn = lottie.loadAnimation({
-      container: document.querySelector(".about-my-img"),
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      path: "./json/bicycle.min.json",
-    });
     let HitballoonAn = lottie.loadAnimation({
       container: document.querySelector(".contact-myhitballoon"),
       renderer: "svg",
