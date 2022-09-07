@@ -761,6 +761,10 @@ header {
   display: none;
 }
 
+.about-AirCamera-box .about-AirCamera-img {
+  width: 12rem;
+}
+
 /* about end */
 /* skills */
 .skills-tortoise-box {
@@ -2118,10 +2122,6 @@ header {
 
   .about-road-box {
     padding-top: 1.4rem;
-  }
-
-  .about-AirCamera-box .about-AirCamera-img {
-    width: 12rem;
   }
 
   /* skills */
