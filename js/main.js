@@ -380,13 +380,6 @@ $(document).ready(function () {
   }
   // bodymovin lottie動畫
   function lottieAn() {
-    let HitballoonAn = lottie.loadAnimation({
-      container: document.querySelector(".contact-myhitballoon"),
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      path: "./json/HotBalloon.min.json",
-    });
     let AirCameraAn = lottie.loadAnimation({
       container: document.querySelector(".about-AirCamera-img"),
       renderer: "svg",
