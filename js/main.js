@@ -387,13 +387,6 @@ $(document).ready(function () {
       autoplay: true,
       path: "./json/bicycle.min.json",
     });
-    let WalkAn = lottie.loadAnimation({
-      container: document.querySelector(".works-my-img"),
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      path: "./json/walk.min.json",
-    });
     let HitballoonAn = lottie.loadAnimation({
       container: document.querySelector(".contact-myhitballoon"),
       renderer: "svg",

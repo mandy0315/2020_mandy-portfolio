@@ -3469,8 +3469,8 @@ header {
 }
 
 .works-my-box-an {
-  -webkit-animation: left-move 14s linear infinite;
-  animation: left-move 14s linear infinite;
+  -webkit-animation: left-move 18s linear infinite;
+  animation: left-move 18s linear infinite;
 }
 
 @media only screen and (max-width: 768px) {
