@@ -24,7 +24,6 @@ $(document).ready(function () {
   worksTabs();
   NavClassAn();
   HashClassAn();
-  lottieAn();
   // nav 虛線匯入
   $("#pp-nav").append('<div class="line-dotted"></div>');
   // 1921px 以上執行滾動
@@ -376,16 +375,6 @@ $(document).ready(function () {
         hashNum = 4;
       }
       window.location.href = "#" + data[hashNum];
-    });
-  }
-  // bodymovin lottie動畫
-  function lottieAn() {
-    let AirCameraAn = lottie.loadAnimation({
-      container: document.querySelector(".about-AirCamera-img"),
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      path: "./json/AirCamera.min.json",
     });
   }
   // 打字動畫
