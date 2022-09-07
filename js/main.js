@@ -387,13 +387,6 @@ $(document).ready(function () {
       autoplay: true,
       path: "./json/bicycle.min.json",
     });
-    let SwimAn = lottie.loadAnimation({
-      container: document.querySelector(".skills-my-img"),
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      path: "./json/swim.min.json",
-    });
     let WalkAn = lottie.loadAnimation({
       container: document.querySelector(".works-my-img"),
       renderer: "svg",
