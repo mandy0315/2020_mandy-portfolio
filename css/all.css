@@ -1418,7 +1418,7 @@ header {
 .contact-contant-box .contact-myhitballoon, .contact-contant-box .contact-myhitballoon-line {
   max-width: 6.8rem;
   margin: 0 auto;
-
+  display: block;
 }
 .contact-contant-box .contact-myhitballoon img, .contact-contant-box .contact-myhitballoon-line img {
   width: 100%;
@@ -2246,7 +2246,6 @@ header {
   .contact-contant-box .contact-myhitballoon {
     max-width: 5.8rem;
     margin: 0 auto;
-    display: block;
   }
   .contact-contant-box .contact-myhitballoon-line {
     max-width: 8rem;
