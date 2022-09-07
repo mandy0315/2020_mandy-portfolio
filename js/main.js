@@ -58,9 +58,6 @@ $(document).ready(function () {
     if (hh >= 6 && hh <= 16) {
       $(".home-day-box").addClass("active");
       $(".home-night-box").removeClass("active");
-      // 車子動畫
-      $(".home-day-car,.home-day-car2").addClass("active");
-      $(".home-night-car,.home-night-car2").removeClass("active");
       //背景
       $(".section-AirBg-wrapper,.menu-contant-box").addClass("day");
       $(".contact-sea-wrapper").addClass("day-contact-sea");
@@ -69,9 +66,6 @@ $(document).ready(function () {
     } else {
       $(".home-night-box").addClass("active");
       $(".home-day-box").removeClass("active");
-      // 車子動畫
-      $(".home-night-car,.home-night-car2").addClass("active");
-      $(".home-day-car,.home-day-car2").removeClass("active");
       //背景
       $(".section-AirBg-wrapper,.menu-contant-box").addClass("night");
       $(".contact-sea-wrapper").addClass("night-contact-sea");
@@ -83,15 +77,6 @@ $(document).ready(function () {
   function NavClassAn() {
     $("#pp-nav>ul>li>a").click(function (e) {
       let getAName = $(this).attr("href");
-      //home
-      if (
-        $("#pagepiling [data-num=" + data2[getAName] + "].section").hasClass(
-          "home"
-        )
-      ) {
-        $(".home-day-car,.home-night-car").toggleClass("home-car-up-an");
-        $(".home-day-car2,.home-night-car2").toggleClass("home-car-down-an");
-      }
       //about
       if (
         $("#pagepiling [data-num=" + data2[getAName] + "].section").hasClass(
@@ -162,16 +147,6 @@ $(document).ready(function () {
   function HashContant() {
     let hashNameAn = window.location.hash;
     let hashNumAn = data2[hashNameAn];
-    //home
-    if (
-      $("#pagepiling [data-num=" + hashNumAn + "].section").hasClass("home")
-    ) {
-      $(".home-day-car,.home-night-car").addClass("home-car-up-an");
-      $(".home-day-car2,.home-night-car2").addClass("home-car-down-an");
-    } else {
-      $(".home-day-car,.home-night-car").removeClass("home-car-up-an");
-      $(".home-day-car2,.home-night-car2").removeClass("home-car-down-an");
-    }
     //about
     if (
       $("#pagepiling [data-num=" + hashNumAn + "].section").hasClass("about")

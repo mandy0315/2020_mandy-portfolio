@@ -501,11 +501,11 @@ header {
   margin-top: -40px;
 }
 
-.home-day-box, .home-night-box, .home-day-car, .home-day-car2, .home-night-car, .home-night-car2 {
+.home-day-box, .home-night-box {
   display: none;
   width: 100%;
 }
-.home-day-box.active, .home-night-box.active, .home-day-car.active, .home-day-car2.active, .home-night-car.active, .home-night-car2.active {
+.home-day-box.active, .home-night-box.active {
   display: block;
 }
 
@@ -604,72 +604,6 @@ header {
   position: absolute;
   left: 140px;
   z-index: 10;
-}
-
-.home-day-car, .home-day-car2, .home-night-car, .home-night-car2 {
-  position: absolute;
-  z-index: 15;
-  top: -70px;
-}
-.home-day-car ul, .home-day-car2 ul, .home-night-car ul, .home-night-car2 ul {
-  position: relative;
-  height: 120px;
-  max-width: 2560px;
-  width: 2560px;
-}
-.home-day-car ul li, .home-day-car2 ul li, .home-night-car ul li, .home-night-car2 ul li {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-.home-day-car.home-day-car ul li .home-car-up01, .home-day-car2.home-day-car ul li .home-car-up01, .home-night-car.home-day-car ul li .home-car-up01, .home-night-car2.home-day-car ul li .home-car-up01 {
-  max-width: 6.6rem;
-}
-.home-day-car.home-day-car ul li .home-scooter-up02, .home-day-car2.home-day-car ul li .home-scooter-up02, .home-night-car.home-day-car ul li .home-scooter-up02, .home-night-car2.home-day-car ul li .home-scooter-up02 {
-  max-width: 3rem;
-}
-.home-day-car.home-day-car ul li .home-car-up03, .home-day-car2.home-day-car ul li .home-car-up03, .home-night-car.home-day-car ul li .home-car-up03, .home-night-car2.home-day-car ul li .home-car-up03 {
-  max-width: 6.6rem;
-}
-.home-day-car.home-day-car ul li .home-car-up04, .home-day-car2.home-day-car ul li .home-car-up04, .home-night-car.home-day-car ul li .home-car-up04, .home-night-car2.home-day-car ul li .home-car-up04 {
-  max-width: 8rem;
-}
-.home-day-car.home-day-car2, .home-day-car2.home-day-car2, .home-night-car.home-day-car2, .home-night-car2.home-day-car2 {
-  top: -35px;
-}
-.home-day-car.home-day-car2 ul li .home-car-down01, .home-day-car2.home-day-car2 ul li .home-car-down01, .home-night-car.home-day-car2 ul li .home-car-down01, .home-night-car2.home-day-car2 ul li .home-car-down01 {
-  max-width: 6.8rem;
-}
-.home-day-car.home-day-car2 ul li .home-car-down02, .home-day-car2.home-day-car2 ul li .home-car-down02, .home-night-car.home-day-car2 ul li .home-car-down02, .home-night-car2.home-day-car2 ul li .home-car-down02 {
-  max-width: 10rem;
-}
-.home-day-car.home-day-car2 ul li .home-scooter-down03, .home-day-car2.home-day-car2 ul li .home-scooter-down03, .home-night-car.home-day-car2 ul li .home-scooter-down03, .home-night-car2.home-day-car2 ul li .home-scooter-down03 {
-  max-width: 3.6rem;
-}
-.home-day-car.home-night-car ul li .home-car-up01, .home-day-car2.home-night-car ul li .home-car-up01, .home-night-car.home-night-car ul li .home-car-up01, .home-night-car2.home-night-car ul li .home-car-up01 {
-  max-width: 9rem;
-}
-.home-day-car.home-night-car ul li .home-scooter-up02, .home-day-car2.home-night-car ul li .home-scooter-up02, .home-night-car.home-night-car ul li .home-scooter-up02, .home-night-car2.home-night-car ul li .home-scooter-up02 {
-  max-width: 4.4rem;
-}
-.home-day-car.home-night-car ul li .home-car-up03, .home-day-car2.home-night-car ul li .home-car-up03, .home-night-car.home-night-car ul li .home-car-up03, .home-night-car2.home-night-car ul li .home-car-up03 {
-  max-width: 9rem;
-}
-.home-day-car.home-night-car ul li .home-car-up04, .home-day-car2.home-night-car ul li .home-car-up04, .home-night-car.home-night-car ul li .home-car-up04, .home-night-car2.home-night-car ul li .home-car-up04 {
-  max-width: 9.8rem;
-}
-.home-day-car.home-night-car2, .home-day-car2.home-night-car2, .home-night-car.home-night-car2, .home-night-car2.home-night-car2 {
-  top: -35px;
-}
-.home-day-car.home-night-car2 ul li .home-car-down01, .home-day-car2.home-night-car2 ul li .home-car-down01, .home-night-car.home-night-car2 ul li .home-car-down01, .home-night-car2.home-night-car2 ul li .home-car-down01 {
-  max-width: 9.2rem;
-}
-.home-day-car.home-night-car2 ul li .home-car-down02, .home-day-car2.home-night-car2 ul li .home-car-down02, .home-night-car.home-night-car2 ul li .home-car-down02, .home-night-car2.home-night-car2 ul li .home-car-down02 {
-  max-width: 11rem;
-}
-.home-day-car.home-night-car2 ul li .home-scooter-down03, .home-day-car2.home-night-car2 ul li .home-scooter-down03, .home-night-car.home-night-car2 ul li .home-scooter-down03, .home-night-car2.home-night-car2 ul li .home-scooter-down03 {
-  max-width: 4.8rem;
 }
 
 .home-my-box {
@@ -1919,55 +1853,6 @@ header {
     top: 100px;
   }
 
-  .home-day-car.home-night-car ul li .home-car-up01, .home-day-car2.home-night-car ul li .home-car-up01, .home-night-car.home-night-car ul li .home-car-up01, .home-night-car2.home-night-car ul li .home-car-up01 {
-    max-width: 10rem;
-  }
-  .home-day-car.home-night-car ul li .home-scooter-up02, .home-day-car2.home-night-car ul li .home-scooter-up02, .home-night-car.home-night-car ul li .home-scooter-up02, .home-night-car2.home-night-car ul li .home-scooter-up02 {
-    max-width: 6rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up03, .home-day-car2.home-night-car ul li .home-car-up03, .home-night-car.home-night-car ul li .home-car-up03, .home-night-car2.home-night-car ul li .home-car-up03 {
-    max-width: 10rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up04, .home-day-car2.home-night-car ul li .home-car-up04, .home-night-car.home-night-car ul li .home-car-up04, .home-night-car2.home-night-car ul li .home-car-up04 {
-    max-width: 12rem;
-  }
-  .home-day-car.home-night-car2, .home-day-car2.home-night-car2, .home-night-car.home-night-car2, .home-night-car2.home-night-car2 {
-    top: -35px;
-  }
-  .home-day-car.home-night-car2 ul li .home-car-down01, .home-day-car2.home-night-car2 ul li .home-car-down01, .home-night-car.home-night-car2 ul li .home-car-down01, .home-night-car2.home-night-car2 ul li .home-car-down01 {
-    max-width: 13rem;
-  }
-  .home-day-car.home-night-car2 ul li .home-car-down02, .home-day-car2.home-night-car2 ul li .home-car-down02, .home-night-car.home-night-car2 ul li .home-car-down02, .home-night-car2.home-night-car2 ul li .home-car-down02 {
-    max-width: 15rem;
-  }
-  .home-day-car.home-night-car2 ul li .home-scooter-down03, .home-day-car2.home-night-car2 ul li .home-scooter-down03, .home-night-car.home-night-car2 ul li .home-scooter-down03, .home-night-car2.home-night-car2 ul li .home-scooter-down03 {
-    max-width: 7rem;
-  }
-  .home-day-car.home-day-car ul li .home-car-up01, .home-day-car2.home-day-car ul li .home-car-up01, .home-night-car.home-day-car ul li .home-car-up01, .home-night-car2.home-day-car ul li .home-car-up01 {
-    max-width: 7.8rem;
-  }
-  .home-day-car.home-day-car ul li .home-scooter-up02, .home-day-car2.home-day-car ul li .home-scooter-up02, .home-night-car.home-day-car ul li .home-scooter-up02, .home-night-car2.home-day-car ul li .home-scooter-up02 {
-    max-width: 5rem;
-  }
-  .home-day-car.home-day-car ul li .home-car-up03, .home-day-car2.home-day-car ul li .home-car-up03, .home-night-car.home-day-car ul li .home-car-up03, .home-night-car2.home-day-car ul li .home-car-up03 {
-    max-width: 7.8rem;
-  }
-  .home-day-car.home-day-car ul li .home-car-up04, .home-day-car2.home-day-car ul li .home-car-up04, .home-night-car.home-day-car ul li .home-car-up04, .home-night-car2.home-day-car ul li .home-car-up04 {
-    max-width: 9rem;
-  }
-  .home-day-car.home-day-car2, .home-day-car2.home-day-car2, .home-night-car.home-day-car2, .home-night-car2.home-day-car2 {
-    top: -35px;
-  }
-  .home-day-car.home-day-car2 ul li .home-car-down01, .home-day-car2.home-day-car2 ul li .home-car-down01, .home-night-car.home-day-car2 ul li .home-car-down01, .home-night-car2.home-day-car2 ul li .home-car-down01 {
-    max-width: 11rem;
-  }
-  .home-day-car.home-day-car2 ul li .home-car-down02, .home-day-car2.home-day-car2 ul li .home-car-down02, .home-night-car.home-day-car2 ul li .home-car-down02, .home-night-car2.home-day-car2 ul li .home-car-down02 {
-    max-width: 13rem;
-  }
-  .home-day-car.home-day-car2 ul li .home-scooter-down03, .home-day-car2.home-day-car2 ul li .home-scooter-down03, .home-night-car.home-day-car2 ul li .home-scooter-down03, .home-night-car2.home-day-car2 ul li .home-scooter-down03 {
-    max-width: 6.6rem;
-  }
-
   .about-contant-box .about-img {
     width: 22rem;
   }
@@ -2175,48 +2060,6 @@ header {
     width: 300px;
   }
 
-  .home-day-car.home-day-car ul li .home-car-up01, .home-day-car2.home-day-car ul li .home-car-up01, .home-night-car.home-day-car ul li .home-car-up01, .home-night-car2.home-day-car ul li .home-car-up01 {
-    max-width: 5.4rem;
-  }
-  .home-day-car.home-day-car ul li .home-scooter-up02, .home-day-car2.home-day-car ul li .home-scooter-up02, .home-night-car.home-day-car ul li .home-scooter-up02, .home-night-car2.home-day-car ul li .home-scooter-up02 {
-    max-width: 2.4rem;
-  }
-  .home-day-car.home-day-car ul li .home-car-up03, .home-day-car2.home-day-car ul li .home-car-up03, .home-night-car.home-day-car ul li .home-car-up03, .home-night-car2.home-day-car ul li .home-car-up03 {
-    max-width: 4.6rem;
-  }
-  .home-day-car.home-day-car ul li .home-car-up04, .home-day-car2.home-day-car ul li .home-car-up04, .home-night-car.home-day-car ul li .home-car-up04, .home-night-car2.home-day-car ul li .home-car-up04 {
-    max-width: 5.4rem;
-  }
-  .home-day-car.home-day-car2 ul li .home-car-down01, .home-day-car2.home-day-car2 ul li .home-car-down01, .home-night-car.home-day-car2 ul li .home-car-down01, .home-night-car2.home-day-car2 ul li .home-car-down01 {
-    max-width: 5.6rem;
-  }
-  .home-day-car.home-day-car2 ul li .home-car-down02, .home-day-car2.home-day-car2 ul li .home-car-down02, .home-night-car.home-day-car2 ul li .home-car-down02, .home-night-car2.home-day-car2 ul li .home-car-down02 {
-    max-width: 8rem;
-  }
-  .home-day-car.home-day-car2 ul li .home-scooter-down03, .home-day-car2.home-day-car2 ul li .home-scooter-down03, .home-night-car.home-day-car2 ul li .home-scooter-down03, .home-night-car2.home-day-car2 ul li .home-scooter-down03 {
-    max-width: 3rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up01, .home-day-car2.home-night-car ul li .home-car-up01, .home-night-car.home-night-car ul li .home-car-up01, .home-night-car2.home-night-car ul li .home-car-up01 {
-    max-width: 7.4rem;
-  }
-  .home-day-car.home-night-car ul li .home-scooter-up02, .home-day-car2.home-night-car ul li .home-scooter-up02, .home-night-car.home-night-car ul li .home-scooter-up02, .home-night-car2.home-night-car ul li .home-scooter-up02 {
-    max-width: 3.8rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up03, .home-day-car2.home-night-car ul li .home-car-up03, .home-night-car.home-night-car ul li .home-car-up03, .home-night-car2.home-night-car ul li .home-car-up03 {
-    max-width: 6.2rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up04, .home-day-car2.home-night-car ul li .home-car-up04, .home-night-car.home-night-car ul li .home-car-up04, .home-night-car2.home-night-car ul li .home-car-up04 {
-    max-width: 7.4rem;
-  }
-  .home-day-car.home-night-car2 ul li .home-car-down01, .home-day-car2.home-night-car2 ul li .home-car-down01, .home-night-car.home-night-car2 ul li .home-car-down01, .home-night-car2.home-night-car2 ul li .home-car-down01 {
-    max-width: 8.6rem;
-  }
-  .home-day-car.home-night-car2 ul li .home-car-down02, .home-day-car2.home-night-car2 ul li .home-car-down02, .home-night-car.home-night-car2 ul li .home-car-down02, .home-night-car2.home-night-car2 ul li .home-car-down02 {
-    max-width: 10rem;
-  }
-  .home-day-car.home-night-car2 ul li .home-scooter-down03, .home-day-car2.home-night-car2 ul li .home-scooter-down03, .home-night-car.home-night-car2 ul li .home-scooter-down03, .home-night-car2.home-night-car2 ul li .home-scooter-down03 {
-    max-width: 4.2rem;
-  }
 
   /* menu */
   .menu-contant-box .menu-text ul li h5 {
@@ -2682,56 +2525,6 @@ header {
     margin: auto;
   }
 
-  /* home */
-  .home-day-car.home-day-car ul li .home-car-up01, .home-day-car2.home-day-car ul li .home-car-up01, .home-night-car.home-day-car ul li .home-car-up01, .home-night-car2.home-day-car ul li .home-car-up01 {
-    max-width: 4.6rem;
-  }
-  .home-day-car.home-day-car ul li .home-scooter-up02, .home-day-car2.home-day-car ul li .home-scooter-up02, .home-night-car.home-day-car ul li .home-scooter-up02, .home-night-car2.home-day-car ul li .home-scooter-up02 {
-    max-width: 2rem;
-  }
-  .home-day-car.home-day-car ul li .home-car-up03, .home-day-car2.home-day-car ul li .home-car-up03, .home-night-car.home-day-car ul li .home-car-up03, .home-night-car2.home-day-car ul li .home-car-up03 {
-    max-width: 4.6rem;
-  }
-  .home-day-car.home-day-car ul li .home-car-up04, .home-day-car2.home-day-car ul li .home-car-up04, .home-night-car.home-day-car ul li .home-car-up04, .home-night-car2.home-day-car ul li .home-car-up04 {
-    max-width: 5rem;
-  }
-  .home-day-car.home-day-car2, .home-day-car2.home-day-car2, .home-night-car.home-day-car2, .home-night-car2.home-day-car2 {
-    top: -35px;
-  }
-  .home-day-car.home-day-car2 ul li .home-car-down01, .home-day-car2.home-day-car2 ul li .home-car-down01, .home-night-car.home-day-car2 ul li .home-car-down01, .home-night-car2.home-day-car2 ul li .home-car-down01 {
-    max-width: 4.8rem;
-  }
-  .home-day-car.home-day-car2 ul li .home-car-down02, .home-day-car2.home-day-car2 ul li .home-car-down02, .home-night-car.home-day-car2 ul li .home-car-down02, .home-night-car2.home-day-car2 ul li .home-car-down02 {
-    max-width: 6rem;
-  }
-  .home-day-car.home-day-car2 ul li .home-scooter-down03, .home-day-car2.home-day-car2 ul li .home-scooter-down03, .home-night-car.home-day-car2 ul li .home-scooter-down03, .home-night-car2.home-day-car2 ul li .home-scooter-down03 {
-    max-width: 3.2rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up01, .home-day-car2.home-night-car ul li .home-car-up01, .home-night-car.home-night-car ul li .home-car-up01, .home-night-car2.home-night-car ul li .home-car-up01 {
-    max-width: 6.8rem;
-  }
-  .home-day-car.home-night-car ul li .home-scooter-up02, .home-day-car2.home-night-car ul li .home-scooter-up02, .home-night-car.home-night-car ul li .home-scooter-up02, .home-night-car2.home-night-car ul li .home-scooter-up02 {
-    max-width: 3.4rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up03, .home-day-car2.home-night-car ul li .home-car-up03, .home-night-car.home-night-car ul li .home-car-up03, .home-night-car2.home-night-car ul li .home-car-up03 {
-    max-width: 6.8rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up04, .home-day-car2.home-night-car ul li .home-car-up04, .home-night-car.home-night-car ul li .home-car-up04, .home-night-car2.home-night-car ul li .home-car-up04 {
-    max-width: 7rem;
-  }
-  .home-day-car.home-night-car2, .home-day-car2.home-night-car2, .home-night-car.home-night-car2, .home-night-car2.home-night-car2 {
-    top: -35px;
-  }
-  .home-day-car.home-night-car2 ul li .home-car-down01, .home-day-car2.home-night-car2 ul li .home-car-down01, .home-night-car.home-night-car2 ul li .home-car-down01, .home-night-car2.home-night-car2 ul li .home-car-down01 {
-    max-width: 8rem;
-  }
-  .home-day-car.home-night-car2 ul li .home-car-down02, .home-day-car2.home-night-car2 ul li .home-car-down02, .home-night-car.home-night-car2 ul li .home-car-down02, .home-night-car2.home-night-car2 ul li .home-car-down02 {
-    max-width: 10rem;
-  }
-  .home-day-car.home-night-car2 ul li .home-scooter-down03, .home-day-car2.home-night-car2 ul li .home-scooter-down03, .home-night-car.home-night-car2 ul li .home-scooter-down03, .home-night-car2.home-night-car2 ul li .home-scooter-down03 {
-    max-width: 4.2rem;
-  }
-
   .home-air-wrapper {
     margin: 2rem 0;
   }
@@ -2942,52 +2735,7 @@ header {
     width: 5.4rem;
   }
 
-  /* home */
-  .home-day-car.home-day-car ul li .home-car-up01, .home-day-car2.home-day-car ul li .home-car-up01, .home-night-car.home-day-car ul li .home-car-up01, .home-night-car2.home-day-car ul li .home-car-up01 {
-    max-width: 4.6rem;
-  }
-  .home-day-car.home-day-car ul li .home-scooter-up02, .home-day-car2.home-day-car ul li .home-scooter-up02, .home-night-car.home-day-car ul li .home-scooter-up02, .home-night-car2.home-day-car ul li .home-scooter-up02 {
-    max-width: 2rem;
-  }
-  .home-day-car.home-day-car ul li .home-car-up03, .home-day-car2.home-day-car ul li .home-car-up03, .home-night-car.home-day-car ul li .home-car-up03, .home-night-car2.home-day-car ul li .home-car-up03 {
-    max-width: 4.6rem;
-  }
-  .home-day-car.home-day-car ul li .home-car-up04, .home-day-car2.home-day-car ul li .home-car-up04, .home-night-car.home-day-car ul li .home-car-up04, .home-night-car2.home-day-car ul li .home-car-up04 {
-    max-width: 5rem;
-  }
-  .home-day-car.home-day-car2, .home-day-car2.home-day-car2, .home-night-car.home-day-car2, .home-night-car2.home-day-car2 {
-    top: -35px;
-  }
-  .home-day-car.home-day-car2 ul li .home-car-down01, .home-day-car2.home-day-car2 ul li .home-car-down01, .home-night-car.home-day-car2 ul li .home-car-down01, .home-night-car2.home-day-car2 ul li .home-car-down01 {
-    max-width: 4.8rem;
-  }
-  .home-day-car.home-day-car2 ul li .home-car-down02, .home-day-car2.home-day-car2 ul li .home-car-down02, .home-night-car.home-day-car2 ul li .home-car-down02, .home-night-car2.home-day-car2 ul li .home-car-down02 {
-    max-width: 6rem;
-  }
-  .home-day-car.home-day-car2 ul li .home-scooter-down03, .home-day-car2.home-day-car2 ul li .home-scooter-down03, .home-night-car.home-day-car2 ul li .home-scooter-down03, .home-night-car2.home-day-car2 ul li .home-scooter-down03 {
-    max-width: 3.2rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up01, .home-day-car2.home-night-car ul li .home-car-up01, .home-night-car.home-night-car ul li .home-car-up01, .home-night-car2.home-night-car ul li .home-car-up01 {
-    max-width: 5rem;
-  }
-  .home-day-car.home-night-car ul li .home-scooter-up02, .home-day-car2.home-night-car ul li .home-scooter-up02, .home-night-car.home-night-car ul li .home-scooter-up02, .home-night-car2.home-night-car ul li .home-scooter-up02 {
-    max-width: 3.4rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up03, .home-day-car2.home-night-car ul li .home-car-up03, .home-night-car.home-night-car ul li .home-car-up03, .home-night-car2.home-night-car ul li .home-car-up03 {
-    max-width: 5rem;
-  }
-  .home-day-car.home-night-car ul li .home-car-up04, .home-day-car2.home-night-car ul li .home-car-up04, .home-night-car.home-night-car ul li .home-car-up04, .home-night-car2.home-night-car ul li .home-car-up04 {
-    max-width: 6rem;
-  }
-  .home-day-car.home-night-car2 ul li .home-car-down01, .home-day-car2.home-night-car2 ul li .home-car-down01, .home-night-car.home-night-car2 ul li .home-car-down01, .home-night-car2.home-night-car2 ul li .home-car-down01 {
-    max-width: 5.2rem;
-  }
-  .home-day-car.home-night-car2 ul li .home-car-down02, .home-day-car2.home-night-car2 ul li .home-car-down02, .home-night-car.home-night-car2 ul li .home-car-down02, .home-night-car2.home-night-car2 ul li .home-car-down02 {
-    max-width: 6.8rem;
-  }
-  .home-day-car.home-night-car2 ul li .home-scooter-down03, .home-day-car2.home-night-car2 ul li .home-scooter-down03, .home-night-car.home-night-car2 ul li .home-scooter-down03, .home-night-car2.home-night-car2 ul li .home-scooter-down03 {
-    max-width: 3.8rem;
-  }
+
 
   .home-city-box {
     height: 280px;
@@ -2997,12 +2745,7 @@ header {
     left: calc(50% - 700px);
   }
 
-  .home-day-car, .home-day-car2, .home-night-car, .home-night-car2 {
-    top: -80px;
-  }
-  .home-day-car.home-day-car2, .home-day-car.home-night-car2, .home-day-car2.home-day-car2, .home-day-car2.home-night-car2, .home-night-car.home-day-car2, .home-night-car.home-night-car2, .home-night-car2.home-day-car2, .home-night-car2.home-night-car2 {
-    top: -58px;
-  }
+
 
   .home-air-wrapper {
     margin: 0;
@@ -3626,51 +3369,7 @@ header {
   animation: turn 16s linear infinite;
 }
 
-.home-day-car.home-car-up-an.active li, .home-night-car.home-car-up-an.active li {
-  -webkit-animation: right-move 12s linear infinite;
-  animation: right-move 12s linear infinite;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-.home-day-car.home-car-up-an.active li:nth-child(2), .home-night-car.home-car-up-an.active li:nth-child(2) {
-  -webkit-animation-delay: 2.8s;
-  animation-delay: 2.8s;
-}
-.home-day-car.home-car-up-an.active li:nth-child(3), .home-night-car.home-car-up-an.active li:nth-child(3) {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
-}
-.home-day-car.home-car-up-an.active li:nth-child(4), .home-night-car.home-car-up-an.active li:nth-child(4) {
-  -webkit-animation-delay: 6s;
-  animation-delay: 6s;
-}
 
-.home-day-car2.home-car-down-an.active li, .home-night-car2.home-car-down-an.active li {
-  -webkit-animation: left-move 12s linear infinite;
-  animation: left-move 12s linear infinite;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-.home-day-car2.home-car-down-an.active li:nth-child(2), .home-night-car2.home-car-down-an.active li:nth-child(2) {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
-}
-.home-day-car2.home-car-down-an.active li:nth-child(3), .home-night-car2.home-car-down-an.active li:nth-child(3) {
-  -webkit-animation-delay: 6s;
-  animation-delay: 6s;
-}
-
-@media only screen and (min-width: 1921px) {
-  .home-day-car.home-car-up-an.active li, .home-night-car.home-car-up-an.active li {
-    -webkit-animation: right-move 10s linear infinite;
-    animation: right-move 10s linear infinite;
-  }
-
-  .home-day-car2.home-car-down-an.active li, .home-night-car2.home-car-down-an.active li {
-    -webkit-animation: left-move 10s linear infinite;
-    animation: left-move 10s linear infinite;
-  }
-}
 .home-day-box.active .home-day-cloud-an2, .home-day-box.active .home-day-cloud-an3 {
   -webkit-animation: cloud-move 40s linear infinite;
   animation: cloud-move 40s linear infinite;
